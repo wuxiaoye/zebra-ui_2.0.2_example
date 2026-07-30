@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aye-checkbox 复选框组件使用文档</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Microsoft YaHei", system-ui, sans-serif;
+    }
+    body {
+      background-color: #f5f7fa;
+      padding: 30px;
+      line-height: 1.7;
+      color: #333;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 26px;
+      color: #1989fa;
+      border-left: 5px solid #1989fa;
+      padding-left: 12px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 20px;
+      margin: 30px 0 15px;
+      color: #222;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #eee;
+    }
+    h3 {
+      font-size: 17px;
+      margin: 20px 0 10px;
+      color: #444;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    .tip {
+      background: #e6f7ff;
+      border: 1px solid #91caff;
+      padding: 12px 16px;
+      border-radius: 6px;
+      margin: 12px 0;
+    }
+    .warn {
+      background: #fff7e6;
+      border: 1px solid #ffd591;
+      padding: 12px 16px;
+      border-radius: 6px;
+      margin: 12px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+      background: #fff;
+    }
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 10px 12px;
+      text-align: left;
+    }
+    table th {
+      background-color: #f0f7ff;
+      font-weight: bold;
+    }
+    pre {
+      background: #2d2d2d;
+      color: #fff;
+      padding: 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+    code {
+      background: #f0f0f0;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: Consolas;
+    }
+    .block {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+      margin-bottom: 25px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>aye-checkbox / aye-checkbox-group 复选框组件使用文档</h1>
+
+  <div class="block">
+    <h2>一、组件概述</h2>
+    <p>基于 Vue3 + uni-app 封装复选框组件，分为两个文件：</p>
+    <ul>
+      <li><code>aye-checkbox.vue</code>：单个复选框</li>
+      <li><code>aye-checkbox-group.vue</code>：复选框组，批量管理选中、全选、反选、禁用过滤</li>
+    </ul>
+    <div class="tip">
+      <strong>核心特性：</strong>
+      1. Group 配置自动透传给子项，子项 props 优先级更高；
+      2. 全选/反选自动排除 <code>disabled</code> 禁用选项；
+      3. 支持横向/竖向布局、竖向两端撑满、文字勾选框左右反转；
+      4. 父子组件均暴露 <code>change</code> 事件；
+      5. 最大可选数量 max 限制、形状方形/圆形、颜色尺寸自定义。
+    </div>
+  </div>
+
+  <div class="block">
+    <h2>二、aye-checkbox 单个复选框</h2>
+    <h3>2.1 Props 属性列表</h3>
+    <table>
+      <tr>
+        <th>参数名</th>
+        <th>类型</th>
+        <th>默认值</th>
+        <th>说明</th>
+      </tr>
+      <tr>
+        <td>modelValue</td>
+        <td>Boolean</td>
+        <td>false</td>
+        <td>单独使用时 v-model 绑定选中状态</td>
+      </tr>
+      <tr>
+        <td>value</td>
+        <td>String|Number|Boolean</td>
+        <td>''</td>
+        <td>在 group 组内唯一标识值</td>
+      </tr>
+      <tr>
+        <td>label</td>
+        <td>String</td>
+        <td>''</td>
+        <td>显示文本</td>
+      </tr>
+      <tr>
+        <td>disabled</td>
+        <td>Boolean</td>
+        <td>undefined</td>
+        <td>是否禁用，优先级高于 group 全局禁用</td>
+      </tr>
+      <tr>
+        <td>shape</td>
+        <td>String</td>
+        <td>undefined</td>
+        <td>square方形 / circle圆形</td>
+      </tr>
+      <tr>
+        <td>activeIconColor</td>
+        <td>String</td>
+        <td>undefined</td>
+        <td>勾选图标颜色</td>
+      </tr>
+      <tr>
+        <td>inactiveIconColor</td>
+        <td>String</td>
+        <td>undefined</td>
+        <td>未勾选边框颜色</td>
+      </tr>
+      <tr>
+        <td>labelColor</td>
+        <td>String</td>
+        <td>undefined</td>
+        <td>文字颜色</td>
+      </tr>
+      <tr>
+        <td>labelSize</td>
+        <td>String</td>
+        <td>undefined</td>
+        <td>文字字号，如 32rpx</td>
+      </tr>
+      <tr>
+        <td>iconSize</td>
+        <td>String</td>
+        <td>undefined</td>
+        <td>勾选框大小</td>
+      </tr>
+      <tr>
+        <td>layout</td>
+        <td>String</td>
+        <td>undefined</td>
+        <td>horizontal横向 / vertical竖向</td>
+      </tr>
+      <tr>
+        <td>verticalFull</td>
+        <td>Boolean</td>
+        <td>undefined</td>
+        <td>竖向布局是否撑满整行两端对齐</td>
+      </tr>
+      <tr>
+        <td>reverseVerticalFull</td>
+        <td>Boolean</td>
+        <td>undefined</td>
+        <td>撑满模式是否反转：文字左、勾选框右</td>
+      </tr>
+    </table>
+
+    <h3>2.2 抛出事件 Events</h3>
+    <table>
+      <tr>
+        <th>事件名</th>
+        <th>参数</th>
+        <th>触发时机</th>
+      </tr>
+      <tr>
+        <td>update:modelValue</td>
+        <td>Boolean</td>
+        <td>用于 v-model 双向绑定</td>
+      </tr>
+      <tr>
+        <td>change</td>
+        <td>(value, checked)</td>
+        <td>点击切换选中状态；禁用不触发</td>
+      </tr>
+    </table>
+
+    <h3>2.3 独立使用示例</h3>
+<pre>
+&lt;aye-checkbox
+  v-model="singleCheck"
+  label="同意协议"
+  value="agree"
+  shape="circle"
+  @change="handleSingleChange"
+/&gt;
+
+const singleCheck = ref(false)
+const handleSingleChange = (val, checked) =&gt; {
+  console.log('当前项值：', val, '是否选中：', checked)
+}
+</pre>
+  </div>
+
+  <div class="block">
+    <h2>三、aye-checkbox-group 复选框组</h2>
+    <h3>3.1 Props 属性</h3>
+    <table>
+      <tr>
+        <th>参数</th>
+        <th>类型</th>
+        <th>默认值</th>
+        <th>说明</th>
+      </tr>
+      <tr>
+        <td>modelValue</td>
+        <td>Array</td>
+        <td>[]</td>
+        <td>v-model 绑定选中 value 数组</td>
+      </tr>
+      <tr>
+        <td>max</td>
+        <td>Number|String</td>
+        <td>999</td>
+        <td>最大可选数量，支持字符串传入如 max="3"</td>
+      </tr>
+      <tr>
+        <td>layout</td>
+        <td>String</td>
+        <td>horizontal</td>
+        <td>horizontal横向自动换行 / vertical竖向单列</td>
+      </tr>
+      <tr>
+        <td>disabled</td>
+        <td>Boolean</td>
+        <td>false</td>
+        <td>全局全部禁用</td>
+      </tr>
+      <tr>
+        <td>verticalFull</td>
+        <td>Boolean</td>
+        <td>false</td>
+        <td>子项统一开启竖向两端撑满</td>
+      </tr>
+      <tr>
+        <td>reverseVerticalFull</td>
+        <td>Boolean</td>
+        <td>false</td>
+        <td>全局统一反转：文字居左，勾选框居右</td>
+      </tr>
+      <tr>
+        <td>shape/颜色/尺寸等</td>
+        <td>-</td>
+        <td>-</td>
+        <td>全部自动透传给子 aye-checkbox</td>
+      </tr>
+    </table>
+
+    <h3>3.2 组组件 Events</h3>
+    <table>
+      <tr>
+        <th>事件</th>
+        <th>参数</th>
+        <th>触发场景</th>
+      </tr>
+      <tr>
+        <td>update:modelValue</td>
+        <td>Array</td>
+        <td>v-model 更新</td>
+      </tr>
+      <tr>
+        <td>change</td>
+        <td>selectedList: Array</td>
+        <td>点击子项、全选、反选、清空均触发</td>
+      </tr>
+    </table>
+
+    <h3>3.3 Ref 对外暴露实例方法</h3>
+<pre>
+// 获取组件实例
+const groupRef = ref(null)
+
+// 1. 全选（自动过滤禁用项，受max限制）
+groupRef.value.selectAll(allValueArray)
+
+// 2. 反选（仅在可用非禁用项内取反）
+groupRef.value.invertSelect(allValueArray)
+
+// 3. 清空所有选中
+groupRef.value.clearAll()
+</pre>
+
+    <h3>3.4 完整业务调用示例</h3>
+<pre>
+&lt;template&gt;
+  &lt;view style="padding:30rpx"&gt;
+    &lt;aye-checkbox-group
+      v-model="checkList"
+      ref="groupRef"
+      layout="vertical"
+      vertical-full
+      :reverse-vertical-full="true"
+      :max="3"
+      shape="circle"
+      @change="groupChange"
+    &gt;
+      &lt;aye-checkbox label="选项一" value="1" /&gt;
+      &lt;aye-checkbox label="选项二" value="2" /&gt;
+      &lt;aye-checkbox label="禁用项（全选反选跳过）" value="3" disabled /&gt;
+      &lt;aye-checkbox label="选项四" value="4" /&gt;
+    &lt;/aye-checkbox-group&gt;
+
+    &lt;view style="margin-top:30rpx;display:flex;gap:20rpx"&gt;
+      &lt;button @tap="$refs.groupRef.selectAll([1,2,3,4])"&gt;全选&lt;/button&gt;
+      &lt;button @tap="$refs.groupRef.invertSelect([1,2,3,4])"&gt;反选&lt;/button&gt;
+      &lt;button @tap="$refs.groupRef.clearAll()"&gt;清空&lt;/button&gt;
+    &lt;/view&gt;
+  &lt;/view&gt;
+&lt;/template&gt;
+
+&lt;script setup&gt;
+import { ref } from 'vue'
+
+const checkList = ref([])
+const groupChange = (list) =&gt; {
+  console.log('组选中变化：', list)
+}
+&lt;/script&gt;
+</pre>
+  </div>
+
+  <div class="block">
+    <h2>四、优先级规则（重要）</h2>
+    <div class="tip">
+      <strong>样式/禁用参数优先级：</strong>
+      子组件自身传入 props > Group 全局 props > 组件内部默认值
+    </div>
+    <p>例：Group 设置 <code>disabled=true</code>，某个子项单独写 <code>:disabled="false"</code>，则该项可点击。</p>
+  </div>
+
+  <div class="block">
+    <h2>五、布局生效条件（竖向左右反转）</h2>
+    <p>想要实现：<strong>竖向列表、整行撑开、文字在左，勾选框在右</strong>，三个属性必须同时开启：</p>
+<pre>
+layout="vertical"
+vertical-full
+:reverse-vertical-full="true"
+</pre>
+  </div>
+
+  <div class="block">
+    <h2>六、全选/反选内置逻辑</h2>
+    <ul>
+      <li>自动收集所有子项 <code>value + disabled</code> 状态，挂载注册、卸载删除；</li>
+      <li>全选：只勾选非禁用条目，超出 max 自动截断；</li>
+      <li>反选：禁用项完全不参与运算，只对可选项取反；</li>
+      <li>单个点击本身无法触发禁用复选框。</li>
+    </ul>
+  </div>
+
+  <div class="block">
+    <h2>七、版本更新说明（本次迭代点）</h2>
+    <ol>
+      <li>修复 Group layout/verticalFull/reverseVerticalFull 无法透传给子组件问题；</li>
+      <li>增加子项 disabled 状态上报，全选反选自动排除禁用项；</li>
+      <li>单个 Checkbox 和 Group 都对外暴露独立 change 事件；</li>
+      <li>max 兼容字符串类型传参，不抛出校验警告；</li>
+      <li>使用 toRefs 保证全局配置响应式更新；</li>
+      <li>新增实例方法 defineExpose，支持 ref 调用全选/反选/清空。</li>
+    </ol>
+  </div>
+
+  <div class="warn">
+    <h3>八、注意事项</h3>
+    <p>1. 放入 aye-checkbox-group 的子项必须填写唯一 <code>value</code>，否则选中逻辑错乱；</p>
+    <p>2. 全选/反选如果不传 allValues 数组，会自动使用组件内部收集到的有效子项列表；</p>
+    <p>3. uni-app 环境依赖 uni.showToast 做数量超限提示，H5 可自行替换 alert；</p>
+    <p>4. 组件内部使用 Vue3 composition API，仅支持 Vue3 项目。</p>
+  </div>
+
+</div>
+</body>
+</html>

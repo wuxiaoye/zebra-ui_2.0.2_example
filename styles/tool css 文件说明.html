@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>uni-app 工具 CSS 类库 - 使用文档</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--sidebar-w:260px;--primary:#0081ff;--primary-light:#e8f4ff;--bg:#f8f9fa;--border:#e8e8e8;--text:#333;--text-light:#666;--code-bg:#f5f7fa;--radius:6px;}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--text);background:var(--bg);line-height:1.7;font-size:14px;}
+/* 侧边栏 */
+.sidebar{position:fixed;left:0;top:0;width:var(--sidebar-w);height:100vh;background:#fff;border-right:1px solid var(--border);overflow-y:auto;z-index:100;padding-bottom:30px;}
+.sidebar::-webkit-scrollbar{width:4px;}
+.sidebar::-webkit-scrollbar-thumb{background:#ddd;border-radius:4px;}
+.sidebar-header{padding:20px 20px 16px;border-bottom:1px solid var(--border);}
+.sidebar-header h1{font-size:16px;color:var(--primary);font-weight:700;}
+.sidebar-header p{font-size:12px;color:var(--text-light);margin-top:4px;}
+.search-box{padding:12px 16px;}
+.search-box input{width:100%;padding:7px 12px;border:1px solid var(--border);border-radius:var(--radius);font-size:13px;outline:none;transition:border .2s;}
+.search-box input:focus{border-color:var(--primary);}
+.nav-group{padding:4px 0;}
+.nav-group-title{padding:8px 20px 4px;font-size:11px;color:#999;text-transform:uppercase;letter-spacing:1px;font-weight:600;}
+.nav-item{display:block;padding:5px 20px 5px 28px;color:var(--text-light);text-decoration:none;font-size:13px;transition:all .15s;border-left:3px solid transparent;}
+.nav-item:hover{color:var(--primary);background:var(--primary-light);}
+.nav-item.active{color:var(--primary);background:var(--primary-light);border-left-color:var(--primary);font-weight:600;}
+/* 主内容 */
+.main{margin-left:var(--sidebar-w);padding:30px 40px 60px;max-width:960px;}
+.section{background:#fff;border-radius:var(--radius);padding:28px 32px;margin-bottom:20px;box-shadow:0 1px 3px rgba(0,0,0,.04);}
+.section h2{font-size:20px;color:var(--text);margin-bottom:16px;padding-bottom:12px;border-bottom:2px solid var(--primary);display:flex;align-items:center;gap:8px;}
+.section h2 .badge{background:var(--primary);color:#fff;font-size:11px;padding:2px 8px;border-radius:10px;font-weight:500;}
+.section h3{font-size:16px;color:var(--text);margin:20px 0 10px;padding-left:10px;border-left:3px solid var(--primary);}
+.section h4{font-size:14px;color:var(--text);margin:16px 0 8px;}
+.section p{margin:8px 0;color:var(--text-light);}
+/* 表格 */
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px;}
+th{background:var(--code-bg);text-align:left;padding:10px 14px;font-weight:600;border:1px solid var(--border);}
+td{padding:8px 14px;border:1px solid var(--border);}
+tr:hover td{background:#fafbfc;}
+code{background:var(--code-bg);padding:2px 6px;border-radius:3px;font-size:12px;color:#c7254e;font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;}
+/* 代码块 */
+pre{background:var(--code-bg);border:1px solid var(--border);border-radius:var(--radius);padding:14px 18px;margin:10px 0;overflow-x:auto;font-size:13px;line-height:1.6;}
+pre code{background:none;padding:0;color:var(--text);font-size:13px;}
+/* 提示框 */
+.tip{background:#e8f4ff;border-left:4px solid var(--primary);padding:12px 16px;border-radius:0 var(--radius) var(--radius) 0;margin:12px 0;font-size:13px;}
+.tip strong{color:var(--primary);}
+.warn{background:#fff8e6;border-left:4px solid #fbbd08;padding:12px 16px;border-radius:0 var(--radius) var(--radius) 0;margin:12px 0;font-size:13px;}
+/* 颜色演示 */
+.color-demo{display:inline-block;width:24px;height:24px;border-radius:4px;vertical-align:middle;margin-right:6px;border:1px solid #eee;}
+/* 标签 */
+.tag{display:inline-block;padding:2px 8px;border-radius:3px;font-size:11px;margin:2px;background:var(--code-bg);color:var(--text-light);}
+/* 响应式 */
+.menu-toggle{display:none;position:fixed;top:10px;left:10px;z-index:200;background:var(--primary);color:#fff;border:none;border-radius:var(--radius);padding:8px 12px;cursor:pointer;font-size:14px;}
+@media(max-width:768px){
+  .menu-toggle{display:block;}
+  .sidebar{transform:translateX(-100%);transition:transform .3s;}
+  .sidebar.open{transform:translateX(0);}
+  .main{margin-left:0;padding:20px 16px 40px;}
+}
+</style>
+</head>
+<body>
+
+<button class="menu-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰ 菜单</button>
+
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <h1>CSS Tool 类库</h1>
+    <p>uni-app 原子化 CSS 工具库</p>
+  </div>
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="搜索类名..." oninput="filterNav(this.value)">
+  </div>
+  <nav>
+    <div class="nav-group">
+      <div class="nav-group-title">快速开始</div>
+      <a class="nav-item" href="#intro" data-text="简介 引入方式 设计理念">简介与引入</a>
+    </div>
+    <div class="nav-group">
+      <div class="nav-group-title">基础类</div>
+      <a class="nav-item" href="#misc" data-text="杂类 overflow relative absolute fixed fulled display">1. 杂类</a>
+      <a class="nav-item" href="#text" data-text="文本 text-size text-weight text-align text-overflow leading">2. 文本类</a>
+      <a class="nav-item" href="#radius" data-text="圆角 round rounded tl tr bl br">3. 圆角</a>
+      <a class="nav-item" href="#opacity" data-text="透明度 opacity">4. 透明度</a>
+      <a class="nav-item" href="#shadow" data-text="投影 shadow">5. 投影</a>
+      <a class="nav-item" href="#border" data-text="边线 border">6. 边线</a>
+      <a class="nav-item" href="#zindex" data-text="zIndex 层级">7. zIndex 层级</a>
+    </div>
+    <div class="nav-group">
+      <div class="nav-group-title">颜色</div>
+      <a class="nav-item" href="#color" data-text="颜色 text- bg- red blue green white black">8. 颜色类</a>
+    </div>
+    <div class="nav-group">
+      <div class="nav-group-title">布局</div>
+      <a class="nav-item" href="#flex" data-text="Flex flex-row flex-col flex-center flex-between">9. Flex 布局</a>
+      <a class="nav-item" href="#grid" data-text="Grid 网格 grid-col">10. Grid 网格</a>
+      <a class="nav-item" href="#gap" data-text="Gap 间隙 gap-row gap-col">11. Gap 间隙</a>
+    </div>
+    <div class="nav-group">
+      <div class="nav-group-title">间距与定位</div>
+      <a class="nav-item" href="#position" data-text="位置控制 top left right bottom 定位">12. 位置控制</a>
+      <a class="nav-item" href="#margin" data-text="外边距 margin ma mt mb ml mr mx my">13. 外边距</a>
+      <a class="nav-item" href="#padding" data-text="内边距 padding pa pt pb pl pr px py">14. 内边距</a>
+    </div>
+    <div class="nav-group">
+      <div class="nav-group-title">尺寸</div>
+      <a class="nav-item" href="#width" data-text="宽度 w-full w-half width">15. 宽度类</a>
+      <a class="nav-item" href="#height" data-text="高度 h-full h-screen height">16. 高度类</a>
+    </div>
+    <div class="nav-group">
+      <div class="nav-group-title">实战</div>
+      <a class="nav-item" href="#examples" data-text="示例 组合 卡片 导航栏 网格 标签">常用组合示例</a>
+      <a class="nav-item" href="#rules" data-text="命名规则 总结">命名规则总结</a>
+      <a class="nav-item" href="#notes" data-text="注意事项 优先级 性能 兼容">注意事项</a>
+    </div>
+  </nav>
+</aside>
+
+<main class="main">
+
+<!-- 简介 -->
+<div class="section" id="intro">
+  <h2><span class="badge">开始</span> 简介与引入</h2>
+  <p>本类库采用 <strong>原子化 CSS</strong> 设计思路，灵感来自 TMUI CSS Tool。每个类只做一件事，通过组合多个类来完成布局，<strong>无需写一行样式代码</strong>。分两个版本，一份的单位为 <code>rpx</code>，另一份的单位为 <code>px</code>。</p>
+  <h3>引入方式</h3>
+  <p>在 <code>App.vue</code> 的 <code>&lt;style&gt;</code> 标签中引入：</p>
+  <pre><code>&lt;style&gt;
+@import '@/css/tool.css';
+&lt;/style&gt;</code></pre>
+  <p>引入后即可在任意组件的 <code>class</code> 中直接使用。</p>
+  <div class="tip"><strong>设计理念：</strong>命名规则统一，易于记忆和推断。95% 的日常布局可通过本类库完成。</div>
+</div>
+
+<!-- 1. 杂类 -->
+<div class="section" id="misc">
+  <h2><span class="badge">1</span> 杂类</h2>
+  <table>
+    <tr><th>类名</th><th>作用</th></tr>
+    <tr><td><code>safe-height</code></td><td>底部安全区域高度（iPhone 底部横条）</td></tr>
+    <tr><td><code>overflow</code></td><td>溢出隐藏</td></tr>
+    <tr><td><code>overflow-x</code></td><td>横向溢出隐藏，纵向自动滚动</td></tr>
+    <tr><td><code>overflow-y</code></td><td>纵向溢出隐藏，横向自动滚动</td></tr>
+    <tr><td><code>relative</code></td><td>相对定位</td></tr>
+    <tr><td><code>absolute</code></td><td>绝对定位</td></tr>
+    <tr><td><code>fixed</code></td><td>固定定位</td></tr>
+    <tr><td><code>sticky</code></td><td>粘性定位（顶部）</td></tr>
+    <tr><td><code>clear</code></td><td>清除浮动</td></tr>
+    <tr><td><code>fulled</code></td><td>宽度 100%</td></tr>
+    <tr><td><code>fulled-height</code></td><td>高度 100%</td></tr>
+    <tr><td><code>gray-100</code></td><td>完全灰度</td></tr>
+    <tr><td><code>gray</code></td><td>25% 灰度</td></tr>
+    <tr><td><code>d-inline-block</code></td><td>内联块元素</td></tr>
+    <tr><td><code>d-block</code></td><td>块元素</td></tr>
+    <tr><td><code>d-inline</code></td><td>内联元素</td></tr>
+    <tr><td><code>d-none</code></td><td>隐藏元素</td></tr>
+    <tr><td><code>vertical-align-top</code></td><td>内联顶部对齐</td></tr>
+    <tr><td><code>vertical-align-middle</code></td><td>内联居中对齐</td></tr>
+    <tr><td><code>vertical-align-bottom</code></td><td>内联底部对齐</td></tr>
+    <tr><td><code>wrap</code></td><td>强制断行（含数字、单词）</td></tr>
+    <tr><td><code>nowrap</code></td><td>不断行</td></tr>
+    <tr><td><code>pointer</code></td><td>鼠标指针样式</td></tr>
+    <tr><td><code>box-border</code></td><td>box-sizing: border-box</td></tr>
+    <tr><td><code>box-content</code></td><td>box-sizing: content-box</td></tr>
+  </table>
+</div>
+
+<!-- 2. 文本类 -->
+<div class="section" id="text">
+  <h2><span class="badge">2</span> 文本类</h2>
+  <h3>文本大小</h3>
+  <table>
+    <tr><th>类名</th><th>大小</th></tr>
+    <tr><td><code>text-size-xxs</code></td><td>20rpx</td></tr>
+    <tr><td><code>text-size-xs</code></td><td>24rpx</td></tr>
+    <tr><td><code>text-size-s</code></td><td>26rpx</td></tr>
+    <tr><td><code>text-size-n</code></td><td>28rpx（默认）</td></tr>
+    <tr><td><code>text-size-g</code></td><td>30rpx</td></tr>
+    <tr><td><code>text-size-lg</code></td><td>32rpx</td></tr>
+    <tr><td><code>text-size-xl</code></td><td>36rpx</td></tr>
+    <tr><td><code>text-size-xxl</code></td><td>40rpx</td></tr>
+    <tr><td><code>text-size-xxxl</code></td><td>48rpx</td></tr>
+  </table>
+  <h3>文本粗细</h3>
+  <table>
+    <tr><th>类名</th><th>效果</th></tr>
+    <tr><td><code>text-weight-thin</code></td><td>细体 (300)</td></tr>
+    <tr><td><code>text-weight-s</code></td><td>正常 (400)</td></tr>
+    <tr><td><code>text-weight-n</code></td><td>中等 (500)</td></tr>
+    <tr><td><code>text-weight-b</code></td><td>加粗 (700)</td></tr>
+  </table>
+  <h3>文本对齐</h3>
+  <table>
+    <tr><th>类名</th><th>效果</th></tr>
+    <tr><td><code>text-align-left</code></td><td>左对齐</td></tr>
+    <tr><td><code>text-align-center</code></td><td>居中对齐</td></tr>
+    <tr><td><code>text-align-right</code></td><td>右对齐</td></tr>
+  </table>
+  <h3>文本溢出省略</h3>
+  <table>
+    <tr><th>类名</th><th>效果</th></tr>
+    <tr><td><code>text-overflow</code></td><td>单行省略号</td></tr>
+    <tr><td><code>text-overflow-{1~5}</code></td><td>指定行数省略号</td></tr>
+  </table>
+  <h3>其它文本</h3>
+  <table>
+    <tr><th>类名</th><th>效果</th></tr>
+    <tr><td><code>text-delete</code></td><td>删除线</td></tr>
+    <tr><td><code>text-underline</code></td><td>下划线</td></tr>
+    <tr><td><code>leading-none</code></td><td>行高 1</td></tr>
+    <tr><td><code>leading-tight</code></td><td>行高 1.25</td></tr>
+    <tr><td><code>leading-normal</code></td><td>行高 1.5</td></tr>
+    <tr><td><code>leading-loose</code></td><td>行高 2</td></tr>
+  </table>
+</div>
+
+<!-- 3. 圆角 -->
+<div class="section" id="radius">
+  <h2><span class="badge">3</span> 圆角</h2>
+  <h3>四边圆角 <code>round-{0~25}</code></h3>
+  <pre><code>&lt;view class="round-10"&gt;圆角 10rpx&lt;/view&gt;
+&lt;view class="rounded"&gt;50% 圆形&lt;/view&gt;
+&lt;view class="round-pill"&gt;胶囊形&lt;/view&gt;</code></pre>
+  <h3>单角圆角 <code>round-{方向}-{0~25}</code></h3>
+  <table>
+    <tr><th>方向</th><th>含义</th></tr>
+    <tr><td><code>tl</code></td><td>左上 (top-left)</td></tr>
+    <tr><td><code>tr</code></td><td>右上 (top-right)</td></tr>
+    <tr><td><code>bl</code></td><td>左下 (bottom-left)</td></tr>
+    <tr><td><code>br</code></td><td>右下 (bottom-right)</td></tr>
+  </table>
+  <h3>组合圆角</h3>
+  <table>
+    <tr><th>方向</th><th>含义</th><th>可用值</th></tr>
+    <tr><td><code>t</code></td><td>顶部两角</td><td>0, 5, 10, 15, 20, 25</td></tr>
+    <tr><td><code>b</code></td><td>底部两角</td><td>0, 5, 10, 15, 20, 25</td></tr>
+    <tr><td><code>l</code></td><td>左侧两角</td><td>0, 5, 10, 15, 20, 25</td></tr>
+    <tr><td><code>r</code></td><td>右侧两角</td><td>0, 5, 10, 15, 20, 25</td></tr>
+  </table>
+  <pre><code>&lt;view class="round-t-10"&gt;顶部两角圆角 10rpx&lt;/view&gt;</code></pre>
+</div>
+
+<!-- 4. 透明度 -->
+<div class="section" id="opacity">
+  <h2><span class="badge">4</span> 透明度</h2>
+  <p><code>opacity-{0~10}</code>，对应 0.0 ~ 1.0</p>
+  <pre><code>&lt;view class="opacity-5"&gt;50% 透明&lt;/view&gt;</code></pre>
+</div>
+
+<!-- 5. 投影 -->
+<div class="section" id="shadow">
+  <h2><span class="badge">5</span> 投影</h2>
+  <p><code>shadow-{0~25}</code>，数值越大阴影越强</p>
+  <pre><code>&lt;view class="shadow-5"&gt;轻微投影&lt;/view&gt;
+&lt;view class="shadow-15"&gt;中等投影&lt;/view&gt;
+&lt;view class="shadow-25"&gt;强烈投影&lt;/view&gt;</code></pre>
+</div>
+
+<!-- 6. 边线 -->
+<div class="section" id="border">
+  <h2><span class="badge">6</span> 边线</h2>
+  <h3>四边边线</h3>
+  <table>
+    <tr><th>类名</th><th>效果</th></tr>
+    <tr><td><code>border</code></td><td>1rpx 四边边线</td></tr>
+    <tr><td><code>border-0</code></td><td>无边线</td></tr>
+    <tr><td><code>border-{1~10}</code></td><td>对应粗细的四边边线</td></tr>
+  </table>
+  <h3>方向边线 <code>border-{方向}-{粗细}</code></h3>
+  <table>
+    <tr><th>方向</th><th>含义</th></tr>
+    <tr><td><code>t</code></td><td>上边线</td></tr>
+    <tr><td><code>b</code></td><td>下边线</td></tr>
+    <tr><td><code>l</code></td><td>左边线</td></tr>
+    <tr><td><code>r</code></td><td>右边线</td></tr>
+    <tr><td><code>a</code></td><td>四边边线</td></tr>
+  </table>
+  <pre><code>&lt;view class="border-b-2"&gt;底部 2rpx 边线&lt;/view&gt;</code></pre>
+</div>
+
+<!-- 7. zIndex -->
+<div class="section" id="zindex">
+  <h2><span class="badge">7</span> zIndex 层级</h2>
+  <table>
+    <tr><th>类名</th><th>效果</th></tr>
+    <tr><td><code>zIndex-{0~25}</code></td><td>z-index: 0~25</td></tr>
+    <tr><td><code>zIndex-n{1~5}</code></td><td>z-index: -1~-5</td></tr>
+  </table>
+</div>
+
+<!-- 8. 颜色类 -->
+<div class="section" id="color">
+  <h2><span class="badge">8</span> 颜色类</h2>
+  <h3>文字颜色 <code>text-{颜色名}</code></h3>
+  <table>
+    <tr><th>类名</th><th>预览</th></tr>
+    <tr><td><code>text-white</code></td><td><span class="color-demo" style="background:#fff"></span>#ffffff</td></tr>
+    <tr><td><code>text-black</code></td><td><span class="color-demo" style="background:#000"></span>#000000</td></tr>
+    <tr><td><code>text-red</code></td><td><span class="color-demo" style="background:#e54d42"></span>#e54d42</td></tr>
+    <tr><td><code>text-orange</code></td><td><span class="color-demo" style="background:#f37b1d"></span>#f37b1d</td></tr>
+    <tr><td><code>text-yellow</code></td><td><span class="color-demo" style="background:#fbbd08"></span>#fbbd08</td></tr>
+    <tr><td><code>text-olive</code></td><td><span class="color-demo" style="background:#8dc63f"></span>#8dc63f</td></tr>
+    <tr><td><code>text-green</code></td><td><span class="color-demo" style="background:#39b54a"></span>#39b54a</td></tr>
+    <tr><td><code>text-cyan</code></td><td><span class="color-demo" style="background:#1cbbb4"></span>#1cbbb4</td></tr>
+    <tr><td><code>text-blue</code></td><td><span class="color-demo" style="background:#0081ff"></span>#0081ff</td></tr>
+    <tr><td><code>text-purple</code></td><td><span class="color-demo" style="background:#6739b6"></span>#6739b6</td></tr>
+    <tr><td><code>text-mauve</code></td><td><span class="color-demo" style="background:#9c26b0"></span>#9c26b0</td></tr>
+    <tr><td><code>text-pink</code></td><td><span class="color-demo" style="background:#e03997"></span>#e03997</td></tr>
+    <tr><td><code>text-brown</code></td><td><span class="color-demo" style="background:#a5673f"></span>#a5673f</td></tr>
+    <tr><td><code>text-grey</code></td><td><span class="color-demo" style="background:#8799a3"></span>#8799a3</td></tr>
+    <tr><td><code>text-gray</code></td><td><span class="color-demo" style="background:#aaa"></span>#aaaaaa</td></tr>
+  </table>
+  <h3>品牌颜色 <code>text-{颜色名}</code></h3>
+  <table>
+    <tr><th>类名</th><th>预览</th></tr>
+    <tr><td><code>text-primary-light</code></td><td><span class="color-demo" style="background:#2fe25f"></span>#2fe25f</td></tr>
+    <tr><td><code>text-primary</code></td><td><span class="color-demo" style="background:#07c160"></span>#07c160</td></tr>
+    <tr><td><code>text-primary-dark</code></td><td><span class="color-demo" style="background:#0eb805"></span>#0eb805</td></tr>
+    <tr><td><code>text-secondary-light</code></td><td><span class="color-demo" style="background:#8abdff"></span>#8abdff</td></tr>
+    <tr><td><code>text-secondary</code></td><td><span class="color-demo" style="background:#6d5dfc"></span>#6d5dfc</td></tr>
+    <tr><td><code>text-secondary-dark</code></td><td><span class="color-demo" style="background:#5b0eeb"></span>#5b0eeb</td></tr>
+    <tr><td><code>text-greyLight-1</code></td><td><span class="color-demo" style="background:#E4EBF5"></span>#E4EBF5</td></tr>
+    <tr><td><code>text-greyLight-2</code></td><td><span class="color-demo" style="background:#c8d0e7"></span>#c8d0e7</td></tr>
+    <tr><td><code>text-greyLight-3</code></td><td><span class="color-demo" style="background:#bec8e4"></span>#bec8e4</td></tr>
+    <tr><td><code>text-greyDark</code></td><td><span class="color-demo" style="background:#9baacf"></span>#9baacf</td></tr>
+  </table>
+  
+  <h3>背景颜色 <code>bg-{颜色名}</code></h3>
+  <p>与文字颜色相同，前缀改为 <code>bg-</code>，另有 <code>bg-transparent</code> 透明背景。</p>
+  <pre><code>&lt;text class="text-red"&gt;红色文字&lt;/text&gt;
+&lt;view class="bg-blue"&gt;蓝色背景&lt;/view&gt;</code></pre>
+</div>
+
+<!-- 9. Flex 布局 -->
+<div class="section" id="flex">
+  <h2><span class="badge">9</span> Flex 布局</h2>
+  <h3>基础 Flex</h3>
+  <table>
+    <tr><th>类名</th><th>效果</th></tr>
+    <tr><td><code>flex</code></td><td>开启 flex 布局</td></tr>
+    <tr><td><code>flex-row</code></td><td>横向排列</td></tr>
+    <tr><td><code>flex-col</code></td><td>纵向排列</td></tr>
+    <tr><td><code>flex-wrap</code></td><td>自动换行</td></tr>
+    <tr><td><code>flex-nowrap</code></td><td>不换行</td></tr>
+    <tr><td><code>flex-shrink</code></td><td>不被压缩</td></tr>
+    <tr><td><code>flex-{0~12}</code></td><td>flex 占比</td></tr>
+  </table>
+  <h3>快捷排版</h3>
+  <table>
+    <tr><th>类名</th><th>效果</th></tr>
+    <tr><td><code>flex-start</code></td><td>居中左对齐</td></tr>
+    <tr><td><code>flex-end</code></td><td>居中右对齐</td></tr>
+    <tr><td><code>flex-center</code></td><td>完全居中</td></tr>
+    <tr><td><code>flex-between</code></td><td>两端对齐，垂直居中</td></tr>
+    <tr><td><code>flex-around</code></td><td>均分空间，垂直居中</td></tr>
+    <tr><td><code>flex-reverse</code></td><td>反转排列</td></tr>
+  </table>
+  <h3>Flex-row 精细排版</h3>
+  <p>需配合 <code>flex flex-row</code> 使用。格式：<code>flex-row-{纵向}-{横向}</code></p>
+  <table>
+    <tr><th>纵向 \ 横向</th><th>start (左)</th><th>center (中)</th><th>end (右)</th><th>between</th></tr>
+    <tr><td><strong>top</strong></td><td><code>flex-row-top-start</code></td><td><code>flex-row-top-center</code></td><td><code>flex-row-top-end</code></td><td></td></tr>
+    <tr><td><strong>center</strong></td><td><code>flex-row-center-start</code></td><td><code>flex-row-center-center</code></td><td><code>flex-row-center-end</code></td><td><code>flex-row-center-between</code></td></tr>
+    <tr><td><strong>bottom</strong></td><td><code>flex-row-bottom-start</code></td><td><code>flex-row-bottom-center</code></td><td><code>flex-row-bottom-end</code></td><td></td></tr>
+  </table>
+  <pre><code>&lt;view class="flex flex-row flex-row-center-between"&gt;...&lt;/view&gt;</code></pre>
+  <h3>Flex-col 精细排版</h3>
+  <p>需配合 <code>flex flex-col</code> 使用。格式：<code>flex-col-{横向}-{纵向}</code></p>
+  <pre><code>&lt;view class="flex flex-col flex-col-center-center"&gt;...&lt;/view&gt;</code></pre>
+  <h3>基线对齐</h3>
+  <table>
+    <tr><th>类名</th><th>效果</th></tr>
+    <tr><td><code>flex-row-baseline-start</code></td><td>基线 + 起始对齐</td></tr>
+    <tr><td><code>flex-row-baseline-center</code></td><td>基线 + 居中对齐</td></tr>
+    <tr><td><code>flex-row-baseline-end</code></td><td>基线 + 末尾对齐</td></tr>
+  </table>
+</div>
+
+<!-- 10. Grid 网格 -->
+<div class="section" id="grid">
+  <h2><span class="badge">10</span> Grid 网格</h2>
+  <table>
+    <tr><th>类名</th><th>效果</th></tr>
+    <tr><td><code>grid</code></td><td>开启网格布局</td></tr>
+    <tr><td><code>grid-col-{1~12}</code></td><td>一行几列</td></tr>
+  </table>
+  <pre><code>&lt;view class="grid grid-col-3"&gt;
+  &lt;view&gt;项目1&lt;/view&gt;
+  &lt;view&gt;项目2&lt;/view&gt;
+  &lt;view&gt;项目3&lt;/view&gt;
+  &lt;view&gt;项目4&lt;/view&gt; &lt;!-- 自动换行 --&gt;
+&lt;/view&gt;</code></pre>
+</div>
+
+<!-- 11. Gap 间隙 -->
+<div class="section" id="gap">
+  <h2><span class="badge">11</span> Gap 间隙</h2>
+  <div class="tip"><strong>规则：</strong>实际值 = x × 2rpx。与 margin/padding 不同，gap 只在元素之间产生间距。</div>
+  <table>
+    <tr><th>类名</th><th>效果</th></tr>
+    <tr><td><code>gap-{1~25}</code></td><td>四周间隙 (x×2 rpx)</td></tr>
+    <tr><td><code>gap-row-{1~25}</code></td><td>行间隙</td></tr>
+    <tr><td><code>gap-col-{1~25}</code></td><td>列间隙</td></tr>
+  </table>
+  <pre><code>&lt;view class="flex flex-row gap-10"&gt;
+  &lt;view&gt;项1&lt;/view&gt;
+  &lt;view&gt;项2&lt;/view&gt;
+&lt;/view&gt;</code></pre>
+</div>
+
+<!-- 12. 位置控制 -->
+<div class="section" id="position">
+  <h2><span class="badge">12</span> 位置控制</h2>
+  <p>用于 <code>absolute</code> / <code>fixed</code> / <code>relative</code> 元素的精确定位。</p>
+  <p><strong>方向：</strong><code>t</code>=顶, <code>l</code>=左, <code>r</code>=右, <code>b</code>=底</p>
+  <table>
+    <tr><th>规则</th><th>说明</th><th>示例</th></tr>
+    <tr><td><code>{方向}-{0~50}</code></td><td>正值 (rpx)</td><td><code>t-20</code> → top: 20rpx</td></tr>
+    <tr><td><code>{方向}-n{1~25}</code></td><td>4的倍数 (rpx)</td><td><code>t-n10</code> → top: 40rpx</td></tr>
+    <tr><td><code>{方向}--{0~50}</code></td><td>负值 (rpx)</td><td><code>t--20</code> → top: -20rpx</td></tr>
+    <tr><td><code>{方向}--n{1~25}</code></td><td>负的4倍数</td><td><code>t--n10</code> → top: -40rpx</td></tr>
+  </table>
+  <pre><code>&lt;view class="absolute t-24 l-n10"&gt;定位元素&lt;/view&gt;
+&lt;view class="absolute t--20"&gt;上浮元素&lt;/view&gt;</code></pre>
+</div>
+
+<!-- 13. 外边距 -->
+<div class="section" id="margin">
+  <h2><span class="badge">13</span> 外边距 (Margin)</h2>
+  <p><strong>方向：</strong><code>a</code>=四周, <code>l</code>=左, <code>r</code>=右, <code>t</code>=顶, <code>b</code>=底, <code>x</code>=水平左右, <code>y</code>=垂直上下</p>
+  <table>
+    <tr><th>规则</th><th>说明</th><th>示例</th></tr>
+    <tr><td><code>m{方向}-{0~50}</code></td><td>正值 (rpx)</td><td><code>ma-10</code> → 四周 10rpx</td></tr>
+    <tr><td><code>m{方向}-n{1~25}</code></td><td>4的倍数</td><td><code>ma-n10</code> → 四周 40rpx</td></tr>
+    <tr><td><code>m{方向}--{0~50}</code></td><td>负值</td><td><code>mt--20</code> → 顶部 -20rpx</td></tr>
+    <tr><td><code>m{方向}--n{1~25}</code></td><td>负的4倍数</td><td><code>mt--n10</code> → 顶部 -40rpx</td></tr>
+  </table>
+  <pre><code>&lt;view class="ma-20"&gt;四周 20rpx 外边距&lt;/view&gt;
+&lt;view class="mx-n10"&gt;左右 40rpx 外边距&lt;/view&gt;
+&lt;view class="mt--10"&gt;向上负外边距&lt;/view&gt;</code></pre>
+</div>
+
+<!-- 14. 内边距 -->
+<div class="section" id="padding">
+  <h2><span class="badge">14</span> 内边距 (Padding)</h2>
+  <p><strong>方向：</strong><code>a</code>=四周, <code>l</code>=左, <code>r</code>=右, <code>t</code>=顶, <code>b</code>=底, <code>x</code>=水平左右, <code>y</code>=垂直上下</p>
+  <table>
+    <tr><th>规则</th><th>说明</th><th>示例</th></tr>
+    <tr><td><code>p{方向}-{0~50}</code></td><td>正值 (rpx)</td><td><code>pa-20</code> → 四周 20rpx</td></tr>
+    <tr><td><code>p{方向}-n{1~25}</code></td><td>4的倍数</td><td><code>pa-n10</code> → 四周 40rpx</td></tr>
+  </table>
+  <pre><code>&lt;view class="pa-30"&gt;四周 30rpx 内边距&lt;/view&gt;
+&lt;view class="px-20 py-10"&gt;左右 20rpx，上下 10rpx&lt;/view&gt;</code></pre>
+</div>
+
+<!-- 15. 宽度类 -->
+<div class="section" id="width">
+  <h2><span class="badge">15</span> 宽度类</h2>
+  <table>
+    <tr><th>类名</th><th>效果</th></tr>
+    <tr><td><code>w-{10~750}</code></td><td>固定宽度（步进 10rpx）</td></tr>
+    <tr><td><code>w-full</code></td><td>宽度 100%</td></tr>
+    <tr><td><code>w-half</code></td><td>宽度 50%</td></tr>
+    <tr><td><code>w-third</code></td><td>宽度 33.33%</td></tr>
+    <tr><td><code>w-quarter</code></td><td>宽度 25%</td></tr>
+  </table>
+</div>
+
+<!-- 16. 高度类 -->
+<div class="section" id="height">
+  <h2><span class="badge">16</span> 高度类</h2>
+  <table>
+    <tr><th>类名</th><th>效果</th></tr>
+    <tr><td><code>h-{10~750}</code></td><td>固定高度（步进 10rpx）</td></tr>
+    <tr><td><code>h-full</code></td><td>高度 100%</td></tr>
+    <tr><td><code>h-half</code></td><td>高度 50%</td></tr>
+    <tr><td><code>h-screen</code></td><td>高度 100vh（全屏）</td></tr>
+  </table>
+</div>
+
+<!-- 常用组合示例 -->
+<div class="section" id="examples">
+  <h2><span class="badge">实战</span> 常用组合示例</h2>
+  <h3>居中卡片</h3>
+  <pre><code>&lt;view class="flex flex-center fulled" style="height:400rpx"&gt;
+  &lt;view class="bg-white round-10 shadow-5 pa-30 ma-20"&gt;
+    &lt;text class="text-size-lg text-weight-b text-align-center"&gt;标题&lt;/text&gt;
+    &lt;text class="text-size-n text-gray mt-10"&gt;描述内容&lt;/text&gt;
+  &lt;/view&gt;
+&lt;/view&gt;</code></pre>
+  <h3>顶部导航栏</h3>
+  <pre><code>&lt;view class="flex flex-between bg-white pa-20 border-b"&gt;
+  &lt;text class="text-size-lg text-weight-b"&gt;返回&lt;/text&gt;
+  &lt;text class="text-size-lg text-weight-b"&gt;标题&lt;/text&gt;
+  &lt;text class="text-size-lg"&gt;更多&lt;/text&gt;
+&lt;/view&gt;</code></pre>
+  <h3>三列网格布局</h3>
+  <pre><code>&lt;view class="grid grid-col-3 gap-5 pa-20"&gt;
+  &lt;view class="bg-white round-10 shadow-3 pa-20 flex flex-center" v-for="i in 9"&gt;
+    &lt;text&gt;项目 {{i}}&lt;/text&gt;
+  &lt;/view&gt;
+&lt;/view&gt;</code></pre>
+  <h3>底部安全区按钮</h3>
+  <pre><code>&lt;view class="fixed b-0 fulled bg-white pa-20"&gt;
+  &lt;view class="bg-blue round-10 flex flex-center" style="height:88rpx"&gt;
+    &lt;text class="text-white text-size-lg text-weight-b"&gt;确认&lt;/text&gt;
+  &lt;/view&gt;
+  &lt;view class="safe-height"&gt;&lt;/view&gt;
+&lt;/view&gt;</code></pre>
+  <h3>横向滚动标签</h3>
+  <pre><code>&lt;view class="flex flex-row overflow-x gap-3 pa-20"&gt;
+  &lt;view class="bg-gray round-pill px-20 py-10 nowrap" v-for="tag in tags"&gt;
+    &lt;text class="text-size-s"&gt;{{tag}}&lt;/text&gt;
+  &lt;/view&gt;
+&lt;/view&gt;</code></pre>
+</div>
+
+<!-- 命名规则总结 -->
+<div class="section" id="rules">
+  <h2><span class="badge">参考</span> 命名规则总结</h2>
+  <table>
+    <tr><th>前缀/模式</th><th>含义</th></tr>
+    <tr><td><code>text-</code></td><td>文本相关</td></tr>
+    <tr><td><code>bg-</code></td><td>背景相关</td></tr>
+    <tr><td><code>round-</code></td><td>圆角</td></tr>
+    <tr><td><code>shadow-</code></td><td>投影</td></tr>
+    <tr><td><code>border-</code></td><td>边线</td></tr>
+    <tr><td><code>flex-</code></td><td>Flex 布局</td></tr>
+    <tr><td><code>grid-</code></td><td>网格布局</td></tr>
+    <tr><td><code>gap-</code></td><td>元素间隙</td></tr>
+    <tr><td><code>m</code> + 方向</td><td>外边距</td></tr>
+    <tr><td><code>p</code> + 方向</td><td>内边距</td></tr>
+    <tr><td><code>t / l / r / b</code></td><td>位置控制</td></tr>
+    <tr><td><code>w- / h-</code></td><td>宽度 / 高度</td></tr>
+    <tr><td><code>zIndex-</code></td><td>层级</td></tr>
+    <tr><td><code>-n{数字}</code></td><td>值为 数字×4</td></tr>
+    <tr><td><code>--{数字}</code></td><td>负值</td></tr>
+    <tr><td><code>--n{数字}</code></td><td>负的 数字×4</td></tr>
+  </table>
+</div>
+
+<!-- 注意事项 -->
+<div class="section" id="notes">
+  <h2><span class="badge">注意</span> 注意事项</h2>
+  <div class="warn"><strong>优先级：</strong>本类库为纯 CSS，优先级低于内联样式和 <code>!important</code></div>
+  <table>
+    <tr><th>项目</th><th>说明</th></tr>
+    <tr><td>类名冲突</td><td>如与已有样式冲突，可通过调整引入顺序解决</td></tr>
+    <tr><td>性能</td><td>类库较大（~150KB），建议在生产环境使用构建工具进行 tree-shaking 或按需引入</td></tr>
+    <tr><td>平台兼容</td><td>所有类均兼容 H5、小程序、APP 等多端</td></tr>
+    <tr><td>rpx 单位</td><td>所有尺寸基于 750rpx 设计稿宽度，自动适配不同屏幕</td></tr>
+  </table>
+</div>
+
+</main>
+
+<script>
+// 搜索过滤
+function filterNav(keyword){
+  const items=document.querySelectorAll('.nav-item');
+  const kw=keyword.toLowerCase().trim();
+  items.forEach(item=>{
+    const text=(item.textContent+' '+(item.dataset.text||'')).toLowerCase();
+    item.style.display=(!kw||text.includes(kw))?'':'none';
+  });
+}
+// 滚动高亮
+const sections=document.querySelectorAll('.section[id]');
+const navItems=document.querySelectorAll('.nav-item');
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      navItems.forEach(n=>n.classList.remove('active'));
+      const target=document.querySelector('.nav-item[href="#'+entry.target.id+'"]');
+      if(target)target.classList.add('active');
+    }
+  });
+},{rootMargin:'-10% 0px -80% 0px'});
+sections.forEach(s=>observer.observe(s));
+// 点击平滑滚动+关闭移动端菜单
+navItems.forEach(item=>{
+  item.addEventListener('click',function(e){
+    if(window.innerWidth<=768){
+      document.querySelector('.sidebar').classList.remove('open');
+    }
+  });
+});
+</script>
+</body>
+</html>

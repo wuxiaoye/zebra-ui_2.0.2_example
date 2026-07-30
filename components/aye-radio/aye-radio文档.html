@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AyeRadio / AyeRadioGroup 单选框组件使用文档</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",system-ui,-apple-system}
+body{background:#f6f8fa;padding:30px;color:#333;line-height:1.8}
+.container{max-width:1100px;margin:0 auto}
+h1{font-size:26px;color:#07c160;border-left:5px solid #07c160;padding-left:12px;margin-bottom:24px}
+h2{font-size:20px;margin:32px 0 16px;padding-bottom:6px;border-bottom:1px solid #e5e7eb;color:#222}
+h3{font-size:17px;margin:22px 0 10px;color:#444}
+.block{background:#fff;padding:22px;border-radius:8px;box-shadow:0 1px 8px rgba(0,0,0,0.06);margin-bottom:26px}
+.tip{background:#ecfdf3;border:1px solid #86e0b1;padding:14px;border-radius:6px;margin:14px 0}
+.warn{background:#fff7e6;border:1px solid #ffd591;padding:14px;border-radius:6px;margin:14px 0}
+table{width:100%;border-collapse:collapse;margin:16px 0}
+table th,table td{border:1px solid #ddd;padding:11px 14px;text-align:left}
+table th{background:#f0fdf6;font-weight:bold}
+pre{background:#1e1e1e;color:#fff;padding:18px;border-radius:6px;overflow-x:auto;margin:16px 0}
+code{background:#f1f1f1;padding:2px 6px;border-radius:3px;font-family:Consolas}
+ul,ol{padding-left:22px;margin:10px 0}
+li{margin:6px 0}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>AyeRadio 单选框组件完整使用文档</h1>
+
+<div class="block">
+<h2>一、组件概述</h2>
+<p>基于 Vue3 + uni-app 开发，分为两个联动组件：</p>
+<ul>
+<li><code>aye-radio.vue</code>：单个单选选项，保留原始新拟态凹凸阴影UI，CSS一行未改动</li>
+<li><code>aye-radio-group.vue</code>：单选组容器，实现互斥单选、属性全局透传</li>
+</ul>
+
+<div class="tip">
+<strong>核心特性清单</strong>
+1. 完全保留原始单选圆圈新拟态阴影样式，不删减任何CSS代码；
+2. Group全局配置自动下发子项，子项props优先级更高；
+3. 支持禁用置灰、自定义图标大小/颜色、文字大小/颜色；
+4. 横向排列 / 竖向单列排列；竖向可开启整行占满+两端对齐，支持文字左、圆点右反转布局；
+5. 两个组件均对外抛出 <code>change</code> 事件；
+6. 无需自定义形状、无需替换图标，只保留原生圆形单选圆点。
+</div>
+</div>
+
+<div class="block">
+<h2>二、aye-radio 单个单选框</h2>
+<h3>2.1 Props 属性列表</h3>
+<table>
+<tr>
+<th>参数名</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+<tr>
+<td>modelValue</td>
+<td>String | Number</td>
+<td>''</td>
+<td>组件独立使用时v-model绑定值</td>
+</tr>
+<tr>
+<td>value</td>
+<td>String | Number</td>
+<td>必填</td>
+<td>当前选项唯一标识，放入group必须唯一</td>
+</tr>
+<tr>
+<td>label</td>
+<td>String</td>
+<td>''</td>
+<td>单选框右侧展示文字</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>Boolean</td>
+<td>undefined</td>
+<td>是否禁用，优先级高于group全局禁用</td>
+</tr>
+<tr>
+<td>iconSize</td>
+<td>String</td>
+<td>50rpx</td>
+<td>单选外圆整体尺寸，如 46rpx</td>
+</tr>
+<tr>
+<td>iconActiveColor</td>
+<td>String</td>
+<td>#07c160</td>
+<td>选中时内部圆点颜色</td>
+</tr>
+<tr>
+<td>iconNormalColor</td>
+<td>String</td>
+<td>#9baacf</td>
+<td>未选中内部圆点颜色</td>
+</tr>
+<tr>
+<td>labelColor</td>
+<td>String</td>
+<td>#333</td>
+<td>文字常规颜色</td>
+</tr>
+<tr>
+<td>labelSize</td>
+<td>String</td>
+<td>32rpx</td>
+<td>文字字号大小</td>
+</tr>
+<tr>
+<td>verticalFull</td>
+<td>Boolean</td>
+<td>undefined</td>
+<td>竖向布局是否占满整行、两端对齐</td>
+</tr>
+<tr>
+<td>reverseAlign</td>
+<td>Boolean</td>
+<td>undefined</td>
+<td>竖向铺满时反转：文字居左，圆点居右</td>
+</tr>
+</table>
+
+<h3>2.2 Events 抛出事件</h3>
+<table>
+<tr>
+<th>事件名</th>
+<th>回调参数</th>
+<th>触发说明</th>
+</tr>
+<tr>
+<td>update:modelValue</td>
+<td>value值</td>
+<td>用于v-model双向绑定</td>
+</tr>
+<tr>
+<td>change</td>
+<td>(value, true)</td>
+<td>点击选中触发；禁用状态不执行</td>
+</tr>
+</table>
+
+<h3>2.3 独立单独使用示例</h3>
+<pre>
+&lt;template&gt;
+  &lt;aye-radio
+    v-model="singleVal"
+    label="同意用户协议"
+    value="agree"
+    icon-active-color="#1677ff"
+    @change="radioChange"
+  /&gt;
+&lt;/template&gt;
+
+&lt;script setup&gt;
+import { ref } from 'vue'
+import AyeRadio from '@/components/aye-radio.vue'
+
+const singleVal = ref('')
+const radioChange = (val, checked) =&gt; {
+  console.log('选中值：', val)
+}
+&lt;/script&gt;
+</pre>
+</div>
+
+<div class="block">
+<h2>三、aye-radio-group 单选组容器</h2>
+<h3>3.1 Props 属性</h3>
+<table>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+<tr>
+<td>modelValue</td>
+<td>String | Number</td>
+<td>''</td>
+<td>v-model绑定当前选中项value</td>
+</tr>
+<tr>
+<td>layout</td>
+<td>String</td>
+<td>horizontal</td>
+<td>布局：horizontal横向 / vertical竖向</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>Boolean</td>
+<td>false</td>
+<td>整组全部禁用置灰</td>
+</tr>
+<tr>
+<td>iconSize</td>
+<td>String</td>
+<td>''</td>
+<td>全局统一单选框尺寸</td>
+</tr>
+<tr>
+<td>iconActiveColor</td>
+<td>String</td>
+<td>''</td>
+<td>全局选中圆点颜色</td>
+</tr>
+<tr>
+<td>iconNormalColor</td>
+<td>String</td>
+<td>''</td>
+<td>全局未选中圆点颜色</td>
+</tr>
+<tr>
+<td>labelColor</td>
+<td>String</td>
+<td>''</td>
+<td>全局文字颜色</td>
+</tr>
+<tr>
+<td>labelSize</td>
+<td>String</td>
+<td>''</td>
+<td>全局文字大小</td>
+</tr>
+<tr>
+<td>verticalFull</td>
+<td>Boolean</td>
+<td>false</td>
+<td>子项默认开启竖向铺满整行</td>
+</tr>
+<tr>
+<td>reverseAlign</td>
+<td>Boolean</td>
+<td>false</td>
+<td>子项默认文字左、圆点右反转布局</td>
+</tr>
+</table>
+
+<h3>3.2 Events 事件</h3>
+<table>
+<tr>
+<th>事件</th>
+<th>参数</th>
+<th>说明</th>
+</tr>
+<tr>
+<td>update:modelValue</td>
+<td>选中值</td>
+<td>双向绑定</td>
+</tr>
+<tr>
+<td>change</td>
+<td>selectedValue</td>
+<td>任意子项切换选中立即触发</td>
+</tr>
+</table>
+
+<h3>3.3 完整业务调用示例（最常用）</h3>
+<pre>
+&lt;template&gt;
+  &lt;view style="padding:30rpx"&gt;
+    &lt;!-- 竖向排列 + 整行铺满 + 文字左圆点右 --&gt;
+    &lt;aye-radio-group
+      v-model="selectVal"
+      layout="vertical"
+      vertical-full
+      reverse-align
+      icon-size="48rpx"
+      icon-active-color="#0088ff"
+      label-size="34rpx"
+      @change="groupChange"
+    &gt;
+      &lt;aye-radio label="选项A" value="A" /&gt;
+      &lt;aye-radio label="选项B（禁用不可选）" value="B" disabled /&gt;
+      &lt;aye-radio label="选项C" value="C" /&gt;
+    &lt;/aye-radio-group&gt;
+
+    &lt;view style="margin-top:40rpx"&gt;当前选中：{{ selectVal }}&lt;/view&gt;
+  &lt;/view&gt;
+&lt;/template&gt;
+
+&lt;script setup&gt;
+import { ref } from 'vue'
+import AyeRadio from '@/components/aye-radio.vue'
+import AyeRadioGroup from '@/components/aye-radio-group.vue'
+
+const selectVal = ref('')
+const groupChange = (val) =&gt; {
+  console.log('单选组变更：', val)
+}
+&lt;/script&gt;
+</pre>
+</div>
+
+<div class="block">
+<h2>四、优先级规则（重要）</h2>
+<div class="tip">
+<strong>样式/禁用权值顺序：</strong>
+子组件单独传入props > Group全局props > 组件内部默认值
+</div>
+<p>举例：Group设置全局disabled=true，某一个子项单独写 <code>:disabled="false"</code>，则该项可正常点击选择。</p>
+</div>
+
+<div class="block">
+<h2>五、竖向左右反转布局生效条件</h2>
+<p>想要实现效果：<strong>列表竖向排布、每一项撑满整行、文字在左侧，单选圆点在最右侧</strong>，三个属性必须同时开启：</p>
+<pre>
+layout="vertical"
+vertical-full
+reverse-align
+</pre>
+</div>
+
+<div class="block">
+<h2>六、UI样式说明（严格保留原始代码）</h2>
+<ol>
+<li>单选圆圈使用新拟态浮雕阴影：未选中外凸阴影，选中内凹inset阴影；</li>
+<li>外框50rpx、内部圆点25rpx比例固定，自定义尺寸会等比例缩放圆点；</li>
+<li>过渡动画0.3s缓动，点击切换视觉流畅；</li>
+<li>禁用项整体透明度降低至0.55，pointer-events禁止点击；</li>
+<li>内部CSS变量、阴影参数、圆角全部沿用最初提供源码，无删减修改。</li>
+</ol>
+</div>
+
+<div class="block">
+<h2>七、注意事项 & 避坑指南</h2>
+<div class="warn">
+<ol>
+<li>放入 aye-radio-group 中的每一个 aye-radio 必须填写唯一 <code>value</code>，否则互斥逻辑失效；</li>
+<li>uni-app模板class绑定统一使用三元表达式写法，避免Vite Vue解析报错；</li>
+<li>仅支持 Vue3 Composition API，Vue2项目无法直接使用；</li>
+<li>rpx单位为uni-app小程序适配单位，H5端自动转换；</li>
+<li>单选本身为互斥逻辑，不提供多选、最大选择数量max参数。</li>
+</ol>
+</div>
+</div>
+
+<div class="block">
+<h2>八、同系列组件统一架构说明</h2>
+<p>本套Radio组件与之前AyeCheckbox复选框组件架构完全统一：</p>
+<ul>
+<li>父组件provide注入，子组件inject接收全局参数；</li>
+<li>props优先级计算逻辑一致；</li>
+<li>change事件抛出规则一致；</li>
+<li>布局参数命名规范统一（verticalFull/reverseAlign），便于团队维护记忆。</li>
+</ul>
+</div>
+
+</div>
+</body>
+</html>

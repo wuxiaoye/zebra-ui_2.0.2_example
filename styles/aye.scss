@@ -1,0 +1,103 @@
+/* 卡片外阴影样式 -大一些*/
+.add_shadow_big {
+    box-shadow: 6px 6px 12px var(--greyLight-2), -4px -4px 10px var(--white);
+}
+/* 卡片外阴影样式 */
+.add_shadow {
+    box-shadow: 3px 3px 6px var(--greyLight-2), -2px -2px 5px var(--white);
+}
+/* 卡片外阴影样式 - 小一些*/
+.add_shadow_mini {
+    box-shadow: 2px 2px 4px var(--greyLight-2), -1px -1px 3px var(--white);
+}
+
+/* 内凹阴影 */
+.add_shadow_inset {
+    box-shadow: inset 2px 2px 4px var(--greyLight-2), inset -2px -2px 4px var(--white);
+}
+/* 内凹阴影-小一些 */
+.add_shadow_inset_mini {
+    box-shadow: inset 1px 1px 1px var(--greyLight-2), inset -2px -2px 4px var(--white);
+}
+
+/* 仅有顶部 - 白色阴影 */
+.add_shadow_top {
+    box-shadow: -2px -2px 5px var(--white);
+}
+/*  仅有底部 - 灰色阴影*/
+.add_shadow_bottom{
+    box-shadow: 3px 3px 6px var(--greyLight-2);
+}
+/*  仅有底部 - 灰色阴影 - 小一些*/
+.add_shadow_bottom_mini{
+    box-shadow: 1px 1px 3px var(--greyLight-2);
+}
+
+/*  动画-放大, 旋转*/
+@keyframes jump-rotate {
+  25% {
+      transform: scale(1.5) rotate(8deg);
+    }
+    50% {
+      transform: scale(0.9) rotate(0deg);
+    }
+    75% {
+      transform: scale(1.15) rotate(5deg);
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+    }
+}
+
+/*  动画-放大, 跳动 */
+@keyframes jump {
+  25% {
+      transform: scale(1.35)  translateY(-6px);
+    }
+    50% {
+      transform: scale(0.9)  translateY(0);
+    }
+    75% {
+      transform: scale(1.15)  translateY(-3px);
+    }
+    100% {
+      transform: scale(1)  translateY(0);
+    }
+}
+/*  动画-放大 */
+@keyframes scale {
+  25% {
+      transform: scale(1.35);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+/*  动画-按下 */
+@keyframes press {
+  25% {
+      transform: translateY(3px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+/* 当 hoverClass 生效时触发的样式 */
+/*  动画-放大, 跳动 */
+.hover-jump {
+  animation: jump 0.5s ease;
+}
+/*  动画-放大, 旋转*/
+.hover-jump-rotate {
+  animation: jump-rotate 0.5s ease;
+}
+/*  放大 */
+.hover-scale {
+  animation: scale 0.4s ease;
+}
+/*  按下 */
+.hover-press {
+  animation: press 0.3s ease;
+}
