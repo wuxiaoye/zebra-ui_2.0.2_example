@@ -62,6 +62,8 @@
           </z-button>
         </view>
       </demo-block>
+      
+      
       <demo-block title="表单项类型">
         <z-form ref="formItem" @submit="onSubmitItem">
           <z-field name="switch" label="开关">
@@ -69,10 +71,24 @@
               <z-switch v-model="switchChecked" />
             </template>
           </z-field>
+          
+          <z-field name="switch2" label="开关2">
+              <template #input>
+                    <aye-switch v-model="switchChecked"></aye-switch>
+                  
+              </template>
+          </z-field>
+          
 
           <z-field name="checkbox" label="复选框">
             <template #input>
               <z-checkbox v-model="checkbox" shape="square" />
+            </template>
+          </z-field>
+          
+          <z-field name="checkbox2" label="复选框2">
+            <template #input>
+               <aye-checkbox label="复选框2" v-model="checkbox"></aye-checkbox>
             </template>
           </z-field>
 
@@ -84,6 +100,16 @@
               </z-checkbox-group>
             </template>
           </z-field>
+          
+          <z-field name="checkboxGroup2" label="复选框组2">
+              <template #input>
+                  <aye-checkbox-group v-model="checkboxGroup">
+                      <aye-checkbox value="1" label="蜂蜜"></aye-checkbox>
+                      <aye-checkbox value="2" label="罗汉果"></aye-checkbox>
+                      <aye-checkbox value="3" label="绿茶"></aye-checkbox>
+                  </aye-checkbox-group>
+              </template>
+          </z-field>
 
           <z-field name="radio" label="单选框">
             <template #input>
@@ -92,6 +118,17 @@
                 <z-radio name="2">选项2</z-radio>
               </z-radio-group>
             </template>
+          </z-field>
+          
+          <z-field name="radio" label="单选框2">
+              <template #input>
+                  <aye-radio-group v-model="radio2">
+                      <aye-radio value="a" label="黑豆"></aye-radio>
+                      <aye-radio value="b" label="绿豆"></aye-radio>
+                      <aye-radio value="c" label="黄豆"></aye-radio>
+                      <aye-radio value="d" label="红豆"></aye-radio>
+                  </aye-radio-group>
+              </template>
           </z-field>
 
           <z-field name="stepper" label="步进器">
@@ -212,6 +249,7 @@ const areaCode = ref('')
 const resultCalendar = ref('')
 const rate = ref(3)
 const radio = ref('1')
+const radio2 = ref('b')
 const slider = ref(50)
 const stepper = ref(1)
 const uploader = ref([

@@ -140,7 +140,6 @@ const emit = defineEmits([
 const tabs = ref<CascaderTab[]>([])
 const cascaderTabsRef = ref()
 const activeTab = ref(0)
-let isInternalUpdate = false
 
 const closeIconStyle = computed(() => {
   const styles = {
@@ -214,18 +213,14 @@ const getSelectedOptionsByValue = (
 const updateTabs = () => {
   const { options, modelValue } = props
 
-  if (
-    modelValue !== undefined &&
-    modelValue !== '' &&
-    typeof modelValue !== 'object'
-  ) {
+  if (modelValue !== undefined) {
     // @ts-ignore
     const selectedOptions = getSelectedOptionsByValue(options, modelValue)
 
     if (selectedOptions) {
       let optionsCursor = options
       // @ts-ignore
-      const newTabs = selectedOptions.map((option) => {
+      tabs.value = selectedOptions.map((option) => {
         const tab = {
           options: optionsCursor,
           selected: option
@@ -242,14 +237,12 @@ const updateTabs = () => {
       })
 
       if (optionsCursor) {
-        newTabs.push({
+        tabs.value.push({
           // @ts-ignore
           options: optionsCursor,
           selected: null
         })
       }
-
-      tabs.value = newTabs
 
       nextTick(() => {
         activeTab.value = tabs.value.length - 1
@@ -257,15 +250,6 @@ const updateTabs = () => {
 
       return
     }
-  }
-
-  // Avoid recreating tabs array when data hasn't changed
-  if (
-    tabs.value.length === 1 &&
-    !tabs.value[0].selected &&
-    tabs.value[0].options === options
-  ) {
-    return
   }
 
   tabs.value = [
@@ -288,7 +272,6 @@ const onSelect = (option: CascaderOption, tabIndex: number) => {
     return
   }
 
-  isInternalUpdate = true
   tabs.value[tabIndex].selected = option
 
   if (tabs.value.length > tabIndex + 1) {
@@ -329,9 +312,6 @@ const onSelect = (option: CascaderOption, tabIndex: number) => {
     }
     emit('finish', params)
   }
-  nextTick(() => {
-    isInternalUpdate = false
-  })
 }
 
 const onClose = () => emit('close')
@@ -346,19 +326,10 @@ watch(activeTab, () => {
     }
   }, 500)
 })
-watch(
-  () => props.options,
-  () => {
-    if (isInternalUpdate) return
-    updateTabs()
-  },
-  { deep: true }
-)
+watch(() => props.options, updateTabs, { deep: true })
 watch(
   () => props.modelValue,
   (value) => {
-    if (isInternalUpdate) return
-    if (value !== undefined && typeof value === 'object') return
     if (value !== undefined) {
       const values = tabs.value.map((tab) => tab.selected?.[valueKey])
       if (values.includes(value)) {

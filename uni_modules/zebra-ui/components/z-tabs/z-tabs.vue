@@ -440,10 +440,9 @@ const setCurrentIndex = (
 
   const newTab = children[newIndex]
   const newName = getTabName(newTab, newIndex)
-  const indexChanged = state.currentIndex !== newIndex
   const shouldEmitChange = state.currentIndex !== null
 
-  if (indexChanged) {
+  if (state.currentIndex !== newIndex) {
     state.currentIndex = newIndex
 
     if (!skipScrollIntoView) {
@@ -455,7 +454,7 @@ const setCurrentIndex = (
   if (newName !== props.active) {
     emit('update:active', newName)
 
-    if (indexChanged && shouldEmitChange) {
+    if (shouldEmitChange) {
       emit('change', newName, newTab.title)
     }
   }
@@ -554,12 +553,9 @@ watch(
   setLine
 )
 
-let isUpdatingIndex = false
-
 watch(
   () => props.active,
   (value) => {
-    if (isUpdatingIndex) return
     if (value !== currentName.value) {
       setCurrentIndexByName(value)
     }
@@ -569,13 +565,11 @@ watch(
 watch(
   () => children.length,
   () => {
-    if (state.inited && !isUpdatingIndex && children.length > 0) {
-      isUpdatingIndex = true
+    if (state.inited) {
       setCurrentIndexByName(props.active)
       setLine()
       nextTick(() => {
         scrollIntoView(true)
-        isUpdatingIndex = false
       })
     }
   }
@@ -872,26 +866,14 @@ defineExpose({
 })
 
 watch(count, () => {
-  if ((props.animated || props.swipeable) && count.value > 0) {
+  if (props.animated || props.swipeable) {
     initialize(stateSwipe.active)
   }
 })
 
-let isSwipingToCurrent = false
-
 const swipeToCurrentTab = (index: number) => {
-  if (isSwipingToCurrent) return
   if (stateSwipe.active !== index) {
-    isSwipingToCurrent = true
-    // Directly sync swipe state instead of going through async swipeTo
-    // to prevent recursive updates (swipeTo -> move -> setCurrentIndex -> state.currentIndex change)
-    stateSwipe.active = index
-    if (size.value) {
-      stateSwipe.offset = getTargetOffset(index)
-    }
-    nextTick(() => {
-      isSwipingToCurrent = false
-    })
+    swipeTo(index, { immediate: !state.inited })
   }
 }
 

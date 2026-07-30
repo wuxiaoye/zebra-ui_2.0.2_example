@@ -666,7 +666,7 @@ if (uni.restoreGlobal) {
       virtualHost: true
     }
   };
-  const _sfc_main$2I = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$2L = /* @__PURE__ */ vue.defineComponent({
     ...__default__$1m,
     props: {
       dot: Boolean,
@@ -736,7 +736,7 @@ if (uni.restoreGlobal) {
     }
     return target;
   };
-  function _sfc_render$2H(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2K(_ctx, _cache, $props, $setup, $data, $options) {
     return $setup.instance.slots.default ? (vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -862,14 +862,14 @@ if (uni.restoreGlobal) {
       /* STABLE_FRAGMENT */
     ));
   }
-  const zBadge = /* @__PURE__ */ _export_sfc(_sfc_main$2I, [["render", _sfc_render$2H], ["__scopeId", "data-v-4f779752"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-badge/z-badge.vue"]]);
+  const zBadge = /* @__PURE__ */ _export_sfc(_sfc_main$2L, [["render", _sfc_render$2K], ["__scopeId", "data-v-4f779752"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-badge/z-badge.vue"]]);
   const __default__$1l = {
     name: "ZIcon",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$2H = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$2K = /* @__PURE__ */ vue.defineComponent({
     ...__default__$1l,
     props: {
       dot: Boolean,
@@ -942,7 +942,7 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   });
-  function _sfc_render$2G(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2J(_ctx, _cache, $props, $setup, $data, $options) {
     var _a, _b, _c, _d, _e;
     return vue.openBlock(), vue.createBlock($setup["zBadge"], {
       dot: $props.dot,
@@ -988,7 +988,7 @@ if (uni.restoreGlobal) {
       /* FORWARDED */
     }, 8, ["dot", "content", "max", "color", "offset", "show-zero", "position", "wrapper-style"]);
   }
-  const zIcon = /* @__PURE__ */ _export_sfc(_sfc_main$2H, [["render", _sfc_render$2G], ["__scopeId", "data-v-bd9bf2f3"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-icon/z-icon.vue"]]);
+  const zIcon = /* @__PURE__ */ _export_sfc(_sfc_main$2K, [["render", _sfc_render$2J], ["__scopeId", "data-v-bd9bf2f3"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-icon/z-icon.vue"]]);
   const ON_RESIZE = "onResize";
   const ON_PAGE_SCROLL = "onPageScroll";
   function formatAppLog(type, filename, ...args) {
@@ -1014,7 +1014,7 @@ if (uni.restoreGlobal) {
     2
     /* HookFlags.PAGE */
   );
-  const _sfc_main$2G = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$2J = /* @__PURE__ */ vue.defineComponent({
     __name: "z-loading",
     props: {
       size: numericProp,
@@ -1044,7 +1044,7 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   });
-  function _sfc_render$2F(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2I(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -1136,14 +1136,14 @@ if (uni.restoreGlobal) {
       /* CLASS, STYLE */
     );
   }
-  const zLoading = /* @__PURE__ */ _export_sfc(_sfc_main$2G, [["render", _sfc_render$2F], ["__scopeId", "data-v-69e19370"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-loading/z-loading.vue"]]);
+  const zLoading = /* @__PURE__ */ _export_sfc(_sfc_main$2J, [["render", _sfc_render$2I], ["__scopeId", "data-v-69e19370"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-loading/z-loading.vue"]]);
   const __default__$1k = {
     name: "ZSwitch",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$2F = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$2I = /* @__PURE__ */ vue.defineComponent({
     ...__default__$1k,
     props: {
       size: numericProp,
@@ -1198,7 +1198,7 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   });
-  function _sfc_render$2E(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2H(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -1232,8 +1232,8 @@ if (uni.restoreGlobal) {
       /* CLASS, STYLE */
     );
   }
-  const __easycom_1$m = /* @__PURE__ */ _export_sfc(_sfc_main$2F, [["render", _sfc_render$2E], ["__scopeId", "data-v-427652b7"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-switch/z-switch.vue"]]);
-  const _sfc_main$2E = /* @__PURE__ */ vue.defineComponent({
+  const __easycom_1$l = /* @__PURE__ */ _export_sfc(_sfc_main$2I, [["render", _sfc_render$2H], ["__scopeId", "data-v-427652b7"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-switch/z-switch.vue"]]);
+  const _sfc_main$2H = /* @__PURE__ */ vue.defineComponent({
     __name: "DemoHomeNav",
     props: {
       group: {
@@ -1263,7 +1263,7 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   });
-  function _sfc_render$2D(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2G(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "demo-home-nav" }, [
       vue.createElementVNode(
         "view",
@@ -1321,7 +1321,7 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const __easycom_2$d = /* @__PURE__ */ _export_sfc(_sfc_main$2E, [["render", _sfc_render$2D], ["__scopeId", "data-v-bf636198"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/components/DemoHomeNav/DemoHomeNav.vue"]]);
+  const __easycom_2$d = /* @__PURE__ */ _export_sfc(_sfc_main$2H, [["render", _sfc_render$2G], ["__scopeId", "data-v-bf636198"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/components/DemoHomeNav/DemoHomeNav.vue"]]);
   var isVue2 = false;
   function set(target, key, val) {
     if (Array.isArray(target)) {
@@ -2945,7 +2945,7 @@ This will fail in production if not fixed.`);
       }
     }
   });
-  const _sfc_main$2D = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$2G = /* @__PURE__ */ vue.defineComponent({
     __name: "DemoHome",
     props: {
       list: {
@@ -2983,9 +2983,9 @@ This will fail in production if not fixed.`);
     }
   });
   const _imports_0 = "/static/logo.png";
-  function _sfc_render$2C(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2F(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_icon = resolveEasycom(vue.resolveDynamicComponent("z-icon"), zIcon);
-    const _component_z_switch = resolveEasycom(vue.resolveDynamicComponent("z-switch"), __easycom_1$m);
+    const _component_z_switch = resolveEasycom(vue.resolveDynamicComponent("z-switch"), __easycom_1$l);
     const _component_DemoHomeNav = resolveEasycom(vue.resolveDynamicComponent("DemoHomeNav"), __easycom_2$d);
     return vue.openBlock(), vue.createElementBlock("view", { class: "demo-home" }, [
       $setup.props.showTitle ? (vue.openBlock(), vue.createElementBlock("view", {
@@ -3035,7 +3035,7 @@ This will fail in production if not fixed.`);
       ))
     ]);
   }
-  const __easycom_0$q = /* @__PURE__ */ _export_sfc(_sfc_main$2D, [["render", _sfc_render$2C], ["__scopeId", "data-v-b6f0227f"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/components/DemoHome/DemoHome.vue"]]);
+  const __easycom_0$q = /* @__PURE__ */ _export_sfc(_sfc_main$2G, [["render", _sfc_render$2F], ["__scopeId", "data-v-b6f0227f"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/components/DemoHome/DemoHome.vue"]]);
   function ChildrenMixin(parent, options = {}) {
     options.indexKey || "index";
     return {
@@ -3089,7 +3089,7 @@ This will fail in production if not fixed.`);
       uni.createSelectorQuery().in(context).select(selector).boundingClientRect().exec((rect = []) => resolve(rect[0]));
     });
   }
-  const _sfc_main$2C = {
+  const _sfc_main$2F = {
     name: "z-swipe-item",
     mixins: [ChildrenMixin("zSwipe")],
     props: {
@@ -3233,7 +3233,7 @@ This will fail in production if not fixed.`);
       }
     }
   };
-  function _sfc_render$2B(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2E(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -3248,7 +3248,7 @@ This will fail in production if not fixed.`);
       /* CLASS, STYLE */
     );
   }
-  const __easycom_1$l = /* @__PURE__ */ _export_sfc(_sfc_main$2C, [["render", _sfc_render$2B], ["__scopeId", "data-v-46825bf1"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-swiper/components/z-swiper-item/z-swiper-item.vue"]]);
+  const __easycom_1$k = /* @__PURE__ */ _export_sfc(_sfc_main$2F, [["render", _sfc_render$2E], ["__scopeId", "data-v-46825bf1"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-swiper/components/z-swiper-item/z-swiper-item.vue"]]);
   function deleteProps(obj) {
     const object = obj;
     Object.keys(object).forEach((key) => {
@@ -9073,7 +9073,7 @@ This will fail in production if not fixed.`);
       swiper.parallax.setTranslate();
     }
   }
-  const _sfc_main$2B = {
+  const _sfc_main$2E = {
     name: "z-swipe",
     mixins: [
       ParentMixin("zSwipe")
@@ -9629,8 +9629,8 @@ This will fail in production if not fixed.`);
       }
     }
   };
-  function _sfc_render$2A(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_swiper_item = resolveEasycom(vue.resolveDynamicComponent("z-swiper-item"), __easycom_1$l);
+  function _sfc_render$2D(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_z_swiper_item = resolveEasycom(vue.resolveDynamicComponent("z-swiper-item"), __easycom_1$k);
     return vue.openBlock(), vue.createElementBlock("view", {
       id: "swiper" + $options._uid,
       class: vue.normalizeClass(["swiper", $data.contentClass, $data.containerClasses, $props.options.direction === "vertical" ? "swiper-vertical" : ""]),
@@ -9809,14 +9809,14 @@ This will fail in production if not fixed.`);
       )) : vue.createCommentVNode("v-if", true)
     ], 14, ["id"]);
   }
-  const __easycom_2$c = /* @__PURE__ */ _export_sfc(_sfc_main$2B, [["render", _sfc_render$2A], ["__scopeId", "data-v-3db01611"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-swiper/components/z-swiper/z-swiper.vue"]]);
+  const __easycom_2$c = /* @__PURE__ */ _export_sfc(_sfc_main$2E, [["render", _sfc_render$2D], ["__scopeId", "data-v-3db01611"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-swiper/components/z-swiper/z-swiper.vue"]]);
   const __default__$1j = {
     name: "ZTabbarItem",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$2A = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$2D = /* @__PURE__ */ vue.defineComponent({
     ...__default__$1j,
     props: {
       dot: Boolean,
@@ -9864,7 +9864,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$2z(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2C(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -9910,14 +9910,14 @@ This will fail in production if not fixed.`);
       /* CLASS, STYLE */
     );
   }
-  const __easycom_0$p = /* @__PURE__ */ _export_sfc(_sfc_main$2A, [["render", _sfc_render$2z], ["__scopeId", "data-v-bd912ed7"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-tabbar-item/z-tabbar-item.vue"]]);
+  const __easycom_0$p = /* @__PURE__ */ _export_sfc(_sfc_main$2D, [["render", _sfc_render$2C], ["__scopeId", "data-v-bd912ed7"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-tabbar-item/z-tabbar-item.vue"]]);
   const __default__$1i = {
     name: "ZTabbar",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$2z = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$2C = /* @__PURE__ */ vue.defineComponent({
     ...__default__$1i,
     props: {
       route: Boolean,
@@ -10007,7 +10007,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$2y(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2B(_ctx, _cache, $props, $setup, $data, $options) {
     return $setup.props.fixed && $setup.props.placeholder ? (vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -10103,8 +10103,8 @@ This will fail in production if not fixed.`);
       /* CLASS, STYLE */
     ));
   }
-  const __easycom_1$k = /* @__PURE__ */ _export_sfc(_sfc_main$2z, [["render", _sfc_render$2y], ["__scopeId", "data-v-8f4e9f9d"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-tabbar/z-tabbar.vue"]]);
-  const _sfc_main$2y = /* @__PURE__ */ vue.defineComponent({
+  const __easycom_1$j = /* @__PURE__ */ _export_sfc(_sfc_main$2C, [["render", _sfc_render$2B], ["__scopeId", "data-v-8f4e9f9d"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-tabbar/z-tabbar.vue"]]);
+  const _sfc_main$2B = /* @__PURE__ */ vue.defineComponent({
     __name: "z-nav-bar",
     props: {
       title: String,
@@ -10175,7 +10175,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$2x(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2A(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       vue.Fragment,
       null,
@@ -10329,7 +10329,7 @@ This will fail in production if not fixed.`);
       /* STABLE_FRAGMENT */
     );
   }
-  const __easycom_0$o = /* @__PURE__ */ _export_sfc(_sfc_main$2y, [["render", _sfc_render$2x], ["__scopeId", "data-v-b9eacab8"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-nav-bar/z-nav-bar.vue"]]);
+  const __easycom_0$o = /* @__PURE__ */ _export_sfc(_sfc_main$2B, [["render", _sfc_render$2A], ["__scopeId", "data-v-b9eacab8"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-nav-bar/z-nav-bar.vue"]]);
   const popupSharedProps = {
     show: Boolean,
     zIndex: numericProp,
@@ -10354,7 +10354,7 @@ This will fail in production if not fixed.`);
       styleIsolation: "shared"
     }
   };
-  const _sfc_main$2x = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$2A = /* @__PURE__ */ vue.defineComponent({
     ...__default__$1h,
     props: {
       name: {
@@ -10506,7 +10506,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$2w(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2z(_ctx, _cache, $props, $setup, $data, $options) {
     return $setup.inited ? (vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -10523,8 +10523,8 @@ This will fail in production if not fixed.`);
       /* CLASS, STYLE, NEED_HYDRATION */
     )) : vue.createCommentVNode("v-if", true);
   }
-  const zTransition = /* @__PURE__ */ _export_sfc(_sfc_main$2x, [["render", _sfc_render$2w], ["__scopeId", "data-v-e794a2c2"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-transition/z-transition.vue"]]);
-  const _sfc_main$2w = /* @__PURE__ */ vue.defineComponent({
+  const zTransition = /* @__PURE__ */ _export_sfc(_sfc_main$2A, [["render", _sfc_render$2z], ["__scopeId", "data-v-e794a2c2"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-transition/z-transition.vue"]]);
+  const _sfc_main$2z = /* @__PURE__ */ vue.defineComponent({
     __name: "z-overlay",
     props: {
       show: Boolean,
@@ -10576,7 +10576,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$2v(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2y(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -10602,7 +10602,7 @@ This will fail in production if not fixed.`);
       /* CLASS */
     );
   }
-  const __easycom_1$j = /* @__PURE__ */ _export_sfc(_sfc_main$2w, [["render", _sfc_render$2v], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-overlay/z-overlay.vue"]]);
+  const __easycom_1$i = /* @__PURE__ */ _export_sfc(_sfc_main$2z, [["render", _sfc_render$2y], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-overlay/z-overlay.vue"]]);
   const __default__$1g = {
     name: "ZPopup",
     options: {
@@ -10611,7 +10611,7 @@ This will fail in production if not fixed.`);
       styleIsolation: "shared"
     }
   };
-  const _sfc_main$2v = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$2y = /* @__PURE__ */ vue.defineComponent({
     ...__default__$1g,
     props: extend$2({}, popupSharedProps, {
       round: Boolean,
@@ -10813,12 +10813,12 @@ This will fail in production if not fixed.`);
         timer2 = v;
       }, onOpened, onClosed, get HAPTICS_FEEDBACK() {
         return HAPTICS_FEEDBACK;
-      }, zOverlay: __easycom_1$j, zTransition, zIcon };
+      }, zOverlay: __easycom_1$i, zTransition, zIcon };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
   });
-  function _sfc_render$2u(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2x(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -10880,14 +10880,14 @@ This will fail in production if not fixed.`);
       /* CLASS */
     );
   }
-  const zPopup = /* @__PURE__ */ _export_sfc(_sfc_main$2v, [["render", _sfc_render$2u], ["__scopeId", "data-v-ac3e0160"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-popup/z-popup.vue"]]);
+  const zPopup = /* @__PURE__ */ _export_sfc(_sfc_main$2y, [["render", _sfc_render$2x], ["__scopeId", "data-v-ac3e0160"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-popup/z-popup.vue"]]);
   const __default__$1f = {
     name: "ZButton",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$2u = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$2x = /* @__PURE__ */ vue.defineComponent({
     ...__default__$1f,
     props: {
       text: String,
@@ -10967,7 +10967,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$2t(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2w(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("button", {
       type: $props.nativeType,
       "form-type": $props.formType,
@@ -11164,14 +11164,14 @@ This will fail in production if not fixed.`);
       )
     ], 14, ["type", "form-type", "disabled"]);
   }
-  const __easycom_3$4 = /* @__PURE__ */ _export_sfc(_sfc_main$2u, [["render", _sfc_render$2t], ["__scopeId", "data-v-9c8188e3"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-button/z-button.vue"]]);
+  const __easycom_3$3 = /* @__PURE__ */ _export_sfc(_sfc_main$2x, [["render", _sfc_render$2w], ["__scopeId", "data-v-9c8188e3"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-button/z-button.vue"]]);
   const __default__$1e = {
     name: "ZDialog",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$2t = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$2w = /* @__PURE__ */ vue.defineComponent({
     ...__default__$1e,
     props: extend$2({}, popupSharedProps, {
       title: String,
@@ -11351,12 +11351,12 @@ This will fail in production if not fixed.`);
         return BORDER_TOP;
       }, get BORDER_LEFT() {
         return BORDER_LEFT;
-      }, zPopup, zButton: __easycom_3$4 };
+      }, zPopup, zButton: __easycom_3$3 };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
   });
-  function _sfc_render$2s(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2v(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -11543,8 +11543,8 @@ This will fail in production if not fixed.`);
       /* CLASS */
     );
   }
-  const __easycom_2$b = /* @__PURE__ */ _export_sfc(_sfc_main$2t, [["render", _sfc_render$2s], ["__scopeId", "data-v-914a7f54"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-dialog/z-dialog.vue"]]);
-  const _sfc_main$2s = /* @__PURE__ */ vue.defineComponent({
+  const __easycom_2$b = /* @__PURE__ */ _export_sfc(_sfc_main$2w, [["render", _sfc_render$2v], ["__scopeId", "data-v-914a7f54"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-dialog/z-dialog.vue"]]);
+  const _sfc_main$2v = /* @__PURE__ */ vue.defineComponent({
     __name: "z-toast",
     props: {
       icon: String,
@@ -11758,7 +11758,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$2r(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2u(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -11826,14 +11826,14 @@ This will fail in production if not fixed.`);
       /* CLASS */
     );
   }
-  const zToast = /* @__PURE__ */ _export_sfc(_sfc_main$2s, [["render", _sfc_render$2r], ["__scopeId", "data-v-e70853f8"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-toast/z-toast.vue"]]);
+  const zToast = /* @__PURE__ */ _export_sfc(_sfc_main$2v, [["render", _sfc_render$2u], ["__scopeId", "data-v-e70853f8"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-toast/z-toast.vue"]]);
   const __default__$1d = {
     name: "ZNotify",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$2r = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$2u = /* @__PURE__ */ vue.defineComponent({
     ...__default__$1d,
     props: extend$2({}, popupSharedProps, {
       type: makeStringProp("danger"),
@@ -11895,7 +11895,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$2q(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2t(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", null, [
       vue.createVNode($setup["zPopup"], {
         show: $setup.getProps("show"),
@@ -11956,8 +11956,8 @@ This will fail in production if not fixed.`);
       }, 8, ["show", "z-index", "lock-scroll", "position"])
     ]);
   }
-  const __easycom_2$a = /* @__PURE__ */ _export_sfc(_sfc_main$2r, [["render", _sfc_render$2q], ["__scopeId", "data-v-8a151e64"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-notify/z-notify.vue"]]);
-  const _sfc_main$2q = {
+  const __easycom_2$a = /* @__PURE__ */ _export_sfc(_sfc_main$2u, [["render", _sfc_render$2t], ["__scopeId", "data-v-8a151e64"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-notify/z-notify.vue"]]);
+  const _sfc_main$2t = {
     name: "PageMeta",
     setup(props, { emit }) {
       onResize$1((evt) => {
@@ -12089,19 +12089,19 @@ This will fail in production if not fixed.`);
       }
     }
   };
-  function _sfc_render$2p(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2s(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { style: { "display": "none" } }, [
       vue.renderSlot(_ctx.$slots, "default")
     ]);
   }
-  const __easycom_0$n = /* @__PURE__ */ _export_sfc(_sfc_main$2q, [["render", _sfc_render$2p], ["__file", "D:/ProgramFiles/HBuilderX/plugins/uniapp-cli-vite/node_modules/@dcloudio/uni-components/lib/page-meta/page-meta.vue"]]);
+  const __easycom_0$n = /* @__PURE__ */ _export_sfc(_sfc_main$2t, [["render", _sfc_render$2s], ["__file", "D:/ProgramFiles/HBuilderX/plugins/uniapp-cli-vite/node_modules/@dcloudio/uni-components/lib/page-meta/page-meta.vue"]]);
   const __default__$1c = {
     name: "ZConfigProvider",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$2p = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$2s = /* @__PURE__ */ vue.defineComponent({
     ...__default__$1c,
     props: {
       theme: makeStringProp("light"),
@@ -12205,7 +12205,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$2o(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2r(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_page_meta = resolveEasycom(vue.resolveDynamicComponent("page-meta"), __easycom_0$n);
     return vue.openBlock(), vue.createElementBlock(
       vue.Fragment,
@@ -12232,8 +12232,8 @@ This will fail in production if not fixed.`);
       /* STABLE_FRAGMENT */
     );
   }
-  const __easycom_5$1 = /* @__PURE__ */ _export_sfc(_sfc_main$2p, [["render", _sfc_render$2o], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-config-provider/z-config-provider.vue"]]);
-  const _sfc_main$2o = /* @__PURE__ */ vue.defineComponent({
+  const __easycom_5$1 = /* @__PURE__ */ _export_sfc(_sfc_main$2s, [["render", _sfc_render$2r], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-config-provider/z-config-provider.vue"]]);
+  const _sfc_main$2r = /* @__PURE__ */ vue.defineComponent({
     __name: "DemoPage",
     props: {
       showHeader: {
@@ -12265,7 +12265,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$2n(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2q(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_nav_bar = resolveEasycom(vue.resolveDynamicComponent("z-nav-bar"), __easycom_0$o);
     const _component_z_dialog = resolveEasycom(vue.resolveDynamicComponent("z-dialog"), __easycom_2$b);
     const _component_z_toast = resolveEasycom(vue.resolveDynamicComponent("z-toast"), zToast);
@@ -12301,7 +12301,7 @@ This will fail in production if not fixed.`);
       /* FORWARDED */
     }, 8, ["theme"]);
   }
-  const __easycom_1$i = /* @__PURE__ */ _export_sfc(_sfc_main$2o, [["render", _sfc_render$2n], ["__scopeId", "data-v-44c443aa"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/components/DemoPage/DemoPage.vue"]]);
+  const __easycom_1$h = /* @__PURE__ */ _export_sfc(_sfc_main$2r, [["render", _sfc_render$2q], ["__scopeId", "data-v-44c443aa"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/components/DemoPage/DemoPage.vue"]]);
   const config = [
     {
       groupName: "基础组件",
@@ -12669,7 +12669,7 @@ This will fail in production if not fixed.`);
       ]
     }
   ];
-  const _sfc_main$2n = {
+  const _sfc_main$2q = {
     __name: "index",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -12734,14 +12734,14 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   };
-  function _sfc_render$2m(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2p(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_DemoHome = resolveEasycom(vue.resolveDynamicComponent("DemoHome"), __easycom_0$q);
-    const _component_z_swiper_item = resolveEasycom(vue.resolveDynamicComponent("z-swiper-item"), __easycom_1$l);
+    const _component_z_swiper_item = resolveEasycom(vue.resolveDynamicComponent("z-swiper-item"), __easycom_1$k);
     const _component_z_swiper = resolveEasycom(vue.resolveDynamicComponent("z-swiper"), __easycom_2$c);
     const _component_z_icon = resolveEasycom(vue.resolveDynamicComponent("z-icon"), zIcon);
     const _component_z_tabbar_item = resolveEasycom(vue.resolveDynamicComponent("z-tabbar-item"), __easycom_0$p);
-    const _component_z_tabbar = resolveEasycom(vue.resolveDynamicComponent("z-tabbar"), __easycom_1$k);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_z_tabbar = resolveEasycom(vue.resolveDynamicComponent("z-tabbar"), __easycom_1$j);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { "show-header": false }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-index" }, [
@@ -12840,14 +12840,14 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$2n, [["render", _sfc_render$2m], ["__scopeId", "data-v-1cf27b2a"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/index/index.vue"]]);
+  const PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$2q, [["render", _sfc_render$2p], ["__scopeId", "data-v-1cf27b2a"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/index/index.vue"]]);
   const __default__$1b = {
     name: "ZSwipeItem",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$2m = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$2p = /* @__PURE__ */ vue.defineComponent({
     ...__default__$1b,
     props: {
       customStyle: Object
@@ -12888,7 +12888,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$2l(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2o(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "div",
       {
@@ -12902,14 +12902,14 @@ This will fail in production if not fixed.`);
       /* STYLE */
     );
   }
-  const __easycom_1$h = /* @__PURE__ */ _export_sfc(_sfc_main$2m, [["render", _sfc_render$2l], ["__scopeId", "data-v-d61a4c35"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-swipe-item/z-swipe-item.vue"]]);
+  const __easycom_1$g = /* @__PURE__ */ _export_sfc(_sfc_main$2p, [["render", _sfc_render$2o], ["__scopeId", "data-v-d61a4c35"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-swipe-item/z-swipe-item.vue"]]);
   const __default__$1a = {
     name: "ZSwipe",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$2l = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$2o = /* @__PURE__ */ vue.defineComponent({
     ...__default__$1a,
     props: {
       loop: truthProp,
@@ -13221,7 +13221,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$2k(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2n(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -13286,14 +13286,14 @@ This will fail in production if not fixed.`);
       /* CLASS, STYLE */
     );
   }
-  const __easycom_2$9 = /* @__PURE__ */ _export_sfc(_sfc_main$2l, [["render", _sfc_render$2k], ["__scopeId", "data-v-4dd261ff"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-swipe/z-swipe.vue"]]);
-  const _sfc_main$2k = {};
-  function _sfc_render$2j(_ctx, _cache) {
-    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$4);
+  const __easycom_2$9 = /* @__PURE__ */ _export_sfc(_sfc_main$2o, [["render", _sfc_render$2n], ["__scopeId", "data-v-4dd261ff"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-swipe/z-swipe.vue"]]);
+  const _sfc_main$2n = {};
+  function _sfc_render$2m(_ctx, _cache) {
+    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$3);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_z_swipe_item = resolveEasycom(vue.resolveDynamicComponent("z-swipe-item"), __easycom_1$h);
+    const _component_z_swipe_item = resolveEasycom(vue.resolveDynamicComponent("z-swipe-item"), __easycom_1$g);
     const _component_z_swipe = resolveEasycom(vue.resolveDynamicComponent("z-swipe"), __easycom_2$9);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Button" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-button" }, [
@@ -13699,14 +13699,14 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesButtonButton = /* @__PURE__ */ _export_sfc(_sfc_main$2k, [["render", _sfc_render$2j], ["__scopeId", "data-v-30dacdec"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/button/button.vue"]]);
+  const PagesButtonButton = /* @__PURE__ */ _export_sfc(_sfc_main$2n, [["render", _sfc_render$2m], ["__scopeId", "data-v-30dacdec"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/button/button.vue"]]);
   const __default__$19 = {
     name: "ZTab",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$2j = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$2m = /* @__PURE__ */ vue.defineComponent({
     ...__default__$19,
     props: {
       dot: Boolean,
@@ -13809,7 +13809,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$2i(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2l(_ctx, _cache, $props, $setup, $data, $options) {
     return $setup.animated || $setup.swipeable ? (vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -13843,8 +13843,8 @@ This will fail in production if not fixed.`);
       [vue.vShow, $setup.show]
     ]);
   }
-  const __easycom_1$g = /* @__PURE__ */ _export_sfc(_sfc_main$2j, [["render", _sfc_render$2i], ["__scopeId", "data-v-63a9e1c9"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-tab/z-tab.vue"]]);
-  const _sfc_main$2i = /* @__PURE__ */ vue.defineComponent({
+  const __easycom_1$f = /* @__PURE__ */ _export_sfc(_sfc_main$2m, [["render", _sfc_render$2l], ["__scopeId", "data-v-63a9e1c9"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-tab/z-tab.vue"]]);
+  const _sfc_main$2l = /* @__PURE__ */ vue.defineComponent({
     __name: "z-sticky",
     props: {
       zIndex: {
@@ -14140,7 +14140,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$2h(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2k(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -14170,14 +14170,14 @@ This will fail in production if not fixed.`);
       /* STYLE */
     );
   }
-  const __easycom_1$f = /* @__PURE__ */ _export_sfc(_sfc_main$2i, [["render", _sfc_render$2h], ["__scopeId", "data-v-ee38364f"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-sticky/z-sticky.vue"]]);
+  const __easycom_1$e = /* @__PURE__ */ _export_sfc(_sfc_main$2l, [["render", _sfc_render$2k], ["__scopeId", "data-v-ee38364f"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-sticky/z-sticky.vue"]]);
   const __default__$18 = {
     name: "ZTabs",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$2h = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$2k = /* @__PURE__ */ vue.defineComponent({
     ...__default__$18,
     props: {
       type: {
@@ -14224,8 +14224,12 @@ This will fail in production if not fixed.`);
       const props = __props;
       const scrollLeft = vue.ref(0);
       const id = useId();
+      const itemIdCache = [];
       const useIdItem = (name22, index) => {
-        return useId(name22) + index;
+        if (!itemIdCache[index]) {
+          itemIdCache[index] = useId(name22) + index;
+        }
+        return itemIdCache[index];
       };
       const [titleRefs, setTitleRefs] = useRefs();
       const { children, linkChildren } = useChildren(name2);
@@ -14233,7 +14237,7 @@ This will fail in production if not fixed.`);
         inited: false,
         position: "",
         lineStyle: {},
-        currentIndex: -1
+        currentIndex: 0
       });
       const scrollable = vue.computed(
         () => children.length > +props.swipeThreshold || !props.ellipsis || props.shrink
@@ -14586,6 +14590,7 @@ This will fail in production if not fixed.`);
                   active = count.value - 1;
                 }
               }
+              active = Math.max(0, active);
               stateSwipe.active = active;
               stateSwipe.swiping = true;
               stateSwipe.offset = getTargetOffset(active);
@@ -14724,7 +14729,7 @@ This will fail in production if not fixed.`);
         return lockScroll;
       }, set lockScroll(v) {
         lockScroll = v;
-      }, instance, name: name2, bem: bem2, emit, props, scrollLeft, id, useIdItem, titleRefs, setTitleRefs, children, linkChildren, state, scrollable, navStyle, titleStyleData, getTabName, currentName, offsetTopPx, scrollIntoView, setLine, findAvailableTab, setCurrentIndex, setCurrentIndexByName, scrollTop, getValueAtIndex, scrollToCurrentContent, onClickTab, onStickyScroll, scrollTo, findIndexScroll, getCurrentIndexOnScroll, onScroll: onScroll2, resize, get isUpdatingIndex() {
+      }, instance, name: name2, bem: bem2, emit, props, scrollLeft, id, itemIdCache, useIdItem, titleRefs, setTitleRefs, children, linkChildren, state, scrollable, navStyle, titleStyleData, getTabName, currentName, offsetTopPx, scrollIntoView, setLine, findAvailableTab, setCurrentIndex, setCurrentIndexByName, scrollTop, getValueAtIndex, scrollToCurrentContent, onClickTab, onStickyScroll, scrollTo, findIndexScroll, getCurrentIndexOnScroll, onScroll: onScroll2, resize, get isUpdatingIndex() {
         return isUpdatingIndex;
       }, set isUpdatingIndex(v) {
         isUpdatingIndex = v;
@@ -14744,12 +14749,12 @@ This will fail in production if not fixed.`);
         return BORDER_TOP_BOTTOM;
       }, get isDef() {
         return isDef;
-      }, zSticky: __easycom_1$f, zBadge };
+      }, zSticky: __easycom_1$e, zBadge };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
   });
-  function _sfc_render$2g(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2j(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -15098,7 +15103,7 @@ This will fail in production if not fixed.`);
       /* CLASS, STYLE */
     );
   }
-  const __easycom_2$8 = /* @__PURE__ */ _export_sfc(_sfc_main$2h, [["render", _sfc_render$2g], ["__scopeId", "data-v-140cf0ab"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-tabs/z-tabs.vue"]]);
+  const __easycom_2$8 = /* @__PURE__ */ _export_sfc(_sfc_main$2k, [["render", _sfc_render$2j], ["__scopeId", "data-v-140cf0ab"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-tabs/z-tabs.vue"]]);
   const iconData = {
     id: "4468162",
     name: "zebra",
@@ -15723,7 +15728,7 @@ This will fail in production if not fixed.`);
   };
   const demoIcon = "smile";
   const demoImage = "https://cdn.zebraui.com/zebra-ui/images/assets/demo-select.png";
-  const _sfc_main$2g = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$2j = /* @__PURE__ */ vue.defineComponent({
     __name: "icon",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -15740,12 +15745,12 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$2f(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2i(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_icon = resolveEasycom(vue.resolveDynamicComponent("z-icon"), zIcon);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_z_tab = resolveEasycom(vue.resolveDynamicComponent("z-tab"), __easycom_1$g);
+    const _component_z_tab = resolveEasycom(vue.resolveDynamicComponent("z-tab"), __easycom_1$f);
     const _component_z_tabs = resolveEasycom(vue.resolveDynamicComponent("z-tabs"), __easycom_2$8);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Icon" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-icon" }, [
@@ -15974,7 +15979,7 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesIconIcon = /* @__PURE__ */ _export_sfc(_sfc_main$2g, [["render", _sfc_render$2f], ["__scopeId", "data-v-11c19ff9"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/icon/icon.vue"]]);
+  const PagesIconIcon = /* @__PURE__ */ _export_sfc(_sfc_main$2j, [["render", _sfc_render$2i], ["__scopeId", "data-v-11c19ff9"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/icon/icon.vue"]]);
   let timer;
   const parseOptions$1 = (message) => isObject$2(message) ? message : { message };
   const getDefaultOptions = () => ({
@@ -16171,7 +16176,7 @@ This will fail in production if not fixed.`);
       closeDialog: closeDialog2
     };
   }
-  const _sfc_main$2f = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$2i = /* @__PURE__ */ vue.defineComponent({
     __name: "tab",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -16196,12 +16201,12 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$2e(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_tab = resolveEasycom(vue.resolveDynamicComponent("z-tab"), __easycom_1$g);
+  function _sfc_render$2h(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_z_tab = resolveEasycom(vue.resolveDynamicComponent("z-tab"), __easycom_1$f);
     const _component_z_tabs = resolveEasycom(vue.resolveDynamicComponent("z-tabs"), __easycom_2$8);
     const _component_demo_block = vue.resolveComponent("demo-block");
     const _component_z_icon = resolveEasycom(vue.resolveDynamicComponent("z-icon"), zIcon);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Tab" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-tab" }, [
@@ -16774,8 +16779,8 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesTabTab = /* @__PURE__ */ _export_sfc(_sfc_main$2f, [["render", _sfc_render$2e], ["__scopeId", "data-v-2d23f78a"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/tab/tab.vue"]]);
-  const _sfc_main$2e = /* @__PURE__ */ vue.defineComponent({
+  const PagesTabTab = /* @__PURE__ */ _export_sfc(_sfc_main$2i, [["render", _sfc_render$2h], ["__scopeId", "data-v-2d23f78a"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/tab/tab.vue"]]);
+  const _sfc_main$2h = /* @__PURE__ */ vue.defineComponent({
     __name: "swipe",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -16792,11 +16797,11 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$2d(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_swipe_item = resolveEasycom(vue.resolveDynamicComponent("z-swipe-item"), __easycom_1$h);
+  function _sfc_render$2g(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_z_swipe_item = resolveEasycom(vue.resolveDynamicComponent("z-swipe-item"), __easycom_1$g);
     const _component_z_swipe = resolveEasycom(vue.resolveDynamicComponent("z-swipe"), __easycom_2$9);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Swipe" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-swipe" }, [
@@ -17029,8 +17034,8 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesSwipeSwipe = /* @__PURE__ */ _export_sfc(_sfc_main$2e, [["render", _sfc_render$2d], ["__scopeId", "data-v-347202c6"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/swipe/swipe.vue"]]);
-  const _sfc_main$2d = /* @__PURE__ */ vue.defineComponent({
+  const PagesSwipeSwipe = /* @__PURE__ */ _export_sfc(_sfc_main$2h, [["render", _sfc_render$2g], ["__scopeId", "data-v-347202c6"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/swipe/swipe.vue"]]);
+  const _sfc_main$2g = /* @__PURE__ */ vue.defineComponent({
     __name: "sticky",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -17054,11 +17059,11 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$2c(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$4);
-    const _component_z_sticky = resolveEasycom(vue.resolveDynamicComponent("z-sticky"), __easycom_1$f);
+  function _sfc_render$2f(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$3);
+    const _component_z_sticky = resolveEasycom(vue.resolveDynamicComponent("z-sticky"), __easycom_1$e);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Sticky" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-sticky" }, [
@@ -17179,14 +17184,14 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesStickySticky = /* @__PURE__ */ _export_sfc(_sfc_main$2d, [["render", _sfc_render$2c], ["__scopeId", "data-v-cea3475e"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/sticky/sticky.vue"]]);
+  const PagesStickySticky = /* @__PURE__ */ _export_sfc(_sfc_main$2g, [["render", _sfc_render$2f], ["__scopeId", "data-v-cea3475e"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/sticky/sticky.vue"]]);
   const __default__$17 = {
     name: "ZCol",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$2c = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$2f = /* @__PURE__ */ vue.defineComponent({
     ...__default__$17,
     props: {
       span: makeNumericProp(0),
@@ -17221,7 +17226,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$2b(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2e(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -17240,14 +17245,14 @@ This will fail in production if not fixed.`);
       /* CLASS, STYLE */
     );
   }
-  const __easycom_1$e = /* @__PURE__ */ _export_sfc(_sfc_main$2c, [["render", _sfc_render$2b], ["__scopeId", "data-v-1172a0ab"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-col/z-col.vue"]]);
+  const __easycom_1$d = /* @__PURE__ */ _export_sfc(_sfc_main$2f, [["render", _sfc_render$2e], ["__scopeId", "data-v-1172a0ab"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-col/z-col.vue"]]);
   const __default__$16 = {
     name: "ZRow",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$2b = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$2e = /* @__PURE__ */ vue.defineComponent({
     ...__default__$16,
     props: {
       wrap: truthProp,
@@ -17326,7 +17331,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$2a(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2d(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -17345,13 +17350,13 @@ This will fail in production if not fixed.`);
       /* CLASS */
     );
   }
-  const __easycom_2$7 = /* @__PURE__ */ _export_sfc(_sfc_main$2b, [["render", _sfc_render$2a], ["__scopeId", "data-v-d2486403"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-row/z-row.vue"]]);
-  const _sfc_main$2a = {};
-  function _sfc_render$29(_ctx, _cache) {
-    const _component_z_col = resolveEasycom(vue.resolveDynamicComponent("z-col"), __easycom_1$e);
+  const __easycom_2$7 = /* @__PURE__ */ _export_sfc(_sfc_main$2e, [["render", _sfc_render$2d], ["__scopeId", "data-v-d2486403"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-row/z-row.vue"]]);
+  const _sfc_main$2d = {};
+  function _sfc_render$2c(_ctx, _cache) {
+    const _component_z_col = resolveEasycom(vue.resolveDynamicComponent("z-col"), __easycom_1$d);
     const _component_z_row = resolveEasycom(vue.resolveDynamicComponent("z-row"), __easycom_2$7);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Layout" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-layout" }, [
@@ -17620,15 +17625,15 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesLayoutLayout = /* @__PURE__ */ _export_sfc(_sfc_main$2a, [["render", _sfc_render$29], ["__scopeId", "data-v-9080cbd0"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/layout/layout.vue"]]);
-  const _sfc_main$29 = {};
-  function _sfc_render$28(_ctx, _cache) {
+  const PagesLayoutLayout = /* @__PURE__ */ _export_sfc(_sfc_main$2d, [["render", _sfc_render$2c], ["__scopeId", "data-v-9080cbd0"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/layout/layout.vue"]]);
+  const _sfc_main$2c = {};
+  function _sfc_render$2b(_ctx, _cache) {
     const _component_z_badge = resolveEasycom(vue.resolveDynamicComponent("z-badge"), zBadge);
-    const _component_z_col = resolveEasycom(vue.resolveDynamicComponent("z-col"), __easycom_1$e);
+    const _component_z_col = resolveEasycom(vue.resolveDynamicComponent("z-col"), __easycom_1$d);
     const _component_z_row = resolveEasycom(vue.resolveDynamicComponent("z-row"), __easycom_2$7);
     const _component_demo_block = vue.resolveComponent("demo-block");
     const _component_z_icon = resolveEasycom(vue.resolveDynamicComponent("z-icon"), zIcon);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Badge" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-badge" }, [
@@ -17971,15 +17976,15 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesBadgeBadge = /* @__PURE__ */ _export_sfc(_sfc_main$29, [["render", _sfc_render$28], ["__scopeId", "data-v-95b0ed52"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/badge/badge.vue"]]);
-  const _sfc_main$28 = {};
-  function _sfc_render$27(_ctx, _cache) {
+  const PagesBadgeBadge = /* @__PURE__ */ _export_sfc(_sfc_main$2c, [["render", _sfc_render$2b], ["__scopeId", "data-v-95b0ed52"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/badge/badge.vue"]]);
+  const _sfc_main$2b = {};
+  function _sfc_render$2a(_ctx, _cache) {
     const _component_z_loading = resolveEasycom(vue.resolveDynamicComponent("z-loading"), zLoading);
-    const _component_z_col = resolveEasycom(vue.resolveDynamicComponent("z-col"), __easycom_1$e);
+    const _component_z_col = resolveEasycom(vue.resolveDynamicComponent("z-col"), __easycom_1$d);
     const _component_z_row = resolveEasycom(vue.resolveDynamicComponent("z-row"), __easycom_2$7);
     const _component_demo_block = vue.resolveComponent("demo-block");
     const _component_z_icon = resolveEasycom(vue.resolveDynamicComponent("z-icon"), zIcon);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Loading" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-loading" }, [
@@ -18216,14 +18221,14 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesLoadingLoading = /* @__PURE__ */ _export_sfc(_sfc_main$28, [["render", _sfc_render$27], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/loading/loading.vue"]]);
+  const PagesLoadingLoading = /* @__PURE__ */ _export_sfc(_sfc_main$2b, [["render", _sfc_render$2a], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/loading/loading.vue"]]);
   const __default__$15 = {
     name: "ZCell",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$27 = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$2a = /* @__PURE__ */ vue.defineComponent({
     ...__default__$15,
     props: {
       icon: String,
@@ -18285,7 +18290,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$26(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$29(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", {
       class: vue.normalizeClass([
         $setup.bem({
@@ -18408,8 +18413,8 @@ This will fail in production if not fixed.`);
       vue.renderSlot(_ctx.$slots, "extra", {}, void 0, true)
     ], 14, ["tabindex"]);
   }
-  const __easycom_1$d = /* @__PURE__ */ _export_sfc(_sfc_main$27, [["render", _sfc_render$26], ["__scopeId", "data-v-fd305495"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-cell/z-cell.vue"]]);
-  const _sfc_main$26 = /* @__PURE__ */ vue.defineComponent({
+  const __easycom_1$c = /* @__PURE__ */ _export_sfc(_sfc_main$2a, [["render", _sfc_render$29], ["__scopeId", "data-v-fd305495"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-cell/z-cell.vue"]]);
+  const _sfc_main$29 = /* @__PURE__ */ vue.defineComponent({
     __name: "popup",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -18437,11 +18442,11 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$25(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$d);
+  function _sfc_render$28(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$c);
     const _component_z_popup = resolveEasycom(vue.resolveDynamicComponent("z-popup"), zPopup);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Popup" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-popup" }, [
@@ -18636,8 +18641,8 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesPopupPopup = /* @__PURE__ */ _export_sfc(_sfc_main$26, [["render", _sfc_render$25], ["__scopeId", "data-v-76c71d6c"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/popup/popup.vue"]]);
-  const _sfc_main$25 = /* @__PURE__ */ vue.defineComponent({
+  const PagesPopupPopup = /* @__PURE__ */ _export_sfc(_sfc_main$29, [["render", _sfc_render$28], ["__scopeId", "data-v-76c71d6c"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/popup/popup.vue"]]);
+  const _sfc_main$28 = /* @__PURE__ */ vue.defineComponent({
     __name: "z-cell-group",
     props: {
       title: String,
@@ -18657,7 +18662,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$24(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$27(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -18728,8 +18733,8 @@ This will fail in production if not fixed.`);
       /* CLASS */
     );
   }
-  const __easycom_1$c = /* @__PURE__ */ _export_sfc(_sfc_main$25, [["render", _sfc_render$24], ["__scopeId", "data-v-a0426351"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-cell-group/z-cell-group.vue"]]);
-  const _sfc_main$24 = /* @__PURE__ */ vue.defineComponent({
+  const __easycom_1$b = /* @__PURE__ */ _export_sfc(_sfc_main$28, [["render", _sfc_render$27], ["__scopeId", "data-v-a0426351"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-cell-group/z-cell-group.vue"]]);
+  const _sfc_main$27 = /* @__PURE__ */ vue.defineComponent({
     __name: "transition",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -18747,12 +18752,12 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$23(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$d);
-    const _component_z_cell_group = resolveEasycom(vue.resolveDynamicComponent("z-cell-group"), __easycom_1$c);
+  function _sfc_render$26(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$c);
+    const _component_z_cell_group = resolveEasycom(vue.resolveDynamicComponent("z-cell-group"), __easycom_1$b);
     const _component_demo_block = vue.resolveComponent("demo-block");
     const _component_z_transition = resolveEasycom(vue.resolveDynamicComponent("z-transition"), zTransition);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Transition" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-transition" }, [
@@ -18812,14 +18817,14 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesTransitionTransition = /* @__PURE__ */ _export_sfc(_sfc_main$24, [["render", _sfc_render$23], ["__scopeId", "data-v-9022f872"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/transition/transition.vue"]]);
+  const PagesTransitionTransition = /* @__PURE__ */ _export_sfc(_sfc_main$27, [["render", _sfc_render$26], ["__scopeId", "data-v-9022f872"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/transition/transition.vue"]]);
   const __default__$14 = {
     name: "ZTag",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$23 = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$26 = /* @__PURE__ */ vue.defineComponent({
     ...__default__$14,
     props: {
       size: String,
@@ -18878,7 +18883,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$22(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$25(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createBlock($setup["zTransition"], {
       show: $setup.props.show,
       name: $setup.props.closeable ? "fade" : "",
@@ -18909,15 +18914,15 @@ This will fail in production if not fixed.`);
       /* FORWARDED */
     }, 8, ["show", "name", "custom-style"]);
   }
-  const __easycom_0$m = /* @__PURE__ */ _export_sfc(_sfc_main$23, [["render", _sfc_render$22], ["__scopeId", "data-v-19f8d075"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-tag/z-tag.vue"]]);
-  const _sfc_main$22 = {};
-  function _sfc_render$21(_ctx, _cache) {
-    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$d);
-    const _component_z_cell_group = resolveEasycom(vue.resolveDynamicComponent("z-cell-group"), __easycom_1$c);
+  const __easycom_0$m = /* @__PURE__ */ _export_sfc(_sfc_main$26, [["render", _sfc_render$25], ["__scopeId", "data-v-19f8d075"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-tag/z-tag.vue"]]);
+  const _sfc_main$25 = {};
+  function _sfc_render$24(_ctx, _cache) {
+    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$c);
+    const _component_z_cell_group = resolveEasycom(vue.resolveDynamicComponent("z-cell-group"), __easycom_1$b);
     const _component_demo_block = vue.resolveComponent("demo-block");
     const _component_z_tag = resolveEasycom(vue.resolveDynamicComponent("z-tag"), __easycom_0$m);
     const _component_z_icon = resolveEasycom(vue.resolveDynamicComponent("z-icon"), zIcon);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Cell" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-cell" }, [
@@ -19128,8 +19133,8 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesCellCell = /* @__PURE__ */ _export_sfc(_sfc_main$22, [["render", _sfc_render$21], ["__scopeId", "data-v-f9674c13"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/cell/cell.vue"]]);
-  const _sfc_main$21 = /* @__PURE__ */ vue.defineComponent({
+  const PagesCellCell = /* @__PURE__ */ _export_sfc(_sfc_main$25, [["render", _sfc_render$24], ["__scopeId", "data-v-f9674c13"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/cell/cell.vue"]]);
+  const _sfc_main$24 = /* @__PURE__ */ vue.defineComponent({
     __name: "overlay",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -19141,11 +19146,11 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$20(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$4);
-    const _component_z_overlay = resolveEasycom(vue.resolveDynamicComponent("z-overlay"), __easycom_1$j);
+  function _sfc_render$23(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$3);
+    const _component_z_overlay = resolveEasycom(vue.resolveDynamicComponent("z-overlay"), __easycom_1$i);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Overlay" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-overlay" }, [
@@ -19213,8 +19218,8 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesOverlayOverlay = /* @__PURE__ */ _export_sfc(_sfc_main$21, [["render", _sfc_render$20], ["__scopeId", "data-v-57e7be64"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/overlay/overlay.vue"]]);
-  const _sfc_main$20 = /* @__PURE__ */ vue.defineComponent({
+  const PagesOverlayOverlay = /* @__PURE__ */ _export_sfc(_sfc_main$24, [["render", _sfc_render$23], ["__scopeId", "data-v-57e7be64"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/overlay/overlay.vue"]]);
+  const _sfc_main$23 = /* @__PURE__ */ vue.defineComponent({
     __name: "toast",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -19250,13 +19255,13 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1$(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$d);
+  function _sfc_render$22(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$c);
     const _component_demo_block = vue.resolveComponent("demo-block");
     const _component_z_icon = resolveEasycom(vue.resolveDynamicComponent("z-icon"), zIcon);
-    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$4);
+    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$3);
     const _component_z_toast = resolveEasycom(vue.resolveDynamicComponent("z-toast"), zToast);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Toast" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-toast" }, [
@@ -19435,8 +19440,8 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesToastToast = /* @__PURE__ */ _export_sfc(_sfc_main$20, [["render", _sfc_render$1$], ["__scopeId", "data-v-6b1cb7b6"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/toast/toast.vue"]]);
-  const _sfc_main$1$ = /* @__PURE__ */ vue.defineComponent({
+  const PagesToastToast = /* @__PURE__ */ _export_sfc(_sfc_main$23, [["render", _sfc_render$22], ["__scopeId", "data-v-6b1cb7b6"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/toast/toast.vue"]]);
+  const _sfc_main$22 = /* @__PURE__ */ vue.defineComponent({
     __name: "navbar",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -19446,11 +19451,11 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1_(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$21(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_nav_bar = resolveEasycom(vue.resolveDynamicComponent("z-nav-bar"), __easycom_0$o);
     const _component_demo_block = vue.resolveComponent("demo-block");
     const _component_z_icon = resolveEasycom(vue.resolveDynamicComponent("z-icon"), zIcon);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Navbar" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-navbar" }, [
@@ -19525,14 +19530,14 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesNavbarNavbar = /* @__PURE__ */ _export_sfc(_sfc_main$1$, [["render", _sfc_render$1_], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/navbar/navbar.vue"]]);
+  const PagesNavbarNavbar = /* @__PURE__ */ _export_sfc(_sfc_main$22, [["render", _sfc_render$21], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/navbar/navbar.vue"]]);
   const __default__$13 = {
     name: "ZImage",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$1_ = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$21 = /* @__PURE__ */ vue.defineComponent({
     ...__default__$13,
     props: {
       src: String,
@@ -19611,7 +19616,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1Z(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$20(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -19688,9 +19693,9 @@ This will fail in production if not fixed.`);
       /* CLASS, STYLE */
     );
   }
-  const __easycom_2$6 = /* @__PURE__ */ _export_sfc(_sfc_main$1_, [["render", _sfc_render$1Z], ["__scopeId", "data-v-bb8cd8b3"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-image/z-image.vue"]]);
+  const __easycom_2$6 = /* @__PURE__ */ _export_sfc(_sfc_main$21, [["render", _sfc_render$20], ["__scopeId", "data-v-bb8cd8b3"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-image/z-image.vue"]]);
   const imageUrl = "https://cdn.zebraui.com/zebra-ui/images/demo.jpg";
-  const _sfc_main$1Z = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$20 = /* @__PURE__ */ vue.defineComponent({
     __name: "image",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -19717,13 +19722,13 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1Y(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1$(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_image = resolveEasycom(vue.resolveDynamicComponent("z-image"), __easycom_2$6);
-    const _component_z_col = resolveEasycom(vue.resolveDynamicComponent("z-col"), __easycom_1$e);
+    const _component_z_col = resolveEasycom(vue.resolveDynamicComponent("z-col"), __easycom_1$d);
     const _component_z_row = resolveEasycom(vue.resolveDynamicComponent("z-row"), __easycom_2$7);
     const _component_demo_block = vue.resolveComponent("demo-block");
     const _component_z_loading = resolveEasycom(vue.resolveDynamicComponent("z-loading"), zLoading);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Image" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-image" }, [
@@ -19965,7 +19970,7 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesImageImage = /* @__PURE__ */ _export_sfc(_sfc_main$1Z, [["render", _sfc_render$1Y], ["__scopeId", "data-v-fa36ddbe"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/image/image.vue"]]);
+  const PagesImageImage = /* @__PURE__ */ _export_sfc(_sfc_main$20, [["render", _sfc_render$1$], ["__scopeId", "data-v-fa36ddbe"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/image/image.vue"]]);
   function isEmptyValue(value) {
     if (Array.isArray(value)) {
       return !value.length;
@@ -20091,7 +20096,7 @@ This will fail in production if not fixed.`);
       virtualHost: true
     }
   };
-  const _sfc_main$1Y = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1$ = /* @__PURE__ */ vue.defineComponent({
     ...__default__$12,
     props: extend$2({}, cellSharedProps, fieldSharedProps, {
       rows: numericProp,
@@ -20434,12 +20439,12 @@ This will fail in production if not fixed.`);
         return startComposing;
       }, get getStringLength() {
         return getStringLength;
-      }, zCell: __easycom_1$d, zIcon };
+      }, zCell: __easycom_1$c, zIcon };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
   });
-  function _sfc_render$1X(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1_(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -20794,8 +20799,8 @@ This will fail in production if not fixed.`);
       /* CLASS, STYLE */
     );
   }
-  const __easycom_1$b = /* @__PURE__ */ _export_sfc(_sfc_main$1Y, [["render", _sfc_render$1X], ["__scopeId", "data-v-3e502ec7"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-field/z-field.vue"]]);
-  const _sfc_main$1X = /* @__PURE__ */ vue.defineComponent({
+  const __easycom_1$a = /* @__PURE__ */ _export_sfc(_sfc_main$1$, [["render", _sfc_render$1_], ["__scopeId", "data-v-3e502ec7"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-field/z-field.vue"]]);
+  const _sfc_main$1_ = /* @__PURE__ */ vue.defineComponent({
     __name: "field",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -20824,11 +20829,11 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1W(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_field = resolveEasycom(vue.resolveDynamicComponent("z-field"), __easycom_1$b);
+  function _sfc_render$1Z(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_z_field = resolveEasycom(vue.resolveDynamicComponent("z-field"), __easycom_1$a);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$4);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$3);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Field" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-field" }, [
@@ -21117,8 +21122,8 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesFieldField = /* @__PURE__ */ _export_sfc(_sfc_main$1X, [["render", _sfc_render$1W], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/field/field.vue"]]);
-  const _sfc_main$1W = {
+  const PagesFieldField = /* @__PURE__ */ _export_sfc(_sfc_main$1_, [["render", _sfc_render$1Z], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/field/field.vue"]]);
+  const _sfc_main$1Z = {
     __name: "test",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -21130,7 +21135,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   };
-  function _sfc_render$1V(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1Y(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", null, [
       vue.createElementVNode("view", {
         class: "",
@@ -21151,14 +21156,14 @@ This will fail in production if not fixed.`);
       ])
     ]);
   }
-  const PagesTestTest = /* @__PURE__ */ _export_sfc(_sfc_main$1W, [["render", _sfc_render$1V], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/test/test.vue"]]);
+  const PagesTestTest = /* @__PURE__ */ _export_sfc(_sfc_main$1Z, [["render", _sfc_render$1Y], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/test/test.vue"]]);
   const __default__$11 = {
     name: "ZChecker",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$1V = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1Y = /* @__PURE__ */ vue.defineComponent({
     ...__default__$11,
     props: {
       name: unknownProp,
@@ -21334,7 +21339,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1U(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1X(_ctx, _cache, $props, $setup, $data, $options) {
     var _a, _b, _c, _d;
     return vue.openBlock(), vue.createElementBlock(
       "view",
@@ -21475,14 +21480,14 @@ This will fail in production if not fixed.`);
       /* CLASS, STYLE */
     );
   }
-  const zChecker = /* @__PURE__ */ _export_sfc(_sfc_main$1V, [["render", _sfc_render$1U], ["__scopeId", "data-v-359231b9"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-checker/z-checker.vue"]]);
+  const zChecker = /* @__PURE__ */ _export_sfc(_sfc_main$1Y, [["render", _sfc_render$1X], ["__scopeId", "data-v-359231b9"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-checker/z-checker.vue"]]);
   const __default__$10 = {
     name: "ZCheckbox",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$1U = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1X = /* @__PURE__ */ vue.defineComponent({
     ...__default__$10,
     props: {
       name: unknownProp,
@@ -21561,7 +21566,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1T(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1W(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createBlock($setup["zChecker"], {
       bem: $setup.bem,
       role: "checkbox",
@@ -21597,8 +21602,8 @@ This will fail in production if not fixed.`);
       } : void 0
     ]), 1032, ["bem", "parent", "checked", "name", "disabled", "icon-size", "icon-name", "model-value", "checked-color", "label-position", "label-disabled", "shape", "bind-group", "indeterminate", "component-slot", "custom-style"]);
   }
-  const __easycom_4$3 = /* @__PURE__ */ _export_sfc(_sfc_main$1U, [["render", _sfc_render$1T], ["__scopeId", "data-v-5748d1ab"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-checkbox/z-checkbox.vue"]]);
-  const _sfc_main$1T = {
+  const __easycom_5 = /* @__PURE__ */ _export_sfc(_sfc_main$1X, [["render", _sfc_render$1W], ["__scopeId", "data-v-5748d1ab"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-checkbox/z-checkbox.vue"]]);
+  const _sfc_main$1W = {
     __name: "aye-checkbox",
     props: {
       // 单独使用时 v-model 绑定布尔值
@@ -21766,7 +21771,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   };
-  function _sfc_render$1S(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1V(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -21830,14 +21835,14 @@ This will fail in production if not fixed.`);
       /* CLASS */
     );
   }
-  const __easycom_1$a = /* @__PURE__ */ _export_sfc(_sfc_main$1T, [["render", _sfc_render$1S], ["__scopeId", "data-v-a5ae8ef6"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/components/aye-checkbox/aye-checkbox.vue"]]);
+  const __easycom_6 = /* @__PURE__ */ _export_sfc(_sfc_main$1W, [["render", _sfc_render$1V], ["__scopeId", "data-v-a5ae8ef6"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/components/aye-checkbox/aye-checkbox.vue"]]);
   const __default__$$ = {
     name: "ZCheckboxGroup",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$1S = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1V = /* @__PURE__ */ vue.defineComponent({
     ...__default__$$,
     props: {
       max: numericProp,
@@ -21888,7 +21893,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1R(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1U(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -21901,8 +21906,8 @@ This will fail in production if not fixed.`);
       /* CLASS */
     );
   }
-  const __easycom_5 = /* @__PURE__ */ _export_sfc(_sfc_main$1S, [["render", _sfc_render$1R], ["__scopeId", "data-v-31e02468"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-checkbox-group/z-checkbox-group.vue"]]);
-  const _sfc_main$1R = {
+  const __easycom_7 = /* @__PURE__ */ _export_sfc(_sfc_main$1V, [["render", _sfc_render$1U], ["__scopeId", "data-v-31e02468"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-checkbox-group/z-checkbox-group.vue"]]);
+  const _sfc_main$1U = {
     __name: "aye-checkbox-group",
     props: {
       // v-model绑定选中值数组
@@ -22012,7 +22017,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   };
-  function _sfc_render$1Q(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1T(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -22025,10 +22030,10 @@ This will fail in production if not fixed.`);
       /* CLASS */
     );
   }
-  const __easycom_3$3 = /* @__PURE__ */ _export_sfc(_sfc_main$1R, [["render", _sfc_render$1Q], ["__scopeId", "data-v-d0fd68d7"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/components/aye-checkbox-group/aye-checkbox-group.vue"]]);
+  const __easycom_8 = /* @__PURE__ */ _export_sfc(_sfc_main$1U, [["render", _sfc_render$1T], ["__scopeId", "data-v-d0fd68d7"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/components/aye-checkbox-group/aye-checkbox-group.vue"]]);
   const activeIcon$1 = "https://cdn.zebraui.com/zebra-ui/images/assets/demo-select.png";
   const inactiveIcon$1 = "https://cdn.zebraui.com/zebra-ui/images/assets/demo-noselect.png";
-  const _sfc_main$1Q = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1T = /* @__PURE__ */ vue.defineComponent({
     __name: "checkbox",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -22072,16 +22077,16 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1P(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_checkbox = resolveEasycom(vue.resolveDynamicComponent("z-checkbox"), __easycom_4$3);
-    const _component_aye_checkbox = resolveEasycom(vue.resolveDynamicComponent("aye-checkbox"), __easycom_1$a);
+  function _sfc_render$1S(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_z_checkbox = resolveEasycom(vue.resolveDynamicComponent("z-checkbox"), __easycom_5);
+    const _component_aye_checkbox = resolveEasycom(vue.resolveDynamicComponent("aye-checkbox"), __easycom_6);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_z_checkbox_group = resolveEasycom(vue.resolveDynamicComponent("z-checkbox-group"), __easycom_5);
-    const _component_aye_checkbox_group = resolveEasycom(vue.resolveDynamicComponent("aye-checkbox-group"), __easycom_3$3);
-    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$4);
-    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$d);
-    const _component_z_cell_group = resolveEasycom(vue.resolveDynamicComponent("z-cell-group"), __easycom_1$c);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_z_checkbox_group = resolveEasycom(vue.resolveDynamicComponent("z-checkbox-group"), __easycom_7);
+    const _component_aye_checkbox_group = resolveEasycom(vue.resolveDynamicComponent("aye-checkbox-group"), __easycom_8);
+    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$3);
+    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$c);
+    const _component_z_cell_group = resolveEasycom(vue.resolveDynamicComponent("z-cell-group"), __easycom_1$b);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Checkbox" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-checkbox" }, [
@@ -22708,14 +22713,14 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesCheckboxCheckbox = /* @__PURE__ */ _export_sfc(_sfc_main$1Q, [["render", _sfc_render$1P], ["__scopeId", "data-v-cdbcba27"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/checkbox/checkbox.vue"]]);
+  const PagesCheckboxCheckbox = /* @__PURE__ */ _export_sfc(_sfc_main$1T, [["render", _sfc_render$1S], ["__scopeId", "data-v-cdbcba27"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/checkbox/checkbox.vue"]]);
   const __default__$_ = {
     name: "ZRadio",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$1P = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1S = /* @__PURE__ */ vue.defineComponent({
     ...__default__$_,
     props: {
       name: unknownProp,
@@ -22754,7 +22759,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1O(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1R(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createBlock($setup["zChecker"], {
       bem: $setup.bem,
       role: "radio",
@@ -22788,14 +22793,14 @@ This will fail in production if not fixed.`);
       } : void 0
     ]), 1032, ["bem", "parent", "checked", "name", "disabled", "icon-size", "icon-name", "model-value", "checked-color", "label-position", "label-disabled", "shape", "component-slot", "custom-style"]);
   }
-  const __easycom_6 = /* @__PURE__ */ _export_sfc(_sfc_main$1P, [["render", _sfc_render$1O], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-radio/z-radio.vue"]]);
+  const __easycom_9 = /* @__PURE__ */ _export_sfc(_sfc_main$1S, [["render", _sfc_render$1R], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-radio/z-radio.vue"]]);
   const __default__$Z = {
     name: "ZRadioGroup",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$1O = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1R = /* @__PURE__ */ vue.defineComponent({
     ...__default__$Z,
     props: {
       shape: String,
@@ -22827,7 +22832,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1N(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1Q(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -22841,10 +22846,10 @@ This will fail in production if not fixed.`);
       /* CLASS */
     );
   }
-  const __easycom_7 = /* @__PURE__ */ _export_sfc(_sfc_main$1O, [["render", _sfc_render$1N], ["__scopeId", "data-v-a6049517"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-radio-group/z-radio-group.vue"]]);
+  const __easycom_10 = /* @__PURE__ */ _export_sfc(_sfc_main$1R, [["render", _sfc_render$1Q], ["__scopeId", "data-v-a6049517"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-radio-group/z-radio-group.vue"]]);
   const activeIcon = "https://cdn.zebraui.com/zebra-ui/images/assets/demo-select.png";
   const inactiveIcon = "https://cdn.zebraui.com/zebra-ui/images/assets/demo-noselect.png";
-  const _sfc_main$1N = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1Q = /* @__PURE__ */ vue.defineComponent({
     __name: "radio",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -22854,13 +22859,13 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1M(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_radio = resolveEasycom(vue.resolveDynamicComponent("z-radio"), __easycom_6);
-    const _component_z_radio_group = resolveEasycom(vue.resolveDynamicComponent("z-radio-group"), __easycom_7);
+  function _sfc_render$1P(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_z_radio = resolveEasycom(vue.resolveDynamicComponent("z-radio"), __easycom_9);
+    const _component_z_radio_group = resolveEasycom(vue.resolveDynamicComponent("z-radio-group"), __easycom_10);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$d);
-    const _component_z_cell_group = resolveEasycom(vue.resolveDynamicComponent("z-cell-group"), __easycom_1$c);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$c);
+    const _component_z_cell_group = resolveEasycom(vue.resolveDynamicComponent("z-cell-group"), __easycom_1$b);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Radio" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-radio" }, [
@@ -23257,7 +23262,7 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesRadioRadio = /* @__PURE__ */ _export_sfc(_sfc_main$1N, [["render", _sfc_render$1M], ["__scopeId", "data-v-54d17699"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/radio/radio.vue"]]);
+  const PagesRadioRadio = /* @__PURE__ */ _export_sfc(_sfc_main$1Q, [["render", _sfc_render$1P], ["__scopeId", "data-v-54d17699"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/radio/radio.vue"]]);
   const [name$2, bem$2, t$2] = createNamespace("picker");
   const getFirstEnabledOption = (options) => options.find((option) => !option.disabled) || options[0];
   function getColumnsType(columns, fields) {
@@ -23325,7 +23330,7 @@ This will fail in production if not fixed.`);
       virtualHost: true
     }
   };
-  const _sfc_main$1M = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1P = /* @__PURE__ */ vue.defineComponent({
     ...__default__$Y,
     props: {
       title: String,
@@ -23345,7 +23350,7 @@ This will fail in production if not fixed.`);
       const cancelButtonStyle = vue.computed(() => {
         return {
           color: "var(--z-picker-cancel-action-color)",
-          margin: "var(--z-picker-action-margin)",
+          margin: "var(--z-picker-cancel-action-margin)",
           padding: "var(--z-picker-action-padding)",
           fontSize: "var(--z-picker-action-font-size)",
           borderRadius: "var(--z-picker-btn-border-radius)"
@@ -23354,7 +23359,7 @@ This will fail in production if not fixed.`);
       const confirmButtonStyle = vue.computed(() => {
         return {
           color: "var(--z-picker-confirm-action-color)",
-          margin: "var(--z-picker-action-margin)",
+          margin: "var(--z-picker-confirm-action-margin)",
           padding: "var(--z-picker-action-padding)",
           fontSize: "var(--z-picker-action-font-size)",
           borderRadius: "var(--z-picker-btn-border-radius)"
@@ -23362,12 +23367,12 @@ This will fail in production if not fixed.`);
       });
       const __returned__ = { name: name2, props, emit, onCancel, onConfirm, cancelButtonStyle, confirmButtonStyle, get bem() {
         return bem$2;
-      }, zButton: __easycom_3$4 };
+      }, zButton: __easycom_3$3 };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
   });
-  function _sfc_render$1L(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1O(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -23446,14 +23451,14 @@ This will fail in production if not fixed.`);
       /* CLASS */
     );
   }
-  const zPickerToolbar = /* @__PURE__ */ _export_sfc(_sfc_main$1M, [["render", _sfc_render$1L], ["__scopeId", "data-v-f2b152b6"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-picker/z-picker-toolbar.vue"]]);
+  const zPickerToolbar = /* @__PURE__ */ _export_sfc(_sfc_main$1P, [["render", _sfc_render$1O], ["__scopeId", "data-v-f2b152b6"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-picker/z-picker-toolbar.vue"]]);
   const __default__$X = {
     name: "ZPickerColumn",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$1L = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1O = /* @__PURE__ */ vue.defineComponent({
     ...__default__$X,
     props: {
       value: numericProp,
@@ -23629,7 +23634,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1K(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1N(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -23694,14 +23699,14 @@ This will fail in production if not fixed.`);
       /* CLASS, NEED_HYDRATION */
     );
   }
-  const zPickerColumn = /* @__PURE__ */ _export_sfc(_sfc_main$1L, [["render", _sfc_render$1K], ["__scopeId", "data-v-389828ea"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-picker/z-picker-column.vue"]]);
+  const zPickerColumn = /* @__PURE__ */ _export_sfc(_sfc_main$1O, [["render", _sfc_render$1N], ["__scopeId", "data-v-389828ea"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-picker/z-picker-column.vue"]]);
   const __default__$W = {
     name: "ZPicker",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$1K = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1N = /* @__PURE__ */ vue.defineComponent({
     ...__default__$W,
     props: {
       loading: Boolean,
@@ -23897,7 +23902,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1J(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1M(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -24090,8 +24095,8 @@ This will fail in production if not fixed.`);
       /* CLASS */
     );
   }
-  const __easycom_4$2 = /* @__PURE__ */ _export_sfc(_sfc_main$1K, [["render", _sfc_render$1J], ["__scopeId", "data-v-bc0fd436"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-picker/z-picker.vue"]]);
-  const _sfc_main$1J = /* @__PURE__ */ vue.defineComponent({
+  const __easycom_4$3 = /* @__PURE__ */ _export_sfc(_sfc_main$1N, [["render", _sfc_render$1M], ["__scopeId", "data-v-bc0fd436"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-picker/z-picker.vue"]]);
+  const _sfc_main$1M = /* @__PURE__ */ vue.defineComponent({
     __name: "picker",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -24221,12 +24226,12 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1I(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_picker = resolveEasycom(vue.resolveDynamicComponent("z-picker"), __easycom_4$2);
+  function _sfc_render$1L(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_z_picker = resolveEasycom(vue.resolveDynamicComponent("z-picker"), __easycom_4$3);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_z_field = resolveEasycom(vue.resolveDynamicComponent("z-field"), __easycom_1$b);
+    const _component_z_field = resolveEasycom(vue.resolveDynamicComponent("z-field"), __easycom_1$a);
     const _component_z_popup = resolveEasycom(vue.resolveDynamicComponent("z-popup"), zPopup);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Picker" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-picker" }, [
@@ -24338,7 +24343,7 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesPickerPicker = /* @__PURE__ */ _export_sfc(_sfc_main$1J, [["render", _sfc_render$1I], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/picker/picker.vue"]]);
+  const PagesPickerPicker = /* @__PURE__ */ _export_sfc(_sfc_main$1M, [["render", _sfc_render$1L], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/picker/picker.vue"]]);
   const pickerSharedProps = {
     loading: Boolean,
     readonly: Boolean,
@@ -24390,7 +24395,7 @@ This will fail in production if not fixed.`);
       virtualHost: true
     }
   };
-  const _sfc_main$1I = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1L = /* @__PURE__ */ vue.defineComponent({
     ...__default__$V,
     props: extend$2({}, sharedProps, {
       columnsType: {
@@ -24509,12 +24514,12 @@ This will fail in production if not fixed.`);
       const onChange = (...args) => emit("change", ...args);
       const onCancel = (...args) => emit("cancel", ...args);
       const onConfirm = (...args) => emit("confirm", ...args);
-      const __returned__ = { name: name2, instance, props, emit, currentValues, updatedByExternalSources, genYearOptions, isMinYear, isMaxYear, isMinMonth, isMaxMonth, getValue, genMonthOptions, genDayOptions, columns, onChange, onCancel, onConfirm, zPicker: __easycom_4$2 };
+      const __returned__ = { name: name2, instance, props, emit, currentValues, updatedByExternalSources, genYearOptions, isMinYear, isMaxYear, isMinMonth, isMaxMonth, getValue, genMonthOptions, genDayOptions, columns, onChange, onCancel, onConfirm, zPicker: __easycom_4$3 };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
   });
-  function _sfc_render$1H(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1K(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createBlock($setup["zPicker"], {
       modelValue: $setup.currentValues,
       "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.currentValues = $event),
@@ -24587,8 +24592,8 @@ This will fail in production if not fixed.`);
       } : void 0
     ]), 1032, ["modelValue", "columns", "loading", "readonly", "option-height", "show-toolbar", "swipe-duration", "visible-option-num", "title", "cancel-button-text", "component-slots", "confirm-button-text"]);
   }
-  const __easycom_15 = /* @__PURE__ */ _export_sfc(_sfc_main$1I, [["render", _sfc_render$1H], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-date-picker/z-date-picker.vue"]]);
-  const _sfc_main$1H = /* @__PURE__ */ vue.defineComponent({
+  const __easycom_20 = /* @__PURE__ */ _export_sfc(_sfc_main$1L, [["render", _sfc_render$1K], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-date-picker/z-date-picker.vue"]]);
+  const _sfc_main$1K = /* @__PURE__ */ vue.defineComponent({
     __name: "datePicker",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -24619,27 +24624,35 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1G(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_date_picker = resolveEasycom(vue.resolveDynamicComponent("z-date-picker"), __easycom_15);
+  function _sfc_render$1J(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_z_date_picker = resolveEasycom(vue.resolveDynamicComponent("z-date-picker"), __easycom_20);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "DatePicker" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-date-picker" }, [
-          vue.createVNode(_component_demo_block, { title: "基础用法" }, {
+          vue.createVNode(_component_demo_block, {
+            title: "基础用法",
+            "box-shadow": false
+          }, {
             default: vue.withCtx(() => [
-              vue.createVNode(_component_z_date_picker, {
-                modelValue: $setup.currentDate,
-                "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.currentDate = $event),
-                title: "选择日期",
-                "min-date": $setup.minDate,
-                "max-date": $setup.maxDate
-              }, null, 8, ["modelValue", "min-date", "max-date"])
+              vue.createElementVNode("view", { class: "round-12 overflow add_shadow" }, [
+                vue.createVNode(_component_z_date_picker, {
+                  modelValue: $setup.currentDate,
+                  "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.currentDate = $event),
+                  title: "选择日期",
+                  "min-date": $setup.minDate,
+                  "max-date": $setup.maxDate
+                }, null, 8, ["modelValue", "min-date", "max-date"])
+              ])
             ]),
             _: 1
             /* STABLE */
           }),
-          vue.createVNode(_component_demo_block, { title: "选项类型" }, {
+          vue.createVNode(_component_demo_block, {
+            title: "选项类型",
+            card: false
+          }, {
             default: vue.withCtx(() => [
               vue.createVNode(_component_z_date_picker, {
                 modelValue: $setup.currentDateOption,
@@ -24653,7 +24666,10 @@ This will fail in production if not fixed.`);
             _: 1
             /* STABLE */
           }),
-          vue.createVNode(_component_demo_block, { title: "格式化选项" }, {
+          vue.createVNode(_component_demo_block, {
+            title: "格式化选项",
+            card: false
+          }, {
             default: vue.withCtx(() => [
               vue.createVNode(_component_z_date_picker, {
                 modelValue: $setup.currentDateFormatter,
@@ -24668,7 +24684,10 @@ This will fail in production if not fixed.`);
             _: 1
             /* STABLE */
           }),
-          vue.createVNode(_component_demo_block, { title: "过滤选项" }, {
+          vue.createVNode(_component_demo_block, {
+            title: "过滤选项",
+            card: false
+          }, {
             default: vue.withCtx(() => [
               vue.createVNode(_component_z_date_picker, {
                 modelValue: $setup.currentDateFilter,
@@ -24689,14 +24708,14 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesDatePickerDatePicker = /* @__PURE__ */ _export_sfc(_sfc_main$1H, [["render", _sfc_render$1G], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/datePicker/datePicker.vue"]]);
+  const PagesDatePickerDatePicker = /* @__PURE__ */ _export_sfc(_sfc_main$1K, [["render", _sfc_render$1J], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/datePicker/datePicker.vue"]]);
   const __default__$U = {
     name: "ZTimePicker",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$1G = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1J = /* @__PURE__ */ vue.defineComponent({
     ...__default__$U,
     props: extend$2({}, sharedProps, {
       minHour: makeNumericProp(0),
@@ -24816,12 +24835,12 @@ This will fail in production if not fixed.`);
       const onChange = (...args) => emit("change", ...args);
       const onCancel = (...args) => emit("cancel", ...args);
       const onConfirm = (...args) => emit("confirm", ...args);
-      const __returned__ = { name: name2, fullColumns, instance, props, emit, currentValues, getValidTime, columns, onChange, onCancel, onConfirm, zPicker: __easycom_4$2 };
+      const __returned__ = { name: name2, fullColumns, instance, props, emit, currentValues, getValidTime, columns, onChange, onCancel, onConfirm, zPicker: __easycom_4$3 };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
   });
-  function _sfc_render$1F(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1I(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createBlock($setup["zPicker"], {
       modelValue: $setup.currentValues,
       "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.currentValues = $event),
@@ -24894,8 +24913,8 @@ This will fail in production if not fixed.`);
       } : void 0
     ]), 1032, ["modelValue", "columns", "loading", "readonly", "option-height", "show-toolbar", "swipe-duration", "visible-option-num", "title", "cancel-button-text", "component-slots", "confirm-button-text"]);
   }
-  const __easycom_2$5 = /* @__PURE__ */ _export_sfc(_sfc_main$1G, [["render", _sfc_render$1F], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-time-picker/z-time-picker.vue"]]);
-  const _sfc_main$1F = /* @__PURE__ */ vue.defineComponent({
+  const __easycom_2$5 = /* @__PURE__ */ _export_sfc(_sfc_main$1J, [["render", _sfc_render$1I], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-time-picker/z-time-picker.vue"]]);
+  const _sfc_main$1I = /* @__PURE__ */ vue.defineComponent({
     __name: "timePicker",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -24944,10 +24963,10 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1E(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1H(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_time_picker = resolveEasycom(vue.resolveDynamicComponent("z-time-picker"), __easycom_2$5);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "TimePicker" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-time-picker" }, [
@@ -25043,14 +25062,14 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesTimePickerTimePicker = /* @__PURE__ */ _export_sfc(_sfc_main$1F, [["render", _sfc_render$1E], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/timePicker/timePicker.vue"]]);
+  const PagesTimePickerTimePicker = /* @__PURE__ */ _export_sfc(_sfc_main$1I, [["render", _sfc_render$1H], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/timePicker/timePicker.vue"]]);
   const __default__$T = {
     name: "ZPickerGroup",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$1E = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1H = /* @__PURE__ */ vue.defineComponent({
     ...__default__$T,
     props: {
       tabs: makeArrayProp(),
@@ -25106,7 +25125,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1D(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1G(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -25159,8 +25178,8 @@ This will fail in production if not fixed.`);
       /* CLASS */
     );
   }
-  const __easycom_4$1 = /* @__PURE__ */ _export_sfc(_sfc_main$1E, [["render", _sfc_render$1D], ["__scopeId", "data-v-9857ec0e"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-picker-group/z-picker-group.vue"]]);
-  const _sfc_main$1D = /* @__PURE__ */ vue.defineComponent({
+  const __easycom_4$2 = /* @__PURE__ */ _export_sfc(_sfc_main$1H, [["render", _sfc_render$1G], ["__scopeId", "data-v-9857ec0e"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-picker-group/z-picker-group.vue"]]);
+  const _sfc_main$1G = /* @__PURE__ */ vue.defineComponent({
     __name: "pickerGroup",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -25203,15 +25222,15 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1C(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_date_picker = resolveEasycom(vue.resolveDynamicComponent("z-date-picker"), __easycom_15);
-    const _component_z_tab = resolveEasycom(vue.resolveDynamicComponent("z-tab"), __easycom_1$g);
+  function _sfc_render$1F(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_z_date_picker = resolveEasycom(vue.resolveDynamicComponent("z-date-picker"), __easycom_20);
+    const _component_z_tab = resolveEasycom(vue.resolveDynamicComponent("z-tab"), __easycom_1$f);
     const _component_z_time_picker = resolveEasycom(vue.resolveDynamicComponent("z-time-picker"), __easycom_2$5);
     const _component_z_tabs = resolveEasycom(vue.resolveDynamicComponent("z-tabs"), __easycom_2$8);
-    const _component_z_picker_group = resolveEasycom(vue.resolveDynamicComponent("z-picker-group"), __easycom_4$1);
+    const _component_z_picker_group = resolveEasycom(vue.resolveDynamicComponent("z-picker-group"), __easycom_4$2);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$4);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$3);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "PickerGroup" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-picker-group" }, [
@@ -25515,8 +25534,8 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesPickerGroupPickerGroup = /* @__PURE__ */ _export_sfc(_sfc_main$1D, [["render", _sfc_render$1C], ["__scopeId", "data-v-f7a42c27"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/pickerGroup/pickerGroup.vue"]]);
-  const _sfc_main$1C = /* @__PURE__ */ vue.defineComponent({
+  const PagesPickerGroupPickerGroup = /* @__PURE__ */ _export_sfc(_sfc_main$1G, [["render", _sfc_render$1F], ["__scopeId", "data-v-f7a42c27"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/pickerGroup/pickerGroup.vue"]]);
+  const _sfc_main$1F = /* @__PURE__ */ vue.defineComponent({
     __name: "switch",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -25535,12 +25554,12 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1B(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_switch = resolveEasycom(vue.resolveDynamicComponent("z-switch"), __easycom_1$m);
+  function _sfc_render$1E(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_z_switch = resolveEasycom(vue.resolveDynamicComponent("z-switch"), __easycom_1$l);
     const _component_demo_block = vue.resolveComponent("demo-block");
     const _component_z_icon = resolveEasycom(vue.resolveDynamicComponent("z-icon"), zIcon);
-    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$d);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$c);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Switch" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-switch" }, [
@@ -25656,8 +25675,8 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesSwitchSwitch = /* @__PURE__ */ _export_sfc(_sfc_main$1C, [["render", _sfc_render$1B], ["__scopeId", "data-v-80d2204a"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/switch/switch.vue"]]);
-  const _sfc_main$1B = /* @__PURE__ */ vue.defineComponent({
+  const PagesSwitchSwitch = /* @__PURE__ */ _export_sfc(_sfc_main$1F, [["render", _sfc_render$1E], ["__scopeId", "data-v-80d2204a"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/switch/switch.vue"]]);
+  const _sfc_main$1E = /* @__PURE__ */ vue.defineComponent({
     __name: "dialog",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -25698,12 +25717,12 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1A(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$d);
+  function _sfc_render$1D(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$c);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_z_picker = resolveEasycom(vue.resolveDynamicComponent("z-picker"), __easycom_4$2);
+    const _component_z_picker = resolveEasycom(vue.resolveDynamicComponent("z-picker"), __easycom_4$3);
     const _component_z_dialog = resolveEasycom(vue.resolveDynamicComponent("z-dialog"), __easycom_2$b);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Dialog" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-dialog" }, [
@@ -25818,14 +25837,14 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesDialogDialog = /* @__PURE__ */ _export_sfc(_sfc_main$1B, [["render", _sfc_render$1A], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/dialog/dialog.vue"]]);
+  const PagesDialogDialog = /* @__PURE__ */ _export_sfc(_sfc_main$1E, [["render", _sfc_render$1D], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/dialog/dialog.vue"]]);
   const __default__$S = {
     name: "ZSearch",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$1A = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1D = /* @__PURE__ */ vue.defineComponent({
     ...__default__$S,
     props: extend$2({}, fieldSharedProps, {
       label: String,
@@ -25898,12 +25917,12 @@ This will fail in production if not fixed.`);
       });
       const onInput = (value) => emit("update:modelValue", value);
       useExpose({ focus, blur });
-      const __returned__ = { instance, name: name2, bem: bem2, props, emit, id, onCancel, getInputId, blur, focus, onBlur, onFocus, onClear, onClickInput, onClickLeftIcon, onClickRightIcon, onConfirm, cellStyle, onInput, zField: __easycom_1$b };
+      const __returned__ = { instance, name: name2, bem: bem2, props, emit, id, onCancel, getInputId, blur, focus, onBlur, onFocus, onClear, onClickInput, onClickLeftIcon, onClickRightIcon, onConfirm, cellStyle, onInput, zField: __easycom_1$a };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
   });
-  function _sfc_render$1z(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1C(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -26023,8 +26042,8 @@ This will fail in production if not fixed.`);
       /* CLASS, STYLE */
     );
   }
-  const __easycom_0$l = /* @__PURE__ */ _export_sfc(_sfc_main$1A, [["render", _sfc_render$1z], ["__scopeId", "data-v-2d08e408"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-search/z-search.vue"]]);
-  const _sfc_main$1z = /* @__PURE__ */ vue.defineComponent({
+  const __easycom_0$l = /* @__PURE__ */ _export_sfc(_sfc_main$1D, [["render", _sfc_render$1C], ["__scopeId", "data-v-2d08e408"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-search/z-search.vue"]]);
+  const _sfc_main$1C = /* @__PURE__ */ vue.defineComponent({
     __name: "search",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -26038,10 +26057,10 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1y(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1B(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_search = resolveEasycom(vue.resolveDynamicComponent("z-search"), __easycom_0$l);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Search" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-search" }, [
@@ -26133,14 +26152,14 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesSearchSearch = /* @__PURE__ */ _export_sfc(_sfc_main$1z, [["render", _sfc_render$1y], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/search/search.vue"]]);
+  const PagesSearchSearch = /* @__PURE__ */ _export_sfc(_sfc_main$1C, [["render", _sfc_render$1B], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/search/search.vue"]]);
   const __default__$R = {
     name: "ZSlider",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$1y = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1B = /* @__PURE__ */ vue.defineComponent({
     ...__default__$R,
     props: {
       min: makeNumericProp(0),
@@ -26371,7 +26390,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1x(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1A(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -26495,8 +26514,8 @@ This will fail in production if not fixed.`);
       /* CLASS, STYLE */
     );
   }
-  const __easycom_2$4 = /* @__PURE__ */ _export_sfc(_sfc_main$1y, [["render", _sfc_render$1x], ["__scopeId", "data-v-f29f17c0"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-slider/z-slider.vue"]]);
-  const _sfc_main$1x = /* @__PURE__ */ vue.defineComponent({
+  const __easycom_2$4 = /* @__PURE__ */ _export_sfc(_sfc_main$1B, [["render", _sfc_render$1A], ["__scopeId", "data-v-f29f17c0"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-slider/z-slider.vue"]]);
+  const _sfc_main$1A = /* @__PURE__ */ vue.defineComponent({
     __name: "slider",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -26513,10 +26532,10 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1w(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1z(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_slider = resolveEasycom(vue.resolveDynamicComponent("z-slider"), __easycom_2$4);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Slider" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-slider" }, [
@@ -26658,14 +26677,14 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesSliderSlider = /* @__PURE__ */ _export_sfc(_sfc_main$1x, [["render", _sfc_render$1w], ["__scopeId", "data-v-2c59709a"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/slider/slider.vue"]]);
+  const PagesSliderSlider = /* @__PURE__ */ _export_sfc(_sfc_main$1A, [["render", _sfc_render$1z], ["__scopeId", "data-v-2c59709a"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/slider/slider.vue"]]);
   const __default__$Q = {
     name: "ZStepper",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$1w = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1z = /* @__PURE__ */ vue.defineComponent({
     ...__default__$Q,
     props: {
       min: makeNumericProp(1),
@@ -26865,7 +26884,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1v(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1y(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -26934,8 +26953,8 @@ This will fail in production if not fixed.`);
       /* CLASS */
     );
   }
-  const __easycom_8 = /* @__PURE__ */ _export_sfc(_sfc_main$1w, [["render", _sfc_render$1v], ["__scopeId", "data-v-5f7e4c5b"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-stepper/z-stepper.vue"]]);
-  const _sfc_main$1v = /* @__PURE__ */ vue.defineComponent({
+  const __easycom_13 = /* @__PURE__ */ _export_sfc(_sfc_main$1z, [["render", _sfc_render$1y], ["__scopeId", "data-v-5f7e4c5b"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-stepper/z-stepper.vue"]]);
+  const _sfc_main$1y = /* @__PURE__ */ vue.defineComponent({
     __name: "stepper",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -26958,10 +26977,10 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1u(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_stepper = resolveEasycom(vue.resolveDynamicComponent("z-stepper"), __easycom_8);
+  function _sfc_render$1x(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_z_stepper = resolveEasycom(vue.resolveDynamicComponent("z-stepper"), __easycom_13);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Stepper" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-stepper" }, [
@@ -27085,14 +27104,14 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesStepperStepper = /* @__PURE__ */ _export_sfc(_sfc_main$1v, [["render", _sfc_render$1u], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/stepper/stepper.vue"]]);
+  const PagesStepperStepper = /* @__PURE__ */ _export_sfc(_sfc_main$1y, [["render", _sfc_render$1x], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/stepper/stepper.vue"]]);
   const __default__$P = {
     name: "ZRate",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$1u = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1x = /* @__PURE__ */ vue.defineComponent({
     ...__default__$P,
     props: {
       size: numericProp,
@@ -27361,7 +27380,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1t(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1w(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -27408,8 +27427,8 @@ This will fail in production if not fixed.`);
       /* CLASS, NEED_HYDRATION */
     );
   }
-  const __easycom_0$k = /* @__PURE__ */ _export_sfc(_sfc_main$1u, [["render", _sfc_render$1t], ["__scopeId", "data-v-005c92aa"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-rate/z-rate.vue"]]);
-  const _sfc_main$1t = /* @__PURE__ */ vue.defineComponent({
+  const __easycom_0$k = /* @__PURE__ */ _export_sfc(_sfc_main$1x, [["render", _sfc_render$1w], ["__scopeId", "data-v-005c92aa"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-rate/z-rate.vue"]]);
+  const _sfc_main$1w = /* @__PURE__ */ vue.defineComponent({
     __name: "rate",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -27425,10 +27444,10 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1s(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1v(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_rate = resolveEasycom(vue.resolveDynamicComponent("z-rate"), __easycom_0$k);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Rate" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-rate" }, [
@@ -27552,14 +27571,14 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesRateRate = /* @__PURE__ */ _export_sfc(_sfc_main$1t, [["render", _sfc_render$1s], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/rate/rate.vue"]]);
+  const PagesRateRate = /* @__PURE__ */ _export_sfc(_sfc_main$1w, [["render", _sfc_render$1v], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/rate/rate.vue"]]);
   const __default__$O = {
     name: "ZSignature",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$1s = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1v = /* @__PURE__ */ vue.defineComponent({
     ...__default__$O,
     props: {
       tips: String,
@@ -27715,12 +27734,12 @@ This will fail in production if not fixed.`);
         return canvasRect;
       }, set canvasRect(v) {
         canvasRect = v;
-      }, uniPlatform, touchStart, touchMove, touchEnd, setCanvasBgColor, submit, clear, initialize, resize, buttonStyle, zButton: __easycom_3$4 };
+      }, uniPlatform, touchStart, touchMove, touchEnd, setCanvasBgColor, submit, clear, initialize, resize, buttonStyle, zButton: __easycom_3$3 };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
   });
-  function _sfc_render$1r(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1u(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -27798,8 +27817,8 @@ This will fail in production if not fixed.`);
       /* CLASS */
     );
   }
-  const __easycom_0$j = /* @__PURE__ */ _export_sfc(_sfc_main$1s, [["render", _sfc_render$1r], ["__scopeId", "data-v-db5fbbca"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-signature/z-signature.vue"]]);
-  const _sfc_main$1r = /* @__PURE__ */ vue.defineComponent({
+  const __easycom_0$j = /* @__PURE__ */ _export_sfc(_sfc_main$1v, [["render", _sfc_render$1u], ["__scopeId", "data-v-db5fbbca"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-signature/z-signature.vue"]]);
+  const _sfc_main$1u = /* @__PURE__ */ vue.defineComponent({
     __name: "signature",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -27842,11 +27861,11 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1q(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1t(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_signature = resolveEasycom(vue.resolveDynamicComponent("z-signature"), __easycom_0$j);
     const _component_z_image = resolveEasycom(vue.resolveDynamicComponent("z-image"), __easycom_2$6);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Signature" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-signature" }, [
@@ -27923,7 +27942,7 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesSignatureSignature = /* @__PURE__ */ _export_sfc(_sfc_main$1r, [["render", _sfc_render$1q], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/signature/signature.vue"]]);
+  const PagesSignatureSignature = /* @__PURE__ */ _export_sfc(_sfc_main$1u, [["render", _sfc_render$1t], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/signature/signature.vue"]]);
   const [name$1, bem$1, t$1] = createNamespace("uploader");
   function readFileContent(file, resultType) {
     return new Promise((resolve) => {
@@ -28097,7 +28116,7 @@ This will fail in production if not fixed.`);
       virtualHost: true
     }
   };
-  const _sfc_main$1q = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1t = /* @__PURE__ */ vue.defineComponent({
     ...__default__$N,
     props: {
       name: numericProp,
@@ -28199,7 +28218,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1p(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1s(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -28321,14 +28340,14 @@ This will fail in production if not fixed.`);
       /* CLASS */
     );
   }
-  const zUploaderItem = /* @__PURE__ */ _export_sfc(_sfc_main$1q, [["render", _sfc_render$1p], ["__scopeId", "data-v-1ee916a7"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-uploader/z-uploader-item.vue"]]);
+  const zUploaderItem = /* @__PURE__ */ _export_sfc(_sfc_main$1t, [["render", _sfc_render$1s], ["__scopeId", "data-v-1ee916a7"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-uploader/z-uploader-item.vue"]]);
   const __default__$M = {
     name: "ZUploader",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$1p = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1s = /* @__PURE__ */ vue.defineComponent({
     ...__default__$M,
     props: {
       name: makeNumericProp(""),
@@ -28586,7 +28605,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1o(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1r(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -28726,8 +28745,8 @@ This will fail in production if not fixed.`);
       /* CLASS */
     );
   }
-  const __easycom_11 = /* @__PURE__ */ _export_sfc(_sfc_main$1p, [["render", _sfc_render$1o], ["__scopeId", "data-v-a35018d7"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-uploader/z-uploader.vue"]]);
-  const _sfc_main$1o = /* @__PURE__ */ vue.defineComponent({
+  const __easycom_16 = /* @__PURE__ */ _export_sfc(_sfc_main$1s, [["render", _sfc_render$1r], ["__scopeId", "data-v-a35018d7"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-uploader/z-uploader.vue"]]);
+  const _sfc_main$1r = /* @__PURE__ */ vue.defineComponent({
     __name: "uploader",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -28803,11 +28822,11 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1n(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_uploader = resolveEasycom(vue.resolveDynamicComponent("z-uploader"), __easycom_11);
+  function _sfc_render$1q(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_z_uploader = resolveEasycom(vue.resolveDynamicComponent("z-uploader"), __easycom_16);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$4);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$3);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Uploader" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-uploader" }, [
@@ -28967,14 +28986,14 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesUploaderUploader = /* @__PURE__ */ _export_sfc(_sfc_main$1o, [["render", _sfc_render$1n], ["__scopeId", "data-v-878447eb"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/uploader/uploader.vue"]]);
+  const PagesUploaderUploader = /* @__PURE__ */ _export_sfc(_sfc_main$1r, [["render", _sfc_render$1q], ["__scopeId", "data-v-878447eb"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/uploader/uploader.vue"]]);
   const __default__$L = {
     name: "ZNumberKeyboardKey",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$1n = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1q = /* @__PURE__ */ vue.defineComponent({
     ...__default__$L,
     props: {
       type: String,
@@ -29014,7 +29033,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1m(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1p(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -29114,14 +29133,14 @@ This will fail in production if not fixed.`);
       /* CLASS, NEED_HYDRATION */
     );
   }
-  const zNumberKeyboardKey = /* @__PURE__ */ _export_sfc(_sfc_main$1n, [["render", _sfc_render$1m], ["__scopeId", "data-v-264a566c"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-number-keyboard/z-number-keyboard-key.vue"]]);
+  const zNumberKeyboardKey = /* @__PURE__ */ _export_sfc(_sfc_main$1q, [["render", _sfc_render$1p], ["__scopeId", "data-v-264a566c"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-number-keyboard/z-number-keyboard-key.vue"]]);
   const __default__$K = {
     name: "ZNumberKeyboard",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$1m = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1p = /* @__PURE__ */ vue.defineComponent({
     ...__default__$K,
     props: {
       show: Boolean,
@@ -29271,12 +29290,12 @@ This will fail in production if not fixed.`);
       );
       const __returned__ = { name: name2, bem: bem2, instance, props, shuffle, emit, genBasicKeys, closeButtonStyle, popupStyle, genDefaultKeys, genCustomKeys, showClose, showTitle, keys, onBlur, onClose, onPress, get getZIndexStyle() {
         return getZIndexStyle;
-      }, zNumberKeyboardKey, zPopup, zButton: __easycom_3$4 };
+      }, zNumberKeyboardKey, zPopup, zButton: __easycom_3$3 };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
   });
-  function _sfc_render$1l(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1o(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createBlock($setup["zPopup"], {
       show: $setup.props.show,
       overlay: $props.overlay,
@@ -29415,8 +29434,8 @@ This will fail in production if not fixed.`);
       /* FORWARDED */
     }, 8, ["show", "overlay", "position", "overlay-back-groud", "custom-style"]);
   }
-  const __easycom_1$9 = /* @__PURE__ */ _export_sfc(_sfc_main$1m, [["render", _sfc_render$1l], ["__scopeId", "data-v-e0981836"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-number-keyboard/z-number-keyboard.vue"]]);
-  const _sfc_main$1l = /* @__PURE__ */ vue.defineComponent({
+  const __easycom_1$9 = /* @__PURE__ */ _export_sfc(_sfc_main$1p, [["render", _sfc_render$1o], ["__scopeId", "data-v-e0981836"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-number-keyboard/z-number-keyboard.vue"]]);
+  const _sfc_main$1o = /* @__PURE__ */ vue.defineComponent({
     __name: "numberKeyboard",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -29436,12 +29455,12 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1k(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$d);
+  function _sfc_render$1n(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$c);
     const _component_z_number_keyboard = resolveEasycom(vue.resolveDynamicComponent("z-number-keyboard"), __easycom_1$9);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_z_field = resolveEasycom(vue.resolveDynamicComponent("z-field"), __easycom_1$b);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_z_field = resolveEasycom(vue.resolveDynamicComponent("z-field"), __easycom_1$a);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "NumberKeyboard" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-number-keyboard" }, [
@@ -29586,14 +29605,14 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesNumberKeyboardNumberKeyboard = /* @__PURE__ */ _export_sfc(_sfc_main$1l, [["render", _sfc_render$1k], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/numberKeyboard/numberKeyboard.vue"]]);
+  const PagesNumberKeyboardNumberKeyboard = /* @__PURE__ */ _export_sfc(_sfc_main$1o, [["render", _sfc_render$1n], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/numberKeyboard/numberKeyboard.vue"]]);
   const __default__$J = {
     name: "ZPasswordInput",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$1k = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1n = /* @__PURE__ */ vue.defineComponent({
     ...__default__$J,
     props: {
       info: String,
@@ -29643,7 +29662,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1j(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1m(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -29732,8 +29751,8 @@ This will fail in production if not fixed.`);
       /* CLASS */
     );
   }
-  const __easycom_0$i = /* @__PURE__ */ _export_sfc(_sfc_main$1k, [["render", _sfc_render$1j], ["__scopeId", "data-v-aa24ba8d"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-password-input/z-password-input.vue"]]);
-  const _sfc_main$1j = /* @__PURE__ */ vue.defineComponent({
+  const __easycom_0$i = /* @__PURE__ */ _export_sfc(_sfc_main$1n, [["render", _sfc_render$1m], ["__scopeId", "data-v-aa24ba8d"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-password-input/z-password-input.vue"]]);
+  const _sfc_main$1m = /* @__PURE__ */ vue.defineComponent({
     __name: "passwordInput",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -29760,11 +29779,11 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1i(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1l(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_password_input = resolveEasycom(vue.resolveDynamicComponent("z-password-input"), __easycom_0$i);
     const _component_z_number_keyboard = resolveEasycom(vue.resolveDynamicComponent("z-number-keyboard"), __easycom_1$9);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "PasswordInput" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-password-input" }, [
@@ -29864,14 +29883,14 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesPasswordInputPasswordInput = /* @__PURE__ */ _export_sfc(_sfc_main$1j, [["render", _sfc_render$1i], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/passwordInput/passwordInput.vue"]]);
+  const PagesPasswordInputPasswordInput = /* @__PURE__ */ _export_sfc(_sfc_main$1m, [["render", _sfc_render$1l], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/passwordInput/passwordInput.vue"]]);
   const __default__$I = {
     name: "ZCascader",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$1i = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1l = /* @__PURE__ */ vue.defineComponent({
     ...__default__$I,
     props: {
       title: String,
@@ -29988,9 +30007,7 @@ This will fail in production if not fixed.`);
               });
             }
             tabs.value = newTabs;
-            vue.nextTick(() => {
-              activeTab.value = tabs.value.length - 1;
-            });
+            activeTab.value = tabs.value.length - 1;
             return;
           }
         }
@@ -30029,9 +30046,7 @@ This will fail in production if not fixed.`);
           } else {
             tabs.value.push(nextTab);
           }
-          vue.nextTick(() => {
-            activeTab.value++;
-          });
+          activeTab.value = tabIndex + 1;
         }
         const selectedOptions = tabs.value.map((tab) => tab.selected).filter(Boolean);
         emit("update:modelValue", option[valueKey]);
@@ -30099,12 +30114,12 @@ This will fail in production if not fixed.`);
         isInternalUpdate = v;
       }, closeIconStyle, textKey, valueKey, childrenKey, tabTitleStyle, selectedIconStyle, optionSelected, optionColor, getSelectedOptionsByValue, updateTabs, onSelect, onClose, onClickTab, resizeTabs, get HAPTICS_FEEDBACK() {
         return HAPTICS_FEEDBACK;
-      }, zIcon, zTabs: __easycom_2$8, zTab: __easycom_1$g };
+      }, zIcon, zTabs: __easycom_2$8, zTab: __easycom_1$f };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
   });
-  function _sfc_render$1h(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1k(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -30163,9 +30178,7 @@ This will fail in production if not fixed.`);
               active: $setup.activeTab,
               "onUpdate:active": _cache[0] || (_cache[0] = ($event) => $setup.activeTab = $event),
               shrink: "",
-              animated: "",
               color: $setup.props.activeColor,
-              swipeable: $setup.props.swipeable,
               onClickTab: $setup.onClickTab
             }, {
               default: vue.withCtx(() => [
@@ -30251,7 +30264,7 @@ This will fail in production if not fixed.`);
               ]),
               _: 3
               /* FORWARDED */
-            }, 8, ["active", "color", "swipeable"])
+            }, 8, ["active", "color"])
           ],
           2
           /* CLASS */
@@ -30261,7 +30274,7 @@ This will fail in production if not fixed.`);
       /* CLASS */
     );
   }
-  const __easycom_1$8 = /* @__PURE__ */ _export_sfc(_sfc_main$1i, [["render", _sfc_render$1h], ["__scopeId", "data-v-1a2348d6"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-cascader/z-cascader.vue"]]);
+  const __easycom_1$8 = /* @__PURE__ */ _export_sfc(_sfc_main$1l, [["render", _sfc_render$1k], ["__scopeId", "data-v-1a2348d6"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-cascader/z-cascader.vue"]]);
   const areaList = {
     province_list: {
       11e4: "北京市",
@@ -34181,7 +34194,7 @@ This will fail in production if not fixed.`);
     });
     return Array.from(provinceMap.values());
   }
-  const _sfc_main$1h = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1k = /* @__PURE__ */ vue.defineComponent({
     __name: "cascader",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -34342,12 +34355,12 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1g(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_field = resolveEasycom(vue.resolveDynamicComponent("z-field"), __easycom_1$b);
+  function _sfc_render$1j(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_z_field = resolveEasycom(vue.resolveDynamicComponent("z-field"), __easycom_1$a);
     const _component_z_cascader = resolveEasycom(vue.resolveDynamicComponent("z-cascader"), __easycom_1$8);
     const _component_z_popup = resolveEasycom(vue.resolveDynamicComponent("z-popup"), zPopup);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Cascader" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-cascader" }, [
@@ -34588,7 +34601,7 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesCascaderCascader = /* @__PURE__ */ _export_sfc(_sfc_main$1h, [["render", _sfc_render$1g], ["__scopeId", "data-v-68dbe9dc"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/cascader/cascader.vue"]]);
+  const PagesCascaderCascader = /* @__PURE__ */ _export_sfc(_sfc_main$1k, [["render", _sfc_render$1j], ["__scopeId", "data-v-68dbe9dc"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/cascader/cascader.vue"]]);
   const [name, bem, t] = createNamespace("calendar");
   const formatMonthTitle = (date) => {
     if (!(date instanceof Date)) {
@@ -34652,7 +34665,7 @@ This will fail in production if not fixed.`);
       virtualHost: true
     }
   };
-  const _sfc_main$1g = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1j = /* @__PURE__ */ vue.defineComponent({
     ...__default__$H,
     props: {
       item: makeRequiredProp(Object),
@@ -34715,7 +34728,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1f(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1i(_ctx, _cache, $props, $setup, $data, $options) {
     return $setup.props.item.type === "placeholder" ? (vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -34865,14 +34878,14 @@ This will fail in production if not fixed.`);
       /* CLASS, STYLE */
     ));
   }
-  const zCalendarDay = /* @__PURE__ */ _export_sfc(_sfc_main$1g, [["render", _sfc_render$1f], ["__scopeId", "data-v-d7fd826f"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-calendar/z-calendar-day.vue"]]);
+  const zCalendarDay = /* @__PURE__ */ _export_sfc(_sfc_main$1j, [["render", _sfc_render$1i], ["__scopeId", "data-v-d7fd826f"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-calendar/z-calendar-day.vue"]]);
   const __default__$G = {
     name: "ZCalendarMonth",
     options: {
       virtualHost: false
     }
   };
-  const _sfc_main$1f = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1i = /* @__PURE__ */ vue.defineComponent({
     ...__default__$G,
     props: {
       date: makeRequiredProp(Number),
@@ -35066,7 +35079,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1e(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1h(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -35159,14 +35172,14 @@ This will fail in production if not fixed.`);
       /* CLASS */
     );
   }
-  const zCalendarMonth = /* @__PURE__ */ _export_sfc(_sfc_main$1f, [["render", _sfc_render$1e], ["__scopeId", "data-v-fc4a7b09"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-calendar/z-calendar-month.vue"]]);
+  const zCalendarMonth = /* @__PURE__ */ _export_sfc(_sfc_main$1i, [["render", _sfc_render$1h], ["__scopeId", "data-v-fc4a7b09"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-calendar/z-calendar-month.vue"]]);
   const __default__$F = {
     name: "ZCalendarHeader",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$1e = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1h = /* @__PURE__ */ vue.defineComponent({
     ...__default__$F,
     props: {
       date: Number,
@@ -35200,7 +35213,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1d(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1g(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -35297,14 +35310,14 @@ This will fail in production if not fixed.`);
       /* CLASS */
     );
   }
-  const zCalendarHeader = /* @__PURE__ */ _export_sfc(_sfc_main$1e, [["render", _sfc_render$1d], ["__scopeId", "data-v-93bdeb09"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-calendar/z-calendar-header.vue"]]);
+  const zCalendarHeader = /* @__PURE__ */ _export_sfc(_sfc_main$1h, [["render", _sfc_render$1g], ["__scopeId", "data-v-93bdeb09"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-calendar/z-calendar-header.vue"]]);
   const __default__$E = {
     name: "ZCalendar",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$1d = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1g = /* @__PURE__ */ vue.defineComponent({
     ...__default__$E,
     props: {
       show: Boolean,
@@ -35680,12 +35693,12 @@ This will fail in production if not fixed.`);
         return bem;
       }, get formatMonthTitle() {
         return formatMonthTitle;
-      }, zCalendarMonth, zCalendarHeader, zPopup, zButton: __easycom_3$4, zToast };
+      }, zCalendarMonth, zCalendarHeader, zPopup, zButton: __easycom_3$3, zToast };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
   });
-  function _sfc_render$1c(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1f(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", null, [
       $setup.props.poppable ? (vue.openBlock(), vue.createBlock($setup["zPopup"], {
         key: 0,
@@ -36025,8 +36038,8 @@ This will fail in production if not fixed.`);
       vue.createVNode($setup["zToast"], { name: "z-calendar" })
     ]);
   }
-  const __easycom_12 = /* @__PURE__ */ _export_sfc(_sfc_main$1d, [["render", _sfc_render$1c], ["__scopeId", "data-v-bda93de6"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-calendar/z-calendar.vue"]]);
-  const _sfc_main$1c = /* @__PURE__ */ vue.defineComponent({
+  const __easycom_17 = /* @__PURE__ */ _export_sfc(_sfc_main$1g, [["render", _sfc_render$1f], ["__scopeId", "data-v-bda93de6"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-calendar/z-calendar.vue"]]);
+  const _sfc_main$1f = /* @__PURE__ */ vue.defineComponent({
     __name: "calendar",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -36135,11 +36148,11 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1b(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$d);
-    const _component_z_calendar = resolveEasycom(vue.resolveDynamicComponent("z-calendar"), __easycom_12);
+  function _sfc_render$1e(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$c);
+    const _component_z_calendar = resolveEasycom(vue.resolveDynamicComponent("z-calendar"), __easycom_17);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Calendar" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-calendar" }, [
@@ -36330,14 +36343,14 @@ This will fail in production if not fixed.`);
       /* STABLE */
     });
   }
-  const PagesCalendarCalendar = /* @__PURE__ */ _export_sfc(_sfc_main$1c, [["render", _sfc_render$1b], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/calendar/calendar.vue"]]);
+  const PagesCalendarCalendar = /* @__PURE__ */ _export_sfc(_sfc_main$1f, [["render", _sfc_render$1e], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/pages/calendar/calendar.vue"]]);
   const __default__$D = {
     name: "ZForm",
     options: {
       virtualHost: true
     }
   };
-  const _sfc_main$1b = /* @__PURE__ */ vue.defineComponent({
+  const _sfc_main$1e = /* @__PURE__ */ vue.defineComponent({
     ...__default__$D,
     props: {
       colon: Boolean,
@@ -36490,7 +36503,7 @@ This will fail in production if not fixed.`);
       return __returned__;
     }
   });
-  function _sfc_render$1a(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1d(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -36503,7 +36516,342 @@ This will fail in production if not fixed.`);
       /* CLASS */
     );
   }
-  const __easycom_4 = /* @__PURE__ */ _export_sfc(_sfc_main$1b, [["render", _sfc_render$1a], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-form/z-form.vue"]]);
+  const __easycom_4$1 = /* @__PURE__ */ _export_sfc(_sfc_main$1e, [["render", _sfc_render$1d], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/uni_modules/zebra-ui/components/z-form/z-form.vue"]]);
+  const _sfc_main$1d = {
+    __name: "aye-switch",
+    props: {
+      /** 开关宽度，支持任意 CSS 长度单位（如 '120rpx', '100px', '10vw'） */
+      width: {
+        type: String,
+        default: "90rpx"
+      },
+      modelValue: {
+        type: Boolean,
+        default: false
+      }
+    },
+    emits: ["update:modelValue"],
+    setup(__props, { expose: __expose, emit: __emit }) {
+      __expose();
+      const props = __props;
+      const emit = __emit;
+      const switchStyle = vue.computed(() => {
+        const match = props.width.match(/^([\d.]+)(.*)$/);
+        let num = 120, unit = "rpx";
+        if (match) {
+          num = parseFloat(match[1]);
+          unit = match[2] || "rpx";
+        }
+        const heightNum = num / 2;
+        return {
+          "--sw-width": num + unit,
+          "--sw-height": heightNum + unit
+        };
+      });
+      const toggle = () => {
+        emit("update:modelValue", !props.modelValue);
+      };
+      const __returned__ = { props, emit, switchStyle, toggle, computed: vue.computed };
+      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+      return __returned__;
+    }
+  };
+  function _sfc_render$1c(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock(
+      "view",
+      {
+        class: "aye-switch",
+        style: vue.normalizeStyle($setup.switchStyle),
+        onClick: $setup.toggle
+      },
+      [
+        vue.createElementVNode(
+          "view",
+          {
+            class: vue.normalizeClass(["aye-switch-track", { checked: $props.modelValue }])
+          },
+          null,
+          2
+          /* CLASS */
+        ),
+        vue.createElementVNode(
+          "view",
+          {
+            class: vue.normalizeClass(["aye-switch-thumb", { checked: $props.modelValue }])
+          },
+          null,
+          2
+          /* CLASS */
+        )
+      ],
+      4
+      /* STYLE */
+    );
+  }
+  const __easycom_4 = /* @__PURE__ */ _export_sfc(_sfc_main$1d, [["render", _sfc_render$1c], ["__scopeId", "data-v-30dfd497"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/components/aye-switch/aye-switch.vue"]]);
+  const disabledTextColor = "#c0c4cc";
+  const _sfc_main$1c = {
+    __name: "aye-radio",
+    props: {
+      modelValue: {
+        type: [String, Number],
+        default: ""
+      },
+      value: {
+        type: [String, Number],
+        required: true
+      },
+      label: {
+        type: String,
+        default: ""
+      },
+      disabled: {
+        type: Boolean,
+        default: void 0
+      },
+      // 自定义尺寸颜色
+      iconSize: {
+        type: String,
+        default: void 0
+      },
+      iconActiveColor: {
+        type: String,
+        default: void 0
+      },
+      iconNormalColor: {
+        type: String,
+        default: void 0
+      },
+      labelColor: {
+        type: String,
+        default: void 0
+      },
+      labelSize: {
+        type: String,
+        default: void 0
+      },
+      // 竖向铺满、反向对齐
+      verticalFull: {
+        type: Boolean,
+        default: void 0
+      },
+      reverseAlign: {
+        type: Boolean,
+        default: void 0
+      }
+    },
+    emits: ["update:modelValue", "change"],
+    setup(__props, { expose: __expose, emit: __emit }) {
+      __expose();
+      const groupInject = vue.inject("ayeRadioGroup", null);
+      const groupBindProps = (groupInject == null ? void 0 : groupInject.groupProps) || null;
+      const props = __props;
+      const emit = __emit;
+      const finalDisabled = vue.computed(() => {
+        var _a;
+        if (props.disabled !== void 0)
+          return props.disabled;
+        return ((_a = groupBindProps == null ? void 0 : groupBindProps.disabled) == null ? void 0 : _a.value) ?? false;
+      });
+      const finalIconSize = vue.computed(() => {
+        var _a;
+        return props.iconSize || ((_a = groupBindProps == null ? void 0 : groupBindProps.iconSize) == null ? void 0 : _a.value) || "50rpx";
+      });
+      const dotInnerSize = vue.computed(() => {
+        const num = parseInt(finalIconSize.value) / 2;
+        return `${num}rpx`;
+      });
+      const activeColor = vue.computed(() => {
+        var _a;
+        return props.iconActiveColor || ((_a = groupBindProps == null ? void 0 : groupBindProps.iconActiveColor) == null ? void 0 : _a.value) || "#07c160";
+      });
+      const normalColor = vue.computed(() => {
+        var _a;
+        return props.iconNormalColor || ((_a = groupBindProps == null ? void 0 : groupBindProps.iconNormalColor) == null ? void 0 : _a.value) || "#9baacf";
+      });
+      const textColor = vue.computed(() => {
+        var _a;
+        return props.labelColor || ((_a = groupBindProps == null ? void 0 : groupBindProps.labelColor) == null ? void 0 : _a.value) || "#333";
+      });
+      const labelSize = vue.computed(() => {
+        var _a;
+        return props.labelSize || ((_a = groupBindProps == null ? void 0 : groupBindProps.labelSize) == null ? void 0 : _a.value) || "32rpx";
+      });
+      const finalVerticalFull = vue.computed(() => {
+        var _a;
+        if (props.verticalFull !== void 0)
+          return props.verticalFull;
+        return ((_a = groupBindProps == null ? void 0 : groupBindProps.verticalFull) == null ? void 0 : _a.value) ?? false;
+      });
+      const finalReverseAlign = vue.computed(() => {
+        var _a;
+        if (props.reverseAlign !== void 0)
+          return props.reverseAlign;
+        return ((_a = groupBindProps == null ? void 0 : groupBindProps.reverseAlign) == null ? void 0 : _a.value) ?? false;
+      });
+      const isChecked = vue.computed(() => {
+        if (groupInject)
+          return groupInject.currentValue.value === props.value;
+        return props.modelValue === props.value;
+      });
+      const handleTap = () => {
+        if (finalDisabled.value)
+          return;
+        if (groupInject) {
+          groupInject.setCurrent(props.value);
+          emit("change", props.value, true);
+        } else {
+          emit("update:modelValue", props.value);
+          emit("change", props.value, true);
+        }
+      };
+      const __returned__ = { groupInject, groupBindProps, props, emit, finalDisabled, finalIconSize, dotInnerSize, activeColor, normalColor, textColor, labelSize, disabledTextColor, finalVerticalFull, finalReverseAlign, isChecked, handleTap, inject: vue.inject, computed: vue.computed };
+      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+      return __returned__;
+    }
+  };
+  function _sfc_render$1b(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock(
+      "view",
+      {
+        class: vue.normalizeClass(["aye-radio-wrap", [
+          $setup.finalDisabled ? "is-disabled" : "",
+          $setup.finalVerticalFull ? "vertical-full" : "",
+          $setup.finalReverseAlign ? "reverse-align" : ""
+        ]]),
+        onClick: $setup.handleTap
+      },
+      [
+        vue.createElementVNode(
+          "view",
+          {
+            class: vue.normalizeClass(["aye-radio", { checked: $setup.isChecked }]),
+            style: vue.normalizeStyle({ width: $props.iconSize, height: $props.iconSize })
+          },
+          [
+            vue.createElementVNode(
+              "view",
+              {
+                class: "radio-dot",
+                style: vue.normalizeStyle({
+                  width: $setup.dotInnerSize,
+                  height: $setup.dotInnerSize,
+                  backgroundColor: $setup.isChecked ? $setup.activeColor : $setup.normalColor
+                })
+              },
+              null,
+              4
+              /* STYLE */
+            )
+          ],
+          6
+          /* CLASS, STYLE */
+        ),
+        $props.label ? (vue.openBlock(), vue.createElementBlock(
+          "text",
+          {
+            key: 0,
+            class: "radio-label",
+            style: vue.normalizeStyle({
+              fontSize: $setup.labelSize,
+              color: $setup.finalDisabled ? $setup.disabledTextColor : $setup.textColor
+            })
+          },
+          vue.toDisplayString($props.label),
+          5
+          /* TEXT, STYLE */
+        )) : vue.createCommentVNode("v-if", true)
+      ],
+      2
+      /* CLASS */
+    );
+  }
+  const __easycom_11 = /* @__PURE__ */ _export_sfc(_sfc_main$1c, [["render", _sfc_render$1b], ["__scopeId", "data-v-4a3408cd"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/components/aye-radio/aye-radio.vue"]]);
+  const _sfc_main$1b = {
+    __name: "aye-radio-group",
+    props: {
+      modelValue: {
+        type: [String, Number],
+        default: ""
+      },
+      layout: {
+        type: String,
+        default: "horizontal",
+        validator: (v) => ["horizontal", "vertical"].includes(v)
+      },
+      disabled: {
+        type: Boolean,
+        default: false
+      },
+      iconSize: {
+        type: String,
+        default: ""
+      },
+      iconActiveColor: {
+        type: String,
+        default: ""
+      },
+      iconNormalColor: {
+        type: String,
+        default: ""
+      },
+      labelColor: {
+        type: String,
+        default: ""
+      },
+      labelSize: {
+        type: String,
+        default: ""
+      },
+      verticalFull: {
+        type: Boolean,
+        default: false
+      },
+      reverseAlign: {
+        type: Boolean,
+        default: false
+      }
+    },
+    emits: ["update:modelValue", "change"],
+    setup(__props, { expose: __expose, emit: __emit }) {
+      __expose();
+      const props = __props;
+      const emit = __emit;
+      const currentValue = vue.computed({
+        get() {
+          return props.modelValue;
+        },
+        set(val) {
+          emit("update:modelValue", val);
+          emit("change", val);
+        }
+      });
+      vue.provide("ayeRadioGroup", {
+        currentValue,
+        setCurrent: (val) => {
+          currentValue.value = val;
+        },
+        groupProps: vue.toRefs(props)
+      });
+      const __returned__ = { props, emit, currentValue, provide: vue.provide, computed: vue.computed, toRefs: vue.toRefs };
+      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+      return __returned__;
+    }
+  };
+  function _sfc_render$1a(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock(
+      "view",
+      {
+        class: vue.normalizeClass(["aye-radio-group", [$props.layout === "vertical" ? "vertical-group" : ""]])
+      },
+      [
+        vue.renderSlot(_ctx.$slots, "default", {}, void 0, true)
+      ],
+      2
+      /* CLASS */
+    );
+  }
+  const __easycom_12 = /* @__PURE__ */ _export_sfc(_sfc_main$1b, [["render", _sfc_render$1a], ["__scopeId", "data-v-f6083395"], ["__file", "D:/Documents/HBuilderProjects/zebra-ui_2.0.2_example/components/aye-radio-group/aye-radio-group.vue"]]);
   const AREA_EMPTY_CODE = "000000";
   const makeOption = (text = "", value = AREA_EMPTY_CODE, children = void 0) => ({
     text,
@@ -36656,7 +37004,7 @@ This will fail in production if not fixed.`);
           return ((_a = picker.value) == null ? void 0 : _a.getSelectedOptions()) || [];
         }
       });
-      const __returned__ = { instance, props, emit, codes, picker, columns, onChange, onCancel, onConfirm, zPicker: __easycom_4$2 };
+      const __returned__ = { instance, props, emit, codes, picker, columns, onChange, onCancel, onConfirm, zPicker: __easycom_4$3 };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
@@ -36746,6 +37094,7 @@ This will fail in production if not fixed.`);
       const resultCalendar = vue.ref("");
       const rate = vue.ref(3);
       const radio = vue.ref("1");
+      const radio2 = vue.ref("b");
       const slider = vue.ref(50);
       const stepper = vue.ref(1);
       const uploader = vue.ref([
@@ -36758,10 +37107,10 @@ This will fail in production if not fixed.`);
       const showCalendar = vue.ref(false);
       const pattern = /\d{6}/;
       const onSubmitBasic = (values) => {
-        formatAppLog("log", "at pages/form/form.vue:227", "submit", values);
+        formatAppLog("log", "at pages/form/form.vue:265", "submit", values);
       };
       const onSubmitItem = (values) => {
-        formatAppLog("log", "at pages/form/form.vue:230", "submit", values);
+        formatAppLog("log", "at pages/form/form.vue:268", "submit", values);
       };
       const submitFormBasic = () => {
         formBasic.value.submit();
@@ -36782,7 +37131,7 @@ This will fail in production if not fixed.`);
         }, 1e3);
       });
       const onFailed = (errorInfo) => {
-        formatAppLog("log", "at pages/form/form.vue:253", "failed", errorInfo);
+        formatAppLog("log", "at pages/form/form.vue:291", "failed", errorInfo);
       };
       const resultPicker = vue.ref("");
       const resultDatePicker = vue.ref("");
@@ -36822,7 +37171,7 @@ This will fail in production if not fixed.`);
         resultCalendar.value = formatDate(date);
         showCalendar.value = false;
       };
-      const __returned__ = { toast, formBasic, formRule, formItem, username, password, value1, value2, value3, value4, areaCode, resultCalendar, rate, radio, slider, stepper, uploader, checkbox, checkboxGroup, switchChecked, showArea, showCalendar, pattern, onSubmitBasic, onSubmitItem, submitFormBasic, submitFormRule, submitFormItem, validator, validatorMessage, asyncValidator, onFailed, resultPicker, resultDatePicker, showPicker, showPickerDate, columnsPicker, onConfirmPicker, onCancelPicker, onConfirmDatePicker, onCancelDatePicker, onConfirmArea, onCancelArea, formatDate, onConfirmCalendar, get areaList() {
+      const __returned__ = { toast, formBasic, formRule, formItem, username, password, value1, value2, value3, value4, areaCode, resultCalendar, rate, radio, radio2, slider, stepper, uploader, checkbox, checkboxGroup, switchChecked, showArea, showCalendar, pattern, onSubmitBasic, onSubmitItem, submitFormBasic, submitFormRule, submitFormItem, validator, validatorMessage, asyncValidator, onFailed, resultPicker, resultDatePicker, showPicker, showPickerDate, columnsPicker, onConfirmPicker, onCancelPicker, onConfirmDatePicker, onCancelDatePicker, onConfirmArea, onCancelArea, formatDate, onConfirmCalendar, get areaList() {
         return areaList;
       } };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
@@ -36830,25 +37179,30 @@ This will fail in production if not fixed.`);
     }
   });
   function _sfc_render$18(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_field = resolveEasycom(vue.resolveDynamicComponent("z-field"), __easycom_1$b);
-    const _component_z_form = resolveEasycom(vue.resolveDynamicComponent("z-form"), __easycom_4);
-    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$4);
+    const _component_z_field = resolveEasycom(vue.resolveDynamicComponent("z-field"), __easycom_1$a);
+    const _component_z_form = resolveEasycom(vue.resolveDynamicComponent("z-form"), __easycom_4$1);
+    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$3);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_z_switch = resolveEasycom(vue.resolveDynamicComponent("z-switch"), __easycom_1$m);
-    const _component_z_checkbox = resolveEasycom(vue.resolveDynamicComponent("z-checkbox"), __easycom_4$3);
-    const _component_z_checkbox_group = resolveEasycom(vue.resolveDynamicComponent("z-checkbox-group"), __easycom_5);
-    const _component_z_radio = resolveEasycom(vue.resolveDynamicComponent("z-radio"), __easycom_6);
-    const _component_z_radio_group = resolveEasycom(vue.resolveDynamicComponent("z-radio-group"), __easycom_7);
-    const _component_z_stepper = resolveEasycom(vue.resolveDynamicComponent("z-stepper"), __easycom_8);
+    const _component_z_switch = resolveEasycom(vue.resolveDynamicComponent("z-switch"), __easycom_1$l);
+    const _component_aye_switch = resolveEasycom(vue.resolveDynamicComponent("aye-switch"), __easycom_4);
+    const _component_z_checkbox = resolveEasycom(vue.resolveDynamicComponent("z-checkbox"), __easycom_5);
+    const _component_aye_checkbox = resolveEasycom(vue.resolveDynamicComponent("aye-checkbox"), __easycom_6);
+    const _component_z_checkbox_group = resolveEasycom(vue.resolveDynamicComponent("z-checkbox-group"), __easycom_7);
+    const _component_aye_checkbox_group = resolveEasycom(vue.resolveDynamicComponent("aye-checkbox-group"), __easycom_8);
+    const _component_z_radio = resolveEasycom(vue.resolveDynamicComponent("z-radio"), __easycom_9);
+    const _component_z_radio_group = resolveEasycom(vue.resolveDynamicComponent("z-radio-group"), __easycom_10);
+    const _component_aye_radio = resolveEasycom(vue.resolveDynamicComponent("aye-radio"), __easycom_11);
+    const _component_aye_radio_group = resolveEasycom(vue.resolveDynamicComponent("aye-radio-group"), __easycom_12);
+    const _component_z_stepper = resolveEasycom(vue.resolveDynamicComponent("z-stepper"), __easycom_13);
     const _component_z_rate = resolveEasycom(vue.resolveDynamicComponent("z-rate"), __easycom_0$k);
     const _component_z_slider = resolveEasycom(vue.resolveDynamicComponent("z-slider"), __easycom_2$4);
-    const _component_z_uploader = resolveEasycom(vue.resolveDynamicComponent("z-uploader"), __easycom_11);
-    const _component_z_calendar = resolveEasycom(vue.resolveDynamicComponent("z-calendar"), __easycom_12);
-    const _component_z_picker = resolveEasycom(vue.resolveDynamicComponent("z-picker"), __easycom_4$2);
+    const _component_z_uploader = resolveEasycom(vue.resolveDynamicComponent("z-uploader"), __easycom_16);
+    const _component_z_calendar = resolveEasycom(vue.resolveDynamicComponent("z-calendar"), __easycom_17);
+    const _component_z_picker = resolveEasycom(vue.resolveDynamicComponent("z-picker"), __easycom_4$3);
     const _component_z_popup = resolveEasycom(vue.resolveDynamicComponent("z-popup"), zPopup);
-    const _component_z_date_picker = resolveEasycom(vue.resolveDynamicComponent("z-date-picker"), __easycom_15);
+    const _component_z_date_picker = resolveEasycom(vue.resolveDynamicComponent("z-date-picker"), __easycom_20);
     const _component_z_area = resolveEasycom(vue.resolveDynamicComponent("z-area"), __easycom_0$h);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Form" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-form" }, [
@@ -36993,14 +37347,41 @@ This will fail in production if not fixed.`);
                       /* STABLE */
                     }),
                     vue.createVNode(_component_z_field, {
+                      name: "switch2",
+                      label: "开关2"
+                    }, {
+                      input: vue.withCtx(() => [
+                        vue.createVNode(_component_aye_switch, {
+                          modelValue: $setup.switchChecked,
+                          "onUpdate:modelValue": _cache[7] || (_cache[7] = ($event) => $setup.switchChecked = $event)
+                        }, null, 8, ["modelValue"])
+                      ]),
+                      _: 1
+                      /* STABLE */
+                    }),
+                    vue.createVNode(_component_z_field, {
                       name: "checkbox",
                       label: "复选框"
                     }, {
                       input: vue.withCtx(() => [
                         vue.createVNode(_component_z_checkbox, {
                           modelValue: $setup.checkbox,
-                          "onUpdate:modelValue": _cache[7] || (_cache[7] = ($event) => $setup.checkbox = $event),
+                          "onUpdate:modelValue": _cache[8] || (_cache[8] = ($event) => $setup.checkbox = $event),
                           shape: "square"
+                        }, null, 8, ["modelValue"])
+                      ]),
+                      _: 1
+                      /* STABLE */
+                    }),
+                    vue.createVNode(_component_z_field, {
+                      name: "checkbox2",
+                      label: "复选框2"
+                    }, {
+                      input: vue.withCtx(() => [
+                        vue.createVNode(_component_aye_checkbox, {
+                          label: "复选框2",
+                          modelValue: $setup.checkbox,
+                          "onUpdate:modelValue": _cache[9] || (_cache[9] = ($event) => $setup.checkbox = $event)
                         }, null, 8, ["modelValue"])
                       ]),
                       _: 1
@@ -37013,7 +37394,7 @@ This will fail in production if not fixed.`);
                       input: vue.withCtx(() => [
                         vue.createVNode(_component_z_checkbox_group, {
                           modelValue: $setup.checkboxGroup,
-                          "onUpdate:modelValue": _cache[8] || (_cache[8] = ($event) => $setup.checkboxGroup = $event),
+                          "onUpdate:modelValue": _cache[10] || (_cache[10] = ($event) => $setup.checkboxGroup = $event),
                           direction: "horizontal"
                         }, {
                           default: vue.withCtx(() => [
@@ -37046,13 +37427,43 @@ This will fail in production if not fixed.`);
                       /* STABLE */
                     }),
                     vue.createVNode(_component_z_field, {
+                      name: "checkboxGroup2",
+                      label: "复选框组2"
+                    }, {
+                      input: vue.withCtx(() => [
+                        vue.createVNode(_component_aye_checkbox_group, {
+                          modelValue: $setup.checkboxGroup,
+                          "onUpdate:modelValue": _cache[11] || (_cache[11] = ($event) => $setup.checkboxGroup = $event)
+                        }, {
+                          default: vue.withCtx(() => [
+                            vue.createVNode(_component_aye_checkbox, {
+                              value: "1",
+                              label: "蜂蜜"
+                            }),
+                            vue.createVNode(_component_aye_checkbox, {
+                              value: "2",
+                              label: "罗汉果"
+                            }),
+                            vue.createVNode(_component_aye_checkbox, {
+                              value: "3",
+                              label: "绿茶"
+                            })
+                          ]),
+                          _: 1
+                          /* STABLE */
+                        }, 8, ["modelValue"])
+                      ]),
+                      _: 1
+                      /* STABLE */
+                    }),
+                    vue.createVNode(_component_z_field, {
                       name: "radio",
                       label: "单选框"
                     }, {
                       input: vue.withCtx(() => [
                         vue.createVNode(_component_z_radio_group, {
                           modelValue: $setup.radio,
-                          "onUpdate:modelValue": _cache[9] || (_cache[9] = ($event) => $setup.radio = $event),
+                          "onUpdate:modelValue": _cache[12] || (_cache[12] = ($event) => $setup.radio = $event),
                           direction: "horizontal"
                         }, {
                           default: vue.withCtx(() => [
@@ -37079,13 +37490,47 @@ This will fail in production if not fixed.`);
                       /* STABLE */
                     }),
                     vue.createVNode(_component_z_field, {
+                      name: "radio",
+                      label: "单选框2"
+                    }, {
+                      input: vue.withCtx(() => [
+                        vue.createVNode(_component_aye_radio_group, {
+                          modelValue: $setup.radio2,
+                          "onUpdate:modelValue": _cache[13] || (_cache[13] = ($event) => $setup.radio2 = $event)
+                        }, {
+                          default: vue.withCtx(() => [
+                            vue.createVNode(_component_aye_radio, {
+                              value: "a",
+                              label: "黑豆"
+                            }),
+                            vue.createVNode(_component_aye_radio, {
+                              value: "b",
+                              label: "绿豆"
+                            }),
+                            vue.createVNode(_component_aye_radio, {
+                              value: "c",
+                              label: "黄豆"
+                            }),
+                            vue.createVNode(_component_aye_radio, {
+                              value: "d",
+                              label: "红豆"
+                            })
+                          ]),
+                          _: 1
+                          /* STABLE */
+                        }, 8, ["modelValue"])
+                      ]),
+                      _: 1
+                      /* STABLE */
+                    }),
+                    vue.createVNode(_component_z_field, {
                       name: "stepper",
                       label: "步进器"
                     }, {
                       input: vue.withCtx(() => [
                         vue.createVNode(_component_z_stepper, {
                           modelValue: $setup.stepper,
-                          "onUpdate:modelValue": _cache[10] || (_cache[10] = ($event) => $setup.stepper = $event)
+                          "onUpdate:modelValue": _cache[14] || (_cache[14] = ($event) => $setup.stepper = $event)
                         }, null, 8, ["modelValue"])
                       ]),
                       _: 1
@@ -37098,7 +37543,7 @@ This will fail in production if not fixed.`);
                       input: vue.withCtx(() => [
                         vue.createVNode(_component_z_rate, {
                           modelValue: $setup.rate,
-                          "onUpdate:modelValue": _cache[11] || (_cache[11] = ($event) => $setup.rate = $event)
+                          "onUpdate:modelValue": _cache[15] || (_cache[15] = ($event) => $setup.rate = $event)
                         }, null, 8, ["modelValue"])
                       ]),
                       _: 1
@@ -37111,7 +37556,7 @@ This will fail in production if not fixed.`);
                       input: vue.withCtx(() => [
                         vue.createVNode(_component_z_slider, {
                           modelValue: $setup.slider,
-                          "onUpdate:modelValue": _cache[12] || (_cache[12] = ($event) => $setup.slider = $event)
+                          "onUpdate:modelValue": _cache[16] || (_cache[16] = ($event) => $setup.slider = $event)
                         }, null, 8, ["modelValue"])
                       ]),
                       _: 1
@@ -37124,7 +37569,7 @@ This will fail in production if not fixed.`);
                       input: vue.withCtx(() => [
                         vue.createVNode(_component_z_uploader, {
                           modelValue: $setup.uploader,
-                          "onUpdate:modelValue": _cache[13] || (_cache[13] = ($event) => $setup.uploader = $event),
+                          "onUpdate:modelValue": _cache[17] || (_cache[17] = ($event) => $setup.uploader = $event),
                           "max-count": "2"
                         }, null, 8, ["modelValue"])
                       ]),
@@ -37133,47 +37578,47 @@ This will fail in production if not fixed.`);
                     }),
                     vue.createVNode(_component_z_field, {
                       modelValue: $setup.resultPicker,
-                      "onUpdate:modelValue": _cache[14] || (_cache[14] = ($event) => $setup.resultPicker = $event),
+                      "onUpdate:modelValue": _cache[18] || (_cache[18] = ($event) => $setup.resultPicker = $event),
                       "is-link": "",
                       readonly: "",
                       name: "picker",
                       label: "选择器",
                       placeholder: "请选择城市",
-                      onClick: _cache[15] || (_cache[15] = ($event) => $setup.showPicker = true)
+                      onClick: _cache[19] || (_cache[19] = ($event) => $setup.showPicker = true)
                     }, null, 8, ["modelValue"]),
                     vue.createVNode(_component_z_field, {
                       modelValue: $setup.resultDatePicker,
-                      "onUpdate:modelValue": _cache[16] || (_cache[16] = ($event) => $setup.resultDatePicker = $event),
+                      "onUpdate:modelValue": _cache[20] || (_cache[20] = ($event) => $setup.resultDatePicker = $event),
                       "is-link": "",
                       readonly: "",
                       name: "datePicker",
                       label: "时间选择",
                       placeholder: "点击选择事件",
-                      onClick: _cache[17] || (_cache[17] = ($event) => $setup.showPickerDate = true)
+                      onClick: _cache[21] || (_cache[21] = ($event) => $setup.showPickerDate = true)
                     }, null, 8, ["modelValue"]),
                     vue.createVNode(_component_z_field, {
                       modelValue: $setup.areaCode,
-                      "onUpdate:modelValue": _cache[18] || (_cache[18] = ($event) => $setup.areaCode = $event),
+                      "onUpdate:modelValue": _cache[22] || (_cache[22] = ($event) => $setup.areaCode = $event),
                       "is-link": "",
                       readonly: "",
                       name: "area",
                       label: "地区选择",
                       placeholder: "点击选择省市区",
-                      onClick: _cache[19] || (_cache[19] = ($event) => $setup.showArea = true)
+                      onClick: _cache[23] || (_cache[23] = ($event) => $setup.showArea = true)
                     }, null, 8, ["modelValue"]),
                     vue.createVNode(_component_z_field, {
                       modelValue: $setup.resultCalendar,
-                      "onUpdate:modelValue": _cache[20] || (_cache[20] = ($event) => $setup.resultCalendar = $event),
+                      "onUpdate:modelValue": _cache[24] || (_cache[24] = ($event) => $setup.resultCalendar = $event),
                       "is-link": "",
                       readonly: "",
                       name: "calendar",
                       label: "日历",
                       placeholder: "点击选择日期",
-                      onClick: _cache[21] || (_cache[21] = ($event) => $setup.showCalendar = true)
+                      onClick: _cache[25] || (_cache[25] = ($event) => $setup.showCalendar = true)
                     }, null, 8, ["modelValue"]),
                     vue.createVNode(_component_z_calendar, {
                       show: $setup.showCalendar,
-                      "onUpdate:show": _cache[22] || (_cache[22] = ($event) => $setup.showCalendar = $event),
+                      "onUpdate:show": _cache[26] || (_cache[26] = ($event) => $setup.showCalendar = $event),
                       round: "",
                       teleport: "body",
                       onConfirm: $setup.onConfirmCalendar
@@ -37205,7 +37650,7 @@ This will fail in production if not fixed.`);
         ]),
         vue.createVNode(_component_z_popup, {
           show: $setup.showPicker,
-          "onUpdate:show": _cache[23] || (_cache[23] = ($event) => $setup.showPicker = $event),
+          "onUpdate:show": _cache[27] || (_cache[27] = ($event) => $setup.showPicker = $event),
           round: "",
           position: "bottom",
           teleport: "body"
@@ -37222,7 +37667,7 @@ This will fail in production if not fixed.`);
         }, 8, ["show"]),
         vue.createVNode(_component_z_popup, {
           show: $setup.showPickerDate,
-          "onUpdate:show": _cache[24] || (_cache[24] = ($event) => $setup.showPickerDate = $event),
+          "onUpdate:show": _cache[28] || (_cache[28] = ($event) => $setup.showPickerDate = $event),
           round: "",
           position: "bottom",
           teleport: "body"
@@ -37238,7 +37683,7 @@ This will fail in production if not fixed.`);
         }, 8, ["show"]),
         vue.createVNode(_component_z_popup, {
           show: $setup.showArea,
-          "onUpdate:show": _cache[25] || (_cache[25] = ($event) => $setup.showArea = $event),
+          "onUpdate:show": _cache[29] || (_cache[29] = ($event) => $setup.showArea = $event),
           round: "",
           position: "bottom",
           teleport: "body"
@@ -37274,7 +37719,7 @@ This will fail in production if not fixed.`);
   function _sfc_render$17(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_area = resolveEasycom(vue.resolveDynamicComponent("z-area"), __easycom_0$h);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Area" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-area" }, [
@@ -37668,11 +38113,11 @@ This will fail in production if not fixed.`);
     }
   });
   function _sfc_render$15(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$d);
+    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$c);
     const _component_z_pull_refresh = resolveEasycom(vue.resolveDynamicComponent("z-pull-refresh"), __easycom_3$2);
-    const _component_z_tab = resolveEasycom(vue.resolveDynamicComponent("z-tab"), __easycom_1$g);
+    const _component_z_tab = resolveEasycom(vue.resolveDynamicComponent("z-tab"), __easycom_1$f);
     const _component_z_tabs = resolveEasycom(vue.resolveDynamicComponent("z-tabs"), __easycom_2$8);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "PullRefresh" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-pull-refresh" }, [
@@ -38100,12 +38545,12 @@ This will fail in production if not fixed.`);
     }
   });
   function _sfc_render$13(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$d);
+    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$c);
     const _component_z_list = resolveEasycom(vue.resolveDynamicComponent("z-list"), __easycom_1$7);
-    const _component_z_tab = resolveEasycom(vue.resolveDynamicComponent("z-tab"), __easycom_1$g);
+    const _component_z_tab = resolveEasycom(vue.resolveDynamicComponent("z-tab"), __easycom_1$f);
     const _component_z_pull_refresh = resolveEasycom(vue.resolveDynamicComponent("z-pull-refresh"), __easycom_3$2);
     const _component_z_tabs = resolveEasycom(vue.resolveDynamicComponent("z-tabs"), __easycom_2$8);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "List" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-list" }, [
@@ -38535,10 +38980,10 @@ This will fail in production if not fixed.`);
     }
   });
   function _sfc_render$11(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$d);
+    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$c);
     const _component_demo_block = vue.resolveComponent("demo-block");
     const _component_z_action_sheet = resolveEasycom(vue.resolveDynamicComponent("z-action-sheet"), __easycom_1$6);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "ActionSheet" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-action-sheet" }, [
@@ -38842,9 +39287,9 @@ This will fail in production if not fixed.`);
   });
   function _sfc_render$$(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_barrage = resolveEasycom(vue.resolveDynamicComponent("z-barrage"), __easycom_0$g);
-    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$4);
+    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$3);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Barrage" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-barrage" }, [
@@ -39036,7 +39481,7 @@ This will fail in production if not fixed.`);
       };
       useExpose({ state, toggle, props });
       __expose({ state, toggle, props });
-      const __returned__ = { name: name2, bem: bem2, props, emit, state, parent, styles, iconStyle, cellStyle, onClickOption, getEmitter, onOpen, onClose, onOpened, onClosed, onClickWrapper, popupStyle, toggle, zPopup, zCell: __easycom_1$d, zIcon };
+      const __returned__ = { name: name2, bem: bem2, props, emit, state, parent, styles, iconStyle, cellStyle, onClickOption, getEmitter, onOpen, onClose, onOpened, onClosed, onClickWrapper, popupStyle, toggle, zPopup, zCell: __easycom_1$c, zIcon };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
@@ -39331,10 +39776,10 @@ This will fail in production if not fixed.`);
     const _component_z_dropdown_item = resolveEasycom(vue.resolveDynamicComponent("z-dropdown-item"), __easycom_0$f);
     const _component_z_dropdown_menu = resolveEasycom(vue.resolveDynamicComponent("z-dropdown-menu"), __easycom_1$5);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_z_switch = resolveEasycom(vue.resolveDynamicComponent("z-switch"), __easycom_1$m);
-    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$d);
-    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$4);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_z_switch = resolveEasycom(vue.resolveDynamicComponent("z-switch"), __easycom_1$l);
+    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$c);
+    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$3);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "DropdownMenu" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-dropdown-menu" }, [
@@ -39728,12 +40173,12 @@ This will fail in production if not fixed.`);
     }
   });
   function _sfc_render$W(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$d);
-    const _component_z_cell_group = resolveEasycom(vue.resolveDynamicComponent("z-cell-group"), __easycom_1$c);
+    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$c);
+    const _component_z_cell_group = resolveEasycom(vue.resolveDynamicComponent("z-cell-group"), __easycom_1$b);
     const _component_z_floating_panel = resolveEasycom(vue.resolveDynamicComponent("z-floating-panel"), __easycom_2$3);
-    const _component_z_tab = resolveEasycom(vue.resolveDynamicComponent("z-tab"), __easycom_1$g);
+    const _component_z_tab = resolveEasycom(vue.resolveDynamicComponent("z-tab"), __easycom_1$f);
     const _component_z_tabs = resolveEasycom(vue.resolveDynamicComponent("z-tabs"), __easycom_2$8);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "FloatingPanel" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-floating-panel" }, [
@@ -40033,9 +40478,9 @@ This will fail in production if not fixed.`);
   });
   function _sfc_render$U(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_floating_bubble = resolveEasycom(vue.resolveDynamicComponent("z-floating-bubble"), __easycom_0$e);
-    const _component_z_tab = resolveEasycom(vue.resolveDynamicComponent("z-tab"), __easycom_1$g);
+    const _component_z_tab = resolveEasycom(vue.resolveDynamicComponent("z-tab"), __easycom_1$f);
     const _component_z_tabs = resolveEasycom(vue.resolveDynamicComponent("z-tabs"), __easycom_2$8);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "FloatingBubble" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-floating-bubble" }, [
@@ -40147,11 +40592,11 @@ This will fail in production if not fixed.`);
     }
   });
   function _sfc_render$T(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$d);
+    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$c);
     const _component_demo_block = vue.resolveComponent("demo-block");
     const _component_z_icon = resolveEasycom(vue.resolveDynamicComponent("z-icon"), zIcon);
     const _component_z_notify = resolveEasycom(vue.resolveDynamicComponent("z-notify"), __easycom_2$a);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Notify" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-notify" }, [
@@ -40619,10 +41064,10 @@ This will fail in production if not fixed.`);
     }
   });
   function _sfc_render$R(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$d);
+    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$c);
     const _component_z_share_sheet = resolveEasycom(vue.resolveDynamicComponent("z-share-sheet"), __easycom_1$4);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "ShareSheet" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-share-sheet" }, [
@@ -41233,12 +41678,12 @@ This will fail in production if not fixed.`);
     }
   });
   function _sfc_render$O(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$4);
-    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$d);
+    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$3);
+    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$c);
     const _component_z_swipe_cell = resolveEasycom(vue.resolveDynamicComponent("z-swipe-cell"), __easycom_2$2);
     const _component_demo_block = vue.resolveComponent("demo-block");
     const _component_z_card = resolveEasycom(vue.resolveDynamicComponent("z-card"), __easycom_1$3);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "SwipeCell" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-swipe-cell" }, [
@@ -41382,10 +41827,10 @@ This will fail in production if not fixed.`);
     }
   });
   function _sfc_render$N(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$4);
+    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$3);
     const _component_z_card = resolveEasycom(vue.resolveDynamicComponent("z-card"), __easycom_1$3);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Card" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-card" }, [
@@ -41854,8 +42299,8 @@ This will fail in production if not fixed.`);
   function _sfc_render$L(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_circle = resolveEasycom(vue.resolveDynamicComponent("z-circle"), __easycom_0$d);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$4);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$3);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Circle" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-circle" }, [
@@ -42109,7 +42554,7 @@ This will fail in production if not fixed.`);
       });
       useExpose({ toggle, expanded, itemName: nameData });
       __expose({ toggle, expanded, itemName: nameData });
-      const __returned__ = { componentName, bem: bem2, props, instance, wrapperRef, parent, index, nameData, expanded, show, lazyRender, wrapperStyle, onTransitionEnd, toggle, onClickTitle, rightIconStyle, cellStyle, zCell: __easycom_1$d };
+      const __returned__ = { componentName, bem: bem2, props, instance, wrapperRef, parent, index, nameData, expanded, show, lazyRender, wrapperStyle, onTransitionEnd, toggle, onClickTitle, rightIconStyle, cellStyle, zCell: __easycom_1$c };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
@@ -42330,8 +42775,8 @@ This will fail in production if not fixed.`);
     const _component_z_collapse = resolveEasycom(vue.resolveDynamicComponent("z-collapse"), __easycom_1$2);
     const _component_demo_block = vue.resolveComponent("demo-block");
     const _component_z_icon = resolveEasycom(vue.resolveDynamicComponent("z-icon"), zIcon);
-    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$4);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$3);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Collapse" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-collapse" }, [
@@ -42906,7 +43351,7 @@ This will fail in production if not fixed.`);
     const _component_demo_block = vue.resolveComponent("demo-block");
     const _component_z_grid_item = resolveEasycom(vue.resolveDynamicComponent("z-grid-item"), __easycom_2$1);
     const _component_z_grid = resolveEasycom(vue.resolveDynamicComponent("z-grid"), __easycom_3$1);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "CountDown" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-count-down" }, [
@@ -43032,7 +43477,7 @@ This will fail in production if not fixed.`);
     const _component_z_grid = resolveEasycom(vue.resolveDynamicComponent("z-grid"), __easycom_3$1);
     const _component_demo_block = vue.resolveComponent("demo-block");
     const _component_z_image = resolveEasycom(vue.resolveDynamicComponent("z-image"), __easycom_2$6);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Grid" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-grid" }, [
@@ -43289,7 +43734,7 @@ This will fail in production if not fixed.`);
   function _sfc_render$B(_ctx, _cache) {
     const _component_z_divider = resolveEasycom(vue.resolveDynamicComponent("z-divider"), __easycom_0$a);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Divider" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-divider" }, [
@@ -43495,10 +43940,10 @@ This will fail in production if not fixed.`);
   function _sfc_render$z(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_empty = resolveEasycom(vue.resolveDynamicComponent("z-empty"), __easycom_0$9);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_z_tab = resolveEasycom(vue.resolveDynamicComponent("z-tab"), __easycom_1$g);
+    const _component_z_tab = resolveEasycom(vue.resolveDynamicComponent("z-tab"), __easycom_1$f);
     const _component_z_tabs = resolveEasycom(vue.resolveDynamicComponent("z-tabs"), __easycom_2$8);
-    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$4);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$3);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Empty" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-empty" }, [
@@ -43768,7 +44213,7 @@ This will fail in production if not fixed.`);
   function _sfc_render$x(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_highlight = resolveEasycom(vue.resolveDynamicComponent("z-highlight"), __easycom_0$8);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Highlight" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-highlight" }, [
@@ -44025,9 +44470,9 @@ This will fail in production if not fixed.`);
   function _sfc_render$v(_ctx, _cache) {
     const _component_z_notice_bar = resolveEasycom(vue.resolveDynamicComponent("z-notice-bar"), __easycom_0$7);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_z_swipe_item = resolveEasycom(vue.resolveDynamicComponent("z-swipe-item"), __easycom_1$h);
+    const _component_z_swipe_item = resolveEasycom(vue.resolveDynamicComponent("z-swipe-item"), __easycom_1$g);
     const _component_z_swipe = resolveEasycom(vue.resolveDynamicComponent("z-swipe"), __easycom_2$9);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "NoticeBar" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-notice-bar" }, [
@@ -44553,13 +44998,13 @@ This will fail in production if not fixed.`);
     }
   });
   function _sfc_render$t(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$4);
+    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$3);
     const _component_z_popover = resolveEasycom(vue.resolveDynamicComponent("z-popover"), __easycom_1$1);
     const _component_demo_block = vue.resolveComponent("demo-block");
     const _component_z_grid_item = resolveEasycom(vue.resolveDynamicComponent("z-grid-item"), __easycom_2$1);
     const _component_z_grid = resolveEasycom(vue.resolveDynamicComponent("z-grid"), __easycom_3$1);
-    const _component_z_picker = resolveEasycom(vue.resolveDynamicComponent("z-picker"), __easycom_4$2);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_z_picker = resolveEasycom(vue.resolveDynamicComponent("z-picker"), __easycom_4$3);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Popover" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-popover" }, [
@@ -44903,8 +45348,8 @@ This will fail in production if not fixed.`);
   function _sfc_render$r(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_progress = resolveEasycom(vue.resolveDynamicComponent("z-progress"), __easycom_0$6);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$4);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$3);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Progress" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-progress" }, [
@@ -45244,11 +45689,11 @@ This will fail in production if not fixed.`);
   });
   function _sfc_render$o(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_rolling_text = resolveEasycom(vue.resolveDynamicComponent("z-rolling-text"), __easycom_0$5);
-    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$4);
+    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$3);
     const _component_demo_block = vue.resolveComponent("demo-block");
     const _component_z_grid_item = resolveEasycom(vue.resolveDynamicComponent("z-grid-item"), __easycom_2$1);
     const _component_z_grid = resolveEasycom(vue.resolveDynamicComponent("z-grid"), __easycom_3$1);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "RollingText" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-rolling-text" }, [
@@ -45686,10 +46131,10 @@ This will fail in production if not fixed.`);
   function _sfc_render$i(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_skeleton = resolveEasycom(vue.resolveDynamicComponent("z-skeleton"), __easycom_0$4);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_z_switch = resolveEasycom(vue.resolveDynamicComponent("z-switch"), __easycom_1$m);
+    const _component_z_switch = resolveEasycom(vue.resolveDynamicComponent("z-switch"), __easycom_1$l);
     const _component_z_skeleton_image = resolveEasycom(vue.resolveDynamicComponent("z-skeleton-image"), __easycom_2);
     const _component_z_skeleton_paragraph = resolveEasycom(vue.resolveDynamicComponent("z-skeleton-paragraph"), __easycom_3);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Skeleton" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-skeleton" }, [
@@ -45997,9 +46442,9 @@ This will fail in production if not fixed.`);
   function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_step = resolveEasycom(vue.resolveDynamicComponent("z-step"), __easycom_0$3);
     const _component_z_steps = resolveEasycom(vue.resolveDynamicComponent("z-steps"), __easycom_1);
-    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$4);
+    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$3);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Steps" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-steps" }, [
@@ -46159,9 +46604,9 @@ This will fail in production if not fixed.`);
   });
   function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_tag = resolveEasycom(vue.resolveDynamicComponent("z-tag"), __easycom_0$m);
-    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$d);
+    const _component_z_cell = resolveEasycom(vue.resolveDynamicComponent("z-cell"), __easycom_1$c);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Tag" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-tag" }, [
@@ -46726,7 +47171,7 @@ This will fail in production if not fixed.`);
   function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_text_ellipsis = resolveEasycom(vue.resolveDynamicComponent("z-text-ellipsis"), __easycom_0$2);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Ellipsis" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-text-ellipsis" }, [
@@ -46979,8 +47424,8 @@ This will fail in production if not fixed.`);
   function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_watermark = resolveEasycom(vue.resolveDynamicComponent("z-watermark"), __easycom_0$1);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$4);
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$3);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Watermark" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-watermark" }, [
@@ -47099,9 +47544,9 @@ This will fail in production if not fixed.`);
   });
   function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_tabbar_item = resolveEasycom(vue.resolveDynamicComponent("z-tabbar-item"), __easycom_0$p);
-    const _component_z_tabbar = resolveEasycom(vue.resolveDynamicComponent("z-tabbar"), __easycom_1$k);
+    const _component_z_tabbar = resolveEasycom(vue.resolveDynamicComponent("z-tabbar"), __easycom_1$j);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Tabbar" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-tabbar" }, [
@@ -47567,13 +48012,13 @@ This will fail in production if not fixed.`);
   });
   function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_rate = resolveEasycom(vue.resolveDynamicComponent("z-rate"), __easycom_0$k);
-    const _component_z_field = resolveEasycom(vue.resolveDynamicComponent("z-field"), __easycom_1$b);
+    const _component_z_field = resolveEasycom(vue.resolveDynamicComponent("z-field"), __easycom_1$a);
     const _component_z_slider = resolveEasycom(vue.resolveDynamicComponent("z-slider"), __easycom_2$4);
-    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$4);
-    const _component_z_form = resolveEasycom(vue.resolveDynamicComponent("z-form"), __easycom_4);
+    const _component_z_button = resolveEasycom(vue.resolveDynamicComponent("z-button"), __easycom_3$3);
+    const _component_z_form = resolveEasycom(vue.resolveDynamicComponent("z-form"), __easycom_4$1);
     const _component_z_config_provider = resolveEasycom(vue.resolveDynamicComponent("z-config-provider"), __easycom_5$1);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "ConfigProvider" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-config-provider" }, [
@@ -47699,7 +48144,7 @@ This will fail in production if not fixed.`);
   const _sfc_main$8 = {};
   function _sfc_render$7(_ctx, _cache) {
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Style" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-style" }, [
@@ -47877,7 +48322,7 @@ This will fail in production if not fixed.`);
     const _component_z_sidebar_item = resolveEasycom(vue.resolveDynamicComponent("z-sidebar-item"), zSidebarItem);
     const _component_z_sidebar = resolveEasycom(vue.resolveDynamicComponent("z-sidebar"), zSidebar);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "Sidebar" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-sidebar" }, [
@@ -48220,7 +48665,7 @@ This will fail in production if not fixed.`);
   function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_z_tree_select = resolveEasycom(vue.resolveDynamicComponent("z-tree-select"), __easycom_0);
     const _component_demo_block = vue.resolveComponent("demo-block");
-    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$i);
+    const _component_DemoPage = resolveEasycom(vue.resolveDynamicComponent("DemoPage"), __easycom_1$h);
     return vue.openBlock(), vue.createBlock(_component_DemoPage, { title: "TreeSelect" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "demo-tree-select" }, [

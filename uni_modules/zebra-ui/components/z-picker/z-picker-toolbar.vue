@@ -65,7 +65,7 @@ const onConfirm = () => emit('confirm')
 const cancelButtonStyle = computed(() => {
   return {
     color: 'var(--z-picker-cancel-action-color)',
-    margin: 'var(--z-picker-action-margin)',
+    margin: 'var(--z-picker-cancel-action-margin)',
     padding: 'var(--z-picker-action-padding)',
     fontSize: 'var(--z-picker-action-font-size)',
     borderRadius: 'var(--z-picker-btn-border-radius)'
@@ -74,7 +74,7 @@ const cancelButtonStyle = computed(() => {
 const confirmButtonStyle = computed(() => {
   return {
     color: 'var(--z-picker-confirm-action-color)',
-    margin: 'var(--z-picker-action-margin)',
+    margin: 'var(--z-picker-confirm-action-margin)',
     padding: 'var(--z-picker-action-padding)',
     fontSize: 'var(--z-picker-action-font-size)',
     borderRadius: 'var(--z-picker-btn-border-radius)'

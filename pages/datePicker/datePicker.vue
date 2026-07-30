@@ -1,15 +1,18 @@
 <template>
   <DemoPage title="DatePicker">
     <view class="demo-date-picker">
-      <demo-block title="基础用法">
-        <z-date-picker
-          v-model="currentDate"
-          title="选择日期"
-          :min-date="minDate"
-          :max-date="maxDate"
-        />
+      <demo-block title="基础用法" :box-shadow="false">
+          <view class=" round-12 overflow add_shadow">
+                <z-date-picker
+                  v-model="currentDate"
+                  title="选择日期"
+                  :min-date="minDate"
+                  :max-date="maxDate"
+                />
+              
+          </view>
       </demo-block>
-      <demo-block title="选项类型">
+      <demo-block title="选项类型" :card="false">
         <z-date-picker
           v-model="currentDateOption"
           title="选择年月"
@@ -18,7 +21,7 @@
           :columns-type="columnsType"
         />
       </demo-block>
-      <demo-block title="格式化选项">
+      <demo-block title="格式化选项" :card="false">
         <z-date-picker
           v-model="currentDateFormatter"
           title="选择年月"
@@ -28,7 +31,7 @@
           :columns-type="columnsType"
         />
       </demo-block>
-      <demo-block title="过滤选项">
+      <demo-block title="过滤选项" :card="false">
         <z-date-picker
           v-model="currentDateFilter"
           title="选择年月"
