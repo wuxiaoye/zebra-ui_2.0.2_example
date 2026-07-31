@@ -294,7 +294,6 @@ const touchStartEvent = (event: any, index: any = '') => {
     buttonIndex = index
   }
     //进度提示面板
-    console.log('是否双滑块', props.range)
     if(props.range == false && props.showTip == true ){
         showTooltip.value = true;
     }
