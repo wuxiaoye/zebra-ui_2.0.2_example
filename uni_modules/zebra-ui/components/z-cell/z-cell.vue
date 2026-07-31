@@ -19,7 +19,7 @@
     </template>
     <template v-else-if="props.icon">
       <view :class="bem('left-icon')">
-        <z-icon :name="props.icon" :class-prefix="props.iconPrefix" />
+        <z-icon :name="props.icon" :class-prefix="props.iconPrefix"  :color="props.iconColor" />
       </view>
     </template>
     <template v-if="showSlots('title') || isDef(props.title)">
@@ -97,6 +97,7 @@ type CellArrowDirection = 'up' | 'down' | 'left' | 'right'
 
 const props = defineProps({
   icon: String,
+  iconColor: String,
   size: String as PropType<CellSize | any>,
   title: numericProp,
   value: numericProp,

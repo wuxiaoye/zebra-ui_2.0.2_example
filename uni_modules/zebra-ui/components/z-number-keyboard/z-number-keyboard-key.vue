@@ -111,6 +111,7 @@ export default {
   cursor: pointer;
   background: var(--z-number-keyboard-key-background);
   border-radius: var(--z-radius-lg);
+  box-shadow: var(--z-number-keyboard-key-box-shadow);
 
   &--large {
     position: absolute;
@@ -124,7 +125,8 @@ export default {
   }
 
   &--active {
-    background-color: var(--z-number-keyboard-key-active-color);
+    // background-color: var(--z-number-keyboard-key-active-color);
+    box-shadow: var(--z-number-keyboard-key-active-box-shadow);
   }
 
   &--blue {

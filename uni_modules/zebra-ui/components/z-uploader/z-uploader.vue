@@ -452,6 +452,7 @@ export default {
     margin: 0 var(--z-padding-xs) var(--z-padding-xs) 0;
     background: var(--z-uploader-upload-background);
     border-radius: var(--z-uploader-border-radius);
+    box-shadow: var(--z-uploader-box-shadow);
 
     &:active {
       background-color: var(--z-uploader-upload-active-color);
@@ -462,7 +463,7 @@ export default {
     }
 
     &-text {
-      margin-top: var(--z-padding-xs);
+      margin-top: var(--z-uploader-text-margin-top);
       font-size: var(--z-uploader-text-font-size);
       color: var(--z-uploader-text-color);
     }

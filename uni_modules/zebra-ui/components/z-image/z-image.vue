@@ -202,6 +202,7 @@ export default {
     font-size: var(--z-image-placeholder-font-size);
     color: var(--z-image-placeholder-text-color);
     background: var(--z-image-placeholder-background);
+    box-shadow: var(--z-image-loading-box-shadow);
   }
 
   &__loading-icon {

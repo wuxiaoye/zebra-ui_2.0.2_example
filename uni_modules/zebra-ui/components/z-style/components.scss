@@ -20,6 +20,8 @@ page {
      /* 卡片外阴影样式 - 小一些*/
     --aye-shadow-mini: 2px 2px 4px var(--greyLight-2), -1px -1px 3px var(--white);
      
+     /* 内凹阴影-大一些 */
+     --aye-shadow-inset-big: inset 0.4rem 0.4rem 0.8rem var(--greyLight-2), inset -0.4rem -0.4rem 0.8rem var(--white);
      /* 内凹阴影 */
     --aye-shadow-inset: inset 2px 2px 4px var(--greyLight-2), inset -2px -2px 4px var(--white);
      /* 内凹阴影-小一些 */
@@ -222,13 +224,14 @@ page {
   --z-calendar-confirm-button-margin: 14rpx 0;
 
   // image
-  --z-image-placeholder-text-color: var(--z-text-color-2);
+  --z-image-placeholder-text-color: var(--greyDark);
   --z-image-placeholder-font-size: var(--z-font-size-md);
-  --z-image-placeholder-background: var(--z-background);
+  --z-image-placeholder-background: var(--greyLight-1);
   --z-image-loading-icon-size: 64rpx;
-  --z-image-loading-icon-color: var(--z-gray-4);
+  --z-image-loading-icon-color: var(--greyDark);
+  --z-image-loading-box-shadow: var(--aye-shadow-inset-big);
   --z-image-error-icon-size: 64rpx;
-  --z-image-error-icon-color: var(--z-gray-4);
+  --z-image-error-icon-color: var(--greyDark);
 
   // card
   --card-border-radius: var(--z-radius-md);
@@ -465,7 +468,7 @@ page {
   --z-number-keyboard-key-height: 96rpx;
   --z-number-keyboard-key-font-size: 56rpx;
   --z-number-keyboard-delete-font-size: var(--z-font-size-lg);
-  --z-number-keyboard-title-color: var(--z-gray-7);
+  --z-number-keyboard-title-color: var(--greyDark);
   --z-number-keyboard-title-height: 68rpx;
   --z-number-keyboard-title-font-size: var(--z-font-size-lg);
   --z-number-keyboard-close-padding: 0 var(--z-padding-md);
@@ -474,9 +477,14 @@ page {
   --z-number-keyboard-button-text-color: var(--z-white);
   --z-number-keyboard-button-background: var(--z-primary-color);
   --z-number-keyboard-z-index: 100;
-  --z-number-keyboard-background: var(--z-gray-2);
-  --z-number-keyboard-key-active-color: var(--z-gray-3);
-  --z-number-keyboard-key-background: var(--z-background-2);
+  // --z-number-keyboard-background: var(--z-gray-2);
+  --z-number-keyboard-background: var(--greyLight-1);
+  //当点击按钮时, 不是改变背景颜色, 而是改变阴影
+  // --z-number-keyboard-key-active-color: var(--z-gray-3);
+  // --z-number-keyboard-key-background: ;
+  //按钮阴影
+  --z-number-keyboard-key-box-shadow: var(--aye-shadow-mini);
+  --z-number-keyboard-key-active-box-shadow: var(--aye-shadow-inset);
 
   // overlay
   --z-overlay-z-index: 1;
@@ -724,16 +732,20 @@ page {
   // uploader
   --z-uploader-size: 160rpx;
   --z-uploader-icon-size: 48rpx;
-  --z-uploader-icon-color: var(--z-gray-4);
-  --z-uploader-text-color: var(--z-text-color-2);
+  --z-uploader-icon-color: var(--primary);
+  --z-uploader-text-color: var(--greyDark);
   --z-uploader-text-font-size: var(--z-font-size-sm);
-  --z-uploader-upload-background: var(--z-gray-1);
+  --z-uploader-text-margin-top: 8rpx;
+  // --z-uploader-upload-background: var(--z-gray-1);
+  --z-uploader-upload-background: var(--greyLight-1);
+  --z-uploader-box-shadow: var(--aye-shadow-inset-big);
   --z-uploader-upload-active-color: var(--z-active-color);
   --z-uploader-delete-color: var(--z-white);
   --z-uploader-delete-icon-size: 24rpx;
   --z-uploader-delete-size: 36rpx;
   --z-uploader-delete-background: rgb(0 0 0 / 40%);
   --z-uploader-file-background: var(--z-background);
+  // --z-uploader-file-background: var(--greyLight-1);
   --z-uploader-file-icon-size: 40rpx;
   --z-uploader-file-icon-color: var(--z-gray-7);
   --z-uploader-file-name-padding: 0 var(--z-padding-base);

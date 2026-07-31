@@ -13,6 +13,11 @@
                 </template>
             </z-field>
             
+            <z-field name="uploader" label="文件上传">
+              <template #input>
+                <z-uploader v-model="uploader" max-count="2" upload-text="点击上传"/>
+              </template>
+            </z-field>
             
             <z-field name="slider" label="滑块">
               <template #input>
@@ -42,7 +47,7 @@
               </template>
             </z-field>
             <view class="ma-30 text-greyDark text-size-n">滑块-纵向</view>
-            <view :style="{ height: '300rpx' }">
+            <view class="px-22 rpx-h-300" >
                 <z-slider v-model="slider" vertical  />
                 <z-slider
                   v-model="slider"
@@ -157,13 +162,6 @@
               </template>
             </z-field>
             
-            
-        
-            <z-field name="uploader" label="文件上传">
-              <template #input>
-                <z-uploader v-model="uploader" max-count="2" />
-              </template>
-            </z-field>
             <z-field
               v-model="resultPicker"
               is-link
