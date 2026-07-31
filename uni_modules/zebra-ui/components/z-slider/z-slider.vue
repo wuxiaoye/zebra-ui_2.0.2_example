@@ -5,6 +5,11 @@
     :class="bem({ vertical: props.vertical, disabled: props.disabled })"
     @click.stop="onClick"
   >
+    <!-- 进度提示面板 -->
+      <view class="slider__tooltip" :class="{ show: showTooltip }" :style="{ left: (modelValue - 15) + '%' }">
+        <text>{{ Math.round(modelValue) }}%</text>
+      </view>
+      
     <view :class="bem('bar')" :style="barStyle">
       <template v-if="props.range">
         <view
@@ -124,7 +129,9 @@ const props = defineProps({
     type: [Number, Array] as any,
     default: 0
   },
-  customStyle: Object
+  customStyle: Object,
+  // 是否显示进度提示面板
+  showTip: Boolean
 })
 
 const emit = defineEmits([
@@ -139,6 +146,9 @@ let current: any
 let startValue: any
 const dragStatus = ref<'start' | 'dragging' | ''>()
 const touch = useTouch()
+
+//进度提示面板
+const showTooltip = ref(false);
 
 const scope = computed(() => Number(props.max) - Number(props.min))
 
@@ -283,6 +293,12 @@ const touchStartEvent = (event: any, index: any = '') => {
     // @ts-ignore
     buttonIndex = index
   }
+    //进度提示面板
+    console.log('是否双滑块', props.range)
+    if(props.range == false && props.showTip == true ){
+        showTooltip.value = true;
+    }
+    
   onTouchStart(event)
 }
 
@@ -328,6 +344,9 @@ const onTouchMove = (event: TouchEvent) => {
 }
 
 const onTouchEnd = (event: TouchEvent) => {
+    //进度提示面板
+    showTooltip.value = false;
+    
   if (props.disabled || props.readonly) {
     return
   }
@@ -364,8 +383,10 @@ export default {
   position: relative;
   width: 100%;
   height: var(--z-slider-bar-height);
-  background: var(--z-slider-inactive-background);
   border-radius: var(--z-radius-max);
+  //  未激活状态颜色
+  // background: var(--z-slider-inactive-background);
+  box-shadow: inset 4rpx 4rpx 10rpx var(--greyLight-2), inset -4rpx -4rpx 10rpx var(--white);
 
   &::before {
     position: absolute;
@@ -377,9 +398,9 @@ export default {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: var(--z-slider-active-background);
     border-radius: inherit;
     transition: all var(--z-duration-fast);
+    background: var(--z-slider-active-background);
   }
 
   &__button {
@@ -388,6 +409,18 @@ export default {
     background: var(--z-slider-button-background);
     border-radius: var(--z-slider-button-radius);
     box-shadow: var(--z-slider-button-shadow);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: var(--z-slider-bar-height);
+      height: var(--z-slider-bar-height);
+      border-radius: 50%;
+      box-shadow: inset 4rpx 4rpx 10rpx var(--greyLight-2), inset -4rpx -4rpx 10rpx var(--white);
+      transform: translate(50%, 50%);
+    }
 
     &-wrapper {
       position: absolute;
@@ -438,5 +471,25 @@ export default {
       inset: 0 calc(var(--z-padding-xs) * -1) 0 calc(var(--z-padding-xs) * -1);
     }
   }
+  
+      .slider__tooltip {
+        position: absolute;
+        top: -60rpx;
+        height: 50rpx;
+        width: 60rpx;
+        border-radius: 12rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24rpx;
+        color: var(--primary);
+        box-shadow: 6rpx 6rpx 12rpx var(--greyLight-2), -4rpx -4rpx 10rpx var(--white);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        transform: translateX(-50%);
+      }
+      .slider__tooltip.show {
+        opacity: 1;
+      }
 }
 </style>

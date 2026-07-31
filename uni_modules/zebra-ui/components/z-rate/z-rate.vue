@@ -263,7 +263,8 @@ const fullIconStyle = (item: any) => {
     display: 'block',
     width: '1em',
     color: 'var(--z-rate-icon-void-color)',
-    fontSize: 'var(--z-rate-icon-size)'
+    fontSize: 'var(--z-rate-icon-size)',
+    textShadow: 'var(--z-rate-icon-full-box-shadow)'
   }
 
   if (props.size) {
@@ -381,6 +382,7 @@ export default {
     width: 1em;
     font-size: var(--z-rate-icon-size);
     color: var(--z-rate-icon-void-color);
+    // ========== 新增星星阴影 ==========
 
     &--half {
       position: absolute;
@@ -391,8 +393,7 @@ export default {
     }
 
     &--full {
-      // color: var(--z-rate-icon-full-color);
-      color: var(--primary);
+      color: var(--z-rate-icon-full-color);
     }
   }
 

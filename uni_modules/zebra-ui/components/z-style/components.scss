@@ -544,6 +544,7 @@ page {
   --z-rate-icon-void-color: var(--greyLight-3);
   --z-rate-icon-full-color: var(--primary);
   --z-rate-icon-disabled-color: var(--z-gray-5);
+  --z-rate-icon-full-box-shadow: var(--aye-shadow);
 
   // rollingText
   --z-rolling-text-background: inherit;
@@ -590,14 +591,15 @@ page {
   --z-signature-content-border: 2rpx dotted #dadada;
 
   // slider
-  --z-slider-active-background: var(--z-primary-color);
+  --z-slider-active-background: linear-gradient(-1deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
   --z-slider-disabled-opacity: var(--z-disabled-opacity);
-  --z-slider-bar-height: 4rpx;
-  --z-slider-button-width: 48rpx;
-  --z-slider-button-height: 48rpx;
+  --z-slider-bar-height: 20rpx;
+  --z-slider-button-width: 40rpx;
+  --z-slider-button-height: 40rpx;
   --z-slider-button-radius: 50%;
-  --z-slider-button-background: var(--z-white);
-  --z-slider-button-shadow: 0 2rpx 4rpx rgb(0 0 0 / 50%);
+  --z-slider-button-background: var(--white);
+  --z-slider-button-shadow: 0.6rem 0.6rem 1.2rem var(--greyLight-2), -0.4rem -0.4rem 1rem var(--white);
+  // --z-slider-inactive-background: var(--z-gray-3);
 
   // stepper
   // --z-stepper-button-icon-color: var(--z-text-color);

@@ -12,6 +12,60 @@
                       <aye-switch2 v-model="switchChecked"></aye-switch2>
                 </template>
             </z-field>
+            
+            
+            <z-field name="slider" label="滑块">
+              <template #input>
+                  <view style="width: 100%;padding-top: 50rpx;">
+                        <z-slider v-model="slider" :show-tip="true" />
+                  </view>
+              </template>
+            </z-field>
+            <z-field name="slider" label="滑块-禁用">
+              <template #input>
+                <z-slider v-model="slider" disabled/>
+              </template>
+            </z-field>
+            <z-field name="slider" label="滑块-自定义">
+              <template #input>
+                <z-slider v-model="slider" bar-height="8rpx" active-color="#ee0a24"  />
+              </template>
+            </z-field>
+            <z-field name="slider" label="滑块-反转">
+              <template #input>
+                <z-slider v-model="slider" reverse  />
+              </template>
+            </z-field>
+            <z-field name="slider" label="双滑块" >
+              <template #input>
+                <z-slider v-model="slider2" range />
+              </template>
+            </z-field>
+            <view class="ma-30 text-greyDark text-size-n">滑块-纵向</view>
+            <view :style="{ height: '300rpx' }">
+                <z-slider v-model="slider" vertical  />
+                <z-slider
+                  v-model="slider"
+                  range
+                  vertical
+                  :custom-style="{ 'margin-left': '100rpx' }"
+                />
+                <z-slider
+                  v-model="slider"
+                  reverse
+                  vertical
+                  :custom-style="{ 'margin-left': '100rpx' }"
+                />
+              </view>
+                    
+            <view class="ma-30"></view>
+            <z-field name="rate" label="评分">
+              <template #input>
+                <z-rate v-model="rate" />
+              </template>
+            </z-field>
+            
+            
             <z-field name="checkbox2" label="复选框2">
               <template #input>
                  <aye-checkbox label="复选框2" v-model="checkbox"></aye-checkbox>
@@ -19,7 +73,7 @@
             </z-field>
             <z-field name="checkboxGroup2" label="复选框组2">
                 <template #input>
-                    <aye-checkbox-group v-model="checkboxGroup">
+                    <aye-checkbox-group v-model="checkboxGroup" layout="vertical">
                         <aye-checkbox value="1" label="蜂蜜"></aye-checkbox>
                         <aye-checkbox value="2" label="罗汉果"></aye-checkbox>
                         <aye-checkbox value="3" label="绿茶"></aye-checkbox>
@@ -28,13 +82,49 @@
             </z-field>
             <z-field name="radio" label="单选框2">
                 <template #input>
-                    <aye-radio-group v-model="radio2">
+                    <aye-radio-group v-model="radio2" >
                         <aye-radio value="a" label="黑豆"></aye-radio>
                         <aye-radio value="b" label="绿豆"></aye-radio>
                         <aye-radio value="c" label="黄豆"></aye-radio>
                         <aye-radio value="d" label="红豆"></aye-radio>
                     </aye-radio-group>
                 </template>
+            </z-field>
+            <z-field name="stepper" label="步进器">
+              <template #input>
+                <z-stepper v-model="stepper" />
+              </template>
+            </z-field>
+            <z-field name="stepper" label="步进器-整体禁用">
+              <template #input>
+                <z-stepper v-model="stepper" disabled/>
+              </template>
+            </z-field>
+            <z-field name="stepper" label="步进器-禁用减号">
+              <template #input>
+                <z-stepper v-model="stepper" disable-minus input-width="80rpx"  />
+              </template>
+            </z-field>
+            <z-field name="stepper" label="步进器-禁用加号">
+              <template #input>
+                <z-stepper v-model="stepper" disable-plus min="-5" max="8"/>
+              </template>
+            </z-field>
+            <z-field name="stepper" label="步进器-禁用输入框">
+              <template #input>
+                <z-stepper v-model="stepper" disable-input/>
+              </template>
+            </z-field>
+            
+            <z-field name="stepper" label="步进器-圆角">
+              <template #input>
+                <z-stepper v-model="stepper" theme="round"/>
+              </template>
+            </z-field>
+            <z-field name="stepper" label="步进器-圆角-禁用">
+              <template #input>
+                <z-stepper v-model="stepper" disabled theme="round"/>
+              </template>
             </z-field>
             
             <view class="my-30 text-greyDark text-size-n">传统样式</view>
@@ -67,54 +157,7 @@
               </template>
             </z-field>
             
-            <z-field name="stepper" label="步进器">
-              <template #input>
-                <z-stepper v-model="stepper" />
-              </template>
-            </z-field>
-            <z-field name="stepper" label="步进器-整体禁用">
-              <template #input>
-                <z-stepper v-model="stepper" disabled/>
-              </template>
-            </z-field>
-            <z-field name="stepper" label="步进器-禁用减号">
-              <template #input>
-                <z-stepper v-model="stepper" disable-minus/>
-              </template>
-            </z-field>
-            <z-field name="stepper" label="步进器-禁用加号">
-              <template #input>
-                <z-stepper v-model="stepper" disable-plus min="-5" max="8"/>
-              </template>
-            </z-field>
-            <z-field name="stepper" label="步进器-禁用输入框">
-              <template #input>
-                <z-stepper v-model="stepper" disable-input/>
-              </template>
-            </z-field>
             
-            <z-field name="stepper" label="步进器-圆角">
-              <template #input>
-                <z-stepper v-model="stepper" theme="round"/>
-              </template>
-            </z-field>
-            <z-field name="stepper" label="步进器-圆角-禁用">
-              <template #input>
-                <z-stepper v-model="stepper" disabled theme="round"/>
-              </template>
-            </z-field>
-        
-            <z-field name="rate" label="评分">
-              <template #input>
-                <z-rate v-model="rate" />
-              </template>
-            </z-field>
-        
-            <z-field name="slider" label="滑块">
-              <template #input>
-                <z-slider v-model="slider" />
-              </template>
-            </z-field>
         
             <z-field name="uploader" label="文件上传">
               <template #input>
@@ -284,7 +327,8 @@ const rate = ref(3)
 const radio = ref('1')
 const radio2 = ref('b')
 const slider = ref(50)
-const stepper = ref(1)
+const slider2 = ref([10, 70]);
+const stepper = ref(3)
 const uploader = ref([
   { url: 'https://cdn.zebraui.com/zebra-ui/images/swipe-demo/swipe1.jpg' }
 ])
@@ -370,4 +414,5 @@ const onConfirmCalendar = (date: Date) => {
     margin-top: 20rpx;
   }
 }
+
 </style>
