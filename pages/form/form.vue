@@ -1,6 +1,177 @@
 <template>
   <DemoPage title="Form">
     <view class="demo-form">
+        <demo-block title="表单项类型">
+            <z-field name="switch2" label="开关2">
+                <template #input>
+                      <aye-switch v-model="switchChecked"></aye-switch>
+                </template>
+            </z-field>
+            <z-field name="switch3" label="开关3">
+                <template #input>
+                      <aye-switch2 v-model="switchChecked"></aye-switch2>
+                </template>
+            </z-field>
+            <z-field name="checkbox2" label="复选框2">
+              <template #input>
+                 <aye-checkbox label="复选框2" v-model="checkbox"></aye-checkbox>
+              </template>
+            </z-field>
+            <z-field name="checkboxGroup2" label="复选框组2">
+                <template #input>
+                    <aye-checkbox-group v-model="checkboxGroup">
+                        <aye-checkbox value="1" label="蜂蜜"></aye-checkbox>
+                        <aye-checkbox value="2" label="罗汉果"></aye-checkbox>
+                        <aye-checkbox value="3" label="绿茶"></aye-checkbox>
+                    </aye-checkbox-group>
+                </template>
+            </z-field>
+            <z-field name="radio" label="单选框2">
+                <template #input>
+                    <aye-radio-group v-model="radio2">
+                        <aye-radio value="a" label="黑豆"></aye-radio>
+                        <aye-radio value="b" label="绿豆"></aye-radio>
+                        <aye-radio value="c" label="黄豆"></aye-radio>
+                        <aye-radio value="d" label="红豆"></aye-radio>
+                    </aye-radio-group>
+                </template>
+            </z-field>
+            
+            <view class="my-30 text-greyDark text-size-n">传统样式</view>
+            
+          <z-form ref="formItem" @submit="onSubmitItem">
+            <z-field name="switch" label="开关">
+              <template #input>
+                <z-switch v-model="switchChecked" />
+              </template>
+            </z-field>
+            <z-field name="checkbox" label="复选框">
+              <template #input>
+                <z-checkbox v-model="checkbox" shape="square" />
+              </template>
+            </z-field>
+            <z-field name="checkboxGroup" label="复选框组">
+              <template #input>
+                <z-checkbox-group v-model="checkboxGroup" direction="horizontal">
+                  <z-checkbox name="1" shape="square"> 选项1 </z-checkbox>
+                  <z-checkbox name="2" shape="square"> 选项2 </z-checkbox>
+                </z-checkbox-group>
+              </template>
+            </z-field>
+            <z-field name="radio" label="单选框">
+              <template #input>
+                <z-radio-group v-model="radio" direction="horizontal">
+                  <z-radio name="1">选项1</z-radio>
+                  <z-radio name="2">选项2</z-radio>
+                </z-radio-group>
+              </template>
+            </z-field>
+            
+            <z-field name="stepper" label="步进器">
+              <template #input>
+                <z-stepper v-model="stepper" />
+              </template>
+            </z-field>
+            <z-field name="stepper" label="步进器-整体禁用">
+              <template #input>
+                <z-stepper v-model="stepper" disabled/>
+              </template>
+            </z-field>
+            <z-field name="stepper" label="步进器-禁用减号">
+              <template #input>
+                <z-stepper v-model="stepper" disable-minus/>
+              </template>
+            </z-field>
+            <z-field name="stepper" label="步进器-禁用加号">
+              <template #input>
+                <z-stepper v-model="stepper" disable-plus min="-5" max="8"/>
+              </template>
+            </z-field>
+            <z-field name="stepper" label="步进器-禁用输入框">
+              <template #input>
+                <z-stepper v-model="stepper" disable-input/>
+              </template>
+            </z-field>
+            
+            <z-field name="stepper" label="步进器-圆角">
+              <template #input>
+                <z-stepper v-model="stepper" theme="round"/>
+              </template>
+            </z-field>
+            <z-field name="stepper" label="步进器-圆角-禁用">
+              <template #input>
+                <z-stepper v-model="stepper" disabled theme="round"/>
+              </template>
+            </z-field>
+        
+            <z-field name="rate" label="评分">
+              <template #input>
+                <z-rate v-model="rate" />
+              </template>
+            </z-field>
+        
+            <z-field name="slider" label="滑块">
+              <template #input>
+                <z-slider v-model="slider" />
+              </template>
+            </z-field>
+        
+            <z-field name="uploader" label="文件上传">
+              <template #input>
+                <z-uploader v-model="uploader" max-count="2" />
+              </template>
+            </z-field>
+            <z-field
+              v-model="resultPicker"
+              is-link
+              readonly
+              name="picker"
+              label="选择器"
+              placeholder="请选择城市"
+              @click="showPicker = true"
+            />
+            <z-field
+              v-model="resultDatePicker"
+              is-link
+              readonly
+              name="datePicker"
+              label="时间选择"
+              placeholder="点击选择事件"
+              @click="showPickerDate = true"
+            />
+            <z-field
+              v-model="areaCode"
+              is-link
+              readonly
+              name="area"
+              label="地区选择"
+              placeholder="点击选择省市区"
+              @click="showArea = true"
+            />
+            <z-field
+              v-model="resultCalendar"
+              is-link
+              readonly
+              name="calendar"
+              label="日历"
+              placeholder="点击选择日期"
+              @click="showCalendar = true"
+            />
+            <z-calendar
+              v-model:show="showCalendar"
+              round
+              teleport="body"
+              @confirm="onConfirmCalendar"
+            />
+          </z-form>
+          <view class="button">
+            <z-button block type="primary" @click="submitFormItem">
+              提交
+            </z-button>
+          </view>
+        </demo-block>
+        
+        
       <demo-block title="基础用法">
         <z-form ref="formBasic" @submit="onSubmitBasic">
           <z-field
@@ -64,145 +235,7 @@
       </demo-block>
       
       
-      <demo-block title="表单项类型">
-        <z-form ref="formItem" @submit="onSubmitItem">
-          <z-field name="switch" label="开关">
-            <template #input>
-              <z-switch v-model="switchChecked" />
-            </template>
-          </z-field>
-          
-          <z-field name="switch2" label="开关2">
-              <template #input>
-                    <aye-switch v-model="switchChecked"></aye-switch>
-                  
-              </template>
-          </z-field>
-          
-
-          <z-field name="checkbox" label="复选框">
-            <template #input>
-              <z-checkbox v-model="checkbox" shape="square" />
-            </template>
-          </z-field>
-          
-          <z-field name="checkbox2" label="复选框2">
-            <template #input>
-               <aye-checkbox label="复选框2" v-model="checkbox"></aye-checkbox>
-            </template>
-          </z-field>
-
-          <z-field name="checkboxGroup" label="复选框组">
-            <template #input>
-              <z-checkbox-group v-model="checkboxGroup" direction="horizontal">
-                <z-checkbox name="1" shape="square"> 选项1 </z-checkbox>
-                <z-checkbox name="2" shape="square"> 选项2 </z-checkbox>
-              </z-checkbox-group>
-            </template>
-          </z-field>
-          
-          <z-field name="checkboxGroup2" label="复选框组2">
-              <template #input>
-                  <aye-checkbox-group v-model="checkboxGroup">
-                      <aye-checkbox value="1" label="蜂蜜"></aye-checkbox>
-                      <aye-checkbox value="2" label="罗汉果"></aye-checkbox>
-                      <aye-checkbox value="3" label="绿茶"></aye-checkbox>
-                  </aye-checkbox-group>
-              </template>
-          </z-field>
-
-          <z-field name="radio" label="单选框">
-            <template #input>
-              <z-radio-group v-model="radio" direction="horizontal">
-                <z-radio name="1">选项1</z-radio>
-                <z-radio name="2">选项2</z-radio>
-              </z-radio-group>
-            </template>
-          </z-field>
-          
-          <z-field name="radio" label="单选框2">
-              <template #input>
-                  <aye-radio-group v-model="radio2">
-                      <aye-radio value="a" label="黑豆"></aye-radio>
-                      <aye-radio value="b" label="绿豆"></aye-radio>
-                      <aye-radio value="c" label="黄豆"></aye-radio>
-                      <aye-radio value="d" label="红豆"></aye-radio>
-                  </aye-radio-group>
-              </template>
-          </z-field>
-
-          <z-field name="stepper" label="步进器">
-            <template #input>
-              <z-stepper v-model="stepper" />
-            </template>
-          </z-field>
-
-          <z-field name="rate" label="评分">
-            <template #input>
-              <z-rate v-model="rate" />
-            </template>
-          </z-field>
-
-          <z-field name="slider" label="滑块">
-            <template #input>
-              <z-slider v-model="slider" />
-            </template>
-          </z-field>
-
-          <z-field name="uploader" label="文件上传">
-            <template #input>
-              <z-uploader v-model="uploader" max-count="2" />
-            </template>
-          </z-field>
-          <z-field
-            v-model="resultPicker"
-            is-link
-            readonly
-            name="picker"
-            label="选择器"
-            placeholder="请选择城市"
-            @click="showPicker = true"
-          />
-          <z-field
-            v-model="resultDatePicker"
-            is-link
-            readonly
-            name="datePicker"
-            label="时间选择"
-            placeholder="点击选择事件"
-            @click="showPickerDate = true"
-          />
-          <z-field
-            v-model="areaCode"
-            is-link
-            readonly
-            name="area"
-            label="地区选择"
-            placeholder="点击选择省市区"
-            @click="showArea = true"
-          />
-          <z-field
-            v-model="resultCalendar"
-            is-link
-            readonly
-            name="calendar"
-            label="日历"
-            placeholder="点击选择日期"
-            @click="showCalendar = true"
-          />
-          <z-calendar
-            v-model:show="showCalendar"
-            round
-            teleport="body"
-            @confirm="onConfirmCalendar"
-          />
-        </z-form>
-        <view class="button">
-          <z-button block type="primary" @click="submitFormItem">
-            提交
-          </z-button>
-        </view>
-      </demo-block>
+      
     </view>
     <z-popup v-model:show="showPicker" round position="bottom" teleport="body">
       <z-picker

@@ -600,19 +600,29 @@ page {
   --z-slider-button-shadow: 0 2rpx 4rpx rgb(0 0 0 / 50%);
 
   // stepper
-  --z-stepper-background: var(--z-active-color);
-  --z-stepper-button-icon-color: var(--z-text-color);
-  --z-stepper-button-disabled-color: var(--z-background);
+  // --z-stepper-button-icon-color: var(--z-text-color);
+  --z-stepper-btn-minus-background: var(--greyLight-1);
+  --z-stepper-btn-plus-background: var(--primary);
+  --z-stepper-btn-minus-color: var(--greyDark);
+  --z-stepper-btn-plus-color: var(--white);
+  
+  --z-stepper-button-disabled-color: var(--greyLight-2);
   --z-stepper-button-disabled-icon-color: var(--z-gray-5);
-  --z-stepper-button-round-theme-color: var(--z-primary-color);
+  //圆形
+  --z-stepper-btn-round-background-color: var(--z-primary-color);
+  
   --z-stepper-input-width: 64rpx;
   --z-stepper-input-height: 56rpx;
   --z-stepper-input-font-size: var(--z-font-size-md);
   --z-stepper-input-line-height: normal;
-  --z-stepper-input-text-color: var(--z-text-color);
-  --z-stepper-input-disabled-text-color: var(--z-text-color-3);
+  --z-stepper-input-text-color: #333;
+  --z-stepper-input-disabled-text-color: #999;
   --z-stepper-input-disabled-background: var(--z-active-color);
   --z-stepper-radius: var(--z-radius-md);
+  //新增: 阴影
+  --z-stepper-btn-box-shadow: var(--aye-shadow);
+  --z-stepper-input-box-shadow: var(--aye-shadow-inset);
+  --z-stepper-input-border-radius: 12rpx;
 
   // swipe
   --z-swipe-indicator-size: 12rpx;

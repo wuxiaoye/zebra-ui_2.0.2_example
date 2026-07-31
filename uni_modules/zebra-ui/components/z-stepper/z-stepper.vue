@@ -1,8 +1,7 @@
 <template>
   <view :class="bem([props.theme])">
-    <button
+    <view
       v-show="props.showMinus"
-      type="button"
       :style="buttonStyle"
       :class="[
         bem('minus', { disabled: minusDisabled }),
@@ -12,7 +11,9 @@
       @touchstart.passive="onTouchstartPassive($event, 'minus')"
       @touchend="onTouchEnd"
       @touchcancel="onTouchEnd"
-    />
+    >
+        <text class="ayeIconfont aye-minus text-icon"></text>
+    </view>
     <input
       v-show="props.showInput"
       :type="props.integer ? 'number' : 'digit'"
@@ -29,9 +30,8 @@
       @input="onInput"
       @focus="onFocus"
     />
-    <button
+    <view
       v-show="props.showPlus"
-      type="button"
       :style="buttonStyle"
       :class="[
         bem('plus', { disabled: plusDisabled }),
@@ -41,7 +41,10 @@
       @touchstart.passive="onTouchstartPassive($event, 'plus')"
       @touchend="onTouchEnd"
       @touchcancel="onTouchEnd"
-    />
+    >
+        <text class="ayeIconfont aye-plus text-icon"></text>
+    </view>
+    
   </view>
 </template>
 <script lang="ts" setup>
@@ -296,6 +299,30 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@font-face {
+  font-family: "ayeIconfont"; /* Project id 5218209 */
+  src: 
+       url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAALkAAsAAAAABtAAAAKYAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHFQGYACDBgqBBIEVATYCJAMMCwgABCAFhQsHNhsVBsg+QTxgc6iipGmoUbtyXLPNKR55P5cB/CxGEg//7fe/fWbm3v/+3K/eBNGmzTKJ9RLqHU/iVawkMh1ChOqNUP7+r2mBVF91VYQ6ki2PyR7mH3B+RqDZqfkZy8IOmWMTNJT2fJTB7YjFCUm9IAdovhGCFus55eZBQJBIgfff6Ymgi96S5uf+GgBhoWIN/M//5fQmRoHMb1k5dUeNpWtsCuys9XzSaXPbWIRFEgA3jF3QEi8RqHaZqB1a2TqqdK/anFX6GkxqkMTH1dC3Kx1uURTo7wlt15VFvDLS4/QNL4PPxz9bj6TJzH2O/rJX+bC3jQfydx5FgOclNMjYpqIQx5s9fXVRxayrkgYMbxUhTWqfgNBk7Zb/eIlombFDYBMUp4siHT7B70+VQAYtGqx5DB9MIVcoQ2E9/1bvcXMYb1zpnur9Wp9E8+Cs0afcryNPIh7s6VK1+/Ff1RP2OXpfsoydTzEBtU4yfya/jreQ+7XfQpA+92/ywBTwE/8DVdFNR28PmuC10bwGFJ5JLiihkw2K/ENcCdWys8E0TPgbLpvsHEvoTCYgGbACss4qXPBdcIPvh1v8CKi22hdNNv5GXZRBrHmDIMx4B8mIryCb8QkX/B9qGDVwiy+C6lh279ZZ6+HB0Gb0wLmE0M0zYfvYvsR1ufMB+qeJTYViyDpBkmE96IpW4V/FDGm8OfLMN5gFCMpTWGHnYZLkUFAeoctKwFwMVFVUvUVx87SyiCAbQx7guARCrlxGePSY7RJaV7/nAPKdStiouQooeAIRKRwM0Cm0bvCqJOtadoPXSGd8BsYEIJBcCqwMG4YSiRwoqodFkIspggGuwoBq1RJdJcrysvR1t0Flzs6RIkfRXAuzU9m4mbjqSgU=') format('woff2');
+}
+
+.ayeIconfont {
+  font-family: "ayeIconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all 0.3s ease;
+}
+
+.aye-minus:before {
+  content: "\e6ba";
+}
+
+.aye-plus:before {
+  content: "\e8fe";
+}
+
+
 .z-stepper {
   display: flex;
   align-items: center;
@@ -303,62 +330,61 @@ export default {
 
   &__minus,
   &__plus {
+      cursor: pointer;
     position: relative;
     box-sizing: border-box;
     width: var(--z-stepper-input-height);
     height: var(--z-stepper-input-height);
     padding: 0;
     margin: 0;
-    color: var(--z-stepper-button-icon-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     vertical-align: middle;
-    background: var(--z-stepper-background);
     border: 0;
-
-    &::before {
-      width: 50%;
-      height: 2rpx;
-    }
-
-    &::after {
-      width: 2rpx;
-      height: 50%;
-    }
-
-    &::before,
-    &::after {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      content: '';
-      background-color: currentcolor;
-      transform: translate(-50%, -50%);
-    }
-
-    &--disabled {
-      color: var(--z-stepper-button-disabled-icon-color);
-      cursor: not-allowed;
-      background-color: var(--z-stepper-button-disabled-color);
-    }
+    box-shadow: var(--z-stepper-btn-box-shadow);
+    transition: all 0.3s ease;
   }
 
   &__minus {
-    border-radius: var(--z-stepper-radius) 0 0 var(--z-stepper-radius);
-
-    &::after {
-      display: none;
-    }
+    // border-radius: var(--z-stepper-radius) 0 0 var(--z-stepper-radius);
+    border-radius: var(--z-stepper-radius);
+    background-color: var(--z-stepper-btn-minus-background);
+        .text-icon{
+            color: var(--z-stepper-btn-minus-color);
+        }
   }
 
   &__plus {
-    border-radius: 0 var(--z-stepper-radius) var(--z-stepper-radius) 0;
+    // border-radius: 0 var(--z-stepper-radius) var(--z-stepper-radius) 0;
+    border-radius: var(--z-stepper-radius);
+    background-color: var(--z-stepper-btn-plus-background);
+        .text-icon{
+            color: var(--z-stepper-btn-plus-color);
+        }
   }
+  // disabled样式
+    &__minus--disabled,
+    &__plus--disabled {
+      cursor: not-allowed;
+      pointer-events: none;
+        opacity: 0.6;
+        
+      box-shadow: 0 0 0;
+      border: var(--greyLight-2) solid 1px;
+      background-color: var(--greyLight-1);
+       .text-icon{
+           color: var(--greyLight-2);
+       }
+       
+    }
 
   &__input {
     box-sizing: border-box;
     width: var(--z-stepper-input-width);
     height: var(--z-stepper-input-height);
     padding: 0;
-    margin: 0 4rpx;
+    margin: 0 20rpx;
     font-size: var(--z-stepper-input-font-size);
     line-height: var(--z-stepper-input-line-height);
     color: var(--z-stepper-input-text-color);
@@ -368,7 +394,8 @@ export default {
     background: var(--z-stepper-background);
     border: 0;
     border-width: 2rpx 0;
-    border-radius: 0;
+    border-radius: var(--z-stepper-input-border-radius);
+    box-shadow: var(--z-stepper-input-box-shadow);
 
     &:disabled {
       color: var(--z-stepper-input-disabled-text-color);
@@ -383,30 +410,11 @@ export default {
   }
 
   &--round {
-    .z-stepper__input {
-      background-color: transparent;
-    }
-
     .z-stepper__plus,
     .z-stepper__minus {
       border-radius: 100%;
-
-      &--disabled {
-        cursor: not-allowed;
-        opacity: 0.3;
-      }
-    }
-
-    .z-stepper__plus {
-      color: var(--z-white);
-      background: var(--z-stepper-button-round-theme-color);
-    }
-
-    .z-stepper__minus {
-      color: var(--z-stepper-button-round-theme-color);
-      background-color: var(--z-background-2);
-      border: 2rpx solid var(--z-stepper-button-round-theme-color);
     }
   }
+  
 }
 </style>
