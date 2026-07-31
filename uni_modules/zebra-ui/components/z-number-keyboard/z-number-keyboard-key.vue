@@ -130,6 +130,7 @@ export default {
   }
 
   &--blue {
+      //右下角大大的"完成"按钮
     color: var(--z-number-keyboard-button-text-color);
     background: var(--z-number-keyboard-button-background);
 

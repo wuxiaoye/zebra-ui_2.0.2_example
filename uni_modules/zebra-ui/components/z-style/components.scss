@@ -471,9 +471,13 @@ page {
   --z-number-keyboard-title-color: var(--greyDark);
   --z-number-keyboard-title-height: 68rpx;
   --z-number-keyboard-title-font-size: var(--z-font-size-lg);
-  --z-number-keyboard-close-padding: 0 var(--z-padding-md);
+  //右上角自定义关闭按钮
+  --z-number-keyboard-close-height: calc( 100% - 20rpx);
+  --z-number-keyboard-close-margin: 10rpx 30rpx 10rpx 0;
+  --z-number-keyboard-close-padding: 0 30rpx;
   --z-number-keyboard-close-color: var(--z-primary-color);
   --z-number-keyboard-close-font-size: var(--z-font-size-md);
+  //右下角大大的"完成"按钮
   --z-number-keyboard-button-text-color: var(--z-white);
   --z-number-keyboard-button-background: var(--z-primary-color);
   --z-number-keyboard-z-index: 100;

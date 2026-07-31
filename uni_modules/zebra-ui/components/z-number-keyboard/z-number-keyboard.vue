@@ -171,7 +171,8 @@ const closeButtonStyle = computed(() => {
   const styles = {
     position: 'absolute',
     right: 0,
-    height: '100%',
+    height: 'var(--z-number-keyboard-close-height)',
+    margin: 'var(--z-number-keyboard-close-margin)',
     padding: 'var(--z-number-keyboard-close-padding)',
     color: 'var(--z-number-keyboard-close-color)',
     fontSize: 'var(--z-number-keyboard-close-font-size)'
