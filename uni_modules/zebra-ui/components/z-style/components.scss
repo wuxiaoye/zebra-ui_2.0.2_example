@@ -259,7 +259,8 @@ page {
   --z-cascader-active-color: var(--z-primary-color);
   --z-cascader-options-height: 768rpx;
   --z-cascader-option-disabled-color: var(--z-text-color-3);
-  --z-cascader-tab-color: var(--z-text-color);
+  // --z-cascader-tab-color: var(--z-text-color);
+  --z-cascader-tab-color: var(--primary);
   --z-cascader-unselected-tab-color: var(--z-text-color-2);
 
   // checkbox

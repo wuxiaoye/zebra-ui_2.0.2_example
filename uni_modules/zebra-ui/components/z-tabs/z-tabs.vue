@@ -431,7 +431,8 @@ const findAvailableTab = (index: number) => {
 
 const setCurrentIndex = (
   currentIndex: number,
-  skipScrollIntoView?: boolean
+  skipScrollIntoView?: boolean,
+  silent = false
 ) => {
   const newIndex = findAvailableTab(currentIndex)
   if (!isDef(newIndex)) {
@@ -451,7 +452,9 @@ const setCurrentIndex = (
     setLine()
   }
 
-  if (newName !== props.active) {
+  // 仅在非 silent（非 swipe 内部同步）时回写 active，避免
+  // swipe 同步 state.currentIndex 与父组件 v-model 之间形成递归更新
+  if (!silent && newName !== props.active) {
     emit('update:active', newName)
 
     if (shouldEmitChange) {
@@ -666,11 +669,13 @@ const getTargetOffset = (targetActive: number, offset = 0) => {
 const move = ({
   pace = 0,
   offset = 0,
-  emitChange
+  emitChange,
+  silent = false
 }: {
   pace?: number
   offset?: number
   emitChange?: boolean
+  silent?: boolean
 }) => {
   if (count.value <= 1) {
     return
@@ -683,7 +688,12 @@ const move = ({
   stateSwipe.offset = targetOffset
 
   if (emitChange && targetActive !== active) {
-    setCurrentIndex(activeIndicator.value)
+    // silent：swipe 内部程序化同步（跟随 currentIndex 变化），只需更新滑动
+    // 位置，不再反向 setCurrentIndex / emit，避免 state.currentIndex 与
+    // stateSwipe.active 相互追赶形成递归更新
+    if (!silent) {
+      setCurrentIndex(activeIndicator.value)
+    }
   }
 }
 const correctPosition = () => {
@@ -830,7 +840,8 @@ const swipeTo = (index: number, options: any = {}) => {
 
     move({
       pace: targetIndex - stateSwipe.active,
-      emitChange: true
+      emitChange: true,
+      silent: options.silent
     })
   })
 }
@@ -873,7 +884,7 @@ watch(count, () => {
 
 const swipeToCurrentTab = (index: number) => {
   if (stateSwipe.active !== index) {
-    swipeTo(index, { immediate: !state.inited })
+    swipeTo(index, { immediate: !state.inited, silent: true })
   }
 }
 

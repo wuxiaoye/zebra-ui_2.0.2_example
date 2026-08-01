@@ -1,7 +1,8 @@
 <template>
   <DemoPage title="Picker">
     <view class="demo-picker">
-      <demo-block title="基础用法">
+        <view class="pa-20 text-size-n text-greyDark">基础用法</view>
+      <demo-block title=""  :card="false">
         <z-picker
           title="标题"
           :columns="columns"
@@ -10,7 +11,9 @@
           @change="onChange"
         />
       </demo-block>
-      <demo-block title="搭配弹出层使用">
+      
+                    <view class="pa-20 text-size-n text-greyDark">搭配弹出层使用</view>
+      <demo-block title=""   :card="false">
         <z-field
           v-model="fieldValue"
           is-link
@@ -28,22 +31,34 @@
           />
         </z-popup>
       </demo-block>
-      <demo-block title="双向绑定">
+      
+                    <view class="pa-20 text-size-n text-greyDark">双向绑定</view>
+      <demo-block title=""  :card="false">
         <z-picker v-model="selectedValues" title="标题" :columns="columns" />
       </demo-block>
-      <demo-block title="多列选择">
+      
+                    <view class="pa-20 text-size-n text-greyDark">多列选择</view>
+      <demo-block title=""   :card="false">
         <z-picker title="标题" :columns="columnsMore" />
       </demo-block>
-      <demo-block title="级联选择">
+      
+                    <view class="pa-20 text-size-n text-greyDark">级联选择</view>
+      <demo-block title=""  :card="false">
         <z-picker title="标题" :columns="columnsCascade" />
       </demo-block>
-      <demo-block title="禁用选项">
+      
+                    <view class="pa-20 text-size-n text-greyDark">禁用选项</view>
+      <demo-block title=""  :card="false">
         <z-picker :columns="columnsDisabled" />
       </demo-block>
-      <demo-block title="加载状态">
+      
+                    <view class="pa-20 text-size-n text-greyDark">加载状态</view>
+      <demo-block title=""  :card="false">
         <z-picker :loading="loading" />
       </demo-block>
-      <demo-block title="自定义 Columns 的结构">
+      
+                    <view class="pa-20 text-size-n text-greyDark">自定义 Columns 的结构</view>
+      <demo-block title=""   :card="false">
         <z-picker
           title="标题"
           :columns="columnsCustom"

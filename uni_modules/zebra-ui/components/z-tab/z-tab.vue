@@ -81,10 +81,11 @@ const init = () => {
 
 const active: any = ref(false)
 const { animated, swipeable, scrollspy } = parent.props
-const show = ref(scrollspy || active.value)
-const hasInactiveClass = ref(!active.value)
+// 用 computed 派生，避免额外 watch 放大渲染（原代码有bug，如果第三方调用此组件时动态监测是否有新数据，并触发更新，而这里每次都会返回新数组，会触发-死循环更新）
+const show = computed(() => scrollspy || active.value)
+const hasInactiveClass = computed(() => !(scrollspy || active.value))
 watch(
-  () => [parent.currentName.value],
+  () => parent.currentName.value,
   () => {
     const isActive: boolean = getName() === parent.currentName.value
     if (isActive && !inited.value) {
@@ -96,19 +97,6 @@ watch(
   {
     immediate: true
   }
-)
-
-watch(
-  () => [scrollspy, active.value],
-  () => {
-    show.value = scrollspy || active.value
-    if (active.value) {
-      hasInactiveClass.value = false
-    } else {
-      hasInactiveClass.value = true
-    }
-  },
-  { immediate: true }
 )
 const stateSwipeItem = reactive({
   offset: 0,
