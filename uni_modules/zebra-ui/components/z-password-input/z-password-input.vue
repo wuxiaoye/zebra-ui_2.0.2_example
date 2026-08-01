@@ -1,13 +1,12 @@
 <template>
   <view :class="bem()">
     <view
-      :class="[bem('security'), { [BORDER_SURROUND]: !props.gutter }]"
+      :class="[bem('security')]"
       @click.passive="onTouchStart"
     >
       <template v-for="(item, index) in length" :key="index">
         <view
           :class="[
-            { [BORDER_LEFT]: showBorder(index) },
             bem('item', { focus: showCursor(index) })
           ]"
           :style="styleData(index)"
@@ -53,7 +52,10 @@ const props = defineProps({
   info: String,
   mask: truthProp,
   value: makeStringProp(''),
-  gutter: numericProp,
+  gutter: {
+      numericProp,
+      default: 5
+  },
   length: makeNumericProp(6),
   focused: Boolean,
   errorInfo: String
@@ -76,17 +78,18 @@ const length = computed(() => {
 const char = (index: any) => {
   return props.value[index]
 }
-const showBorder = (index: any) => {
-  return index !== 0 && !props.gutter
-}
+// const showBorder = (index: any) => {
+  // return index !== 0 && !props.gutter
+  // return false
+// }
 const showCursor = (index: any) => {
   // @ts-ignore
   return props.focused && index === props.value.length
 }
 
 const styleData = (index: any) => {
-  if (index !== 0 && props.gutter) {
-    return { marginLeft: addUnit(props.gutter) }
+  if (index !== 0 ) {
+    return { marginLeft: addUnit( props.gutter ) }
   }
 }
 </script>
@@ -152,6 +155,8 @@ export default {
     line-height: 1.2;
     color: var(--z-password-input-text-color);
     background: var(--z-password-input-background);
+    border-radius: 6px;
+    box-shadow: var(--aye-shadow-inset-big);
   }
 
   &__cursor {
