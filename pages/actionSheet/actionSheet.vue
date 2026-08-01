@@ -2,7 +2,7 @@
   <DemoPage title="ActionSheet">
     <view class="demo-action-sheet">
       <demo-block title="基础用法">
-        <z-cell is-link title="基础用法" @click="showBasic = true" />
+        <z-cell  title="基础用法" @click="showBasic = true"  />
         <z-cell is-link title="展示取消按钮" @click="showCancel = true" />
         <z-cell is-link title="展示描述信息" @click="showDescription = true" />
       </demo-block>

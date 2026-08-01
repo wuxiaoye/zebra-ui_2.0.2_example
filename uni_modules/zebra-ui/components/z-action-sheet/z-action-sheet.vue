@@ -157,7 +157,7 @@ const closeIconStyle = computed(() => {
   const styles = {
     color: 'var(--z-action-sheet-close-icon-color)',
     fontSize: 'var(--z-action-sheet-close-icon-size)',
-    lineHeight: 'inherit'
+    lineHeight: 'inherit',
   }
   return { ...styles }
 })
@@ -223,6 +223,8 @@ export default {
 
   &__item {
     line-height: var(--z-action-sheet-item-line-height);
+    box-shadow: var(--aye-shadow-bottom-mini);
+    margin-bottom: 1px;
 
     &--loading,
     &--disabled {
@@ -270,6 +272,7 @@ export default {
     display: block;
     height: var(--z-action-sheet-cancel-padding-top);
     background: var(--z-action-sheet-cancel-padding-color);
+    box-shadow: var(--aye-shadow-inset);
   }
 
   &__header {

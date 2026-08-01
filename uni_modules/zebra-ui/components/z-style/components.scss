@@ -10,6 +10,7 @@ page {
     --secondary-dark: #5b0eeb;
     --white: #FFFFFF;
     --greyLight-1: #E4EBF5;
+    --greyLight-1-dark: #d8e4f5;
     --greyLight-2: #c8d0e7;
     --greyLight-3: #bec8e4;
     --greyDark: #9baacf;
@@ -79,7 +80,7 @@ page {
   --z-cell-text-color: var(--z-text-color);
   --z-cell-background: var(--z-background-2);
   --z-cell-border-color: var(--z-border-color);
-  --z-cell-active-color: var(--z-active-color);
+  --z-cell-active-color: var(--greyLight-1-dark);
   --z-cell-required-color: var(--z-danger-color);
   --z-cell-label-color: var(--z-text-color-2);
   --z-cell-label-font-size: var(--z-font-size-sm);
@@ -172,15 +173,16 @@ page {
   --z-action-sheet-max-height: 80%;
   --z-action-sheet-header-height: 96rpx;
   --z-action-sheet-header-font-size: var(--z-font-size-lg);
-  --z-action-sheet-description-color: var(--z-text-color-2);
+  --z-action-sheet-description-color: var(--greyDark);
   --z-action-sheet-description-font-size: var(--z-font-size-md);
   --z-action-sheet-description-line-height: var(--z-line-height-md);
   --z-action-sheet-item-background: var(--z-background-2);
   --z-action-sheet-item-font-size: var(--z-font-size-lg);
   --z-action-sheet-item-line-height: var(--z-line-height-lg);
   --z-action-sheet-item-text-color: var(--z-text-color);
-  --z-action-sheet-item-disabled-text-color: var(--z-text-color-3);
-  --z-action-sheet-subname-color: var(--z-text-color-2);
+  --z-action-sheet-item-disabled-text-color: var(--greyLight-2);
+  // --z-action-sheet-subname-color: var(--z-text-color-2);
+  --z-action-sheet-subname-color: var(--greyDark);
   --z-action-sheet-subname-font-size: var(--z-font-size-sm);
   --z-action-sheet-subname-line-height: var(--z-line-height-sm);
   --z-action-sheet-close-icon-size: 44rpx;
@@ -188,7 +190,7 @@ page {
   --z-action-sheet-close-icon-padding: 0 var(--z-padding-md);
   --z-action-sheet-cancel-text-color: var(--z-gray-7);
   --z-action-sheet-cancel-padding-top: var(--z-padding-xs);
-  --z-action-sheet-cancel-padding-color: var(--z-background);
+  --z-action-sheet-cancel-padding-color: var(--greyLight-1);
   --z-action-sheet-loading-icon-size: 44rpx;
 
   // barrage

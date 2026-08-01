@@ -914,30 +914,4 @@ export default {
   }
 }
 
-/*  此组件 如果设置了 is-link 属性, 当用户点击时, 会出现 hover 样式: 瞬间变白色 */
-// 穿透修改子组件 z-cell is-link 点击按压背景色
-::v-deep .z-cell--link:active {
-    border-radius: 16px;
-  background-color: var(--greyLight-2) !important;
-}
-
-// 顺带如果 clickable 也要统一，一并加上
-::v-deep .z-cell--clickable:active {
-    border-radius: 16px;
-  background-color: var(--greyLight-2) !important;
-}
-
-// 去除默认点击高亮边框/阴影（可选，更干净）
-::v-deep .z-cell--link {
-  -webkit-tap-highlight-color: transparent;
-}
-// Vue3 uni-app 兼容写法备选（如果上面不生效换这个）
-:deep(.z-cell--link:active) {
-    border-radius: 16px;
-  background-color: var(--greyLight-2) !important;
-}
-:deep(.z-cell--clickable:active) {
-    border-radius: 16px;
-  background-color: var(--greyLight-2) !important;
-}
 </style>

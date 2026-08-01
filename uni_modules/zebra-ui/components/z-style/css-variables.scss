@@ -9,6 +9,7 @@ page {
     --secondary-dark: #5b0eeb;
     --white: #FFFFFF;
     --greyLight-1: #E4EBF5;
+    --greyLight-1-dark: #d8e4f5;
     --greyLight-2: #c8d0e7;
     --greyLight-3: #bec8e4;
     --greyDark: #9baacf;
@@ -66,7 +67,7 @@ page {
   // --z-text-color-2: var(--greyLight-3);
   --z-text-color-3: var(--z-gray-5);
   // --z-text-color-3: var(--greyLight-2);
-  --z-active-color: var(--z-gray-2);
+  --z-active-color: var(--greyLight-1-dark);
   --z-active-opacity: 0.6;
   --z-disabled-opacity: 0.5;
   --z-background: var(--z-gray-1);
