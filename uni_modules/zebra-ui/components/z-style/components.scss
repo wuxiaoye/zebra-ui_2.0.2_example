@@ -582,9 +582,17 @@ page {
   --z-rolling-text-item-border-radius: 0rpx;
 
   // search
+  //外圆角
+  --z-search-border-radius: 24rpx;
+  //外阴影
+  --z-search-box-shadow: var(--aye-shadow);
   --z-search-padding: 20rpx var(--z-padding-sm);
   --z-search-background: var(--z-background-2);
-  --z-search-content-background: var(--z-background);
+  --z-search-content-background: var(--z-background-2);
+  //内圆角
+  --z-search-content-border-radius: 24rpx;
+  --z-search-content-border-shadow: var(--aye-shadow-inset); //内阴影
+  --z-search-content-round-border-shadow:var(--aye-shadow-inset-big);//当设置了圆角 50% 时的内阴影
   --z-search-input-height: 68rpx;
   --z-search-label-padding: 0 10rpx;
   --z-search-label-color: var(--z-text-color);
@@ -593,6 +601,7 @@ page {
   --z-search-action-padding: 0 var(--z-padding-xs);
   --z-search-action-text-color: var(--z-text-color);
   --z-search-action-font-size: var(--z-font-size-md);
+  
 
   // shareSheet
   --z-share-sheet-header-padding: var(--z-padding-sm) var(--z-padding-md);

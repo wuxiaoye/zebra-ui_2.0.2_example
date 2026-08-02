@@ -3,7 +3,7 @@
     <view class="demo-field">
       <demo-block title="基础用法">
                 <z-field v-model="value" label="文本" placeholder="请输入文本" is-link/>
-            <view class="my-20 text-greyDark text-size-n">无边框</view>
+            <view class="my-20 text-greyDark text-size-n">无边框阴影</view>
                 <z-field v-model="value" label="文本" placeholder="请输入文本" :box-shadow="false"/>
       </demo-block>
       <demo-block title="自定义类型">

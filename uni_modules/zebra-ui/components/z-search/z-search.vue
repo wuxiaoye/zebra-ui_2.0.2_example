@@ -48,6 +48,7 @@
         :error="props.error"
         :disabled="props.disabled"
         :readonly="props.readonly"
+         :box-shadow="false"
         @blur="onBlur"
         @focus="onFocus"
         @clear="onClear"
@@ -150,7 +151,9 @@ const cellStyle = computed(() => {
     alignItems: 'center',
     padding: `0 var(--z-padding-xs) 0 0`,
     height: 'var(--z-search-input-height)',
-    backgroundColor: 'transparent'
+    backgroundColor: 'transparent',
+          // borderRadius: 'var(--z-radius-max)',
+          // border: '#333 solid 1px'
   }
   let messageStyle = {}
   if (props.errorMessage) {
@@ -185,16 +188,21 @@ export default {
   align-items: center;
   padding: var(--z-search-padding);
   background: var(--z-search-background);
+  border-radius: var(--z-search-border-radius);
+  box-shadow: var(--z-search-box-shadow);
 
   &__content {
     display: flex;
     flex: 1;
     padding-left: var(--z-padding-sm);
     background: var(--z-search-content-background);
-    border-radius: var(--z-radius-sm);
+    border-radius: var(--z-search-content-border-radius);
+    box-shadow: var(--z-search-content-border-shadow);
 
     &--round {
+        box-sizing: border-box;
       border-radius: var(--z-radius-max);
+      box-shadow: var(--z-search-content-round-border-shadow);
     }
   }
 
