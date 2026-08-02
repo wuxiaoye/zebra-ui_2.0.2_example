@@ -370,15 +370,23 @@ export default {
     padding-top: var(--z-dialog-header-padding-top);
     font-weight: var(--z-dialog-header-font-weight);
     line-height: var(--z-dialog-header-line-height);
-    color: var(--z-text-color);
+    // color: var(--z-text-color);
+    color: var(--greyDark);
     text-align: center;
 
     &--isolated {
+        // 无标题时
       padding: var(--z-dialog-header-isolated-padding);
     }
   }
 
   &__content {
+      box-sizing: border-box;
+      box-shadow: var(--aye-shadow);
+      border-radius: 12px;
+      margin: 30rpx;
+      // padding: 10rpx 0;
+      
     &--isolated {
       display: flex;
       align-items: center;
@@ -394,13 +402,15 @@ export default {
     font-size: var(--z-dialog-message-font-size);
     line-height: var(--z-dialog-message-line-height);
     color: var(--z-text-color);
+    // color: var(--greyDark);
     text-align: center;
     word-wrap: break-word;
     white-space: pre-wrap;
     -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
 
     &--has-title {
-      padding-top: var(--z-dialog-has-title-message-padding-top);
+      // padding-top: var(--z-dialog-has-title-message-padding-top);
       color: var(--z-dialog-has-title-message-text-color);
     }
 
@@ -431,7 +441,7 @@ export default {
     }
 
     .z-dialog__message {
-      padding-bottom: var(--z-padding-md);
+      // padding-bottom: var(--z-padding-md);
       color: var(--z-text-color);
     }
 
