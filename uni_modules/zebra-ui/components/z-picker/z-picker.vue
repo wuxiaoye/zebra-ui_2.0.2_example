@@ -68,7 +68,7 @@
       <template v-if="hasOptions">
         <view :class="bem('mask')" :style="maskStyle" />
         <view
-          :class="[BORDER_UNSET_TOP_BOTTOM, bem('frame')]"
+          :class="[bem('frame')]"
           :style="frameStyle"
         />
       </template>
@@ -376,16 +376,21 @@ export default {
     position: relative;
     display: flex;
     cursor: grab;
+    box-shadow:  -4rpx -4rpx 16rpx var(--greyLight-1-dark);
   }
 
   &__frame {
     position: absolute;
     top: 50%;
-    right: var(--z-padding-md);
-    left: var(--z-padding-md);
+    right: var(--z-padding-sm);
+    left: var(--z-padding-sm);
     z-index: 2;
     pointer-events: none;
     transform: translateY(-50%);
+    border-radius: 24rpx;
+    box-shadow: 
+        12rpx 12rpx 32rpx var(--greyLight-2), -12rpx -12rpx 30rpx var(--white),  
+        inset 0.4rem 0.4rem 0.8rem var(--greyLight-2), inset -0.4rem -0.4rem 0.8rem var(--white);
   }
 
   &__mask {

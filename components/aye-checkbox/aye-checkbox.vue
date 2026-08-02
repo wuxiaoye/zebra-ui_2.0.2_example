@@ -306,7 +306,16 @@ const handleClick = () => {
   box-shadow: inset 4rpx 4rpx 10rpx var(--greyLight-2), inset -4rpx -4rpx 10rpx var(--white);
 }
 
-.check-icon, .aye-checkbox-label {
+/* .check-icon, */
+ .aye-checkbox-label {
   transition: all 0.3s ease;
 }
+.check-icon{
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform: scale(1);
+}
+.aye-checkbox.checked .check-icon{
+    transform: scale(0.85);
+}
+
 </style>

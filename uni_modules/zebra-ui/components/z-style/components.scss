@@ -29,6 +29,11 @@ page {
     --aye-shadow-inset: inset 2px 2px 4px var(--greyLight-2), inset -2px -2px 4px var(--white);
      /* 内凹阴影-小一些 */
     --aye-shadow-inset-mini: inset 1px 1px 1px var(--greyLight-2), inset -2px -2px 4px var(--white);
+    
+    /* 浅灰色阴影 - 顶部向上阴影 */
+    --aye-shadow-grey-light-top: -4rpx -4rpx 16rpx var(--greyLight-1-dark);
+    /* 浅灰色阴影 - 底部阴影 */
+    --aye-shadow-grey-light-bottom: 4rpx 4rpx 16rpx var(--greyLight-1-dark);
      
      /* 仅有顶部 - 白色阴影 */
     --aye-shadow-top: -2px -2px 5px var(--white);
@@ -142,6 +147,7 @@ page {
   --z-picker-cancel-action-margin : 16px 0 6px 20px;
   --z-picker-confirm-action-color: var(--z-primary-color);
   --z-picker-cancel-action-color: var(--z-text-color-2);
+  
   --z-picker-option-font-size: var(--z-font-size-lg);
   --z-picker-option-padding: 0 var(--z-padding-base);
   --z-picker-option-text-color: var(--z-text-color);
@@ -149,13 +155,16 @@ page {
   --z-picker-option-disabled-opacity: 0.3;
   --z-picker-loading-icon-color: var(--z-primary-color);
   --z-picker-group-background: var(--z-background-2);
-  --z-picker-loading-mask-color: rgb(255 255 255 / 90%);
-  --z-picker-mask-color: linear-gradient(
-      180deg,
-      rgb(255 255 255 / 90%),
-      rgb(255 255 255 / 40%)
-    ),
-    linear-gradient(0deg, rgb(255 255 255 / 90%), rgb(255 255 255 / 40%));
+  // --z-picker-loading-mask-color: rgb(255 255 255 / 90%);
+  --z-picker-loading-mask-color: var(--greyLight-1-dark);
+  // --z-picker-mask-color: 
+  //       linear-gradient( 180deg, rgb(255 255 255 / 90%), rgb(255 255 255 / 40%) ),
+  //       linear-gradient(0deg, rgb(255 255 255 / 90%), rgb(255 255 255 / 40%)
+  //   );
+    --z-picker-mask-color:
+          linear-gradient( 180deg, rgba(255, 255, 255, 0.4 ), rgba(255, 255, 255, 0.2) ),
+          linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2)
+      );
     //新增: 圆角
     --z-picker-btn-border-radius: 12px;
 

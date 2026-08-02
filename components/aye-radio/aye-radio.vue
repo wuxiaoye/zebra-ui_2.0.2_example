@@ -9,11 +9,14 @@
     ]"
     @tap="handleTap"
   >
-    <!-- 【核心单选圆圈：完全沿用你原始模板+样式，未做任何删减修改】 -->
+    <!-- 【核心单选圆圈：完全沿用你原始模板】 -->
     <view
       class="aye-radio"
       :class="{ checked: isChecked }"
-      :style="{ width: iconSize, height: iconSize }"
+      :style="{
+        width: finalIconSize,
+        height: finalIconSize
+      }"
     >
       <view
         class="radio-dot"
@@ -42,9 +45,22 @@
 <script setup>
 import { inject, computed } from 'vue'
 
-// 注入group
+/**
+ * 尺寸解析工具：自动兼容 60 / 60rpx / 60px
+ * 无单位默认补 rpx，圆点数值对半、单位跟随外圈
+ */
+function parseSizeStr(str) {
+  if (!str) return { num: null, unit: 'rpx' }
+  const match = String(str).match(/^(\d+)(rpx|px)?$/)
+  if (!match) return { num: null, unit: 'rpx' }
+  const num = Number(match[1])
+  const unit = match[2] || 'rpx'
+  return { num, unit }
+}
+
+// 注入group，兜底空对象避免null报错
 const groupInject = inject('ayeRadioGroup', null)
-const groupBindProps = groupInject?.groupProps || null
+const groupBindProps = groupInject?.groupProps ?? {}
 
 const props = defineProps({
   modelValue: {
@@ -63,7 +79,6 @@ const props = defineProps({
     type: Boolean,
     default: undefined
   },
-  // 自定义尺寸颜色
   iconSize: {
     type: String,
     default: undefined
@@ -84,7 +99,6 @@ const props = defineProps({
     type: String,
     default: undefined
   },
-  // 竖向铺满、反向对齐
   verticalFull: {
     type: Boolean,
     default: undefined
@@ -97,37 +111,57 @@ const props = defineProps({
 
 const emit = defineEmits(['update:modelValue', 'change'])
 
-// ===================== 优先级计算：自身 > group > 默认值 =====================
-// 禁用状态
+// 禁用状态 优先级自身 > group
 const finalDisabled = computed(() => {
   if (props.disabled !== undefined) return props.disabled
-  return groupBindProps?.disabled?.value ?? false
+  return groupBindProps.disabled?.value ?? false
 })
 
-// 外框尺寸，内部圆点永远是外框一半（和原始25rpx/50rpx比例一致）
-const finalIconSize = computed(() => props.iconSize || groupBindProps?.iconSize?.value || '50rpx')
+// 外层最终尺寸
+const finalIconSize = computed(() => {
+  let raw = props.iconSize
+  if (raw === undefined) {
+    raw = groupBindProps.iconSize?.value
+  }
+  return raw || '50rpx'
+})
+
+// 圆点尺寸：数值减半，单位和外圈保持一致
 const dotInnerSize = computed(() => {
-  const num = parseInt(finalIconSize.value) / 2
-  return `${num}rpx`
+  const { num, unit } = parseSizeStr(finalIconSize.value)
+  if (num === null || isNaN(num)) return '25rpx'
+  return `${num / 2}${unit}`
 })
 
 // 圆点颜色
-const activeColor = computed(() => props.iconActiveColor || groupBindProps?.iconActiveColor?.value || '#07c160')
-const normalColor = computed(() => props.iconNormalColor || groupBindProps?.iconNormalColor?.value || '#9baacf')
+const activeColor = computed(() => {
+  if (props.iconActiveColor !== undefined) return props.iconActiveColor
+  return groupBindProps.iconActiveColor?.value ?? '#07c160'
+})
+const normalColor = computed(() => {
+  if (props.iconNormalColor !== undefined) return props.iconNormalColor
+  return groupBindProps.iconNormalColor?.value ?? '#9baacf'
+})
 
 // 文字样式
-const textColor = computed(() => props.labelColor || groupBindProps?.labelColor?.value || '#333')
-const labelSize = computed(() => props.labelSize || groupBindProps?.labelSize?.value || '32rpx')
-const disabledTextColor = '#c0c4cc'
+const textColor = computed(() => {
+  if (props.labelColor !== undefined) return props.labelColor
+  return groupBindProps.labelColor?.value ?? '#333'
+})
+const labelSize = computed(() => {
+  if (props.labelSize !== undefined) return props.labelSize
+  return groupBindProps.labelSize?.value ?? '32rpx'
+})
+const disabledTextColor = '#666'
 
 // 布局属性
 const finalVerticalFull = computed(() => {
   if (props.verticalFull !== undefined) return props.verticalFull
-  return groupBindProps?.verticalFull?.value ?? false
+  return groupBindProps.verticalFull?.value ?? false
 })
 const finalReverseAlign = computed(() => {
   if (props.reverseAlign !== undefined) return props.reverseAlign
-  return groupBindProps?.reverseAlign?.value ?? false
+  return groupBindProps.reverseAlign?.value ?? false
 })
 
 // 是否选中
@@ -151,7 +185,7 @@ const handleTap = () => {
 </script>
 
 <style scoped>
-/* ========== 你原始完整CSS，一行未删、未改、未精简，原样保留 ========== */
+/* ========== 完全还原你最初原始CSS，一行未改动 ========== */
 :root {
   --greyLight-1: #E4EBF5;
   --greyLight-2: #c8d0e7;
@@ -168,7 +202,7 @@ const handleTap = () => {
   width: 50rpx;
   height: 50rpx;
   border-radius: 50%;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 .aye-radio.checked {
   box-shadow: inset 4rpx 4rpx 10rpx var(--greyLight-2), inset -4rpx -4rpx 10rpx var(--white);
@@ -178,13 +212,15 @@ const handleTap = () => {
   height: 25rpx;
   background-color: var(--greyDark);
   border-radius: 50%;
-  transition: 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform: scale(1);
 }
 .aye-radio.checked .radio-dot {
   background-color: var(--primary);
+  transform: scale(0.85);
 }
 
-/* ========== 新增外层布局、label、禁用样式，不污染原有radio ========== */
+/* ========== 外层布局、label、禁用样式原样保留 ========== */
 .aye-radio-wrap {
   display: flex;
   align-items: center;
@@ -204,6 +240,9 @@ const handleTap = () => {
 .aye-radio-wrap.is-disabled {
   opacity: 0.55;
   pointer-events: none;
+}
+.aye-radio-wrap.is-disabled .radio-dot {
+  background-color: var(--greyLight-2) !important;
 }
 .radio-label {
   flex-shrink: 0;

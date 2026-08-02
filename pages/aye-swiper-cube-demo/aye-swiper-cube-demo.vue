@@ -53,7 +53,7 @@ export default {
   components: { buttonPage, cellPage, dialogPage, fieldPage, cascaderPage },
   data() {
     return {
-        activeIndex2: 2,
+        activeIndex2: 0,
         active: 0,
         tabbarIcon : [
             {
