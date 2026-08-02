@@ -194,6 +194,18 @@ const handleTap = () => {
   --white: #FFFFFF;
   --primary: #07c160;
 }
+/* 定义回弹动画：先缩小，0.7秒后恢复原状 */
+@keyframes radioDotBounce {
+  0% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(0.85);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .aye-radio {
   box-shadow: 6rpx 6rpx 12rpx var(--greyLight-2), -4rpx -4rpx 10rpx var(--white);
   display: flex;
@@ -212,12 +224,13 @@ const handleTap = () => {
   height: 25rpx;
   background-color: var(--greyDark);
   border-radius: 50%;
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     transform: scale(1);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .aye-radio.checked .radio-dot {
   background-color: var(--primary);
-  transform: scale(0.85);
+  /* transform: scale(0.85); */
+  animation: radioDotBounce 0.6s ease forwards;
 }
 
 /* ========== 外层布局、label、禁用样式原样保留 ========== */
@@ -241,6 +254,8 @@ const handleTap = () => {
   opacity: 0.55;
   pointer-events: none;
 }
+
+
 .aye-radio-wrap.is-disabled .radio-dot {
   background-color: var(--greyLight-2) !important;
 }

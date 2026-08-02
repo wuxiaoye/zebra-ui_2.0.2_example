@@ -306,16 +306,30 @@ const handleClick = () => {
   box-shadow: inset 4rpx 4rpx 10rpx var(--greyLight-2), inset -4rpx -4rpx 10rpx var(--white);
 }
 
+/* 定义回弹动画：先缩小，0.7秒后恢复原状 */
+@keyframes radioDotBounce {
+  0% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(0.85);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /* .check-icon, */
  .aye-checkbox-label {
   transition: all 0.3s ease;
 }
 .check-icon{
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  /* transition: all 0.4s ease; */
     transform: scale(1);
 }
 .aye-checkbox.checked .check-icon{
-    transform: scale(0.85);
+    /* transform: scale(0.85); */
+    animation: radioDotBounce 0.6s ease forwards;
 }
 
 </style>
