@@ -361,6 +361,11 @@ export default [
         path: '/treeSelect',
         title: 'TreeSelect 分类选择',
         image: 'treeSelect'
+      },
+      {
+        path: '/aye-swiper-cube-demo',
+        title: '3D 翻转页面 ',
+        image: 'treeSelect'
       }
     ]
   }

@@ -2,7 +2,7 @@
   <DemoPage title="Dialog">
       
       <view class="pa-30">
-            <z-button @click="openDialog">打开提示弹窗</z-button>
+            <z-button @click="openDialog">打开弹窗- z-dialog 标签式用法</z-button>
       </view>
       
           <!-- zebraui dialog 标签式调用，无任何编译坑 -->
@@ -24,26 +24,18 @@
           is-link
           @click="
             dialog.showDialog({
-                title: '标题', message: '这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。' ,
-            showCancelButton: true,
-            // 唯一有效回调：callback
-                  callback: function(action){
-                      console.log(action)
-                      
-                          if (action === 'confirm') {
-                            console.log('点击了确认')
-                          } else {
-                            console.log('点击了取消')
-                          }
-                          done()
-                        }
+                title: '标题', message: '这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。' 
             })
           "
         />
         <z-cell
           title="提示弹窗（无标题）"
           is-link
-          @click="dialog.showDialog({ message: '这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。' })"
+          @click="dialog.showDialog({ message: '这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。' })
+          .then(() => {
+            toast.showToast('弹窗（无标题）-点击确认按钮')
+          })
+          "
         />
         <z-cell
           title="确认弹窗"
@@ -51,13 +43,13 @@
           @click="
             dialog.showConfirmDialog({
               title: '标题',
-              message: '这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。',
-              onConfirm:()=>{
-                  console.log('点击了确认')
-              },
-              onCancel: ()=>{
-                  console.log('点击了取消')
-              }
+              message: '这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。这是一个示例提示。'
+            })
+            .then(() => {
+              toast.showToast('点击确认按钮')
+            })
+            .catch(() => {
+              toast.showToast('点击取消按钮')
             })
           "
         />

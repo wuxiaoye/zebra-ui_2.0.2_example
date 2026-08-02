@@ -7,13 +7,18 @@
           :swiper-item-height="swiperHeight"
           :key="index"
         >
-          <view class="scroll-view-content" :style="scrollViewStyle">
+          <scroll-view
+            class="scroll-view-content"
+            :style="scrollViewStyle"
+            scroll-y
+            :show-scrollbar="false"
+          >
             <DemoHome
               :list="item"
               :show-title="index == 0"
               :show-desc="index == 0"
             />
-          </view>
+          </scroll-view>
         </z-swiper-item>
       </z-swiper>
       <z-tabbar
@@ -46,8 +51,8 @@ list.value = list.value.map((item) => [item])
 const active = ref(0)
 const zswiper = ref(null)
 const options = ref({
-  autoHeight: true,
-  noSwiping: true,
+  autoHeight: false,
+  noSwiping: false,
   effect: 'cube',
   cubeEffect: {
     shadow: false,
@@ -89,7 +94,7 @@ const swiperHeight = computed(() => {
 
 const scrollViewStyle = computed(() => {
   const styles = {
-    height: `calc(100vh - env(safe-area-inset-top) - ${uni.getSystemInfoSync().statusBarHeight}px)`
+    height: `${uni.getSystemInfoSync().windowHeight}px`
   }
   return {
     ...styles
@@ -103,7 +108,25 @@ const tabbarChange = (value) => {
 <style scoped lang="scss">
 .demo-index {
   .scroll-view-content {
-    overflow-y: auto;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: var(--greyLight-1);
+
+    ::v-deep .demo-home {
+      padding-bottom: 160rpx;
+    }
+  }
+
+  // 关键修复：cube 模式下，非当前 slide 会被 3D 翻转后覆盖在中间区域，
+  // 拦截触摸导致中间无法滚动。这里让非激活 slide 不响应触摸，
+  // 只保留当前激活 slide 可交互，内部 scroll-view 即可正常滚动。
+  ::v-deep .swiper-slide-cube {
+    pointer-events: none !important;
+  }
+
+  ::v-deep .swiper-slide-cube.swiper-slide-active {
+    pointer-events: auto !important;
   }
 }
 </style>

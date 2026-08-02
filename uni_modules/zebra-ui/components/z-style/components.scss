@@ -14,6 +14,8 @@ page {
     --greyLight-2: #c8d0e7;
     --greyLight-3: #bec8e4;
     --greyDark: #9baacf;
+    /* 卡片外阴影样式 -超大*/
+    --aye-shadow-more-big: 0.4rem 0.4rem 0.8rem var(--greyLight-2),  -0.4rem -0.4rem 0.8rem var(--white);
     /* 卡片外阴影样式 -大一些*/
     --aye-shadow-big: 6px 6px 12px var(--greyLight-2), -4px -4px 10px var(--white);
      /* 卡片外阴影样式 */

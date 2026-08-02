@@ -382,7 +382,7 @@ export default {
 
   &__content {
       box-sizing: border-box;
-      box-shadow: var(--aye-shadow);
+      box-shadow: var(--aye-shadow-more-big);
       border-radius: 12px;
       margin: 30rpx;
       // padding: 10rpx 0;
