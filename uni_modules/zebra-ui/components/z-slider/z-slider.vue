@@ -491,4 +491,8 @@ export default {
         opacity: 1;
       }
 }
+
+.z-slider.z-slider--disabled .z-slider__bar{
+    background: var(--z-slider-disabled-bar-background);
+}
 </style>

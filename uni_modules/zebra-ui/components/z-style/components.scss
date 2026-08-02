@@ -628,6 +628,8 @@ page {
 
   // slider
   --z-slider-active-background: linear-gradient(-1deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+  //被禁用时, 进度条颜色
+  --z-slider-disabled-bar-background: linear-gradient(-1deg, var(--greyLight-3), var(--greyLight-2) );
   --z-slider-disabled-opacity: var(--z-disabled-opacity);
   --z-slider-bar-height: 20rpx;
   --z-slider-button-width: 40rpx;
