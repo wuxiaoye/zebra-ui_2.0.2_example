@@ -13,7 +13,11 @@
               <aye-loading :is-show-text="false" />
           </z-col>
         </z-row>
+        <view class="my-30"></view>
+        <aye-play-button></aye-play-button>
+        
       </demo-block>
+      
       <demo-block title="自定义颜色">
         <z-row gutter="20">
           <z-col span="6">
@@ -34,7 +38,7 @@
             <z-loading color="#1989fa" type="spinner" size="24" />
           </z-col>
           <z-col span="6">
-              <aye-loading :is-show-text="false" size="40rpx"/>
+              <aye-loading :is-show-text="false" size="60rpx"/>
           </z-col>
         </z-row>
       </demo-block>
@@ -51,11 +55,11 @@
           </z-col>
         </z-row>
         <view class="my-30"></view>
-            <aye-loading size="40rpx"></aye-loading>
+            <aye-loading size="60rpx"></aye-loading>
         <view class="my-30"></view>
-            <aye-loading size="40rpx">自定义文字</aye-loading>
+            <aye-loading size="60rpx">自定义文字</aye-loading>
         <view class="my-30"></view>
-            <aye-loading size="40rpx" :is-vertical="true">纵向展示</aye-loading>
+            <aye-loading size="60rpx" :is-vertical="true">纵向展示</aye-loading>
       </demo-block>
       
       <demo-block title="文本颜色">
