@@ -196,6 +196,7 @@ export default {
     align-items: center;
     justify-content: center;
     min-width: 0;
+    box-shadow: var(--aye-shadow-mini);
 
     &--disabled {
       .z-dropdown-menu__title {
@@ -240,6 +241,7 @@ export default {
     }
 
     &--down {
+        
       &::after {
         margin-top: -2rpx;
         transform: rotate(135deg);

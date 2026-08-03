@@ -174,6 +174,7 @@ export default {
   border-top-left-radius: var(--z-floating-panel-border-radius);
   border-top-right-radius: var(--z-floating-panel-border-radius);
   will-change: transform;
+    box-shadow: var(--aye-shadow);
 
   &::after {
     position: absolute;

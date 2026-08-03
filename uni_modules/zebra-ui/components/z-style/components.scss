@@ -357,8 +357,10 @@ page {
   // dropDown
   --z-dropdown-item-z-index: 10;
   --z-dropdown-menu-height: 96rpx;
-  --z-dropdown-menu-background: var(--z-background-2);
-  --z-dropdown-menu-shadow: 0 4rpx 24rpx rgb(100 101 102 / 12%);
+  // --z-dropdown-menu-background: var(--z-background-2);
+  --z-dropdown-menu-background: var(--greyLight-1);
+  // --z-dropdown-menu-shadow: 0 4rpx 24rpx rgb(100 101 102 / 12%);
+  --z-dropdown-menu-shadow: var(--aye-shadow-mini);
   --z-dropdown-menu-title-font-size: 30rpx;
   --z-dropdown-menu-title-text-color: var(--z-text-color);
   --z-dropdown-menu-title-active-text-color: var(--z-primary-color);
@@ -440,9 +442,10 @@ page {
   --z-list-loading-icon-size: 38rpx;
 
   // loading
-  --z-loading-text-color: var(--z-text-color-2);
+  --z-loading-text-color: var(--primary);
   --z-loading-text-font-size: var(--z-font-size-md);
-  --z-loading-spinner-color: var(--z-gray-5);
+  // --z-loading-spinner-color: var(--z-gray-5);
+  --z-loading-spinner-color: var(--primary);
   --z-loading-spinner-size: 60rpx;
   --z-loading-spinner-duration: 0.8s;
 

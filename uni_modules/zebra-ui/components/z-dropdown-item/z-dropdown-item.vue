@@ -14,30 +14,48 @@
       :duration="state.transition ? parent.props.duration : 0"
       :overlay-style="{ position: 'absolute' }"
       :close-on-click-overlay="parent.props.closeOnClickOverlay"
+      :style="{
+          // 这里设置样式无效，此 popup 是 absolute 定位，虚浮，若设置它的边框你仅能看到一条细线，它的宽度为0，阴影等效果无效
+      }"
       @open="onOpen"
       @close="onClose"
       @opened="onOpened"
       @closed="onClosed"
     >
-      <template v-for="(option, index) in props.options" :key="index">
-        <z-cell
-          :icon="option.icon"
-          :title="option.text"
-          :custom-style="cellStyle(option)"
-          clickable
-          @click="onClickOption(option)"
-        >
-          <template v-if="option.value === props.modelValue">
-            <z-icon
-              :custom-style="iconStyle"
-              size="var(--z-font-size-lg)"
-              :color="parent.props.activeColor"
-              name="check"
-            />
+    <view
+        :style="{
+            boxSizing: 'border-box',
+            margin: '6px',
+            boxShadow: 'var(--aye-shadow-mini)',
+            // borderWidth: '2px',
+              // borderStyle: 'solid',
+              // borderColor: 'rgba(255, 255, 255, 0.7)  var(--greyLight-2) var(--greyLight-2) rgba(255, 255, 255, 0.7)',
+        }"
+    >
+        
+          <template v-for="(option, index) in props.options" :key="index">
+            <z-cell
+              :icon="option.icon"
+              :title="option.text"
+              :custom-style="cellStyle(option)"
+              clickable
+              :style="{
+                  background: 'transparent'
+              }"
+              @click="onClickOption(option)"
+            >
+              <template v-if="option.value === props.modelValue">
+                <z-icon
+                  :custom-style="iconStyle"
+                  size="var(--z-font-size-lg)"
+                  :color="parent.props.activeColor"
+                  name="check"
+                />
+              </template>
+            </z-cell>
           </template>
-        </z-cell>
-      </template>
-      <slot></slot>
+          <slot></slot>
+      </view>
     </z-popup>
   </view>
 </template>

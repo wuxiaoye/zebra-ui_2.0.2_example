@@ -7,6 +7,7 @@
           <z-dropdown-item v-model="value2" :options="option2" />
         </z-dropdown-menu>
       </demo-block>
+      
       <demo-block title="自定义菜单内容">
         <z-dropdown-menu>
           <z-dropdown-item v-model="value1" :options="option1" />
@@ -35,6 +36,7 @@
           </z-dropdown-item>
         </z-dropdown-menu>
       </demo-block>
+      
       <demo-block title="自定义选中颜色">
         <z-dropdown-menu active-color="#ee0a24">
           <z-dropdown-item v-model="value1" :options="option1" />
