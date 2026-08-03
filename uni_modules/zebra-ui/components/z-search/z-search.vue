@@ -1,7 +1,11 @@
 <template>
   <view
     :class="bem({ 'show-action': props.showAction })"
-    :style="{ background: props.background }"
+    :style="{ 
+        background: props.background,
+        borderRadius: props.isBorderRadius? 'var(--z-search-border-radius)' : '0',
+        boxShadow: props.isBoxShadow ? 'var(--z-search-box-shadow)' : '0 0 0'
+         }"
   >
     <template v-if="instance.slots.left">
       <slot name="left"></slot>
@@ -71,7 +75,9 @@
         <slot name="action"></slot>
       </template>
       <template v-else>
+          <text class="right-action-btn">
         {{ props.actionText || '取消' }}
+        </text>
       </template>
     </div>
   </view>
@@ -105,7 +111,9 @@ const props = defineProps(
     clearable: truthProp,
     actionText: String,
     background: String,
-    showAction: Boolean
+    showAction: Boolean,
+    isBorderRadius: Boolean,
+    isBoxShadow: Boolean
   })
 )
 
@@ -188,8 +196,7 @@ export default {
   align-items: center;
   padding: var(--z-search-padding);
   background: var(--z-search-background);
-  border-radius: var(--z-search-border-radius);
-  box-shadow: var(--z-search-box-shadow);
+  
 
   &__content {
     display: flex;
@@ -250,6 +257,11 @@ export default {
     font-size: var(--z-search-action-font-size);
     line-height: var(--z-search-input-height);
     color: var(--z-search-action-text-color);
+    
+    margin: 0 10px 0 6px;
+    border-radius: 24rpx;
+    box-shadow: var(--aye-shadow-inset), var(--aye-shadow);
   }
 }
+
 </style>

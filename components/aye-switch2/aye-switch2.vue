@@ -1,10 +1,9 @@
 <template>
-  <!-- <view class="aye-switch" :style="switchStyle" @tap="toggle">
-    <view class="aye-switch-track" :class="{ checked: modelValue }"></view>
-    <view class="aye-switch-thumb" :class="{ checked: modelValue }"></view>
-  </view> -->
-  
-  <view class="neu-toggle-track" :style="switchStyle"  :class="{ active: modelValue }" @tap="toggle">
+  <view class="neu-toggle-track" 
+        :style="switchStyle"  
+        :class="{ active: modelValue, 'is-disabled': disabled }" 
+        @tap="toggle"
+    >
     <view class="neu-toggle-thumb"></view>
   </view>
 </template>
@@ -21,7 +20,12 @@ const props = defineProps({
   modelValue: {
     type: Boolean,
     default: false
-  }
+  },
+  /** 新增：是否禁用 */
+    disabled: {
+      type: Boolean,
+      default: false
+    }
 });
 
 const emit = defineEmits(['update:modelValue']);
@@ -42,6 +46,7 @@ const switchStyle = computed(() => {
 });
 
 const toggle = () => {
+    if (props.disabled) return uni.showToast({ title: '已禁用', icon:'none' });
   emit('update:modelValue', !props.modelValue);
 };
 </script>
@@ -49,14 +54,18 @@ const toggle = () => {
 <style scoped>
 /* 定义全局变量（可迁移至公共样式，这里保留以便独立使用） */
 :root {
-  --greyLight-1: #E4EBF5;
-  --greyLight-2: #c8d0e7;
-  --greyLight-3: #bec8e4;
-  --greyDark: #9baacf;
-  --white: #FFFFFF;
   --primary-light: #2fe25f;
   --primary: #07c160;
   --primary-dark: #0eb805;
+  --secondary-light: #8abdff;
+  --secondary: #6d5dfc;
+  --secondary-dark: #5b0eeb;
+  --white: #FFFFFF;
+  --greyLight-1: #E4EBF5;
+  --greyLight-1-dark: #d8e4f5;
+  --greyLight-2: #c8d0e7;
+  --greyLight-3: #bec8e4;
+  --greyDark: #9baacf;
 }
 
 
@@ -105,5 +114,12 @@ const toggle = () => {
   left: calc(var(--sw-width) * 0.522);
 }
 
-
+.neu-toggle-track.is-disabled {
+    background: var(--greyLight-1-dark);
+    box-shadow: 0 0 0;
+}
+.neu-toggle-track.is-disabled .neu-toggle-thumb{
+    background: var(--greyLight-2);
+    box-shadow: 0 0 0;
+}
 </style>

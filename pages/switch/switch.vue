@@ -2,24 +2,44 @@
   <DemoPage title="Switch">
     <view class="demo-switch">
       <demo-block title="基础用法">
+        <aye-switch v-model="checked2"></aye-switch>
+        <view class="my-20"></view>
+        <aye-switch2 v-model="checked2"></aye-switch2>
+        <view class="my-20"></view>
+        
         <z-switch v-model="checked" />
       </demo-block>
+      
       <demo-block title="禁用状态">
+          <aye-switch v-model="checked2" :disabled="true"></aye-switch>
+          <view class="my-20"></view>
+          <aye-switch2 v-model="checked2" disabled></aye-switch2>
+          <view class="my-20"></view>
+          
         <z-switch v-model="checked" disabled />
       </demo-block>
+      
       <demo-block title="加载状态">
         <z-switch v-model="checked" loading />
       </demo-block>
+      
       <demo-block title="自定义大小">
+          <aye-switch2 v-model="checked2" width="120rpx"></aye-switch2>
+          <view class="my-20"></view>
+          <aye-switch v-model="checked2" width="100rpx"></aye-switch>
+          <view class="my-20"></view>
+          
         <z-switch v-model="checked" size="30rpx" />
       </demo-block>
+      
       <demo-block title="自定义颜色">
         <z-switch
           v-model="checked"
           active-color="#ee0a24"
-          inactive-color="#dcdee0"
+          inactive-color="#55aaff"
         />
       </demo-block>
+      
       <demo-block title="自定义按钮">
         <z-switch v-model="checked">
           <template #node>
@@ -36,7 +56,18 @@
       <demo-block title="异步控制">
         <z-switch :model-value="checked" @update:model-value="onUpdateValue" />
       </demo-block>
+      
       <demo-block title="搭配单元格使用">
+          <z-cell center title="标题">
+            <template #right-icon>
+              <aye-switch v-model="checked" />
+            </template>
+          </z-cell>
+          <z-cell center title="标题">
+            <template #right-icon>
+              <aye-switch2 v-model="checked" />
+            </template>
+          </z-cell>
         <z-cell center title="标题">
           <template #right-icon>
             <z-switch v-model="checked" />
@@ -51,6 +82,7 @@ import { ref } from 'vue'
 import { useDialog } from '../../uni_modules/zebra-ui'
 const dialog = useDialog()
 const checked = ref(true)
+const checked2 = ref(true)
 const onUpdateValue = (newValue: any) => {
   dialog
     .showConfirmDialog({

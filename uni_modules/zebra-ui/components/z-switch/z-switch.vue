@@ -3,7 +3,7 @@
     :class="bem({ on: isChecked(), loading, disabled })"
     :style="{
       fontSize: addUnit(size),
-      backgroundColor: isChecked() ? activeColor : inactiveColor
+      background: isChecked() ? activeColor : inactiveColor
     }"
     @click="onClick"
   >
@@ -68,11 +68,12 @@ const loadingStyle = computed(() => {
     left: '25%',
     width: '50%',
     height: '50%',
-    lineHeight: '1'
+    lineHeight: '1',
+    color: 'var(--z-switch-on-loading-background)'
   }
-  if (isChecked()) {
-    styleObject['color'] = 'var(--z-switch-on-background)'
-  }
+  // if (isChecked()) {
+  //   styleObject['color'] = 'var(--z-switch-on-loading-background)'
+  // }
   return styleObject
 })
 </script>
@@ -94,7 +95,8 @@ export default {
   font-size: var(--z-switch-size);
   background: var(--z-switch-background);
   border-radius: var(--z-switch-node-size);
-  transition: background-color var(--z-switch-duration);
+  box-shadow: var(--aye-shadow);
+  transition: all 0.4s ease;
 
   &__node {
     position: absolute;
@@ -106,8 +108,7 @@ export default {
     background: var(--z-switch-node-background);
     border-radius: 100%;
     box-shadow: var(--z-switch-node-shadow);
-    transition: transform var(--z-switch-duration)
-      cubic-bezier(0.3, 1.05, 0.4, 1.05);
+    transition: all 0.4s ease;
   }
 
   &__loading {
@@ -123,8 +124,9 @@ export default {
 
     .z-switch__node {
       transform: translateX(
-        calc(var(--z-switch-width) - var(--z-switch-node-size) - 8rpx)
-      );
+            calc(var(--z-switch-width) - var(--z-switch-node-size) - 8rpx)
+          );
+      background: var(--z-switch-on-node-background);
     }
   }
 

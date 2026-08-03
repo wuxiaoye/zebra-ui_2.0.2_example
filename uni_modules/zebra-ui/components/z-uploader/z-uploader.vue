@@ -53,7 +53,7 @@
             :style="getSizeStyle(props.previewSize)"
             @click="onClickUpload"
           >
-            <z-icon :name="props.uploadIcon" :custom-style="uploadIconStyle" />
+            <z-icon :name="(props.disabled || props.readonly) ? 'stop' : props.uploadIcon" :custom-style="uploadIconStyle" />
             <template v-if="props.uploadText">
               <text :class="bem('upload-text')">{{ props.uploadText }}</text>
             </template>
@@ -178,7 +178,7 @@ const resetInput = () => {}
 
 const uploadIconStyle = computed(() => {
   const styles = {
-    color: 'var(--z-uploader-icon-color)',
+    color: (props.disabled || props.readonly) ? 'var(--z-uploader-stop-icon-color)' : 'var(--z-uploader-icon-color)',
     fontSize: 'var(--z-uploader-icon-size)'
   }
   return { ...styles }
@@ -359,8 +359,8 @@ const startUpload = () => {
   }
   isReuploading.value = false
 
-  const { maxCount, modelValue, disabled } = props
-  if (disabled) {
+  const { maxCount, modelValue, disabled, readonly  } = props
+  if (disabled || readonly) {
     return
   }
 

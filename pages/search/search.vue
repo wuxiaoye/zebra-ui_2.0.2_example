@@ -2,8 +2,10 @@
   <DemoPage title="Search">
     <view class="demo-search">
       <demo-block title="基础用法">
-        <z-search v-model="value" placeholder="请输入搜索关键词" />
+        <z-search v-model="value" placeholder="请输入搜索关键词" :is-box-shadow="true"  :is-border-radius="true" show-action  
+        />
       </demo-block>
+      
       <demo-block title="事件监听">
         <z-search
           v-model="value"
@@ -13,6 +15,7 @@
           @cancel="onCancel"
         />
       </demo-block>
+      
       <demo-block title="搜索框内容对齐">
         <z-search
           v-model="value"

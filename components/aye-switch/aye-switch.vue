@@ -1,6 +1,10 @@
 <!-- components/AyeSwitch/index.vue -->
 <template>
-  <view class="aye-switch" :style="switchStyle" @tap="toggle">
+  <view class="aye-switch" 
+         :class="{ 'is-disabled': disabled }"
+        :style="switchStyle" 
+        @tap="toggle"
+    >
     <view class="aye-switch-track" :class="{ checked: modelValue }"></view>
     <view class="aye-switch-thumb" :class="{ checked: modelValue }"></view>
   </view>
@@ -18,7 +22,12 @@ const props = defineProps({
   modelValue: {
     type: Boolean,
     default: false
-  }
+  },
+  /** 新增：是否禁用 */
+    disabled: {
+      type: Boolean,
+      default: false
+    }
 });
 
 const emit = defineEmits(['update:modelValue']);
@@ -39,21 +48,29 @@ const switchStyle = computed(() => {
 });
 
 const toggle = () => {
-  emit('update:modelValue', !props.modelValue);
+    if (props.disabled){
+        uni.showToast({ title: '已禁用', icon:'none' });
+    }else{
+        emit('update:modelValue', !props.modelValue);
+    }
 };
 </script>
 
 <style scoped>
 /* 定义全局变量（可迁移至公共样式，这里保留以便独立使用） */
 :root {
-  --greyLight-1: #E4EBF5;
-  --greyLight-2: #c8d0e7;
-  --greyLight-3: #bec8e4;
-  --greyDark: #9baacf;
-  --white: #FFFFFF;
   --primary-light: #2fe25f;
   --primary: #07c160;
   --primary-dark: #0eb805;
+  --secondary-light: #8abdff;
+  --secondary: #6d5dfc;
+  --secondary-dark: #5b0eeb;
+  --white: #FFFFFF;
+  --greyLight-1: #E4EBF5;
+  --greyLight-1-dark: #d8e4f5;
+  --greyLight-2: #c8d0e7;
+  --greyLight-3: #bec8e4;
+  --greyDark: #9baacf;
 }
 
 .aye-switch {
@@ -102,5 +119,26 @@ const toggle = () => {
   /* 选中时 left = 宽度 - 圆点宽度 - 左边距 */
   left: calc(var(--sw-width) - var(--sw-width) * 0.35 - var(--sw-width) * 0.0667);
   background: var(--greyLight-1);
+}
+
+/* 禁用状态样式 */
+.aye-switch.is-disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  background: var(--greyLight-1-dark) !important;
+  box-shadow: 0 0 0;
+  /* pointer-events: none; */
+}
+
+/* 禁用时轨道颜色覆盖 */
+.aye-switch.is-disabled .aye-switch-track {
+  background: var(--greyLight-1-dark) !important;
+  box-shadow: 0 0 0;
+}
+
+/* 禁用时滑块颜色 */
+.aye-switch.is-disabled .aye-switch-thumb {
+  background: var(--greyLight-2) !important;
+  box-shadow: 0 0 0;
 }
 </style>

@@ -43,8 +43,13 @@
         <z-uploader :before-read="asyncBeforeRead" />
       </demo-block>
       <demo-block title="禁用文件上传">
-        <z-uploader disabled />
+        <z-uploader  disabled />
       </demo-block>
+      
+      <demo-block title="只读状态">
+        <z-uploader  readonly />
+      </demo-block>
+      
       <demo-block title="自定义单个图片预览">
         <z-uploader v-model="fileListOnly" :deletable="false" />
       </demo-block>

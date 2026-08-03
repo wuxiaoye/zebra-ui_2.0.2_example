@@ -162,7 +162,7 @@ page {
   //       linear-gradient(0deg, rgb(255 255 255 / 90%), rgb(255 255 255 / 40%)
   //   );
     --z-picker-mask-color:
-          linear-gradient( 180deg, rgba(255, 255, 255, 0.4 ), rgba(255, 255, 255, 0.2) ),
+          linear-gradient( 180deg, rgba(216, 228, 245, 0.5 ), rgba(255, 255, 255, 0.4) ),
           linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2)
       );
     //新增: 圆角
@@ -388,7 +388,7 @@ page {
   --z-field-input-error-text-color: var(--z-danger-color);
   --z-field-input-disabled-text-color: var(--z-text-color-3);
   // --z-field-placeholder-text-color: var(--z-text-color-3);
-  --z-field-placeholder-text-color: var(--greyDark);
+  --z-field-placeholder-text-color: var(--greyLight-3);
   --z-field-icon-size: 36rpx;
   --z-field-clear-icon-size: 36rpx;
   --z-field-clear-icon-color: var(--z-gray-5);
@@ -594,12 +594,16 @@ page {
   --z-search-content-border-shadow: var(--aye-shadow-inset); //内阴影
   --z-search-content-round-border-shadow:var(--aye-shadow-inset-big);//当设置了圆角 50% 时的内阴影
   --z-search-input-height: 68rpx;
+  // --z-search-input-placeholder-color: var(--greyLight-3);
+  --z-search-input-placeholder-color: #333;
   --z-search-label-padding: 0 10rpx;
-  --z-search-label-color: var(--z-text-color);
+  // --z-search-label-color: var(--z-text-color);
+  --z-search-label-color: var(--greyDark);
   --z-search-label-font-size: var(--z-font-size-md);
   --z-search-left-icon-color: var(--z-gray-6);
   --z-search-action-padding: 0 var(--z-padding-xs);
-  --z-search-action-text-color: var(--z-text-color);
+  // --z-search-action-text-color: var(--z-text-color);
+  --z-search-action-text-color: var(--greyDark);
   --z-search-action-font-size: var(--z-font-size-md);
   
 
@@ -698,14 +702,21 @@ page {
   --z-step-horizontal-title-font-size: var(--z-font-size-sm);
 
   // switch
+  //关闭状态
+  --z-switch-background: var(--greyLight-1);
+  //开启状态
+  --z-switch-on-background: linear-gradient(330deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+  --z-switch-on-loading-background : var(--primary);
   --z-switch-size: 52rpx;
   --z-switch-width: calc(1.8em + 8rpx);
   --z-switch-height: calc(1em + 8rpx);
   --z-switch-node-size: 1em;
-  --z-switch-node-background: var(--z-white);
+  // --z-switch-node-background: var(--z-white);
+  //关闭时-圆点颜色
+  --z-switch-node-background: var(--greyLight-3);
+  //开启时-圆点颜色
+  --z-switch-on-node-background: #fff;
   --z-switch-node-shadow: 0 6rpx 2rpx 0 rgb(0 0 0 / 5%);
-  --z-switch-on-background: var(--z-primary-color);
-  --z-switch-duration: var(--z-duration-base);
   --z-switch-disabled-opacity: var(--z-disabled-opacity);
 
   // tabs
@@ -763,6 +774,7 @@ page {
   --z-uploader-size: 160rpx;
   --z-uploader-icon-size: 48rpx;
   --z-uploader-icon-color: var(--primary);
+  --z-uploader-stop-icon-color: var(--secondary);
   --z-uploader-text-color: var(--greyDark);
   --z-uploader-text-font-size: var(--z-font-size-sm);
   --z-uploader-text-margin-top: 8rpx;
