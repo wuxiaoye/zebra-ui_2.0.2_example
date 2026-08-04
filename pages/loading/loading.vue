@@ -15,6 +15,7 @@
         </z-row>
         <view class="my-30"></view>
         <aye-loading2 ></aye-loading2>
+        <view class="my-25 text-greyDark text-size-n flex-center ">加载中……</view>
         
         <view class="my-30"></view>
         <aye-loading2 box-shadow-type="grey"></aye-loading2>
@@ -27,6 +28,7 @@
         
         <view class="my-30"></view>
         <aye-loading3 icon="taiji"></aye-loading3>
+        <view class="my-25 text-greyDark text-size-n flex-center ">加载中……</view>
       </demo-block>
       
       <demo-block title="自定义颜色">

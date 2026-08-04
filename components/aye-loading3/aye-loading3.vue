@@ -19,6 +19,7 @@
 <script setup>
 const props = defineProps({
     // 中间图标: 太极图 taiji / 太极鱼 yu / 太极云 yun
+    //这里不设置文字，“加载中……“文字自己在外面加
   icon:{
       type: String,
       default: 'yu'
@@ -27,14 +28,37 @@ const props = defineProps({
 </script>
 
 <style scoped>
-:root {
-  --greyLight-1: #E4EBF5;
-  --greyLight-2: #c8d0e7;
-  --greyLight-3: #bec8e4;
-  --greyDark: #9baacf;
-  --white: #FFFFFF;
-  --primary: #07c160;
+:root{
+    /* 变量定义 */
+    --primary-light: #2fe25f;
+    --primary: #07c160;
+    --primary-dark: #0eb805;
+    --secondary-light: #8abdff;
+    --secondary: #6d5dfc;
+    --secondary-dark: #5b0eeb;
+    --white: #FFFFFF;
+    --greyLight-1: #E4EBF5;
+    --greyLight-1-dark: #d8e4f5;
+    --greyLight-2: #c8d0e7;
+    --greyLight-3: #bec8e4;
+    --greyDark: #9baacf;
+    /* 卡片外阴影样式 -超大*/
+    --aye-shadow-more-big: 0.4rem 0.4rem 0.8rem var(--greyLight-2),  -0.4rem -0.4rem 0.8rem var(--white);
+    /* 卡片外阴影样式 -大一些*/
+    --aye-shadow-big: 6px 6px 12px var(--greyLight-2), -4px -4px 10px var(--white);
+     /* 卡片外阴影样式 */
+    --aye-shadow:  3px 3px 6px var(--greyLight-2), -2px -2px 5px var(--white);
+     /* 卡片外阴影样式 - 小一些*/
+    --aye-shadow-mini: 2px 2px 4px var(--greyLight-2), -1px -1px 3px var(--white);
+     
+     /* 内凹阴影-大一些 */
+     --aye-shadow-inset-more-big: inset 0.4rem 0.4rem 0.8rem var(--greyLight-2), inset -0.4rem -0.4rem 0.8rem var(--white);
+     /* 内凹阴影 */
+    --aye-shadow-inset: inset 2px 2px 4px var(--greyLight-2), inset -2px -2px 4px var(--white);
+     /* 内凹阴影-小一些 */
+    --aye-shadow-inset-mini: inset 1px 1px 1px var(--greyLight-2), inset -2px -2px 4px var(--white);
 }
+
 
 @keyframes spin {
   to {
@@ -93,9 +117,10 @@ const props = defineProps({
   align-items: center;
   border-radius: 50%;
   color: var(--primary);
-  z-index: 300;
+  z-index: 3;
   background: var(--greyLight-1);
-  box-shadow: inset 2px 2px 4px var(--greyLight-2), inset -2px -2px 4px var(--white),
+  box-shadow: 
+    /* inset 2px 2px 4px var(--greyLight-2), inset -2px -2px 4px var(--white), */
     6rpx 6rpx 12rpx var(--greyLight-2), -4rpx -4rpx 10rpx var(--white);
   position: relative;
   padding: 10rpx;
@@ -125,7 +150,7 @@ const props = defineProps({
   height: 120rpx;
   border-radius: 50%;
   filter: blur(2rpx);
-  z-index: 100;
+  z-index: 2;
 }
 .circle__back-1 {
   box-shadow: 8rpx 8rpx 16rpx var(--greyLight-2), -8rpx -8rpx 16rpx var(--white);

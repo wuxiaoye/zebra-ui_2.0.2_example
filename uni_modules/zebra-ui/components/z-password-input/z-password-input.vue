@@ -156,7 +156,7 @@ export default {
     color: var(--z-password-input-text-color);
     background: var(--z-password-input-background);
     border-radius: 6px;
-    box-shadow: var(--aye-shadow-inset-big);
+    box-shadow: var(--aye-shadow-inset-more-big);
   }
 
   &__cursor {

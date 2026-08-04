@@ -24,7 +24,7 @@ page {
     --aye-shadow-mini: 2px 2px 4px var(--greyLight-2), -1px -1px 3px var(--white);
      
      /* 内凹阴影-大一些 */
-     --aye-shadow-inset-big: inset 0.4rem 0.4rem 0.8rem var(--greyLight-2), inset -0.4rem -0.4rem 0.8rem var(--white);
+     --aye-shadow-inset-more-big: inset 0.4rem 0.4rem 0.8rem var(--greyLight-2), inset -0.4rem -0.4rem 0.8rem var(--white);
      /* 内凹阴影 */
     --aye-shadow-inset: inset 2px 2px 4px var(--greyLight-2), inset -2px -2px 4px var(--white);
      /* 内凹阴影-小一些 */
@@ -242,7 +242,7 @@ page {
   --z-image-placeholder-background: var(--greyLight-1);
   --z-image-loading-icon-size: 64rpx;
   --z-image-loading-icon-color: var(--greyDark);
-  --z-image-loading-box-shadow: var(--aye-shadow-inset-big);
+  --z-image-loading-box-shadow: var(--aye-shadow-inset-more-big);
   --z-image-error-icon-size: 64rpx;
   --z-image-error-icon-color: var(--greyDark);
 
@@ -596,7 +596,7 @@ page {
   //内圆角
   --z-search-content-border-radius: 24rpx;
   --z-search-content-border-shadow: var(--aye-shadow-inset); //内阴影
-  --z-search-content-round-border-shadow:var(--aye-shadow-inset-big);//当设置了圆角 50% 时的内阴影
+  --z-search-content-round-border-shadow:var(--aye-shadow-inset-more-big);//当设置了圆角 50% 时的内阴影
   --z-search-input-height: 68rpx;
   // --z-search-input-placeholder-color: var(--greyLight-3);
   --z-search-input-placeholder-color: #333;
@@ -784,7 +784,7 @@ page {
   --z-uploader-text-margin-top: 8rpx;
   // --z-uploader-upload-background: var(--z-gray-1);
   --z-uploader-upload-background: var(--greyLight-1);
-  --z-uploader-box-shadow: var(--aye-shadow-inset-big);
+  --z-uploader-box-shadow: var(--aye-shadow-inset-more-big);
   --z-uploader-upload-active-color: var(--z-active-color);
   --z-uploader-delete-color: var(--z-white);
   --z-uploader-delete-icon-size: 24rpx;
