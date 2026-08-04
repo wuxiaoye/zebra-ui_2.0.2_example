@@ -313,9 +313,10 @@ page {
   --z-collapse-item-content-padding: var(--z-padding-sm) var(--z-padding-md);
   --z-collapse-item-content-font-size: var(--z-font-size-md);
   --z-collapse-item-content-line-height: 1.5;
-  --z-collapse-item-content-text-color: var(--z-text-color-2);
+  // --z-collapse-item-content-text-color: var(--z-text-color-2);
+  --z-collapse-item-content-text-color: var(--greyDark);
   --z-collapse-item-content-background: var(--z-background-2);
-  --z-collapse-item-title-disabled-color: var(--z-text-color-3);
+  --z-collapse-item-title-disabled-color: var(--greyLight-3);
 
   // countDown
   --z-count-down-text-color: var(--z-text-color);
@@ -346,7 +347,7 @@ page {
   // divider
   --z-divider-margin: var(--z-padding-md) 0;
   --z-divider-vertical-margin: 0 var(--z-padding-xs);
-  --z-divider-text-color: var(--z-text-color-2);
+  --z-divider-text-color: var(--greyDark);
   --z-divider-font-size: var(--z-font-size-md);
   --z-divider-line-height: 48rpx;
   --z-divider-border-color: var(--z-border-color);
@@ -376,7 +377,7 @@ page {
   --z-empty-image-size: 360rpx;
   --z-empty-description-margin-top: var(--z-padding-md);
   --z-empty-description-padding: 0 120rpx;
-  --z-empty-description-color: var(--z-text-color-2);
+  --z-empty-description-color: var(--greyDark);
   --z-empty-description-font-size: var(--z-font-size-md);
   --z-empty-description-line-height: var(--z-line-height-md);
   --z-empty-bottom-margin-top: 48rpx;

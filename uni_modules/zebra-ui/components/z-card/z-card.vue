@@ -159,7 +159,7 @@ export default {
 
   &--shadow-hover:hover,
   &--shadow {
-    box-shadow: var(--z-shadow-1);
+    box-shadow: var(--aye-shadow);
   }
 
   &__cover {

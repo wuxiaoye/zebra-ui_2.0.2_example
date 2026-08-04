@@ -33,7 +33,7 @@
         <slot name="icon" />
       </template>
       <template v-if="instance.slots.value" #default>
-        <slot name="value" />
+            <slot name="value" />
       </template>
       <template v-if="instance.slots.label" #label>
         <slot name="label" />
@@ -115,7 +115,11 @@ const props = defineProps({
   isLink: truthProp,
   disabled: Boolean,
   readonly: Boolean,
-  lazyRender: truthProp
+  lazyRender: truthProp,
+  isBoxShadow:{
+      type: Boolean,
+      default: true
+  }
 })
 
 const instance = getCurrentInstance()!
@@ -195,11 +199,16 @@ const rightIconStyle = computed(() => {
 
 const cellStyle = computed(() => {
   const styles: CSSProperties = {
-    position: 'relative'
+    position: 'relative',
+    borderRadius : '12px'
   }
   if (props.disabled) {
     styles['color'] = 'var(--z-collapse-item-title-disabled-color)'
     styles['cursor'] = 'not-allowed'
+  }else{
+      if(props.isBoxShadow){
+        styles['box-shadow'] = 'var(--aye-shadow-big)'
+      }
   }
   return { ...styles }
 })

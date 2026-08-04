@@ -25,6 +25,51 @@
           </z-col>
         </z-row>
       </demo-block>
+      
+      <demo-block title="无阴影">
+          <z-badge :content="99" :is-box-shadow="false">
+            <view class="child" />
+          </z-badge>
+      </demo-block>
+      
+      <demo-block title="基础用法">
+          <view class="flex-row flex-around gap-10">
+              <view class="flex-col flex-center ">
+                  <view class="mb-10">
+                      <z-badge :content="56" color="var(--primary)" max="999">
+                        <z-icon name="heart" size="60rpx" color="var(--greyDark)"></z-icon>
+                      </z-badge>
+                  </view>
+                  <view class="text-greyDark text-size-xs">
+                      赞和收藏
+                  </view>
+              </view>
+              
+              <view class="flex-col flex-center ">
+                  <view class="mb-10">
+                      <z-badge :content="1500" color="var(--primary)" max="999">
+                        <z-icon name="adduser" size="60rpx" color="var(--greyDark)"></z-icon>
+                      </z-badge>
+                  </view>
+                  <view class="text-greyDark text-size-xs">
+                      新增关注
+                  </view>
+              </view>
+              
+              <view class="flex-col flex-center">
+                  <view class="mb-10">
+                      <z-badge :content="10" color="var(--secondary)" max="999">
+                        <!-- <z-icon name="comment" size="60rpx" color="var(--greyDark)"></z-icon> -->
+                        <z-icon name="message" size="60rpx" color="var(--greyDark)"></z-icon>
+                      </z-badge>
+                  </view>
+                  <view class="text-greyDark text-size-xs">
+                      评论和@
+                  </view>
+              </view>
+          </view>
+      </demo-block>
+      
       <demo-block title="最大值">
         <z-row gutter="20">
           <z-col span="6">
@@ -63,6 +108,7 @@
           </z-col>
         </z-row>
       </demo-block>
+      
       <demo-block title="自定义内容">
         <z-row gutter="20">
           <z-col span="6">

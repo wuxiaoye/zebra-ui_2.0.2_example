@@ -1,8 +1,20 @@
 <template>
   <DemoPage title="Card">
     <view class="demo-card">
-      <demo-block title="基础用法">
-        <z-card :title="title" header-bordered>
+        
+      <demo-block title="标题栏下可设有横线">
+            <z-card :title="title" header-bordered >
+              {{ infoMessage }}
+              <template #actions>
+                <z-button type="primary" size="mini" @click="clickHandler"
+                  >操作</z-button
+                >
+              </template>
+            </z-card>
+      </demo-block>
+      
+      <demo-block title="副标题与描述 + 阴影">
+        <z-card :title="title" :subtitle="subtitle" :description="description" shadow>
           {{ infoMessage }}
           <template #actions>
             <z-button type="primary" size="mini" @click="clickHandler"
@@ -11,16 +23,7 @@
           </template>
         </z-card>
       </demo-block>
-      <demo-block title="副标题与描述">
-        <z-card :title="title" :subtitle="subtitle" :description="description">
-          {{ infoMessage }}
-          <template #actions>
-            <z-button type="primary" size="mini" @click="clickHandler"
-              >操作</z-button
-            >
-          </template>
-        </z-card>
-      </demo-block>
+      
       <demo-block title="底部">
         <z-card :cover="cover">
           <template #footer>
@@ -32,6 +35,7 @@
           </template>
         </z-card>
       </demo-block>
+      
       <demo-block title="全部展示">
         <z-card
           :title="title"

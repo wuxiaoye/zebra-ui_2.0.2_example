@@ -242,6 +242,7 @@ export default {
     color: var(--z-gray-7);
     background-color: var(--z-gray-2);
     border-radius: 100%;
+    box-shadow: var(--aye-shadow);
 
     &--link,
     &--poster,
@@ -307,7 +308,8 @@ export default {
       display: block;
       height: var(--z-padding-xs);
       content: ' ';
-      background-color: var(--z-background);
+      // background-color: var(--z-background);
+      box-shadow: var(--aye-shadow-inset);
     }
 
     &::after {

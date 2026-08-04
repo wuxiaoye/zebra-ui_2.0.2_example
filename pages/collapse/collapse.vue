@@ -4,11 +4,13 @@
       <demo-block title="基础用法">
         <z-collapse v-model="active1">
           <z-collapse-item title="标题1">
-            zebra-swiper是基于uniapp开发的一款移动端轮播组件。
+                    zebra-swiper是基于uniapp开发的一款移动端轮播组件。
           </z-collapse-item>
-          <z-collapse-item title="标题2">
-            zebraSwiper 组件主要由 z-swiper，z-swiper-item 组成。
-            其中，z-swiper-item 组件只可放置在 z-swiper 组件中。
+          <z-collapse-item title="自定义文字颜色">
+              <view class="text-secondary">
+                zebraSwiper 组件主要由 z-swiper，z-swiper-item 组成。
+                其中，z-swiper-item 组件只可放置在 z-swiper 组件中。
+              </view>
           </z-collapse-item>
           <z-collapse-item title="标题3">
             在使用组件时，可以通过props像组件传递参数，从而实现不同的配置。

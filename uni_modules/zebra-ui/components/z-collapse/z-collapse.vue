@@ -22,7 +22,10 @@ type CollapseToggleAllOptions =
       skipDisabled?: boolean
     }
 const props = defineProps({
-  border: truthProp,
+  border: {
+      type: Boolean,
+      default: false
+  },
   accordion: Boolean,
   modelValue: {
     type: [String, Number, Array] as PropType<Numeric | Numeric[]>,

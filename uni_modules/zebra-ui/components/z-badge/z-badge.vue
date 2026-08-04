@@ -7,7 +7,7 @@
           :class="
             bem([
               props.position,
-              { dot: props.dot, fixed: !!instance.slots.default }
+              { dot: props.dot, fixed: !!instance.slots.default ,  'box-shadow': props.isBoxShadow}
             ])
           "
           :style="style"
@@ -40,7 +40,7 @@
         :class="
           bem([
             props.position,
-            { dot: props.dot, fixed: !!instance.slots.default }
+            { dot: props.dot, fixed: !!instance.slots.default, 'box-shadow': props.isBoxShadow }
           ])
         "
         :style="style"
@@ -91,7 +91,12 @@ const props = defineProps({
   showZero: truthProp,
   position: makeStringProp<BadgePosition>('top-right'),
   customStyle: Object,
-  wrapperStyle: Object
+  wrapperStyle: Object,
+  // 新增：是否开启外层wrapper阴影，可选，默认false
+    isBoxShadow: {
+        type: Boolean,
+        default: true
+    }
 })
 const instance = getCurrentInstance()!
 const hasContent = () => {
@@ -156,6 +161,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    
+.z-badge--box-shadow{
+    box-shadow:0.2rem 0.2rem 0.4rem var(--greyLight-2), -0.15rem -0.15rem 0.3rem var(--white);
+}
+
 .z-badge {
   box-sizing: border-box;
   display: inline-block;
