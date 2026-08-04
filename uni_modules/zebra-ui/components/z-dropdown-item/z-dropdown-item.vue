@@ -26,7 +26,7 @@
         :style="{
             boxSizing: 'border-box',
             margin: '6px',
-            boxShadow: 'var(--aye-shadow-mini)',
+            boxShadow: 'var(--aye-shadow)',
             // borderWidth: '2px',
               // borderStyle: 'solid',
               // borderColor: 'rgba(255, 255, 255, 0.7)  var(--greyLight-2) var(--greyLight-2) rgba(255, 255, 255, 0.7)',
@@ -202,6 +202,7 @@ export default {
   left: 0;
   z-index: var(--z-dropdown-item-z-index);
   overflow: hidden;
+  // border: #55ff7f solid 1px;
 
   &--up {
     top: 0;

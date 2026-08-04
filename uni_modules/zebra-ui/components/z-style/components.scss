@@ -360,7 +360,8 @@ page {
   // --z-dropdown-menu-background: var(--z-background-2);
   --z-dropdown-menu-background: var(--greyLight-1);
   // --z-dropdown-menu-shadow: 0 4rpx 24rpx rgb(100 101 102 / 12%);
-  --z-dropdown-menu-shadow: var(--aye-shadow-mini);
+  --z-dropdown-menu-item-box-shadow: var(--aye-shadow-inset), var(--aye-shadow);
+  --z-dropdown-menu-scrollable-box-shadow: var(--aye-shadow);
   --z-dropdown-menu-title-font-size: 30rpx;
   --z-dropdown-menu-title-text-color: var(--z-text-color);
   --z-dropdown-menu-title-active-text-color: var(--z-primary-color);

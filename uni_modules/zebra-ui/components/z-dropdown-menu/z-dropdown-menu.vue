@@ -172,17 +172,25 @@ export default {
     display: flex;
     height: var(--z-dropdown-menu-height);
     background: var(--z-dropdown-menu-background);
-    box-shadow: var(--z-dropdown-menu-shadow);
 
     &--opened {
       z-index: calc(var(--z-dropdown-item-z-index) + 1);
     }
 
+    // 众多子项- 横向滚动
     &--scrollable {
       padding-right: var(--z-padding-xs);
       padding-left: var(--z-padding-base);
       overflow: auto hidden;
       -webkit-overflow-scrolling: touch;
+      box-shadow: var(--z-dropdown-menu-scrollable-box-shadow);
+      
+      /* ===== 核心CSS 右侧内阴影渐变提示 ===== */
+        background-image: linear-gradient(to left, rgba(200, 208, 231, 0.7) 1px, var(--greyLight-1-dark), rgba(255, 255, 255, 0) 70rpx);
+        background-repeat: no-repeat;
+        background-position: right 0 top 0;
+        background-size: 80rpx 100%;
+        -webkit-overflow-scrolling: touch;
 
       &::-webkit-scrollbar {
         display: none;
@@ -196,7 +204,7 @@ export default {
     align-items: center;
     justify-content: center;
     min-width: 0;
-    box-shadow: var(--aye-shadow-mini);
+    box-shadow: var(--z-dropdown-menu-item-box-shadow);
 
     &--disabled {
       .z-dropdown-menu__title {
