@@ -97,6 +97,7 @@ const props = defineProps({
 
 
 .circle {
+    flex-shrink: 0;
   width: 180rpx;
   height: 180rpx;
   justify-self: center;
@@ -107,6 +108,7 @@ const props = defineProps({
   align-items: center;
 }
 .circle__btn {
+    flex-shrink: 0;
   grid-row: 1/2;
   grid-column: 1/2;
   width: 120rpx;
@@ -127,6 +129,7 @@ const props = defineProps({
   box-sizing: border-box;
 }
 .neu-spinner{
+    flex-shrink: 0;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -140,9 +143,6 @@ const props = defineProps({
 }
 
 
-.circle__btn.shadow {
-  box-shadow: inset 4rpx 4rpx 10rpx var(--greyLight-2), inset -4rpx -4rpx 10rpx var(--white);
-}
 .circle__back-1, .circle__back-2 {
   grid-row: 1/2;
   grid-column: 1/2;
@@ -151,6 +151,7 @@ const props = defineProps({
   border-radius: 50%;
   filter: blur(2rpx);
   z-index: 2;
+  flex-shrink: 0;
 }
 .circle__back-1 {
   box-shadow: 8rpx 8rpx 16rpx var(--greyLight-2), -8rpx -8rpx 16rpx var(--white);

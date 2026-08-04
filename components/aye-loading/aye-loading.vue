@@ -1,79 +1,63 @@
 <template>
-  <view
-    class="neu-card loading-card"
-    :style="{
-      flexDirection: props.isVertical ? 'column' : 'row'
-    }"
-  >
-    <view
-      class="spinner-wrap"
-      :style="{
-        width: props.size,
-        height: props.size,
-        margin: props.isVertical ? '0 0 24rpx 0' : '0 24rpx 0 0'
-      }"
+    <view class="loading-card"
+        :style="{
+            flexDirection: props.isVertical ? 'column' : 'row'
+        }"
     >
-      <view class="neu-spinner" :style="spinnerStyle"></view>
+        <view class="item-wrap" 
+            :style="{
+                margin:  props.isVertical ? '0 0 24rpx 0' : '0 24rpx 0 0'
+            }"
+        >
+              <view class="neu-spinner"
+                :style="{
+                    width: props.size,
+                    height: props.size,
+                }"
+              ></view>
+      </view>
+      <text class="forum-caption" v-if="props.isShowText" :style="textStyle">
+          <slot>加载中...</slot>
+        </text>
     </view>
-    <text
-      class="forum-caption"
-      v-if="props.isShowText"
-      :style="textStyle"
-    >
-      <slot>加载中...</slot>
-    </text>
-  </view>
 </template>
 
 <script setup>
 import { computed } from 'vue';
 
 const props = defineProps({
-  isVertical: {
-    type: Boolean,
-    default: false
-  },
-  // 图标大小，带单位
-  size: {
-    type: String,
-    default: '72rpx'
-  },
-  isShowText: {
-    type: Boolean,
-    default: true
-  },
-  textSize: {
-    type: String,
-    default: '24rpx'
-  },
-  textColor: {
-    type: String,
-    default: 'var(--greyDark)'
-  },
-  // 【新增】支持自定义线条颜色
-  color: {
-    type: String,
-    default: 'var(--primary)'
-  },
-  // 【新增】线条粗细
-  borderWidth: {
-    type: String,
-    default: '6rpx'
-  }
+    isVertical: {
+      type: Boolean,
+      default: false
+    },
+    // 图标大小，必须连带单位一起传入
+    size:{
+        type: String,
+        default: '72rpx'
+    },
+    isShowText:{
+        type: Boolean,
+        default: true
+    },
+    // 文字大小，必须连带单位一起传入
+    textSize: {
+        type: String,
+        default: '24rpx'
+    },
+    textColor: {
+        type: String,
+        default: 'var(--greyDark)'
+    }
 });
+
 
 const textStyle = computed(() => {
-  return {
-    fontSize: props.textSize,
+  const styles = {
+    fontSize: props.textSize ,
     color: props.textColor
-  };
-});
-
-// 动态样式绑定圆环颜色、线条宽度
-const spinnerStyle = computed(() => ({
-  borderWidth: props.borderWidth,
-  borderRightColor: props.color,
-}))
+  }
+  return styles
+})
 </script>
 
 <style scoped>
@@ -109,39 +93,39 @@ const spinnerStyle = computed(() => ({
 }
 
 @keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+  to { transform: rotate(360deg); }
 }
-
+    
 .loading-card {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.spinner-wrap {
-  border-radius: 50%;
-  box-shadow: var(--aye-shadow);
+.item-wrap{
+    width: 72rpx;
+    height: 72rpx;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    box-shadow: var(--aye-shadow);
 }
-
 .neu-spinner {
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  border-style: solid;
-  border-color: transparent;
-   /* var(--greyLight-2) transparent transparent; */
+    flex-shrink: 0;
+  width: 52rpx;
+  height: 52rpx;
   border-radius: 50%;
-  box-shadow: var(--aye-shadow-inset);
-  box-shadow: inset -4px -4px 8px var(--white), inset 4px 4px 8px var(--white);
-  background: var(--greyLight-1);
-  animation: spin 1s linear infinite;
+  border: 6rpx solid var(--greyLight-2);
+  border-top-color: var(--primary);
+  animation: spin 0.9s linear infinite;
+  box-shadow: inset -2px -2px 4px var(--white);
 }
 
 .forum-caption {
-  font-size: 24rpx;
-  color: var(--greyDark);
-  line-height: 1.5;
+    font-size: 24rpx;
+    color: var(--greyDark);
+    line-height: 1.5;
 }
+
 </style>

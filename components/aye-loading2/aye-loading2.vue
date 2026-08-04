@@ -73,6 +73,7 @@ const props = defineProps({
   grid-template-rows: 1fr;
   justify-items: center;
   align-items: center;
+  flex-shrink: 0;
 }
 .circle__btn {
   grid-row: 1/2;
@@ -89,6 +90,7 @@ const props = defineProps({
   position: relative;
   padding: 10rpx;
   box-sizing: border-box;
+  flex-shrink: 0;
 }
 .circle__btn.box-shadow-grey{
     // 灰色内阴影
@@ -113,6 +115,7 @@ const props = defineProps({
   border-radius: 50%;
   // box-shadow: inset 16rpx 16rpx 32rpx var(--greyLight-2), inset -16rpx -16rpx 32rpx var(--white);
   padding: 0rpx;
+  flex-shrink: 0;
 }
 
 /* ========== 方案B：花瓣独立闪烁，效果更清晰 ========== */
@@ -120,6 +123,7 @@ const props = defineProps({
   position: relative;
   width: 60rpx;
   height: 60rpx;
+  flex-shrink: 0;
 }
 .petal-spinner__line {
   position: absolute;
@@ -168,6 +172,7 @@ const props = defineProps({
   border-radius: 50%;
   filter: blur(2rpx);
   z-index: 2;
+  flex-shrink: 0;
 }
 .circle__back-1 {
   box-shadow: 8rpx 8rpx 16rpx var(--greyLight-2), -8rpx -8rpx 16rpx var(--white);
