@@ -14,8 +14,19 @@
           </z-col>
         </z-row>
         <view class="my-30"></view>
-        <aye-play-button></aye-play-button>
+        <aye-loading2 ></aye-loading2>
         
+        <view class="my-30"></view>
+        <aye-loading2 box-shadow-type="grey"></aye-loading2>
+        
+        <view class="my-30"></view>
+        <aye-loading3 ></aye-loading3>
+        
+        <view class="my-30"></view>
+        <aye-loading3 icon="yun"></aye-loading3>
+        
+        <view class="my-30"></view>
+        <aye-loading3 icon="taiji"></aye-loading3>
       </demo-block>
       
       <demo-block title="自定义颜色">
