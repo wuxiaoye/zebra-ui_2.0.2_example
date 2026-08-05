@@ -2,6 +2,7 @@
   <DemoPage title="Tag">
     <view class="demo-tag">
       <demo-block title="基础用法">
+          
           <z-cell title="default类型"  :value-overflow-hidden="false">
             <template #value>
               <z-tag type="default">标签</z-tag>
@@ -138,7 +139,11 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'
+
+
+const slider = ref(50)
 const show = ref(true)
+
 const close = () => {
   show.value = false
 }

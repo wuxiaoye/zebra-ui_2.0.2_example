@@ -13,6 +13,8 @@
       :is-link="props.isLink"
       :clickable="props.clickable"
       :title-style="labelStyle"
+      :value-overflow-hidden="props.isOverflowHidden"
+      :cell-overflow-hidden="props.isOverflowHidden"
       :value-style="{ overflow: 'visible' }"
       :title-class="[bem('label', [labelAlign]), props.labelClass]"
       :arrow-direction="props.arrowDirection"
@@ -328,7 +330,12 @@ const props = defineProps(
     boxShadow: {
         type: Boolean,
         default: true
-      }
+      },
+      // 是否开启-超出隐藏
+     isOverflowHidden:{
+         type:Boolean,
+         default: false
+     }
   })
 )
 const inputValue = ref('')

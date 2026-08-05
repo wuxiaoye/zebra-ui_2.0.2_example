@@ -19,13 +19,12 @@
               </template>
             </z-field>
             
-            <z-field name="slider" label="滑块">
+            <z-field name="slider" label="滑块-开启提示">
               <template #input>
-                  <!-- <view style="width: 100%;padding-top: 50rpx;"> -->
                         <z-slider v-model="slider" :show-tip="true" />
-                  <!-- </view> -->
               </template>
             </z-field>
+            
             <z-field name="slider" label="滑块-禁用">
               <template #input>
                 <z-slider v-model="slider" disabled/>
