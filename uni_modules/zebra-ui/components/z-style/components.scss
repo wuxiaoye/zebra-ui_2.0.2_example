@@ -553,14 +553,19 @@ page {
 
   // progress
   --z-progress-height: 8rpx;
-  --z-progress-color: var(--z-primary-color);
+  --z-progress-color: linear-gradient(to right, var(--primary-light), var(--primary) );
   --z-progress-inactive-color: var(--z-gray-5);
-  --z-progress-background: var(--z-gray-3);
+  --z-progress-background: var(--greyLight-1);//var(--aye-shadow-inset);
+  --z-progress-box-shadow: var(--aye-shadow-inset-mini);
+  //彩色进度条
+  --z-progress-portion-box-shadow: var(--aye-shadow);
+  //进度提示圆点
   --z-progress-pivot-padding: 0 10rpx;
   --z-progress-pivot-text-color: var(--z-white);
   --z-progress-pivot-font-size: var(--z-font-size-xs);
   --z-progress-pivot-line-height: 1.6;
-  --z-progress-pivot-background: var(--z-primary-color);
+  --z-progress-pivot-background:  var(--z-primary-color);
+  --z-progress-pivot-box-shadow:  var(--aye-shadow);
 
   // pullrefresh
   --z-pull-refresh-head-height: 100rpx;
@@ -684,11 +689,11 @@ page {
   // Skeleton
   --z-skeleton-duration: 1.2s;
   --z-skeleton-avatar-size: 64rpx;
-  --z-skeleton-avatar-background: var(--z-active-color);
+  --z-skeleton-avatar-background: var(--greyLight-2);
   --z-skeleton-image-size: 192rpx;
   --z-skeleton-image-radius: 48rpx;
   --z-skeleton-paragraph-height: 32rpx;
-  --z-skeleton-paragraph-background: var(--z-active-color);
+  --z-skeleton-paragraph-background: var(--greyLight-2);
   --z-skeleton-paragraph-margin-top: var(--z-padding-sm);
   --z-skeleton-title-width: 40%;
 

@@ -4,8 +4,19 @@
       <demo-block title="基础用法">
         <z-skeleton title :row="3" />
       </demo-block>
+      
+      <demo-block title="圆角风格">
+        <z-skeleton title :row="3" round/>
+      </demo-block>
+      
       <demo-block title="显示头像">
-        <z-skeleton title avatar :row="3" />
+            <z-skeleton title avatar :row="3" round/>
+        
+            <view class="text-size-n my-20 text-greyDark">头像在右侧</view>
+            <z-skeleton avatar avatar-right avatar-shape="round" round :row="3" ></z-skeleton>
+            
+            <view class="text-size-n my-20 text-greyDark">方形头像</view>
+            <z-skeleton avatar avatar-shape="square" :row="3" round></z-skeleton>
       </demo-block>
 
       <demo-block title="显示子组件">
@@ -17,9 +28,7 @@
             <image src="https://cdn.zebraui.com/zebra-ui/images/logo.png" />
             <view class="demo-skeleton-content">
               <view class="title">标题</view>
-              <view class="desc"
-                >zebra-swiper 是基于uniapp开发的一款移动端轮播组件。</view
-              >
+              <view class="desc">zebra-swiper 是基于uniapp开发的一款移动端轮播组件。</view>
             </view>
           </view>
         </z-skeleton>

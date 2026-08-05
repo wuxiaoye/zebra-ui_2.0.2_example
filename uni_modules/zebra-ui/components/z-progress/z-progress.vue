@@ -68,6 +68,7 @@ export default {
   position: relative;
   height: var(--z-progress-height);
   background: var(--z-progress-background);
+  box-shadow: var(--z-progress-box-shadow);
   border-radius: var(--z-progress-height);
 
   &__portion {
@@ -79,6 +80,7 @@ export default {
     border-radius: inherit;
     transition: all var(--z-duration-base) var(--z-ease-out);
     transform-origin: 0;
+    box-shadow: var(--z-progress-portion-box-shadow);
 
     &--inactive {
       background: var(--z-progress-inactive-color);
@@ -99,6 +101,7 @@ export default {
     background: var(--z-progress-pivot-background);
     border-radius: 1em;
     transition: all var(--z-duration-base) var(--z-ease-out);
+    box-shadow: var(--z-progress-pivot-box-shadow);
 
     &--inactive {
       background: var(--z-progress-inactive-color);

@@ -2,17 +2,26 @@
   <template v-if="!props.loading">
     <slot></slot>
   </template>
-  <view v-else :class="bem({ animate: props.animate, round: props.round })">
+  <view
+    v-else
+    :class="bem({
+      animate: props.animate,
+      round: props.round,
+      'avatar-right': props.avatarRight
+    })"
+  >
     <template v-if="instance.slots.template">
       <slot name="template"></slot>
     </template>
     <template v-else>
+      <!-- 头像 -->
       <template v-if="props.avatar">
         <z-skeleton-avatar
           :avatar-shape="props.avatarShape"
           :avatar-size="props.avatarSize"
         />
       </template>
+      <!-- 文本内容区域 -->
       <view :class="bem('content')">
         <template v-if="props.title">
           <z-skeleton-title
@@ -30,6 +39,7 @@
     </template>
   </view>
 </template>
+
 <script lang="ts" setup>
 import { type PropType, getCurrentInstance } from 'vue'
 import {
@@ -45,6 +55,7 @@ import {
 import zSkeletonAvatar from '../z-skeleton-avatar/z-skeleton-avatar.vue'
 import zSkeletonTitle from '../z-skeleton-title/z-skeleton-title.vue'
 import zSkeletonParagraph from '../z-skeleton-paragraph/z-skeleton-paragraph.vue'
+
 type SkeletonAvatarShape = 'square' | 'round'
 const [name, bem] = createNamespace('skeleton')
 useComponentName(name)
@@ -58,6 +69,8 @@ const props = defineProps({
   avatar: Boolean,
   avatarSize: numericProp,
   avatarShape: makeStringProp<SkeletonAvatarShape>('round'),
+  // 新增：头像是否展示在右侧
+  avatarRight: Boolean,
   loading: truthProp,
   animate: truthProp,
   rowWidth: {
@@ -82,6 +95,7 @@ const getRowWidth = (index: number) => {
   return rowWidth
 }
 </script>
+
 <script lang="ts">
 export default {
   name: 'ZSkeleton',
@@ -90,9 +104,12 @@ export default {
   }
 }
 </script>
+
 <style lang="scss" scoped>
 .z-skeleton {
   display: flex;
+  align-items: flex-start;
+  gap: 22rpx; // 头像与内容间距
 
   &__content {
     width: 100%;
@@ -100,6 +117,11 @@ export default {
 
   &--animate {
     animation: z-skeleton-blink var(--z-skeleton-duration) ease-in-out infinite;
+  }
+
+  // 头像居右修饰类：flex反向排列
+  &--avatar-right {
+    flex-direction: row-reverse;
   }
 }
 
