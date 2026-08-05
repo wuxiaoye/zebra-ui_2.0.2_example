@@ -1,28 +1,33 @@
 <template>
   <view :class="bem()">
     <view :class="bem('image')" :style="getSizeStyle(props.imageSize)">
+      <!-- image插槽 -->
       <template v-if="instance.slots.image">
         <slot name="image"></slot>
       </template>
-      <template v-else-if="props.iconType">
-        <text
-          :class="['ayeIconfont', iconFontClass]"
-          :style="{ fontSize: iconFontSize }"
-        />
-      </template>
-      <template v-else-if="props.image">
-        <image
-          :src="props.image"
-          mode="aspectFill"
-        ></image>
-      </template>
+      <!-- iconType字体图标 -->
+      <text
+        v-else-if="props.iconType"
+        :class="['ayeIconfont', iconFontClass]"
+        :style="{ fontSize: iconFontSize }"
+      />
+      <!-- 自定义图片 -->
+      <image
+        v-else-if="props.image"
+        :src="props.image"
+        mode="aspectFill"
+      ></image>
+      <!-- 默认 empty-icon 占位，无插槽、无iconType、无image才显示 -->
+      <view v-else class="empty-icon"></view>
     </view>
+
     <template v-if="instance.slots.description">
       <slot name="description"></slot>
     </template>
     <template v-else>
       <text :class="bem('description')">{{ props.description }}</text>
     </template>
+
     <template v-if="instance.slots.default">
       <view :class="bem('bottom')">
         <slot></slot>
@@ -46,15 +51,17 @@ const instance = getCurrentInstance()!
 
 const props = defineProps({
   image: String,
+  //控制 图片的大小
   imageSize: [Number, String, Array] as PropType<Numeric | [Numeric, Numeric]>,
   description: String,
   iconType: {
     type: String as PropType<'default' | 'error' | 'network' | 'search'>,
-    default: 'default'
+    default: ''
   },
+  //控制 icon 图标的大小
   size: {
     type: [Number, String] as PropType<Numeric>,
-    default: '100px'
+    default: '81px'
   }
 })
 
@@ -132,7 +139,7 @@ export default {
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: var(--greyLight-3);
+  color: var(--greyDark);
 }
 
 .aye-error-network:before {
@@ -149,6 +156,14 @@ export default {
 
 .aye-error-default:before {
   content: "\e61c";
+}
+
+.empty-icon {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  background: var(--greyLight-1);
+  box-shadow: inset 0.4rem 0.4rem 0.8rem var(--greyLight-2), inset -0.4rem -0.4rem 0.8rem var(--white);
 }
 
 .z-empty {

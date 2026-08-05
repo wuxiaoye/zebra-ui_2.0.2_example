@@ -25,6 +25,9 @@
       :overlay-class="props.overlayClass"
       :overlay-back-groud="props.overlayBackGroud"
       :close-on-click-overlay="props.closeOnClickOverlay"
+      :style="{
+          
+      }"
     >
       <template v-if="props.showArrow">
         <view :class="bem('arrow')" />
@@ -420,6 +423,7 @@ export default {
   &__content {
     overflow: hidden;
     border-radius: var(--z-popover-radius);
+    box-shadow: var(--aye-shadow);
 
     &--horizontal {
       display: flex;
@@ -617,7 +621,6 @@ export default {
 
     .z-popover__content {
       background: var(--z-popover-light-background);
-      box-shadow: 0 4rpx 24rpx rgb(50 50 51 / 12%);
     }
 
     .z-popover__arrow {
