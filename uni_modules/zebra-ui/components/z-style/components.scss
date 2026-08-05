@@ -699,9 +699,12 @@ page {
 
   // Steps
   --z-steps-background: var(--z-background-2);
-  --z-step-text-color: var(--z-text-color-2);
-  --z-step-active-color: var(--z-primary-color);
-  --z-step-process-text-color: var(--z-text-color);
+  // --z-step-text-color: var(--z-text-color-2);
+  // --z-step-active-color: var(--z-primary-color);
+  // --z-step-process-text-color: var(--z-text-color);
+  --z-step-text-color: var(--z-text-color-2); //未进行的
+  --z-step-active-color: var(--z-primary-color);//当前的
+  --z-step-process-text-color: var(--secondary);//
   --z-step-font-size: var(--z-font-size-md);
   --z-step-line-color: var(--z-border-color);
   --z-step-finish-line-color: var(--z-primary-color);
@@ -744,13 +747,14 @@ page {
   --z-tabs-bottom-bar-color: var(--z-primary-color);
 
   // Tag
-  --z-tag-padding: 0 var(--z-padding-base);
   --z-tag-text-color: var(--z-white);
-  --z-tag-font-size: var(--z-font-size-sm);
-  --z-tag-radius: 4rpx;
+  --z-tag-font-size: 22rpx;
+  --z-tag-radius: 12rpx;
   --z-tag-line-height: 32rpx;
-  --z-tag-medium-padding: 4rpx 12rpx;
-  --z-tag-large-padding: var(--z-padding-base) var(--z-padding-xs);
+  
+  --z-tag-padding: 4rpx 18rpx;
+  --z-tag-medium-padding: 8rpx 24rpx;
+  --z-tag-large-padding: 12rpx 28rpx;
   --z-tag-large-radius: var(--z-radius-md);
   --z-tag-large-font-size: var(--z-font-size-md);
   --z-tag-round-radius: var(--z-radius-max);
@@ -759,7 +763,7 @@ page {
   --z-tag-success-color: var(--z-success-color);
   --z-tag-warning-color: var(--z-warning-color);
   --z-tag-default-color: var(--z-gray-6);
-  --z-tag-plain-background: var(--z-background-2);
+  --z-tag-plain-background: rgba(255, 255, 255, 0);
 
   // TextEllipsis
   --z-text-ellipsis-line-height: 1.6;

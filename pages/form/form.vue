@@ -21,9 +21,9 @@
             
             <z-field name="slider" label="滑块">
               <template #input>
-                  <view style="width: 100%;padding-top: 50rpx;">
+                  <!-- <view style="width: 100%;padding-top: 50rpx;"> -->
                         <z-slider v-model="slider" :show-tip="true" />
-                  </view>
+                  <!-- </view> -->
               </template>
             </z-field>
             <z-field name="slider" label="滑块-禁用">

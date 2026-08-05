@@ -1,6 +1,7 @@
 <template>
   <DemoPage title="Steps">
     <view class="demo-steps">
+        
       <demo-block title="基础用法">
         <z-steps :active="active">
           <z-step>第一步</z-step>

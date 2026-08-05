@@ -40,31 +40,51 @@ const props = defineProps({
   plain: Boolean,
   round: Boolean,
   textColor: String,
-  closeable: Boolean
+  closeable: Boolean,
+  noneBorder: Boolean
 })
 const emit = defineEmits(['close'])
 const onClose = (event: MouseEvent) => {
   emit('close', event)
 }
 
+// type映射主题颜色，和scss变量一一对应
+const typeColorMap: Record<TagType, string> = {
+  default: 'var(--z-tag-default-color)',
+  primary: 'var(--z-tag-primary-color)',
+  danger: 'var(--z-tag-danger-color)',
+  success: 'var(--z-tag-success-color)',
+  warning: 'var(--z-tag-warning-color)'
+}
+
 const getStyle = computed(() => {
+  // noneBorder 最高优先级
+  if (props.noneBorder) {
+    // textColor > props.color > type对应的主题色
+    const textColorVal = props.textColor || props.color || typeColorMap[props.type]
+    return {
+      color: textColorVal,
+      background: 'transparent'
+    }
+  }
   if (props.plain) {
     return {
-      color: props.textColor || props.color,
-      borderColor: props.color
+      color: props.textColor || props.color || typeColorMap[props.type],
+      borderColor: props.color || typeColorMap[props.type]
     }
   }
   return {
     color: props.textColor,
-    background: props.color
+    background: props.color || typeColorMap[props.type]
   }
 })
 
 const classes = computed(() => {
   const classes: Record<string, unknown> = {
     mark: props.mark,
-    plain: props.plain,
-    round: props.round
+    plain: props.plain && !props.noneBorder, // noneBorder开启，plain类直接失效
+    round: props.round,
+    'none-border': props.noneBorder
   }
   if (props.size) {
     classes[props.size] = props.size
@@ -79,6 +99,8 @@ const transitionStyle = computed(() => {
   return { ...styles }
 })
 </script>
+
+
 <script lang="ts">
 export default {
   name: 'ZTag',
@@ -97,6 +119,7 @@ export default {
   line-height: var(--z-tag-line-height);
   color: var(--z-tag-text-color);
   border-radius: var(--z-tag-radius);
+  box-shadow: var(--aye-shadow);
 
   &--default {
     background: var(--z-tag-default-color);
@@ -150,6 +173,13 @@ export default {
       border: 2rpx solid;
       border-color: inherit;
       border-radius: inherit;
+    }
+  }
+
+  // 新增 none‑border 样式：清除plain伪元素边框，背景已经js设置transparent
+  &.z-tag--none-border {
+    &::before {
+      border: none !important;
     }
   }
 
