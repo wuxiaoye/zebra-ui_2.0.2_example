@@ -44,5 +44,12 @@ export default {
   width: var(--z-sidebar-width);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  box-shadow: var(--aye-shadow);
+  border-radius: var(--z-sidebar-border-radius);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  min-width: 0;
+  overflow: hidden;
 }
 </style>

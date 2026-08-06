@@ -2,10 +2,13 @@
   <DemoPage title="Sidebar">
     <view class="demo-sidebar">
         <view class="py-30 text-greyDark text-size-n px-20">基础用法</view>
-        <view class="px-20">
+        <view class=" mb-30 add_shadow_big round-12 overflow" style="">
             <z-sidebar v-model="active1">
+              <z-sidebar-item title="名道德经" />
+              <z-sidebar-item title="标签名道德" />
+              <z-sidebar-item title="标签名道" />
               <z-sidebar-item title="标签名" />
-              <z-sidebar-item title="标签名" />
+              <z-sidebar-item title="标签" />
               <z-sidebar-item title="标签名" />
             </z-sidebar>
         </view>
@@ -36,7 +39,7 @@
       <demo-block title="徽标提示">
         <z-sidebar v-model="active4">
           <z-sidebar-item title="标签名" dot />
-          <z-sidebar-item title="标签名" badge="5" />
+          <z-sidebar-item title="标签名" badge="59"/>
           <z-sidebar-item title="标签名" />
         </z-sidebar>
       </demo-block>

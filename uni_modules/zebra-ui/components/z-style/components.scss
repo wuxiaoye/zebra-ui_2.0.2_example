@@ -825,19 +825,22 @@ page {
 
   // sidebar
   --z-sidebar-width: 160rpx;
-  --z-sidebar-font-size: var(--z-font-size-md);
-  --z-sidebar-line-height: var(--z-line-height-md);
+  --z-sidebar-border-radius: 24rpx;
+  --z-sidebar-font-size: 20rpx;
+  --z-sidebar-padding: 20rpx;
+  --z-sidebar-text-line-height: 1.4;
   --z-sidebar-text-color: var(--greyDark);
-  --z-sidebar-disabled-text-color: var(--z-text-color-3);
-  --z-sidebar-padding: 40rpx var(--z-padding-sm);
-  --z-sidebar-active-color: var(--white);
+  --z-sidebar-disabled-text-color: var(--greyLight-2);
   --z-sidebar-background: var(var(--greyLight-1));
+  --z-sidebar-active-color: var(--white);
+  // 激活
   --z-sidebar-selected-font-weight: var(--z-font-bold);
   --z-sidebar-selected-text-color: var(--white);
-  --z-sidebar-selected-border-width: 8rpx;
-  --z-sidebar-selected-border-height: 32rpx;
-  --z-sidebar-selected-border-color: var(--z-primary-color);
-  --z-sidebar-selected-background: linear-gradient( 120deg, var(--primary), var(--primary-light) );
+  --z-sidebar-selected-background: linear-gradient( 120deg, var(--primary-light), var(--primary) );
+  --z-sidebar-selected-border-radius: 0 20rpx 20rpx 0;
+  // --z-sidebar-selected-border-width: 8rpx;
+  // --z-sidebar-selected-border-height: 32rpx;
+  // --z-sidebar-selected-border-color: var(--z-primary-color);
 
   // tree select
   --z-tree-select-font-size: var(--z-font-size-md);

@@ -1,3 +1,7 @@
+/* 卡片外阴影样式 -更大*/
+.add_shadow_more_big{
+    box-shadow: 0.4rem 0.4rem 0.8rem var(--greyLight-2),  -0.4rem -0.4rem 0.8rem var(--white);
+}
 /* 卡片外阴影样式 -大一些*/
 .add_shadow_big {
     box-shadow: 6px 6px 12px var(--greyLight-2), -4px -4px 10px var(--white);
