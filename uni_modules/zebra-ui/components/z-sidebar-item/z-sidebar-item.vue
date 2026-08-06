@@ -70,9 +70,10 @@ export default {
   line-height: var(--z-sidebar-line-height);
   color: var(--z-sidebar-text-color);
   background: var(--z-sidebar-background);
+  box-shadow: var(--aye-shadow);
 
   &:active {
-    background-color: var(--z-sidebar-active-color);
+    // background-color: var(--z-sidebar-active-color);
   }
 
   &:not(:last-child)::after {
@@ -86,10 +87,12 @@ export default {
   &--select {
     font-weight: var(--z-sidebar-selected-font-weight);
     color: var(--z-sidebar-selected-text-color);
+    background: var(--z-sidebar-selected-background);
+    border-radius: 12rpx;
 
     &,
     &:active {
-      background-color: var(--z-sidebar-selected-background);
+      // background-color: var(--z-sidebar-selected-background);
     }
 
     &::before {

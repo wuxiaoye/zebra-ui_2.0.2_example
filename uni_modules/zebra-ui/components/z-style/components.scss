@@ -86,17 +86,20 @@ page {
   --z-cell-horizontal-padding: var(--z-padding-md);
   --z-cell-text-color: var(--z-text-color);
   --z-cell-background: var(--z-background-2);
-  --z-cell-border-color: var(--z-border-color);
+  // --z-cell-border-color: var(--z-border-color);
+  --z-cell-border-color: var(--greyDark);
   --z-cell-active-color: var(--greyLight-1-dark);
   --z-cell-required-color: var(--z-danger-color);
   --z-cell-label-color: var(--z-text-color-2);
   --z-cell-label-font-size: var(--z-font-size-sm);
   --z-cell-label-line-height: var(--z-line-height-sm);
   --z-cell-label-margin-top: var(--z-padding-base);
-  --z-cell-value-color: var(--z-text-color-2);
+  // --z-cell-value-color: var(--z-text-color-2);
+  --z-cell-value-color: var(--greyDark);
   --z-cell-value-font-size: inherit;
   --z-cell-icon-size: 32rpx;
-  --z-cell-right-icon-color: var(--z-gray-6);
+  // --z-cell-right-icon-color: var(--z-gray-6);
+  --z-cell-right-icon-color: var(--greyDark);//右边图标，右边默认箭头图标
   --z-cell-large-vertical-padding: var(--z-padding-sm);
   --z-cell-large-title-font-size: var(--z-font-size-lg);
   --z-cell-large-label-font-size: var(--z-font-size-md);
@@ -430,9 +433,11 @@ page {
   --z-grid-item-content-padding: var(--z-padding-md) var(--z-padding-xs);
   --z-grid-item-content-background: var(--z-background-2);
   --z-grid-item-content-active-color: var(--z-active-color);
-  --z-grid-item-icon-size: 56rpx;
-  --z-grid-item-text-color: var(--z-text-color);
+  --z-grid-item-icon-size: 36rpx;
+  --z-grid-item-text-color: var(--greyDark);
   --z-grid-item-text-font-size: var(--z-font-size-sm);
+  --z-grid-item-icon-box-shadow: var(--aye-shadow);
+  
 
   // highlight
   --z-highlight-tag-color: var(--z-primary-color);
@@ -822,17 +827,17 @@ page {
   --z-sidebar-width: 160rpx;
   --z-sidebar-font-size: var(--z-font-size-md);
   --z-sidebar-line-height: var(--z-line-height-md);
-  --z-sidebar-text-color: var(--z-text-color);
+  --z-sidebar-text-color: var(--greyDark);
   --z-sidebar-disabled-text-color: var(--z-text-color-3);
   --z-sidebar-padding: 40rpx var(--z-padding-sm);
-  --z-sidebar-active-color: var(--z-active-color);
-  --z-sidebar-background: var(--z-background);
+  --z-sidebar-active-color: var(--white);
+  --z-sidebar-background: var(var(--greyLight-1));
   --z-sidebar-selected-font-weight: var(--z-font-bold);
-  --z-sidebar-selected-text-color: var(--z-text-color);
+  --z-sidebar-selected-text-color: var(--white);
   --z-sidebar-selected-border-width: 8rpx;
   --z-sidebar-selected-border-height: 32rpx;
   --z-sidebar-selected-border-color: var(--z-primary-color);
-  --z-sidebar-selected-background: var(--z-background-2);
+  --z-sidebar-selected-background: linear-gradient( 120deg, var(--primary), var(--primary-light) );
 
   // tree select
   --z-tree-select-font-size: var(--z-font-size-md);

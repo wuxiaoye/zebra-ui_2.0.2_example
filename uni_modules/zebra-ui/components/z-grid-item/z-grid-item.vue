@@ -11,16 +11,22 @@
           </z-badge>
         </template>
         <template v-else-if="props.icon">
-          <z-icon
-            :dot="props.dot"
-            :name="props.icon"
-            :size="parent.props.iconSize"
-            :badge="props.badge"
-            :custom-style="iconStyle"
-            :color="props.iconColor"
-            :badge-props="props.badgeProps"
-            :class-prefix="props.iconPrefix"
-          />
+            <view class="icon-wrap"
+                :style="{
+                    background: props.iconBackground
+                }"
+            >
+                  <z-icon
+                    :dot="props.dot"
+                    :name="props.icon"
+                    :size="parent.props.iconSize"
+                    :badge="props.badge"
+                    :custom-style="iconStyle"
+                    :color="props.iconColor"
+                    :badge-props="props.badgeProps"
+                    :class-prefix="props.iconPrefix"
+                  />
+            </view>
         </template>
       </template>
       <template v-if="instance.slots.text">
@@ -55,7 +61,14 @@ const props = defineProps({
   text: String,
   icon: String,
   badge: numericProp,
-  iconColor: String,
+  iconColor: {
+      type: String,
+      default: '#fff'
+  },
+  iconBackground:{
+      type: String,
+      default: 'var(--primary)'
+  },
   iconPrefix: String,
   badgeProps: Object
 })
@@ -137,9 +150,17 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.icon-wrap{
+    border-radius: 14rpx;
+    padding: 16rpx;
+    background: var(--primary);
+    box-shadow: var(--z-grid-item-icon-box-shadow);
+}
+    
 .z-grid-item {
   position: relative;
   box-sizing: border-box;
+  // box-shadow: var(--aye-shadow);
 
   &--square {
     height: 0;

@@ -24,7 +24,10 @@ type GridDirection = 'horizontal' | 'vertical'
 const props = defineProps({
   square: Boolean,
   center: truthProp,
-  border: truthProp,
+  border: {
+      type: Boolean,
+      default: false
+  },
   gutter: numericProp,
   reverse: Boolean,
   iconSize: numericProp,

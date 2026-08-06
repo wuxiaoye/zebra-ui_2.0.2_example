@@ -2,8 +2,8 @@
   <!--
     z-cell 单元格组件
     prop:
-      cellOverflowHidden: boolean = true  根容器是否开启 overflow:hidden；false=允许子元素溢出cell盒子
-      valueOverflowHidden: boolean = true value区域是否开启 overflow:hidden；false=value内容可以溢出
+      cellOverflowHidden:  根容器是否开启 overflow:hidden，值为false， 则允许子元素溢出cell盒子
+      valueOverflowHidden:  value区域是否开启 overflow:hidden；值为false，则value内容可以溢出
     注意：当 required 生效时，根容器强制 overflow:visible，cellOverflowHidden 将失效，保证*必填星号正常显示
   -->
   <view

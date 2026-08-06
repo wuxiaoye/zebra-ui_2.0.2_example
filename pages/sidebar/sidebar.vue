@@ -1,6 +1,15 @@
 <template>
   <DemoPage title="Sidebar">
     <view class="demo-sidebar">
+        <view class="py-30 text-greyDark text-size-n px-20">基础用法</view>
+        <view class="px-20">
+            <z-sidebar v-model="active1">
+              <z-sidebar-item title="标签名" />
+              <z-sidebar-item title="标签名" />
+              <z-sidebar-item title="标签名" />
+            </z-sidebar>
+        </view>
+        
       <demo-block title="基础用法">
         <z-sidebar v-model="active1">
           <z-sidebar-item title="标签名" />
@@ -8,6 +17,7 @@
           <z-sidebar-item title="标签名" />
         </z-sidebar>
       </demo-block>
+      
       <demo-block title="禁用选项">
         <z-sidebar v-model="active2">
           <z-sidebar-item title="标签名" />
@@ -15,6 +25,7 @@
           <z-sidebar-item title="标签名" />
         </z-sidebar>
       </demo-block>
+      
       <demo-block title="监听切换">
         <z-sidebar v-model="active3" @change="onChange">
           <z-sidebar-item title="标签名" />
