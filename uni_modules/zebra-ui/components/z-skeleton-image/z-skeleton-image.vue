@@ -50,6 +50,7 @@ export default {
     width: var(--z-skeleton-image-size);
     height: var(--z-skeleton-image-size);
     background: var(--z-active-color);
+    border-radius: var(--z-radius-sm);
 
     &--round {
       border-radius: var(--z-skeleton-image-radius);

@@ -2,11 +2,12 @@
   <DemoPage title="Tab">
     <view class="demo-tab">
       <demo-block title="基础用法">
-        <z-tabs v-model:active="active">
+        <z-tabs v-model:active="active" >
           <z-tab
             v-for="(item, index) in 4"
             :key="index"
             :title="`标签 ${item}`"
+             :badge="index"
           >
             <view class="demo-tab-item"> 内容{{ item }} </view>
           </z-tab>
@@ -58,6 +59,7 @@
           </z-tab>
         </z-tabs>
       </demo-block>
+      
       <demo-block title="样式风格">
         <z-tabs v-model:active="active" type="card">
           <z-tab
@@ -69,6 +71,7 @@
           </z-tab>
         </z-tabs>
       </demo-block>
+      
       <demo-block title="点击事件">
         <z-tabs v-model:active="active" @click-tab="onClickTab">
           <z-tab
@@ -80,6 +83,7 @@
           </z-tab>
         </z-tabs>
       </demo-block>
+      
       <demo-block title="收缩布局">
         <z-tabs v-model:active="active" shrink>
           <z-tab
@@ -185,7 +189,7 @@ const beforeChange = (index: any) => {
 .demo-tab {
   .demo-tab-item {
     padding: 30rpx;
-    background-color: var(--z-line-color);
+    background-color: var(--greyLight-1);
   }
 }
 </style>

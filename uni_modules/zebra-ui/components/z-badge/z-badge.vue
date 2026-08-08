@@ -1,6 +1,6 @@
 <template>
   <template v-if="instance.slots.default">
-    <view :class="bem('wrapper')" :style="wrapperStyle">
+    <view :class="bem('wrapper')"  :style="[wrapperStyle, wrapperOuterStyle]">
       <slot></slot>
       <template v-if="hasContent() || props.dot">
         <view
@@ -96,7 +96,12 @@ const props = defineProps({
     isBoxShadow: {
         type: Boolean,
         default: true
-    }
+    },
+    // 新增：wrapper 的 z-index 层级，专门给 tabs 组件的 card 模式使用
+      wrapperZIndex: {
+        type: [Number, String],
+        default: undefined
+      },
 })
 const instance = getCurrentInstance()!
 const hasContent = () => {
@@ -148,6 +153,14 @@ const style = computed(() => {
   }
 
   return style
+})
+
+// 组装 wrapper 的样式，把 wrapperZIndex 注入
+const wrapperOuterStyle = computed(() => {
+  if (!isDef(props.wrapperZIndex)) return {}
+  return {
+    zIndex: props.wrapperZIndex
+  }
 })
 </script>
 

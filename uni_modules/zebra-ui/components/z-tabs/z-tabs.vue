@@ -58,6 +58,7 @@
                       :dot="item.dot"
                       :content="item.badge"
                       :show-zero="item.showZeroBadge"
+                      :wrapper-z-index="2"
                     >
                       <text
                         :class="bem('text', { ellipsis: !item.scrollable })"
@@ -70,6 +71,7 @@
                         </template>
                       </text>
                     </z-badge>
+                    
                   </template>
                   <template v-else>
                     <view
@@ -140,10 +142,12 @@
                   <template
                     v-if="item.dot || (isDef(item.badge) && item.badge !== '')"
                   >
+                  
                     <z-badge
                       :dot="item.dot"
                       :content="item.badge"
                       :show-zero="item.showZeroBadge"
+                      :wrapper-z-index="2"
                     >
                       <text
                         :class="bem('text', { ellipsis: !item.scrollable })"
@@ -156,6 +160,7 @@
                         </template>
                       </text>
                     </z-badge>
+                    
                   </template>
                   <template v-else>
                     <view
@@ -917,11 +922,11 @@ export default {
   padding: 0 var(--z-padding-base);
   font-size: var(--z-tab-font-size);
   line-height: var(--z-tab-line-height);
-  color: var(--z-tab-text-color);
+  color: var(--z-tab-line-text-color);
 
   &--active {
     font-weight: var(--z-font-bold);
-    color: var(--z-tab-active-text-color);
+    color: var(--z-tab-line-active-text-color);
   }
 
   &--disabled {
@@ -940,16 +945,14 @@ export default {
   }
 
   &--card {
-    color: var(--z-tabs-default-color);
-    border-right: var(--z-border-width) solid var(--z-tabs-default-color);
-
+    
+    
     &:last-child {
-      border-right: none;
+      // border-right: none;
     }
 
     &.z-tab--active {
-      color: var(--z-white);
-      background-color: var(--z-tabs-default-color);
+      
     }
 
     &--disabled {
@@ -980,6 +983,9 @@ export default {
 
   &__wrap {
     overflow: hidden;
+    border-radius: var(--z-tab-border-radius);
+    box-shadow: var(--z-tab-wrap-box-shadow);
+    margin: var(--z-tab-wrap-margin);
 
     &--page-top {
       position: fixed;
@@ -1016,8 +1022,8 @@ export default {
     &--card {
       box-sizing: border-box;
       height: var(--z-tabs-card-height);
-      border: var(--z-border-width) solid var(--z-tabs-default-color);
-      border-radius: var(--z-radius-sm);
+      border: 0;
+      border-radius: var(--z-tab-border-radius);
     }
 
     &--card.z-tabs__nav--shrink {
@@ -1134,4 +1140,37 @@ export default {
     }
   }
 }
+
+
+
+.z-tab--card{
+    position: relative;
+    color: var(--z-tab-card-text-color);
+    border-radius: var(--z-tab-border-radius);
+    // overflow:hidden;
+}
+.z-tab--card::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: var(--z-tab-border-radius);
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+  background-color:  var(--z-tab-card-active-background-color);
+  z-index: 1;
+}
+.z-tab--card .z-tab__text {
+  position: relative;
+  z-index: 2;
+}
+
+.z-tab--card.z-tab--active{
+    color: var(--z-tab-card-active-text-color);
+}
+.z-tab--card.z-tab--active::before {
+  bottom: 0;
+}
+
 </style>

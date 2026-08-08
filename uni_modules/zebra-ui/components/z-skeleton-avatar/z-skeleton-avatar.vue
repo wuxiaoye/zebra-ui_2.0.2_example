@@ -37,6 +37,8 @@ export default {
     height: var(--z-skeleton-avatar-size);
     margin-right: var(--z-padding-md);
     background: var(--z-skeleton-avatar-background);
+    box-shadow: var(--aye-shadow-inset);
+    border-radius: var(--z-radius-sm);
 
     &--round {
       border-radius: var(--z-radius-max);

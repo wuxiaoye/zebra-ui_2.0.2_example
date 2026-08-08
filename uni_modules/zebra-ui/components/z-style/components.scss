@@ -9,6 +9,7 @@ page {
     --secondary: #6d5dfc;
     --secondary-dark: #5b0eeb;
     --white: #FFFFFF;
+    --blackDark: #333;
     --greyLight-1: #E4EBF5;
     --greyLight-1-dark: #d8e4f5;
     --greyLight-2: #c8d0e7;
@@ -738,15 +739,22 @@ page {
   --z-switch-disabled-opacity: var(--z-disabled-opacity);
 
   // tabs
-  --z-tab-text-color: var(--z-gray-7);
-  --z-tab-active-text-color: var(--z-text-color);
-  --z-tab-disabled-text-color: var(--z-text-color-3);
+  --z-tab-line-text-color: var(--greyDark);
+  --z-tab-line-active-text-color: var(--blackDark);
+  --z-tab-card-text-color: var(--greyDark);
+  --z-tab-card-active-text-color: var(--white);
+  --z-tab-card-active-background-color: var(--primary);
+  --z-tab-disabled-text-color: var(--greyLight-3);
   --z-tab-font-size: var(--z-font-size-md);
   --z-tab-line-height: var(--z-line-height-md);
-  --z-tabs-default-color: var(--z-primary-color);
+  
   --z-tabs-line-height: 88rpx;
-  --z-tabs-card-height: 60rpx;
-  --z-tabs-nav-background: var(--z-background-2);
+  --z-tabs-card-height: 88rpx;
+  --z-tab-border-radius: 12rpx;
+  --z-tabs-nav-background: var(--greyLight-1);
+  --z-tab-wrap-box-shadow: var(--aye-shadow);
+  --z-tab-wrap-margin: 16rpx 0;
+  
   --z-tabs-bottom-bar-width: 80rpx;
   --z-tabs-bottom-bar-height: 6rpx;
   --z-tabs-bottom-bar-color: var(--z-primary-color);
