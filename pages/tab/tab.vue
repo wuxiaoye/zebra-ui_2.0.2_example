@@ -26,7 +26,7 @@
         </z-tabs>
       </demo-block>
       <demo-block title="吸顶">
-        <z-tabs v-model:active="active" sticky custom-navbar>
+        <z-tabs v-model:active="active" sticky custom-navbar >
           <z-tab
             v-for="(item, index) in 4"
             :key="index"
@@ -107,7 +107,7 @@
       <demo-block title="自定义标题">
         <z-tabs v-model:active="active">
           <template #title="{ item }">
-            <z-icon name="star" />选项 {{ item.slotContent }}
+            <z-icon name="star" /><text class="ml-4">选项 {{ item.slotContent }}</text>
           </template>
           <z-tab v-for="(item, index) in 4" :key="index" :slot-content="item">
             <view class="demo-tab-item"> 内容{{ item }} </view>
@@ -137,7 +137,7 @@
         </z-tabs>
       </demo-block>
       <demo-block title="滚动导航">
-        <z-tabs v-model:active="activeScrollspy" scrollspy>
+        <z-tabs v-model:active="activeScrollspy" scrollspy type="card">
           <view style="height: 1000rpx">
             <z-tab
               v-for="(item, index) in 18"

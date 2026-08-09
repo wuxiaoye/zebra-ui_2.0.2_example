@@ -1,6 +1,12 @@
 <template>
   <view
-    :class="bem({ active: active, animate: parent.props.animate })"
+    :class="[
+        bem({ 
+            active: active, 
+            animate: parent.props.animate ,
+            background: parent.props.background
+            })
+        ]"
     :style="{
       color: active ? parent.props.activeColor : parent.props.inactiveColor
     }"
@@ -93,6 +99,22 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+/*  动画：放大 + 弹跳*/
+@keyframes bump {
+  25% {
+      transform: scale(1.35) rotate(8deg);
+    }
+    50% {
+      transform: scale(0.9) rotate(0deg);
+    }
+    75% {
+      transform: scale(1.15) rotate(5deg);
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+    }
+}
+
 .z-tabbar-item {
   position: relative;
   z-index: 10;
@@ -104,18 +126,31 @@ export default {
   font-size: var(--z-tabbar-item-font-size);
   line-height: var(--z-tabbar-item-line-height);
   color: var(--z-tabbar-item-text-color);
+  transition: all 0.2s ease;
 
   &--active {
     color: var(--z-tabbar-item-active-color);
+    animation: bump 0.3s;
   }
+  
+  // animate模式 pulse
+    // &--active.z-tabbar-item--animate {
+    //   animation: pulse 0.5s ease-in-out;
+    // }
+    
+    // =====================
+      // ✅ 优先级更高：开启background并且active，强制使用shake，覆盖 bump / pulse
+      // =====================
+      &--background.z-tabbar-item--active {
+        animation: tabShake 0.3s ease-in-out;
+      }
 }
 
 .z-tabbar-item--active.z-tabbar-item--animate {
-  animation-name: pulse;
-  animation-duration: 500ms;
-  animation-timing-function: ease-in-out;
+  animation: pulse 0.5s ease-in-out;
 }
 
+/*  动画：放大*/
 @keyframes pulse {
   0% {
     transform: scale3d(1, 1, 1);
@@ -129,4 +164,16 @@ export default {
     transform: scale3d(1, 1, 1);
   }
 }
+
+// ==========新增：左右摇晃关键帧==========
+/*  动画：左右摇晃 */
+@keyframes tabShake  {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(3px); }
+  100% { transform: translateX(0); }
+}
+
 </style>

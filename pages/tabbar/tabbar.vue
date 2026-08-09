@@ -2,7 +2,7 @@
   <DemoPage title="Tabbar">
     <view class="demo-tabbar">
       <demo-block title="基础用法">
-        <z-tabbar :fixed="false" v-model="active">
+        <z-tabbar :fixed="false" v-model="active" animate>
           <z-tabbar-item icon="home">标签</z-tabbar-item>
           <z-tabbar-item icon="search">标签</z-tabbar-item>
           <z-tabbar-item icon="bell">标签</z-tabbar-item>
@@ -26,6 +26,7 @@
           <z-tabbar-item icon="setting" badge="20"> 标签 </z-tabbar-item>
         </z-tabbar>
       </demo-block>
+      
       <demo-block title="自定义图标">
         <z-tabbar :fixed="false" v-model="active3">
           <z-tabbar-item badge="3">
@@ -61,21 +62,78 @@
       </demo-block>
 
       <demo-block title="背景">
-        <z-tabbar :fixed="false" v-model="active6" background>
+          <view class="mb-20 text-greyDark text-size-n">
+            背景样式 - 默认
+            </view>
+          <z-tabbar :fixed="false" v-model="active6" background >
+            <z-tabbar-item icon="home">标签</z-tabbar-item>
+            <z-tabbar-item icon="search">标签</z-tabbar-item>
+            <z-tabbar-item icon="bell">标签</z-tabbar-item>
+            <z-tabbar-item icon="setting" badge="5">标签</z-tabbar-item>
+          </z-tabbar>
+          
+          <view class="my-20 text-greyDark text-size-n">
+          背景样式 + 自定义颜色
+          </view>
+        <z-tabbar :fixed="false" v-model="active_bg_2" background  class="ceui-tabbar">
           <z-tabbar-item icon="home">标签</z-tabbar-item>
           <z-tabbar-item icon="search">标签</z-tabbar-item>
           <z-tabbar-item icon="bell">标签</z-tabbar-item>
           <z-tabbar-item icon="setting" badge="5">标签</z-tabbar-item>
         </z-tabbar>
       </demo-block>
+      
       <demo-block title="圆角">
-        <z-tabbar :fixed="false" v-model="active7" float background>
+        <z-tabbar :fixed="false" v-model="active7" float background class="ceui-tabbar">
           <z-tabbar-item icon="home">标签</z-tabbar-item>
           <z-tabbar-item icon="search">标签</z-tabbar-item>
           <z-tabbar-item icon="bell">标签</z-tabbar-item>
           <z-tabbar-item icon="setting" badge="5">标签</z-tabbar-item>
         </z-tabbar>
       </demo-block>
+      
+      <demo-block title="动画">
+          <view class="my-20 text-greyDark text-size-n">
+            默认样式 - 默认动画
+          </view>
+          <z-tabbar :fixed="false" v-model="an_1"  >
+            <z-tabbar-item icon="home">标签</z-tabbar-item>
+            <z-tabbar-item icon="search">标签</z-tabbar-item>
+            <z-tabbar-item icon="bell">标签</z-tabbar-item>
+            <z-tabbar-item icon="setting" badge="5">标签</z-tabbar-item>
+          </z-tabbar>
+          
+          <view class="my-20 text-greyDark text-size-n">
+            默认样式 + 开启 animate=true 动画
+            </view>
+          <z-tabbar :fixed="false" v-model="an_2"  animate >
+            <z-tabbar-item icon="home">标签</z-tabbar-item>
+            <z-tabbar-item icon="search">标签</z-tabbar-item>
+            <z-tabbar-item icon="bell">标签</z-tabbar-item>
+            <z-tabbar-item icon="setting" badge="5">标签</z-tabbar-item>
+          </z-tabbar>
+          
+          <view class="my-20 text-greyDark text-size-n">
+            背景样式 - 默认动画
+            </view>
+          <z-tabbar :fixed="false" v-model="an_3" background class="ceui-tabbar">
+            <z-tabbar-item icon="home">标签</z-tabbar-item>
+            <z-tabbar-item icon="search">标签</z-tabbar-item>
+            <z-tabbar-item icon="bell">标签</z-tabbar-item>
+            <z-tabbar-item icon="setting" badge="5">标签</z-tabbar-item>
+          </z-tabbar>
+          
+          <view class="my-20 text-greyDark text-size-n">
+          背景样式 + 开启 animate=true 动画
+          </view>
+        <z-tabbar :fixed="false" v-model="an_4" background animate class="ceui-tabbar">
+          <z-tabbar-item icon="home">标签</z-tabbar-item>
+          <z-tabbar-item icon="search">标签</z-tabbar-item>
+          <z-tabbar-item icon="bell">标签</z-tabbar-item>
+          <z-tabbar-item icon="setting" badge="5">标签</z-tabbar-item>
+        </z-tabbar>
+      </demo-block>
+      
       <demo-block title="圆角悬浮">
         <z-tabbar :fixed="true" placeholder v-model="active8" float background>
           <z-tabbar-item icon="home">标签</z-tabbar-item>
@@ -97,7 +155,12 @@ const active3 = ref(0)
 const active4 = ref(0)
 const active5 = ref(0)
 const active6 = ref(0)
+const active_bg_2 = ref(0)
 const active7 = ref(0)
+const an_1 = ref(0)
+const an_2 = ref(0)
+const an_3 = ref(0)
+const an_4 = ref(0)
 const active8 = ref(0)
 const activeName = ref('home')
 
@@ -117,4 +180,10 @@ const onChange = (index: number) => {
     height: 40rpx;
   }
 }
+
+.ceui-tabbar{
+    --z-tabbar-item-active-color: #fff;
+    --z-tabbar-item-active-background: var(--primary);
+}
+
 </style>
