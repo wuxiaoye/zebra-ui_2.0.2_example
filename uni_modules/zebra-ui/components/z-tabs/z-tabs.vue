@@ -1158,7 +1158,7 @@ export default {
   bottom: -100%;
   left: 0;
   transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
-  background-color:  var(--z-tab-card-active-background-color);
+  background:  var(--z-tab-card-active-background-color);
   z-index: 1;
 }
 .z-tab--card .z-tab__text {

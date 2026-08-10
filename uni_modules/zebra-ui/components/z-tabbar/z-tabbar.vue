@@ -102,7 +102,11 @@ const props = defineProps({
   },
   background: Boolean,
   float: Boolean,
-  animate: Boolean
+  animate: Boolean,
+  isBoxShadow: {
+      type: Boolean,
+      default: true
+  }
 })
 
 const emit = defineEmits(['change', 'update:modelValue'])
@@ -136,6 +140,10 @@ const backgroundContentStyle = computed(() => {
       styles['border-top-right-radius'] = '50rpx'
       styles['border-bottom-right-radius'] = '50rpx'
     }
+  }
+  //设置内阴影
+  if( props.isBoxShadow ){
+      styles['box-shadow'] = 'var(--aye-shadow-inset)'
   }
   return { ...styles }
 })
@@ -212,7 +220,7 @@ export default {
     &--content {
       width: 100%;
       height: 100%;
-      background-color: var(--z-tabbar-item-active-background);
+      background: var(--z-tabbar-item-active-background);
       border-radius: 10rpx;
     }
   }

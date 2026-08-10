@@ -743,7 +743,7 @@ page {
   --z-tab-line-active-text-color: var(--blackDark);
   --z-tab-card-text-color: var(--greyDark);
   --z-tab-card-active-text-color: var(--white);
-  --z-tab-card-active-background-color: var(--primary);
+  --z-tab-card-active-background-color: linear-gradient(135deg,  var(--primary-light),  var(--primary) );
   --z-tab-disabled-text-color: var(--greyLight-3);
   --z-tab-font-size: var(--z-font-size-md);
   --z-tab-line-height: var(--z-line-height-md);
@@ -792,7 +792,7 @@ page {
   --z-tabbar-item-font-size: var(--z-font-size-sm);
   --z-tabbar-item-text-color: var(--z-text-color);
   --z-tabbar-item-active-color: var(--z-primary-color);
-  --z-tabbar-item-active-background: #f2f3ff;
+  --z-tabbar-item-active-background: var(--greyLight-1);
   --z-tabbar-item-line-height: 1;
   --z-tabbar-item-icon-size: 44rpx;
   --z-tabbar-item-icon-margin-bottom: var(--z-padding-base);

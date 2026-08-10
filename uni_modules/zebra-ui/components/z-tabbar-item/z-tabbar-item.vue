@@ -126,7 +126,7 @@ export default {
   font-size: var(--z-tabbar-item-font-size);
   line-height: var(--z-tabbar-item-line-height);
   color: var(--z-tabbar-item-text-color);
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 
   &--active {
     color: var(--z-tabbar-item-active-color);
