@@ -502,6 +502,12 @@
         "navigationBarTitleText": "TreeSelect",
         "navigationStyle": "custom"
       }
+    },
+    {
+        "path": "pages/tip/tip",
+        "style": {
+            "navigationBarTitleText": ""
+        }
     }
     
   ],

@@ -221,6 +221,11 @@ export default [
         path: '/swipeCell',
         title: 'SwipeCell 滑动单元格',
         image: 'swipeCell'
+      },
+      {
+        path: '/tip',
+        title: 'aye-tip 弹出通知',
+        image: 'actionSheet'
       }
     ]
   },

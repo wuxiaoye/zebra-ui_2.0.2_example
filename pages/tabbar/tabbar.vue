@@ -182,6 +182,7 @@ const onChange = (index: number) => {
 }
 
 .ceui-tabbar{
+    --z-tabbar-item-text-color: var(--greyDark);
     --z-tabbar-item-active-color: #fff;
     --z-tabbar-item-active-background: linear-gradient(135deg,  var(--primary-light),  var(--primary) );
 }
