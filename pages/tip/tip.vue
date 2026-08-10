@@ -1,6 +1,6 @@
 <template>
   <view class="page" style="
-  background-color: #000; 
+  background-color: var(--greyLight-1); 
   min-height: 100vh;
   ">
     <view class="my-10"></view>
@@ -150,7 +150,7 @@ export default {
         type: "default",
         // title: "收藏成功",
         msg: "已收藏",
-        stay: 0, // 永久，等用户操作
+        // stay: 0, // 永久，等用户操作
         actionText: "管理分类",
         actionClick: () => {
           aa.showTagPopup = true;

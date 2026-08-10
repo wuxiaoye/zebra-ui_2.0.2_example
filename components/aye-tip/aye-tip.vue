@@ -294,14 +294,13 @@ export default {
 }
 .tip-title {
   font-size: 28rpx;
-  color: var(--greyDark);
+  color: #e7e7e7;
   font-weight: 500;
   line-height: 1.4;
   margin-bottom: 6rpx;
 }
 .tip-desc {
   font-size: 24rpx;
-  color: var(--greyDark);
   color: #fff;
   line-height: 1.5;
   max-height: 66rpx;
