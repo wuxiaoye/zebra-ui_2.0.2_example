@@ -193,6 +193,7 @@ export default {
     height: var(--z-floating-panel-header-height);
     cursor: grab;
     user-select: none;
+    border-bottom: var(--greyLight-1-dark) solid 1px;
 
     &-bar {
       width: var(--z-floating-panel-bar-width);
