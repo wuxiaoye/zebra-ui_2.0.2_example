@@ -113,7 +113,7 @@ export default {
         actionText: opt.actionText || "",
         actionClick: opt.actionClick,
         closeAfterAction: opt.closeAfterAction ?? true,
-        // 首帧即显示态，避免真机首条卡在 opacity:0
+        // 首帧即显示态，进场动画由 CSS animation 自动播放
         show: true,
         timer: null,
       };
@@ -194,40 +194,20 @@ export default {
   align-items: flex-end;
   justify-content: flex-start;
 }
-/* 右下：靠下靠右，距底 150px（300rpx - 外层30rpx = 270rpx） */
+/* 右下：靠下靠右，距底 150px */
 .bottom-right {
   align-items: flex-end;
   justify-content: flex-end;
   padding-bottom: 150px;
 }
-/* 左下：靠下靠左，距底 150px（300rpx - 外层30rpx = 270rpx） */
+/* 左下：靠下靠左，距底 150px */
 .bottom-left {
   align-items: flex-start;
   justify-content: flex-end;
   padding-bottom: 150px;
 }
 
-/* 右侧两类：从右到左划入，使用反向动画 */
-.top-right .aye-tip-item,
-.bottom-right .aye-tip-item {
-  animation-name: aye-tip-in-right;
-}
-.top-right .ani-hide,
-.bottom-right .ani-hide {
-  transform: translateX(120%);
-}
-
-@keyframes aye-tip-in-right {
-  from {
-    opacity: 0;
-    transform: translateX(120%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
+/* 进场：左侧两类从左到右划入 */
 .aye-tip-item {
   width: 81%;
   max-width: 560rpx;
@@ -240,11 +220,26 @@ export default {
   align-items: center;
   margin: 16rpx 0;
   pointer-events: auto;
-  /* 退场过渡 */
-  transition: opacity 0.3s ease, transform 0.3s ease;
   /* 进场动画：每次插入元素自动播放（从左到右划入） */
   animation: aye-tip-in 0.3s ease both;
   box-shadow: 3px 3px 6px var(--greyLight-2), -2px -2px 5px var(--white);
+}
+
+/* 进场：右侧两类从右到左划入 */
+.top-right .aye-tip-item,
+.bottom-right .aye-tip-item {
+  animation-name: aye-tip-in-right;
+}
+
+/* 退场：左侧两类向右滑回左侧屏幕外（与"从左到右进场"相反） */
+.ani-hide {
+  animation: aye-tip-out 0.3s ease both;
+}
+
+/* 退场：右侧两类向左滑回右侧屏幕外（与"从右到左进场"相反） */
+.top-right .ani-hide,
+.bottom-right .ani-hide {
+  animation-name: aye-tip-out-right;
 }
 
 @keyframes aye-tip-in {
@@ -257,11 +252,36 @@ export default {
     transform: translateX(0);
   }
 }
-
-/* 退场：反向滑回左侧 */
-.ani-hide {
-  opacity: 0;
-  transform: translateX(-120%);
+@keyframes aye-tip-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(120%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* 退场与进场方向相反，opacity 由关键帧平滑渐变，不会瞬间消失 */
+@keyframes aye-tip-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-120%);
+  }
+}
+@keyframes aye-tip-out-right {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(120%);
+  }
 }
 
 .tip-icon {
