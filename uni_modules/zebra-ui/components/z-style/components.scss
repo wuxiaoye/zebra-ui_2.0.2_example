@@ -708,16 +708,16 @@ page {
   // --z-step-text-color: var(--z-text-color-2);
   // --z-step-active-color: var(--z-primary-color);
   // --z-step-process-text-color: var(--z-text-color);
-  --z-step-text-color: var(--z-text-color-2); //未进行的
+  --z-step-text-color: var(--greyDark); //未进行的
   --z-step-active-color: var(--z-primary-color);//当前的
-  --z-step-process-text-color: var(--secondary);//
+  --z-step-process-text-color: var(--greyDark);//
   --z-step-font-size: var(--z-font-size-md);
   --z-step-line-color: var(--z-border-color);
   --z-step-finish-line-color: var(--z-primary-color);
   --z-step-finish-text-color: var(--z-text-color);
-  --z-step-icon-size: 24rpx;
-  --z-step-circle-size: 10rpx;
-  --z-step-circle-color: var(--z-gray-6);
+  --z-step-icon-size: 34rpx;
+  --z-step-circle-size: 20rpx;
+  --z-step-circle-color: var(--greyDark);
   --z-step-horizontal-title-font-size: var(--z-font-size-sm);
 
   // switch
