@@ -4,7 +4,8 @@
       <z-tabs>
         <z-tab title="基础用法">
           <z-floating-panel>
-            <z-cell-group>
+              <view class="py-20">
+            <z-cell-group inset>
               <z-cell
                 v-for="i in 26"
                 :key="i"
@@ -12,6 +13,7 @@
                 size="large"
               />
             </z-cell-group>
+                </view>
           </z-floating-panel>
         </z-tab>
 
