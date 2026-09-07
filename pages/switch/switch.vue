@@ -2,12 +2,12 @@
   <DemoPage title="Switch">
     <view class="demo-switch">
       <demo-block title="基础用法">
-        <aye-switch v-model="checked2"></aye-switch>
+        <aye-switch width="45px" v-model="checked2"></aye-switch>
         <view class="my-20"></view>
-        <aye-switch2 v-model="checked2"></aye-switch2>
+        <aye-switch2  width="45px" v-model="checked2"></aye-switch2>
         <view class="my-20"></view>
         
-        <z-switch v-model="checked" />
+        <z-switch  size="20px" v-model="checked" />
       </demo-block>
       
       <demo-block title="禁用状态">
@@ -70,7 +70,7 @@
           </z-cell>
         <z-cell center title="标题">
           <template #right-icon>
-            <z-switch v-model="checked" />
+            <z-switch v-model="checked" size="20px" />
           </template>
         </z-cell>
       </demo-block>

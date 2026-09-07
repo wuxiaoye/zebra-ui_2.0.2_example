@@ -728,12 +728,12 @@ page {
   --z-switch-on-background: linear-gradient(330deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
   --z-switch-on-loading-background : var(--primary);
   --z-switch-size: 52rpx;
-  --z-switch-width: calc(1.8em + 8rpx);
+  --z-switch-width: calc(2.2em + 8rpx);
   --z-switch-height: calc(1em + 8rpx);
   --z-switch-node-size: 1em;
   // --z-switch-node-background: var(--z-white);
   //关闭时-圆点颜色
-  --z-switch-node-background: var(--greyLight-3);
+  --z-switch-node-background: var(--greyDark);
   //开启时-圆点颜色
   --z-switch-on-node-background: #fff;
   --z-switch-node-shadow: 0 6rpx 2rpx 0 rgb(0 0 0 / 5%);
