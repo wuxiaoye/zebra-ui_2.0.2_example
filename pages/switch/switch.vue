@@ -53,7 +53,16 @@
           </template>
         </z-switch>
       </demo-block>
+      
       <demo-block title="异步控制">
+         <aye-switch v-model="switchVal" asyncChange @change="handleSwitchChange" />
+         
+         <view class="my-20"></view>
+         
+         <aye-switch2 v-model="switchVal2" asyncChange @change="handleSwitchChange2" />
+         
+         <view class="my-20"></view>
+         
         <z-switch :model-value="checked" @update:model-value="onUpdateValue" />
       </demo-block>
       
@@ -91,6 +100,35 @@ const onUpdateValue = (newValue: any) => {
     })
     .then(() => {
       checked.value = newValue
+    })
+}
+
+const switchVal = ref(false);
+function handleSwitchChange(newVal) {
+  console.log('开关状态变为：', newVal);
+  // 执行您的自定义逻辑
+  dialog
+    .showConfirmDialog({
+      title: '提醒',
+      message: '是否切换开关？'
+    })
+    .then(() => {
+      switchVal.value = newVal
+    })
+}
+
+
+const switchVal2 = ref(false);
+function handleSwitchChange2(newVal) {
+  console.log('开关状态变为：', newVal);
+  // 执行您的自定义逻辑
+  dialog
+    .showConfirmDialog({
+      title: '提醒',
+      message: '是否切换开关？'
+    })
+    .then(() => {
+      switchVal2.value = newVal
     })
 }
 </script>

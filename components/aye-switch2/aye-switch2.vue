@@ -25,10 +25,15 @@ const props = defineProps({
     disabled: {
       type: Boolean,
       default: false
+    },
+    /** 是否启用异步控制：为 true 时，点击不自动更新 modelValue，仅触发 change 事件由父组件异步控制 */
+    asyncChange: {
+      type: Boolean,
+      default: false
     }
 });
 
-const emit = defineEmits(['update:modelValue']);
+const emit = defineEmits(['update:modelValue', 'change']);
 
 // 解析宽度，生成 CSS 自定义属性，用于内部样式计算
 const switchStyle = computed(() => {
@@ -46,8 +51,20 @@ const switchStyle = computed(() => {
 });
 
 const toggle = () => {
-    if (props.disabled) return uni.showToast({ title: '已禁用', icon:'none' });
-  emit('update:modelValue', !props.modelValue);
+    if (props.disabled){
+        uni.showToast({ title: '已禁用', icon:'none' });
+        return;
+    }
+    const newVal = !props.modelValue;
+    
+    // 如果是异步控制模式，不更新 modelValue，只触发 change 事件
+    if (props.asyncChange) {
+      emit('change', newVal);
+    } else {
+      // 普通模式：更新 v-model 并触发 change
+      emit('update:modelValue', newVal);
+      emit('change', newVal);
+    }
 };
 </script>
 
