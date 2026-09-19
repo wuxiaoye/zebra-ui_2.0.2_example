@@ -119,7 +119,7 @@ export default {
   line-height: var(--z-tag-line-height);
   color: var(--z-tag-text-color);
   border-radius: var(--z-tag-radius);
-  box-shadow: var(--aye-shadow);
+  box-shadow: var(--zzz-shadow);
 
   &--default {
     background: var(--z-tag-default-color);
@@ -137,7 +137,7 @@ export default {
     }
   }
 
-  &--primary {
+  &--zzz-primary {
     background: var(--z-tag-primary-color);
 
     &.z-tag--plain {

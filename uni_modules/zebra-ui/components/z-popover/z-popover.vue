@@ -423,7 +423,7 @@ export default {
   &__content {
     overflow: hidden;
     border-radius: var(--z-popover-radius);
-    box-shadow: var(--aye-shadow);
+    box-shadow: var(--zzz-shadow);
 
     &--horizontal {
       display: flex;

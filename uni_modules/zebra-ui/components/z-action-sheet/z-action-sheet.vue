@@ -223,7 +223,7 @@ export default {
 
   &__item {
     line-height: var(--z-action-sheet-item-line-height);
-    box-shadow: var(--aye-shadow-bottom-mini);
+    box-shadow: var(--zzz-shadow-bottom-mini);
     margin-bottom: 1px;
 
     &--loading,
@@ -272,7 +272,7 @@ export default {
     display: block;
     height: var(--z-action-sheet-cancel-padding-top);
     background: var(--z-action-sheet-cancel-padding-color);
-    box-shadow: var(--aye-shadow-inset);
+    box-shadow: var(--zzz-shadow-inset);
   }
 
   &__header {

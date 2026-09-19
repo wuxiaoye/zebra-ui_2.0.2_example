@@ -222,7 +222,7 @@ export default {
   border-radius: var(--z-button-radius);
   transition: opacity var(--z-duration-fast);
   -webkit-font-smoothing: auto;
-  box-shadow: var(--aye-shadow);
+  box-shadow: var(--zzz-shadow);
 
   &::before {
     position: absolute;
@@ -262,6 +262,13 @@ export default {
     background: var(--z-button-primary-background);
     border: var(--z-button-border-width) solid
       var(--z-button-primary-border-color);
+  }
+  
+  &--zi {
+    color: var(--z-button-zi-color);
+    background: var(--z-button-zi-background);
+    border: var(--z-button-border-width) solid
+      var(--z-button-zi-border-color);
   }
 
   &--success {
@@ -305,10 +312,14 @@ export default {
 
   &--plain {
     background: var(--z-button-plain-background);
-    box-shadow: var(--aye-shadow-inset);
+    box-shadow: var(--zzz-shadow-inset);
 
     &.z-button--primary {
       color: var(--z-button-primary-background);
+    }
+    
+    &.z-button--zi {
+      color: var(--z-button-zi-background);
     }
 
     &.z-button--success {

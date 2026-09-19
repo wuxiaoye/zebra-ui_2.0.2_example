@@ -186,7 +186,7 @@ export default {
       box-shadow: var(--z-dropdown-menu-scrollable-box-shadow);
       
       /* ===== 核心CSS 右侧内阴影渐变提示 ===== */
-        background-image: linear-gradient(to left, rgba(200, 208, 231, 0.7) 1px, var(--greyLight-1-dark), rgba(255, 255, 255, 0) 70rpx);
+        background-image: linear-gradient(to left, rgba(200, 208, 231, 0.7) 1px, var(--zzz-greyLight-1-dark), rgba(255, 255, 255, 0) 70rpx);
         background-repeat: no-repeat;
         background-position: right 0 top 0;
         background-size: 80rpx 100%;

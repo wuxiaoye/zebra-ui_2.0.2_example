@@ -33,7 +33,7 @@ export default {
   &-paragraph {
     height: var(--z-skeleton-paragraph-height);
     background: var(--z-skeleton-paragraph-background);
-    box-shadow: var(--aye-shadow-inset-more-big);
+    box-shadow: var(--zzz-shadow-inset-more-big);
     border-radius: var(--z-radius-sm);
 
     &--round {

@@ -580,7 +580,7 @@ export default {
     cursor: pointer;
     user-select: none;
     border-radius: 12px;
-    box-shadow: var(--aye-shadow-inset);
+    box-shadow: var(--zzz-shadow-inset);
     transition: all 0.4s ease;
 
     // 激活态高亮：颜色由 JS（tabNavStyle）动态控制，

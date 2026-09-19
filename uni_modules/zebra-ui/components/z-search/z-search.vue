@@ -260,7 +260,7 @@ export default {
     
     margin: 0 10px 0 6px;
     border-radius: 24rpx;
-    box-shadow: var(--aye-shadow-inset), var(--aye-shadow);
+    box-shadow: var(--zzz-shadow-inset), var(--zzz-shadow);
   }
 }
 

@@ -207,7 +207,7 @@ const cellStyle = computed(() => {
     styles['cursor'] = 'not-allowed'
   }else{
       if(props.isBoxShadow){
-        styles['box-shadow'] = 'var(--aye-shadow-big)'
+        styles['box-shadow'] = 'var(--zzz-shadow-big)'
       }
   }
   return { ...styles }

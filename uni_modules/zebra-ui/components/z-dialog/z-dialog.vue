@@ -371,7 +371,7 @@ export default {
     font-weight: var(--z-dialog-header-font-weight);
     line-height: var(--z-dialog-header-line-height);
     // color: var(--z-text-color);
-    color: var(--greyDark);
+    color: var(--zzz-greyDark);
     text-align: center;
 
     &--isolated {
@@ -382,7 +382,7 @@ export default {
 
   &__content {
       box-sizing: border-box;
-      box-shadow: var(--aye-shadow-more-big);
+      box-shadow: var(--zzz-shadow-more-big);
       border-radius: 12px;
       margin: 30rpx;
       // padding: 10rpx 0;
@@ -402,7 +402,7 @@ export default {
     font-size: var(--z-dialog-message-font-size);
     line-height: var(--z-dialog-message-line-height);
     color: var(--z-text-color);
-    // color: var(--greyDark);
+    // color: var(--zzz-greyDark);
     text-align: center;
     word-wrap: break-word;
     white-space: pre-wrap;

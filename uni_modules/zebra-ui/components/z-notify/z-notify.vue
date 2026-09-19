@@ -137,7 +137,7 @@ export default {
   white-space: pre-wrap;
 
   &__placeholder {
-    &--primary {
+    &--zzz-primary {
       background: var(--z-notify-primary-background);
     }
 
@@ -154,7 +154,7 @@ export default {
     }
   }
 
-  &--primary {
+  &--zzz-primary {
     background: var(--z-notify-primary-background);
   }
 

@@ -26,10 +26,10 @@
         :style="{
             boxSizing: 'border-box',
             margin: '6px',
-            boxShadow: 'var(--aye-shadow)',
+            boxShadow: 'var(--zzz-shadow)',
             // borderWidth: '2px',
               // borderStyle: 'solid',
-              // borderColor: 'rgba(255, 255, 255, 0.7)  var(--greyLight-2) var(--greyLight-2) rgba(255, 255, 255, 0.7)',
+              // borderColor: 'rgba(255, 255, 255, 0.7)  var(--zzz-greyLight-2) var(--zzz-greyLight-2) rgba(255, 255, 255, 0.7)',
         }"
     >
         

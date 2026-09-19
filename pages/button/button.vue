@@ -20,7 +20,11 @@
         <view class="demo-button-item">
           <z-button type="text">文字按钮</z-button>
         </view>
+        <view class="demo-button-item">
+          <z-button type="zi">紫色按钮</z-button>
+        </view>
       </demo-block>
+      
       <demo-block title="镂空按钮">
         <view class="demo-button-item">
           <z-button plain type="primary">主要按钮</z-button>
@@ -37,15 +41,19 @@
         <view class="demo-button-item">
           <z-button plain type="danger">危险按钮</z-button>
         </view>
+        <view class="demo-button-item">
+          <z-button plain type="zi">紫色按钮</z-button>
+        </view>
       </demo-block>
       <demo-block title="禁用">
         <view class="demo-button-item">
-          <z-button disabled type="primary">主要按钮</z-button>
+          <z-button disabled type="zi">主要按钮</z-button>
         </view>
         <view class="demo-button-item">
           <z-button disabled type="success">成功按钮</z-button>
         </view>
       </demo-block>
+      
       <demo-block title="加载">
         <view class="demo-button-item">
           <z-button loading type="primary"></z-button>
@@ -57,14 +65,16 @@
           <z-button loading type="success" loading-text="加载中..." />
         </view>
       </demo-block>
+      
       <demo-block title="形状">
         <view class="demo-button-item">
-          <z-button square type="primary">方形按钮</z-button>
+          <z-button square type="zi">方形按钮</z-button>
         </view>
         <view class="demo-button-item">
-          <z-button round type="success">圆形按钮</z-button>
+          <z-button round type="zi">圆形按钮</z-button>
         </view>
       </demo-block>
+      
       <demo-block title="图标按钮">
         <view class="demo-button-item">
           <z-button icon="plus" type="primary"></z-button>
@@ -95,15 +105,17 @@
           <z-button size="mini" type="primary">迷你按钮</z-button>
         </view>
       </demo-block>
+      
       <demo-block title="块级按钮">
         <z-button block type="primary">块级按钮</z-button>
       </demo-block>
+      
       <demo-block title="自定义按钮">
         <view class="demo-button-item">
-          <z-button color="#7232dd">单色按钮</z-button>
+          <z-button color="#ffaa00">单色按钮</z-button>
         </view>
         <view class="demo-button-item">
-          <z-button color="#7232dd" plain>单色按钮</z-button>
+          <z-button color="#ffaa00" plain>单色按钮</z-button>
         </view>
         <view class="demo-button-item">
           <z-button color="linear-gradient(to right, #ff6034, #ee0a24)">
@@ -111,6 +123,7 @@
           </z-button>
         </view>
       </demo-block>
+      
       <demo-block title="动画按钮">
         <z-button type="danger">
           <z-swipe

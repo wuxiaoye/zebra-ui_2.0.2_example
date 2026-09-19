@@ -385,7 +385,7 @@ export default {
   border-radius: var(--z-radius-max);
   //  未激活状态颜色
   // background: var(--z-slider-inactive-background);
-  box-shadow: inset 4rpx 4rpx 10rpx var(--greyLight-2), inset -4rpx -4rpx 10rpx var(--white);
+  box-shadow: inset 4rpx 4rpx 10rpx var(--zzz-greyLight-2), inset -4rpx -4rpx 10rpx var(--zzz-white);
 
   &::before {
     position: absolute;
@@ -417,7 +417,7 @@ export default {
       width: var(--z-slider-bar-height);
       height: var(--z-slider-bar-height);
       border-radius: 50%;
-      box-shadow: inset 4rpx 4rpx 10rpx var(--greyLight-2), inset -4rpx -4rpx 10rpx var(--white);
+      box-shadow: inset 4rpx 4rpx 10rpx var(--zzz-greyLight-2), inset -4rpx -4rpx 10rpx var(--zzz-white);
       transform: translate(50%, 50%);
     }
 
@@ -481,8 +481,8 @@ export default {
         justify-content: center;
         align-items: center;
         font-size: 24rpx;
-        color: var(--primary);
-        box-shadow: 6rpx 6rpx 12rpx var(--greyLight-2), -4rpx -4rpx 10rpx var(--white);
+        color: var(--zzz-primary);
+        box-shadow: 6rpx 6rpx 12rpx var(--zzz-greyLight-2), -4rpx -4rpx 10rpx var(--zzz-white);
         opacity: 0;
         transition: opacity 0.3s ease;
         transform: translateX(-50%);

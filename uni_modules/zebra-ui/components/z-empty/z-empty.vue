@@ -139,7 +139,7 @@ export default {
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: var(--greyDark);
+  color: var(--zzz-greyDark);
 }
 
 .aye-error-network:before {
@@ -162,8 +162,8 @@ export default {
   width: 128rpx;
   height: 128rpx;
   border-radius: 50%;
-  background: var(--greyLight-1);
-  box-shadow: inset 0.4rem 0.4rem 0.8rem var(--greyLight-2), inset -0.4rem -0.4rem 0.8rem var(--white);
+  background: var(--zzz-greyLight-1);
+  box-shadow: inset 0.4rem 0.4rem 0.8rem var(--zzz-greyLight-2), inset -0.4rem -0.4rem 0.8rem var(--zzz-white);
 }
 
 .z-empty {

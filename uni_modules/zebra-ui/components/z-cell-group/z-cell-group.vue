@@ -52,7 +52,7 @@ const instance = getCurrentInstance()!
 <style lang="scss" scoped>
 .z-cell-group {
   &--inset {
-    box-shadow: 3px 3px 6px var(--greyLight-2), -2px -2px 5px var(--white);
+    box-shadow: 3px 3px 6px var(--zzz-greyLight-2), -2px -2px 5px var(--zzz-white);
     margin: var(--z-cell-group-inset-padding);
     overflow: hidden;
     border-radius: var(--z-cell-group-inset-radius);

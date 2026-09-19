@@ -174,7 +174,7 @@ export default {
   border-top-left-radius: var(--z-floating-panel-border-radius);
   border-top-right-radius: var(--z-floating-panel-border-radius);
   will-change: transform;
-    box-shadow: var(--aye-shadow);
+    box-shadow: var(--zzz-shadow);
 
   &::after {
     position: absolute;
@@ -193,7 +193,7 @@ export default {
     height: var(--z-floating-panel-header-height);
     cursor: grab;
     user-select: none;
-    border-bottom: var(--greyLight-1-dark) solid 1px;
+    border-bottom: var(--zzz-greyLight-1-dark) solid 1px;
 
     &-bar {
       width: var(--z-floating-panel-bar-width);

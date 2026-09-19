@@ -788,7 +788,7 @@ export default {
     
     
      &--input-box-shadow{
-        box-shadow: var(--aye-shadow-inset);
+        box-shadow: var(--zzz-shadow-inset);
         border-radius: 20rpx;
         padding-left: 22rpx !important;
         padding-right: 18rpx !important;
@@ -796,7 +796,7 @@ export default {
     }
     
     &--textarea-box-shadow{
-        box-shadow: var(--aye-shadow-inset);
+        box-shadow: var(--zzz-shadow-inset);
         border-radius: 20rpx;
         padding:  18rpx !important;
         color: var(--z-field-textarea-text-color);

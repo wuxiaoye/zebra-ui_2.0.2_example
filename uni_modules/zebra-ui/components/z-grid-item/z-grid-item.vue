@@ -67,7 +67,7 @@ const props = defineProps({
   },
   iconBackground:{
       type: String,
-      default: 'var(--primary)'
+      default: 'var(--zzz-primary)'
   },
   iconPrefix: String,
   badgeProps: Object
@@ -153,14 +153,14 @@ export default {
 .icon-wrap{
     border-radius: 14rpx;
     padding: 16rpx;
-    background: var(--primary);
+    background: var(--zzz-primary);
     box-shadow: var(--z-grid-item-icon-box-shadow);
 }
     
 .z-grid-item {
   position: relative;
   box-sizing: border-box;
-  // box-shadow: var(--aye-shadow);
+  // box-shadow: var(--zzz-shadow);
 
   &--square {
     height: 0;

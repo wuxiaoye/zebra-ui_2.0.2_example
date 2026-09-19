@@ -54,11 +54,11 @@ const props = defineProps({
   },
   iconColor:{
       type: String,
-      default: 'var(--greyDark)'
+      default: 'var(--zzz-greyDark)'
   },
   activeIconColor:{
       type: String,
-      default: 'var(--white)'
+      default: 'var(--zzz-white)'
   },
 })
 const emit = defineEmits(['click'])

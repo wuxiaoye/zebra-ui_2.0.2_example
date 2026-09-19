@@ -143,7 +143,7 @@ const backgroundContentStyle = computed(() => {
   }
   //设置内阴影
   if( props.isBoxShadow ){
-      styles['box-shadow'] = 'var(--aye-shadow-inset)'
+      styles['box-shadow'] = 'var(--zzz-shadow-inset)'
   }
   return { ...styles }
 })

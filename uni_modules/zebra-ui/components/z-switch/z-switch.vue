@@ -95,7 +95,7 @@ export default {
   font-size: var(--z-switch-size);
   background: var(--z-switch-background);
   border-radius: var(--z-switch-node-size);
-  box-shadow: var(--aye-shadow);
+  box-shadow: var(--zzz-shadow);
   transition: all 0.4s ease;
 
   &__node {

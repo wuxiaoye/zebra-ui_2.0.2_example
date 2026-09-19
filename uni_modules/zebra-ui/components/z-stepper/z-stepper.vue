@@ -371,10 +371,10 @@ export default {
         opacity: 0.6;
         
       box-shadow: 0 0 0;
-      border: var(--greyLight-2) solid 1px;
-      background-color: var(--greyLight-1);
+      border: var(--zzz-greyLight-2) solid 1px;
+      background-color: var(--zzz-greyLight-1);
        .text-icon{
-           color: var(--greyLight-2);
+           color: var(--zzz-greyLight-2);
        }
        
     }
