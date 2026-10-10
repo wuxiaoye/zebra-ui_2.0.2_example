@@ -180,7 +180,7 @@
 	@import '@/uni_modules/uv-ui-tools/libs/css/color.scss';
 	$uv-notify-padding: 8px 10px !default;
 	$uv-notify-text-font-size: 15px !default;
-	$uv-notify-primary-bgColor: $uv-primary !default;
+	$uv-notify-primary-bgColor: #1989fa !default;
 	$uv-notify-success-bgColor: $uv-success !default;
 	$uv-notify-error-bgColor: $uv-error !default;
 	$uv-notify-warning-bgColor: $uv-warning !default;

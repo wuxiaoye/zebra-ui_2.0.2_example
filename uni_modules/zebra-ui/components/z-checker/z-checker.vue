@@ -199,6 +199,7 @@ const iconStyle = computed(() => {
   let checkedStyle: CSSProperties = {}
   let disabledStyle: CSSProperties = {}
   if (props.role === 'checkbox') {
+      //多选组件
     style = {
       display: 'block',
       boxSizing: 'border-box',
@@ -208,7 +209,7 @@ const iconStyle = computed(() => {
       fontSize: '0.8em',
       lineHeight: '1.25',
       textAlign: 'center',
-      border: '1rpx solid var(--z-checkbox-border-color)',
+      border: '1px solid var(--z-checkbox-border-color)',
       transitionDuration: 'var(--z-checkbox-duration)',
       transitionProperty: 'color, border-color, background-color'
     }
@@ -236,21 +237,25 @@ const iconStyle = computed(() => {
         borderColor: 'var(--z-checkbox-checked-icon-color)'
       }
     } else {
-      checkedStyle = {}
+      checkedStyle = {
+          borderColor: 'var(--z-checkbox-border-color)'
+      }
     }
 
     if (disabled.value) {
       disabledStyle = {
         'background-color': 'var(--z-checkbox-disabled-background)',
-        'border-color': 'var(--z-checkbox-disabled-icon-color)'
       }
       if (props.checked) {
         disabledStyle['color'] = 'var(--z-checkbox-disabled-icon-color)'
+        disabledStyle['border-color'] = 'var(--z-checkbox-disabled-icon-color)'
       }
     } else {
-      disabledStyle = {}
+      disabledStyle = {
+      }
     }
   } else {
+      //单选组件
     style = {
       display: 'block',
       boxSizing: 'border-box',
@@ -292,8 +297,8 @@ const iconStyle = computed(() => {
     }
   }
 
-  const checkedColor = props.checkedColor || getParentProp('checkedColor')
-
+  const checkedColor = props.checkedColor || getParentProp('checkedColor');
+//当设置了 自定义颜色
   if (checkedColor && props.checked && !disabled.value) {
     return {
       ...style,
@@ -304,7 +309,10 @@ const iconStyle = computed(() => {
       backgroundColor: checkedColor
     }
   }
-  return { ...style, ...indeterminateStyle, ...checkedStyle, ...disabledStyle }
+  //当没有设置自定义颜色
+  return { ...style, ...indeterminateStyle, ...checkedStyle, ...disabledStyle
+        // , borderColor : ' var(--z-checkbox-border-color)'
+   }
 })
 const onClick = (event: any) => {
   if (!disabled.value && !props.labelDisabled) {

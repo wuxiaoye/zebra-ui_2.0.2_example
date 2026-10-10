@@ -273,11 +273,17 @@ export default {
     justify-content: center;
     padding: var(--z-picker-option-padding);
     color: var(--z-picker-option-text-color);
+    transition: all 0.15s ease;
 
     &--disabled {
       cursor: not-allowed;
       opacity: var(--z-picker-option-disabled-opacity);
     }
+    
+    &--selected {
+        color: var(--z-picker-option-selected-text-color, var(--z-picker-option-text-color));
+        font-weight: 700;//var(--z-picker-option-selected-font-weight, 500);
+      }
   }
 }
 </style>

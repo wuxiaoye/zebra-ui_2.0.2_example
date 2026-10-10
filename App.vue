@@ -8,7 +8,10 @@ export default {
 
 <style lang="scss">
 @import './uni_modules/zebra-ui/index';
-// 这里定义了一些基础属性， 深色模式样式
+/**
+ *  这里定义了一些基础属性， 
+ *  包含浅色模式、深色模式 的样式变量
+ */
 @import './common/style/var';
 @import './common/style/icon.css';
 
@@ -16,8 +19,10 @@ export default {
 @import '@/styles/tool-px.css';
 @import '@/styles/aye.scss';
 
-/* 变量定义 */
 :root {
+    /* 变量定义 
+        已转移到上面  './common/style/var'  文件中
+    */
     // --primary-light: #2fe25f;
     // --primary: #07c160;
     // --primary-dark: #0eb805;

@@ -28,48 +28,6 @@
        /*  仅有底部 - 灰色阴影 - 小一些*/
       --zzz-shadow-bottom-mini: 1px 1px 3px var(--zzz-greyLight-2);
       
-      // Color Palette
-      --z-black: #000;
-      --z-white: #fff;
-      
-      --z-gray-1: #f7f8fa;
-      --z-gray-2: #f2f3f5;
-      --z-gray-3: #ebedf0;
-      --z-gray-4: #dcdee0;
-      // --z-gray-5: #c8c9cc;
-      --z-gray-5: var(--zzz-greyDark);
-      --z-gray-6: #969799;
-      --z-gray-7: #646566;
-      --z-gray-8: #333;
-      
-      --z-red: #ee0a24;
-      --z-blue: #1989fa;
-      --z-orange: #ff976a;
-      --z-orange-dark: #ed6a0c;
-      --z-orange-light: #fffbe8;
-      --z-green: #07c160;
-      
-      // Gradient Colors
-      --z-gradient-red: linear-gradient(to right, #ff6034, #ee0a24);
-      --z-gradient-orange: linear-gradient(to right, #ffd01e, #ff8917);
-      
-      // Component Colors
-      --z-primary-color: var(--zzz-primary);
-      --z-success-color: var(--zzz-primary);
-      --z-danger-color: var(--z-red);
-      --z-warning-color: var(--z-orange);
-      --z-text-color: var(--z-gray-8);
-      --z-text-color-2: var(--z-gray-6);
-      // --z-text-color-2: var(--zzz-greyLight-3);
-      --z-text-color-3: var(--z-gray-5);
-      // --z-text-color-3: var(--zzz-greyLight-2);
-      --z-active-color: var(--zzz-greyLight-1-dark);
-      --z-active-opacity: 0.6;
-      --z-disabled-opacity: 0.5;
-      --z-background: var(--z-gray-1);
-      // --z-background-2: var(--z-white);
-      --z-background-2: var(--zzz-greyLight-1);
-      --z-background-3: var(--z-white);
       
       // Padding
       --z-padding-base: 8rpx;
@@ -104,8 +62,7 @@
       --z-ease-in: ease-in;
       
       // Border
-      // --z-border-color: var(--z-gray-3);
-      --z-border-color: var(--zzz-greyLight-3);
+      --z-border-color: #9baacf;//var(--z-gray-3);//var(--zzz-greyDark);
       --z-border-width: 2rpx;
       --z-radius-sm: 4rpx;
       --z-radius-md: 8rpx;
@@ -116,6 +73,36 @@
       --z-shadow-1: 0 2rpx 20rpx rgb(0 0 0 / 5%), 
                             0 8rpx 10rpx rgb(0 0 0 / 8%),
                             0 4rpx 8rpx -2rpx rgb(0 0 0 / 12%);
+                            
+    
+    // calendar
+    --z-calendar-popup-height: 80%;
+    --z-calendar-month-mark-color: var(--zzz-ri-ji-bai_ye-ji-hei);//当前月份-大大的背景数字
+    --z-calendar-day-disabled-color: var(--z-text-color-3);
+    --z-calendar-background: var(--z-background-2);
+    --z-calendar-header-shadow: 0 4rpx 20rpx rgb(125 126 128 / 16%);
+    --z-calendar-header-title-height: 88rpx;
+    --z-calendar-header-title-font-size: var(--z-font-size-lg);
+    --z-calendar-header-subtitle-font-size: var(--z-font-size-md);
+    --z-calendar-weekdays-height: 60rpx;
+    --z-calendar-weekdays-font-size: var(--z-font-size-sm);
+    --z-calendar-month-title-font-size: var(--z-font-size-md);
+    --z-calendar-month-mark-font-size: 320rpx;
+    --z-calendar-day-height: 128rpx;
+    --z-calendar-day-font-size: var(--z-font-size-lg);
+    --z-calendar-day-margin-bottom: 8rpx;
+    --z-calendar-range-edge-color: var(--z-white);
+    --z-calendar-range-edge-background: var(--z-primary-color);
+    --z-calendar-range-middle-color: var(--z-primary-color);
+    --z-calendar-range-middle-background-opacity: 0.1;
+    --z-calendar-selected-day-size: 108rpx;
+    --z-calendar-selected-day-color: var(--z-white);
+    --z-calendar-info-font-size: var(--z-font-size-xs);
+    --z-calendar-info-line-height: var(--z-line-height-xs);
+    --z-calendar-selected-day-background: var(--z-primary-color);
+    --z-calendar-confirm-button-height: 72rpx;
+    --z-calendar-confirm-button-margin: 14rpx 0;
+    
       
       // button
     --z-button-mini-height: 46rpx;
@@ -130,9 +117,9 @@
     --z-button-default-height: 88rpx;
     --z-button-default-line-height: 1.1;
     --z-button-default-font-size: var(--z-font-size-lg);
-    --z-button-default-color: var(--z-text-color);
-    --z-button-default-background: var(--z-background-2);
-    --z-button-default-border-color: var(--z-gray-4);
+    --z-button-default-color: var(--zzz-greyDark);
+    --z-button-default-background: var(--zzz-greyLight-1);
+    --z-button-default-border-color: var(--zzz-greyLight-1);
     --z-button-primary-color: var(--z-white);
     --z-button-primary-background: var(--z-primary-color);
     --z-button-primary-border-color: var(--z-primary-color);
@@ -163,18 +150,17 @@
     --z-cell-line-height: 58rpx;
     --z-cell-vertical-padding: 20rpx;
     --z-cell-horizontal-padding: var(--z-padding-md);
-    --z-cell-text-color: var(--z-text-color);
+    --z-cell-text-color: var(--zzz-ri-hei_ye-bai);
     --z-cell-background: var(--z-background-2);
-    // --z-cell-border-color: var(--z-border-color);
-    --z-cell-border-color: var(--zzz-greyDark);
+    --z-cell-border-color: var(--z-border-color);
     --z-cell-active-color: var(--zzz-greyLight-1-dark);
     --z-cell-required-color: var(--z-danger-color);
-    --z-cell-label-color: var(--z-text-color-2);
+    --z-cell-label-color: var(--zzz-ri-hui_ye-hui);
+    --z-cell-label-color: var(--zzz-ri-hui_ye-hui);
     --z-cell-label-font-size: var(--z-font-size-sm);
     --z-cell-label-line-height: var(--z-line-height-sm);
     --z-cell-label-margin-top: var(--z-padding-base);
-    // --z-cell-value-color: var(--z-text-color-2);
-    --z-cell-value-color: var(--zzz-greyDark);
+    --z-cell-value-color: var(--zzz-ri-hui_ye-lv);
     --z-cell-value-font-size: inherit;
     --z-cell-icon-size: 32rpx;
     // --z-cell-right-icon-color: var(--z-gray-6);
@@ -184,13 +170,14 @@
     --z-cell-large-label-font-size: var(--z-font-size-md);
     --z-cell-large-value-font-size: inherit;
     --z-cell-group-background: var(--z-background-2);
-    --z-cell-group-title-color: var(--z-text-color-2);
+    --z-cell-group-title-color: var(--zzz-ri-hui_ye-hui);
     --z-cell-group-title-padding: var(--z-padding-md) var(--z-padding-md);
     --z-cell-group-title-font-size: var(--z-font-size-md);
     --z-cell-group-title-line-height: 32rpx;
     --z-cell-group-inset-padding: 0 var(--z-padding-md);
     --z-cell-group-inset-radius: var(--z-radius-lg);
     --z-cell-group-inset-title-padding: var(--z-padding-md) var(--z-padding-md);
+    
     
     // popup
     --z-popup-background: var(--z-background-2);
@@ -218,6 +205,22 @@
     --z-toast-position-top-distance: 20%;
     --z-toast-position-bottom-distance: 20%;
     
+    
+    // checkbox
+    --z-checkbox-size: 40rpx;
+    --z-checkbox-border-color: var(--zzz-ri-hui_ye-hui);
+    --z-checkbox-duration: var(--z-duration-fast);
+    --z-checkbox-label-margin: var(--z-padding-xs);
+    --z-checkbox-label-color: var(--zzz-ri-hei_ye-bai);
+    --z-checkbox-checked-icon-color: var(--z-primary-color);
+    --z-checkbox-disabled-icon-color: var(--z-gray-5);
+    --z-checkbox-disabled-label-color: var(--z-text-color-3);
+    --z-checkbox-disabled-background: var(--z-border-color);
+    
+    // checkbox2
+    --z-checkbox2-final-inactive-icon-color: var(--zzz-ri-grey-dark_ye-shen-hui); //最终非活跃图标颜色
+    --z-checkbox2-final-label-color: var(--zzz-ri-hei_ye-bai); //最终文字颜色
+    
     // picker
     --z-picker-background: var(--z-background-2);
     --z-picker-title-font-size: var(--z-font-size-lg);
@@ -228,12 +231,12 @@
     --z-picker-confirm-action-margin : 16px 20px 6px 0;
     --z-picker-cancel-action-margin : 16px 0 6px 20px;
     --z-picker-confirm-action-color: var(--z-primary-color);
-    --z-picker-cancel-action-color: var(--z-text-color-2);
+    --z-picker-cancel-action-color: var(--zzz-ri-hui_ye-hui);
     
     --z-picker-option-font-size: var(--z-font-size-lg);
     --z-picker-option-padding: 0 var(--z-padding-base);
     --z-picker-option-text-color: var(--z-text-color);
-    // --z-picker-option-text-color: var(--zzz-primary);
+    --z-picker-option-selected-text-color: var(--zzz-primary);
     --z-picker-option-disabled-opacity: 0.3;
     --z-picker-loading-icon-color: var(--z-primary-color);
     --z-picker-group-background: var(--z-background-2);
@@ -293,30 +296,6 @@
     --z-barrage-color: var(--z-white);
     --move-distance: 0;
     
-    // calendar
-    --z-calendar-background: var(--z-background-2);
-    --z-calendar-header-shadow: 0 4rpx 20rpx rgb(125 126 128 / 16%);
-    --z-calendar-header-title-height: 88rpx;
-    --z-calendar-header-title-font-size: var(--z-font-size-lg);
-    --z-calendar-header-subtitle-font-size: var(--z-font-size-md);
-    --z-calendar-weekdays-height: 60rpx;
-    --z-calendar-weekdays-font-size: var(--z-font-size-sm);
-    --z-calendar-month-title-font-size: var(--z-font-size-md);
-    --z-calendar-month-mark-font-size: 320rpx;
-    --z-calendar-day-height: 128rpx;
-    --z-calendar-day-font-size: var(--z-font-size-lg);
-    --z-calendar-day-margin-bottom: 8rpx;
-    --z-calendar-range-edge-color: var(--z-white);
-    --z-calendar-range-edge-background: var(--z-primary-color);
-    --z-calendar-range-middle-color: var(--z-primary-color);
-    --z-calendar-range-middle-background-opacity: 0.1;
-    --z-calendar-selected-day-size: 108rpx;
-    --z-calendar-selected-day-color: var(--z-white);
-    --z-calendar-info-font-size: var(--z-font-size-xs);
-    --z-calendar-info-line-height: var(--z-line-height-xs);
-    --z-calendar-selected-day-background: var(--z-primary-color);
-    --z-calendar-confirm-button-height: 72rpx;
-    --z-calendar-confirm-button-margin: 14rpx 0;
     
     // image
     --z-image-placeholder-text-color: var(--zzz-greyDark);
@@ -337,7 +316,7 @@
     --card-border-color: var(--z-border-color);
     --card-background: var(--z-background-2);
     --card-color: var(--z-text-color);
-    --card-subtitle-color: var(--z-text-color-2);
+    --card-subtitle-color: var(--zzz-ri-hui_ye-hui);
     --card-avatar-margin: var(--z-padding-xs);
     --card-description-margin: var(--z-padding-xs);
     --card-title-margin: var(--z-padding-xs);
@@ -348,26 +327,16 @@
     --z-cascader-title-font-size: var(--z-font-size-lg);
     --z-cascader-title-line-height: 40rpx;
     --z-cascader-close-icon-size: 44rpx;
-    --z-cascader-close-icon-color: var(--z-gray-5);
+    --z-cascader-close-icon-color: var(--zzz-ri-hui_ye-hui);
     --z-cascader-selected-icon-size: 36rpx;
+    --z-cascader-selected-icon-color:var(--zzz-primary);
     --z-cascader-tabs-height: 96rpx;
     --z-cascader-active-color: var(--z-primary-color);
     --z-cascader-options-height: 768rpx;
     --z-cascader-option-disabled-color: var(--z-text-color-3);
     // --z-cascader-tab-color: var(--z-text-color);
     --z-cascader-tab-color: var(--zzz-primary);
-    --z-cascader-unselected-tab-color: var(--z-text-color-2);
-    
-    // checkbox
-    --z-checkbox-size: 40rpx;
-    --z-checkbox-border-color: var(--z-gray-5);
-    --z-checkbox-duration: var(--z-duration-fast);
-    --z-checkbox-label-margin: var(--z-padding-xs);
-    --z-checkbox-label-color: var(--z-text-color);
-    --z-checkbox-checked-icon-color: var(--z-primary-color);
-    --z-checkbox-disabled-icon-color: var(--z-gray-5);
-    --z-checkbox-disabled-label-color: var(--z-text-color-3);
-    --z-checkbox-disabled-background: var(--z-border-color);
+    --z-cascader-unselected-tab-color: var(--zzz-ri-hui_ye-hui);
     
     // radio
     --z-radio-size: 40rpx;
@@ -432,7 +401,7 @@
     --z-divider-text-color: var(--zzz-greyDark);
     --z-divider-font-size: var(--z-font-size-md);
     --z-divider-line-height: 48rpx;
-    --z-divider-border-color: var(--z-border-color);
+    --z-divider-border-color: var(--zzz-greyDark);
     --z-divider-content-padding: var(--z-padding-md);
     --z-divider-content-left-width: 10%;
     --z-divider-content-right-width: 10%;
@@ -513,7 +482,7 @@
     --z-grid-item-content-background: var(--z-background-2);
     --z-grid-item-content-active-color: var(--z-active-color);
     --z-grid-item-icon-size: 36rpx;
-    --z-grid-item-text-color: var(--zzz-greyDark);
+    --z-grid-item-text-color: var(--zzz-ri-hui_ye-hui);
     --z-grid-item-text-font-size: var(--z-font-size-sm);
     --z-grid-item-icon-box-shadow: var(--zzz-shadow);
     
@@ -522,7 +491,7 @@
     --z-highlight-tag-color: var(--z-primary-color);
     
     // list
-    --z-list-text-color: var(--z-text-color-2);
+    --z-list-text-color: var(--zzz-ri-hui_ye-hui);
     --z-list-text-font-size: var(--z-font-size-md);
     --z-list-text-line-height: 100rpx;
     --z-list-loading-icon-size: 38rpx;
@@ -562,7 +531,7 @@
     --z-notify-padding: var(--z-padding-xs) var(--z-padding-md);
     --z-notify-font-size: var(--z-font-size-md);
     --z-notify-line-height: var(--z-line-height-md);
-    --z-notify-primary-background: var(--z-primary-color);
+    --z-notify-primary-background: var(--z-blue);
     --z-notify-success-background: var(--z-success-color);
     --z-notify-danger-background: var(--z-danger-color);
     --z-notify-warning-background: var(--z-warning-color);
@@ -593,10 +562,6 @@
     --z-number-keyboard-key-box-shadow: var(--zzz-shadow-mini);
     --z-number-keyboard-key-active-box-shadow: var(--zzz-shadow-inset);
     
-    // Calendar
-    --z-calendar-popup-height: 80%;
-    --z-calendar-month-mark-color: rgb(242 243 245 / 80%);
-    --z-calendar-day-disabled-color: var(--z-text-color-3);
     
     // overlay
     --z-overlay-z-index: 1;
@@ -608,7 +573,7 @@
     --z-password-input-font-size: 40rpx;
     --z-password-input-radius: 12rpx;
     --z-password-input-background: var(--z-background-2);
-    --z-password-input-info-color: var(--z-text-color-2);
+    --z-password-input-info-color: var(--zzz-ri-hui_ye-hui);
     --z-password-input-info-font-size: var(--z-font-size-md);
     --z-password-input-error-info-color: var(--z-danger-color);
     --z-password-input-dot-size: 20rpx;
@@ -659,7 +624,7 @@
     // pullrefresh
     --z-pull-refresh-head-height: 100rpx;
     --z-pull-refresh-head-font-size: var(--z-font-size-md);
-    --z-pull-refresh-head-text-color: var(--z-text-color-2);
+    --z-pull-refresh-head-text-color: var(--zzz-ri-hui_ye-hui);
     --z-pull-refresh-loading-icon-size: 42rpx;
     
     // rate
@@ -711,7 +676,7 @@
     --z-share-sheet-title-color: var(--z-text-color);
     --z-share-sheet-title-font-size: var(--z-font-size-md);
     --z-share-sheet-title-line-height: var(--z-line-height-md);
-    --z-share-sheet-description-color: var(--z-text-color-2);
+    --z-share-sheet-description-color: var(--zzz-ri-hui_ye-hui);
     --z-share-sheet-description-font-size: var(--z-font-size-sm);
     --z-share-sheet-description-line-height: 32rpx;
     --z-share-sheet-icon-size: 96rpx;
@@ -863,7 +828,7 @@
     
     // TextEllipsis
     --z-text-ellipsis-line-height: 1.6;
-    --z-text-ellipsis-action-color: var(--z-blue);
+    --z-text-ellipsis-action-color: var(--zzz-primary);
     
     // Waternark
     --z-watermark-z-index: 100;
@@ -943,6 +908,9 @@
     --z-tree-select-item-disabled-color: var(--z-gray-5);
     --z-tree-select-item-selected-size: 32rpx;
     --z-tree-select-item-color: var(--z-text-color);
+    
+    // icon
+    --z-icon-default-color: var(--zzz-ri-hei_ye-bai);
 }
 
 :root,
@@ -964,12 +932,73 @@ page {
     --zzz-greyLight-2: #c8d0e7;
     --zzz-greyLight-3: #bec8e4;
     --zzz-greyDark: #9baacf;
+    // ==========白天样式=========
+    //名称释义：--zzz-日间模式-颜色值_夜间模式-颜色值
+    // ====== 比 --zzz-greyDark  更黑====== 一般用于标题： 白天-黑色，夜间-白色
+    --zzz-ri-hei_ye-bai: #212121;
     
+        // ====== 比 --zzz-greyDark  更深灰====== 一般用于 辅助描述：白天-深灰色，夜间-偏亮黄灰色
+    --zzz-ri-hui_ye-hui: #969799;
+    
+    
+    // ======  --zzz-greyDark  原色====== 
+    --zzz-ri-grey-dark_ye-qian-hui: #9baacf; //白天-基准灰色，夜间-更偏白
+    --zzz-ri-ye-tong-hui: #9baacf ; //日夜同一个灰色
+    --zzz-ri-grey-dark_ye-shen-hui: #9baacf; //白天-基准灰色，夜间-更偏黑
+    
+    // ====== 比 --zzz-greyDark  更浅灰====== 一般用于 辅助描述：白天-比灰色更偏白，夜间-比灰色更偏黑
+    --zzz-ri-qian-hui_ye-qian-hui: var(--zzz-greyLight-3); //临时，未敲定
+    
+    // ====== 比 --zzz-greyDark  更白====== 一般用于 辅助：白天-浅灰色（非常白），夜间-浅灰色（非常黑）
+    --zzz-ri-ji-bai_ye-ji-hei: #f5f5f7;
+    
+    // 一般用于 选中值：白天-基准灰色（--zzz-greyDark），夜间-品牌绿色
+    --zzz-ri-hui_ye-lv : var(--zzz-greyDark);
+    
+    // Color Palette
+    --z-black: #000;
+    --z-white: #fff;
+    
+    --z-gray-1: #f7f8fa;
+    --z-gray-2: #f2f3f5;
+    --z-gray-3: #ebedf0;
+    --z-gray-4: #dcdee0;
+    // --z-gray-5: #c8c9cc;
+    --z-gray-5: var(--zzz-greyDark);
+    --z-gray-6: #969799;
+    --z-gray-7: #646566;
+    --z-gray-8: #333;
+    
+    --z-red: #ee0a24;
+    --z-blue: #1989fa;
+    --z-orange: #ff976a;
+    --z-orange-dark: #ed6a0c;
+    --z-orange-light: #fffbe8;
+    --z-green: #07c160;
+    
+    // Gradient Colors
+    --z-gradient-red: linear-gradient(to right, #ff6034, #ee0a24);
+    --z-gradient-orange: linear-gradient(to right, #ffd01e, #ff8917);
+    
+    // Component Colors
+    --z-primary-color: var(--zzz-primary);
+    --z-success-color: var(--zzz-primary);
+    --z-danger-color: var(--z-red);
+    --z-warning-color: var(--z-orange);
+    --z-text-color: var(--z-gray-8);
+    --z-text-color-2: var(--z-gray-6);
+    --z-text-color-3: var(--z-gray-5);
+    --z-active-color: var(--zzz-greyLight-1-dark);
+    --z-active-opacity: 0.6;
+    --z-disabled-opacity: 0.5;
+    --z-background: var(--z-gray-1);
+    --z-background-2: var(--zzz-greyLight-1);
+    --z-background-3: var(--z-white);
     @include z-theme-vars;
 }
 
 .z-theme-dark{
-    /* 变量定义 */
+    /*  深色模式- 变量定义 */
     --zzz-primary-light: #2fe25f;
     --zzz-primary: #07c160;
     --zzz-primary-dark: #0eb805;
@@ -978,14 +1007,47 @@ page {
     --zzz-secondary: #6d5dfc;
     --zzz-secondary-dark: #5b0eeb;
     
-    --zzz-white: #a7a9be;
-    --zzz-blackDark: #333;
+    // --zzz-white: #a05e31;
+    --zzz-white: #7b7a79;//#6a5241;  //常用于上边阴影
+    --zzz-blackDark: #2f2f2f;
     
-    --zzz-greyLight-1: #0f0e17;
+    --zzz-greyLight-1: #000000;
     --zzz-greyLight-1-dark: #d8e4f5;
-    --zzz-greyLight-2: #c8d0e7;
+    --zzz-greyLight-2: #7b7a79; //常用于下边阴影
     --zzz-greyLight-3: #bec8e4;
-    --zzz-greyDark: #9baacf;
+    --zzz-greyDark: #c1babc;
+    
+    --zzz-qian-huang: #cfb0a7; //黄色
+    // ==========夜间样式=========
+    //名称释义：--zzz-日间模式-颜色值_夜间模式-颜色值
+    // ====== 比 --zzz-greyDark  更黑====== 一般用于标题： 白天-黑色，夜间-白色
+   	--zzz-ri-hei_ye-bai: #f5f5f5;
+    
+    // ====== 比 --zzz-greyDark  更深灰====== 一般用于 辅助描述：白天-深灰色，夜间-偏亮黄灰色
+    --zzz-ri-hui_ye-hui: #c1babc; //夜间-偏黄亮色
+    
+    // ======  --zzz-greyDark  原色====== 
+    --zzz-ri-grey-dark_ye-qian-hui: #acbde5; //白天-基准灰色，夜间-更偏白
+    --zzz-ri-ye-tong-hui: #9baacf ; //日夜同一个灰色
+    --zzz-ri-grey-dark_ye-shen-hui: #51596c; //白天-基准灰色，夜间-更偏黑。用于 checbox2 未选中图标颜色
+    
+    // ====== 比 --zzz-greyDark  更浅灰====== 一般用于 辅助描述：白天-比灰色更偏白，夜间-比灰色更偏黑
+    --zzz-ri-qian-hui_ye-qian-hui: #908b8d; //临时，未敲定
+    
+    // ====== 比 --zzz-greyDark  更白====== 一般用于 辅助：白天-浅灰色（非常白），夜间-浅灰色（非常黑）
+    --zzz-ri-ji-bai_ye-ji-hei: #2a2a2d;
+    
+    // 一般用于 选中值：白天-基准灰色（--zzz-greyDark），夜间-品牌绿色
+    --zzz-ri-hui_ye-lv : var(--zzz-primary);
+    
+    
+    --z-text-color: #f5f5f5;
+    --z-text-color-2: #707070;
+    --z-text-color-3: #4d4d4d;
+    --z-active-color: #3a3a3c;
+    --z-background: #000;
+    --z-background-2: #1c1c1e;//#262628;//var(--zzz-greyLight-1);
+    --z-background-3: #37363b;
     
     @include z-theme-vars;
 }

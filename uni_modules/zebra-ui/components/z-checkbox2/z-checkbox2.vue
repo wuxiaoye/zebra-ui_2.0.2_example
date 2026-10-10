@@ -51,7 +51,7 @@
 import { inject, computed, watch, onMounted, onUnmounted } from 'vue'
 
 // 注入父级group实例
-const groupInject = inject('ayeCheckboxGroup', null)
+const groupInject = inject('zCheckboxGroup2', null)
 const groupGlobalProps = groupInject?.groupGlobalProps || null
 
 /**
@@ -141,12 +141,12 @@ const finalActiveIconColor = computed(() => {
 
 const finalInactiveIconColor = computed(() => {
   if (props.inactiveIconColor) return props.inactiveIconColor
-  return groupGlobalProps?.inactiveIconColor?.value ?? '#bbd0f9'
+  return groupGlobalProps?.inactiveIconColor?.value ?? 'var(--z-checkbox2-final-inactive-icon-color)';
 })
 
 const finalLabelColor = computed(() => {
   if (props.labelColor) return props.labelColor
-  return groupGlobalProps?.labelColor?.value ?? '#333'
+  return groupGlobalProps?.labelColor?.value ?? 'var(--z-checkbox2-final-label-color)'
 })
 
 const finalLabelSize = computed(() => {
@@ -315,7 +315,7 @@ const handleClick = () => {
     transform: scale(0.85);
   }
   100% {
-    transform: scale(1);
+    transform: scale(1.2);
   }
 }
 /* .check-icon, */

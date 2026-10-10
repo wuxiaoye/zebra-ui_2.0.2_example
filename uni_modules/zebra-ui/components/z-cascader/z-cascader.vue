@@ -244,7 +244,8 @@ const tabNavStyle = (tab: any) => {
 /** 选中对勾图标样式 */
 const selectedIconStyle = computed(() => {
   const styles = {
-    fontSize: 'var(--z-cascader-selected-icon-size)'
+    fontSize: 'var(--z-cascader-selected-icon-size)',
+    color: props.activeColor ? props.activeColor : 'var(--z-cascader-selected-icon-color)'
   }
   return styles
 })

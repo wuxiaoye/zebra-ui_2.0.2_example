@@ -4,7 +4,7 @@
       <demo-block title="基础用法">
         <z-checkbox v-model="checked">复选框</z-checkbox>
         <view class="ma-8"></view>
-        <aye-checkbox v-model="checked" label="蜂蜜"></aye-checkbox>
+        <z-checkbox2 v-model="checked" label="蜂蜜" />
       </demo-block>
       
       <demo-block title="禁用状态">
@@ -13,7 +13,7 @@
           <z-checkbox v-model="checkDisabled" disabled>复选框</z-checkbox>
         </view>
         <view class="ma-8"></view>
-        <aye-checkbox v-model="checkDisabled" disabled label="被禁用的"></aye-checkbox>
+        <z-checkbox2 v-model="checkDisabled" disabled label="被禁用的"/>
       </demo-block>
       
       <demo-block title="自定义形状">
@@ -24,9 +24,9 @@
           </view>
         </z-checkbox-group>
         <view class="ma-8"></view>
-        <aye-checkbox v-model="checkedShape2"  label="自定义形状-方形"></aye-checkbox>
+        <z-checkbox2 v-model="checkedShape2"  label="自定义形状-方形" />
         <view class="ma-8"></view>
-        <aye-checkbox v-model="checked" shape="circle" label="自定义形状-圆形"></aye-checkbox>
+        <z-checkbox2 v-model="checked" shape="circle" label="自定义形状-圆形"/>
       </demo-block>
       
       <demo-block title="自定义颜色">
@@ -34,13 +34,13 @@
           >复选框</z-checkbox
         >
         <view class="ma-8"></view>
-        <aye-checkbox v-model="checked" activeIconColor="#aa00ff" label="自定义颜色"></aye-checkbox>
+        <z-checkbox2 v-model="checked" activeIconColor="#aa00ff" label="自定义颜色"/>
       </demo-block>
       
       <demo-block title="自定义大小">
         <z-checkbox v-model="checked" icon-size="48rpx">复选框</z-checkbox>
         <view class="ma-8"></view>
-        <aye-checkbox v-model="checked" labelSize="42rpx" iconSize="46rpx" label="自定义大小"></aye-checkbox>
+        <z-checkbox2 v-model="checked" labelSize="42rpx" iconSize="46rpx" label="自定义大小"/>
       </demo-block>
       
       <demo-block title="自定义图标">
@@ -70,14 +70,14 @@
         </z-checkbox-group>
         
         <view class="ma-8"></view>
-        <aye-checkbox-group
+        <z-checkbox-group2
             v-model="checkedGroup"
             layout="vertical"
             >
-              <aye-checkbox label="选项一" value="1" />
-              <aye-checkbox label="选项二" value="2" />
-              <aye-checkbox label="选项三" value="3" />
-            </aye-checkbox-group>
+              <z-checkbox2 label="选项一" value="1" />
+              <z-checkbox2 label="选项二" value="2" />
+              <z-checkbox2 label="选项三" value="3" />
+            </z-checkbox-group2>
             
       </demo-block>
       
@@ -87,13 +87,13 @@
           <z-checkbox name="b">复选框 b</z-checkbox>
         </z-checkbox-group>
           <view class="ma-12"></view>
-          <aye-checkbox-group
+          <z-checkbox-group2
               v-model="checkedGroup"
               >
-                <aye-checkbox label="选项一" value="1" />
-                <aye-checkbox label="选项二" value="2" />
-                <aye-checkbox label="选项三" value="3" />
-              </aye-checkbox-group>
+                <z-checkbox2 label="选项一" value="1" />
+                <z-checkbox2 label="选项二" value="2" />
+                <z-checkbox2 label="选项三" value="3" />
+              </z-checkbox-group2>
       </demo-block>
       
       <demo-block title="限制最大可选数">
@@ -108,14 +108,14 @@
         </z-checkbox-group>
         
         <view class="ma-12"></view>
-        <aye-checkbox-group
+        <z-checkbox-group2
             v-model="checkedMax2"
             max="2"
             >
-              <aye-checkbox label="选项一" value="1" />
-              <aye-checkbox label="选项二" value="2" />
-              <aye-checkbox label="选项三" value="3" />
-            </aye-checkbox-group>
+              <z-checkbox2 label="选项一" value="1" />
+              <z-checkbox2 label="选项二" value="2" />
+              <z-checkbox2 label="选项三" value="3" />
+            </z-checkbox-group2>
       </demo-block>
       
       <demo-block title="全选与反选">
@@ -141,7 +141,7 @@
         <view class="ma-30"></view>
         <text style="color: var(--greyDark);">纵向排列 + 占满一行 + 两端对齐 + 文字图标反转位置</text>
         <view class="ma-15">
-            <aye-checkbox-group
+            <z-checkbox-group2
               v-model="checkedAll"
               ref="groupRef"
               layout="vertical"
@@ -150,13 +150,13 @@
               :max="3"
               shape="circle"
             >
-              <aye-checkbox label="选项一" value="1" />
-              <aye-checkbox label="选项二" value="2" />
-              <aye-checkbox label="禁用项（全选反选跳过）" value="3" disabled />
-              <aye-checkbox label="选项四" value="4" />
-              <aye-checkbox label="选项五" value="5" />
-              <aye-checkbox label="选项六" value="6" />
-            </aye-checkbox-group>
+              <z-checkbox2 label="选项一" value="1" />
+              <z-checkbox2 label="选项二" value="2" />
+              <z-checkbox2 label="禁用项（全选反选跳过）" value="3" disabled />
+              <z-checkbox2 label="选项四" value="4" />
+              <z-checkbox2 label="选项五" value="5" />
+              <z-checkbox2 label="选项六" value="6" />
+            </z-checkbox-group2>
         
             <view style="margin-top:30rpx;display:flex;gap:20rpx">
               <z-button @tap="$refs.groupRef.selectAll([1,2,3,4,5,6])">全选</z-button>

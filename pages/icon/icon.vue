@@ -21,6 +21,7 @@
               </view>
             </view>
           </demo-block>
+          
           <demo-block title="提示信息">
             <view class="list">
               <view class="item">
@@ -49,6 +50,7 @@
               </view>
             </view>
           </demo-block>
+          
           <demo-block title="图标颜色">
             <view class="list">
               <view class="item">
@@ -69,6 +71,7 @@
               </view>
             </view>
           </demo-block>
+          
           <demo-block title="图标大小">
             <view class="list">
               <view class="item">
@@ -156,7 +159,7 @@ const onClick = (name: string) => {
 
 <style scoped lang="scss">
 .demo-icon {
-  color: var(--z-text-color);
+  // color: var(--z-text-color);
 
   .list {
     display: flex;

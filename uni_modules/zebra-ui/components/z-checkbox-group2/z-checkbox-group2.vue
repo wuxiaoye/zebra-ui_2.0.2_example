@@ -143,7 +143,7 @@ const clearAll = () => {
 }
 
 // 注入给子组件的全部能力
-provide('ayeCheckboxGroup', {
+provide('zCheckboxGroup2', {
   innerValue,
   handleItemChange,
   groupGlobalProps: toRefs(props),

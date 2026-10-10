@@ -19,6 +19,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: inherit;
+  color: var(--z-icon-default-color);
 }
 
 .z-icon-check-small:before {
