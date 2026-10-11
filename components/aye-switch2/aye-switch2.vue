@@ -126,7 +126,7 @@ const toggle = () => {
 
 .neu-toggle-track.active .neu-toggle-thumb {
   left: 46rpx;
-  background: var(--white);
+  background: var(--primary);
   /* 选中时 left = 宽度 * 46/88 */
   left: calc(var(--sw-width) * 0.522);
 }

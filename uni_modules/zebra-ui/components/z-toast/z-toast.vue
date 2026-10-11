@@ -24,7 +24,10 @@
           :name="getProps('icon') || iconTypeName"
           :size="getProps('iconSize') || 'var(--z-toast-icon-size)'"
           :class-prefix="getProps('iconPrefix')"
-          :custom-style="{ 'line-height': '1' }"
+          :custom-style="{
+              'color' : 'var(--z-toast-icon-color)',
+              'line-height': '1' 
+            }"
         />
       </template>
       <template v-else-if="getProps('type') === 'loading'">

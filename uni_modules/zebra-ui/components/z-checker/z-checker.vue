@@ -265,7 +265,7 @@ const iconStyle = computed(() => {
       fontSize: '0.8em',
       lineHeight: '1.25',
       textAlign: 'center',
-      border: '1rpx solid var(--z-radio-border-color)',
+      border: '1px solid var(--z-radio-border-color)',
       transitionDuration: 'var(--z-radio-duration)',
       transitionProperty: 'color, border-color, background-color'
     }
@@ -281,7 +281,9 @@ const iconStyle = computed(() => {
         borderColor: 'var(--z-radio-checked-icon-color)'
       }
     } else {
-      checkedStyle = {}
+      checkedStyle = {
+          borderColor: 'var(--z-radio-border-color)'
+      }
     }
 
     if (disabled.value) {

@@ -8,6 +8,8 @@
     <z-popup
       v-model:show="state.showPopup"
       :custom-style="popupStyle"
+      :is-show-shadow="false"
+      :is-show-border="false"
       :overlay="parent.props.overlay"
       :overlay-back-groud="overlayBackGroud"
       :position="parent.props.direction === 'down' ? 'top' : 'bottom'"

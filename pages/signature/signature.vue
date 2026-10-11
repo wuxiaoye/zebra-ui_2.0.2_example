@@ -7,7 +7,7 @@
       </demo-block>
       <demo-block title="自定义颜色">
         <z-signature
-          pen-color="#ff0000"
+          pen-color="#07c160"
           @submit="onSubmitColor"
           @clear="onClear"
         />

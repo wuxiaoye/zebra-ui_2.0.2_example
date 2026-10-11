@@ -23,19 +23,19 @@ const props = defineProps({
   },
   iconSize: {
     type: String,
-    default: ''
+    default: undefined
   },
   iconActiveColor: {
     type: String,
-    default: ''
+    default: undefined
   },
   iconNormalColor: {
     type: String,
-    default: ''
+    default: undefined
   },
   labelColor: {
     type: String,
-    default: ''
+    default: undefined
   },
   labelSize: {
     type: String,
@@ -63,7 +63,7 @@ const currentValue = computed({
   }
 })
 
-provide('ayeRadioGroup', {
+provide('zRadioGroup2', {
   currentValue,
   setCurrent: (val) => {
     currentValue.value = val

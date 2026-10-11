@@ -198,26 +198,71 @@ const onChange = () => {
   emit(actionType)
 }
 
-const onInput = (event: any) => {
-  const input = event.target as HTMLInputElement
-  const { value } = input
-  const { decimalLength } = props
+/**
+ * 各端事件取值兼容：
+ * App / H5 / 小程序（uni-app 内置 input）: event.detail.value
+ * 纯 Web 原生 DOM 事件: event.target.value
+ */
+const getEventValue = (event: any) => {
+  const detailValue = event?.detail?.value
+  const target = event?.target
+  const isDomInput =
+    !!target && typeof target === 'object' && 'value' in target
 
-  let formatted = formatNumber(String(value), !props.integer)
+  const raw = detailValue !== undefined ? detailValue : isDomInput ? target.value : ''
+
+  return raw == null ? '' : String(raw)
+}
+
+/**
+ * 直接改写输入框显示内容，仅在能拿到真实 DOM 节点时生效（H5 原生 input）。
+ * uni-app 内置 input 组件拿不到原生节点，只能靠 :value="current" 驱动显示。
+ */
+const setDisplayValue = (event: any, value: string) => {
+  const target = event?.target
+
+  if (!!target && typeof target === 'object' && 'value' in target) {
+    if (target.value !== value) {
+      target.value = value
+    }
+    return true
+  }
+
+  return false
+}
+
+const onInput = (event: any) => {
+  const { decimalLength } = props
+  const rawValue = getEventValue(event)
+
+  let formatted = formatNumber(rawValue, !props.integer)
 
   if (isDef(decimalLength) && formatted.includes('.')) {
     const pair = formatted.split('.')
     formatted = `${pair[0]}.${pair[1].slice(0, +decimalLength)}`
   }
 
+  const isNumeric = formatted === String(+formatted)
+  const next: Numeric = isNumeric ? +formatted : formatted
+
   if (props.beforeChange) {
-    input.value = String(current.value)
-  } else if (!isEqual(value, formatted)) {
-    input.value = formatted
+    // 异步变更：beforeChange 确认前保持原值
+    setDisplayValue(event, String(current.value))
+  } else if (
+    // 拿不到原生节点、且值未变化（输入内容被过滤，如输入了非法字符）时，
+    // 强制刷新一次 :value 绑定，避免非法内容残留到失焦才被纠正
+    !setDisplayValue(event, formatted) &&
+    isEqual(next, current.value) &&
+    !isEqual(rawValue, formatted)
+  ) {
+    current.value = ''
+    nextTick(() => {
+      current.value = next
+    })
+    return
   }
 
-  const isNumeric = formatted === String(+formatted)
-  setValue(isNumeric ? +formatted : formatted)
+  setValue(next)
 }
 
 const onFocus = (event: any) => {
@@ -229,9 +274,8 @@ const onFocus = (event: any) => {
 }
 
 const onBlur = (event: any) => {
-  const input = event.detail
-  const value = format(input.value, props.autoFixed)
-  input.value = String(value)
+  const value = format(getEventValue(event), props.autoFixed)
+  setDisplayValue(event, String(value))
   current.value = value
   nextTick(() => {
     emit('blur', event)

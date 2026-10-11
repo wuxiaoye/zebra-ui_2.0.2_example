@@ -1,8 +1,11 @@
 <template>
+    <!-- 此组件会隐藏溢出内容, 无法显示外阴影,这里手动关闭外阴影，显示外边框 -->
   <z-popup
     :show="props.show"
     :overlay="overlay"
     :position="position"
+    :is-show-shadow="false"
+    :isShowBorder="true"
     :overlay-back-groud="overlayBackground"
     :custom-style="popupStyle"
     @close="onClose"

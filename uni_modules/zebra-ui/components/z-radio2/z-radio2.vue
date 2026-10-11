@@ -59,7 +59,7 @@ function parseSizeStr(str) {
 }
 
 // 注入group，兜底空对象避免null报错
-const groupInject = inject('ayeRadioGroup', null)
+const groupInject = inject('zRadioGroup2', null)
 const groupBindProps = groupInject?.groupProps ?? {}
 
 const props = defineProps({
@@ -140,13 +140,13 @@ const activeColor = computed(() => {
 })
 const normalColor = computed(() => {
   if (props.iconNormalColor !== undefined) return props.iconNormalColor
-  return groupBindProps.iconNormalColor?.value ?? '#9baacf'
+  return groupBindProps.iconNormalColor?.value ?? 'var(--z-radio2-inactive-icon-color)'
 })
 
 // 文字样式
 const textColor = computed(() => {
   if (props.labelColor !== undefined) return props.labelColor
-  return groupBindProps.labelColor?.value ?? '#333'
+  return groupBindProps.labelColor?.value ?? 'var(--z-radio2-label-color)'
 })
 const labelSize = computed(() => {
   if (props.labelSize !== undefined) return props.labelSize

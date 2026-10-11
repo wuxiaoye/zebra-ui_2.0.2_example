@@ -2,10 +2,10 @@
   <DemoPage title="Radio">
     <view class="demo-radio">
       <demo-block title="基础用法">
-          <aye-radio-group v-model="checked2" layout="vertical">
-              <aye-radio value="1" label="新设计1"></aye-radio>
-              <aye-radio value="2" label="新设计2"></aye-radio>
-          </aye-radio-group>
+          <z-radio-group2 v-model="checked2" layout="vertical">
+              <z-radio2 value="1" label="新设计1"></z-radio2>
+              <z-radio2 value="2" label="新设计2"></z-radio2>
+          </z-radio-group2>
           
           <view class="ma-30"></view>
         <z-radio-group v-model="checked">
@@ -17,10 +17,10 @@
       </demo-block>
       
       <demo-block title="水平排列">
-          <aye-radio-group v-model="checked2" >
-              <aye-radio value="1" label="新设计1"></aye-radio>
-              <aye-radio value="2" label="新设计2"></aye-radio>
-          </aye-radio-group>
+          <z-radio-group2 v-model="checked2" >
+              <z-radio2 value="1" label="新设计1"></z-radio2>
+              <z-radio2 value="2" label="新设计2"></z-radio2>
+          </z-radio-group2>
           
           <view class="ma-30"></view>
         <z-radio-group v-model="checked" direction="horizontal">
@@ -30,10 +30,10 @@
       </demo-block>
       
       <demo-block title="禁用状态">
-          <aye-radio-group v-model="checked2" layout="vertical" disabled>
-              <aye-radio value="1" label="新设计1"></aye-radio>
-              <aye-radio value="2" label="新设计2"></aye-radio>
-          </aye-radio-group>
+          <z-radio-group2 v-model="checked2" layout="vertical" disabled>
+              <z-radio2 value="1" label="新设计1"></z-radio2>
+              <z-radio2 value="2" label="新设计2"></z-radio2>
+          </z-radio-group2>
           
           <view class="ma-30"></view>
         <z-radio-group v-model="checked" disabled>
@@ -63,10 +63,10 @@
       </demo-block>
       
       <demo-block title="自定义颜色">
-          <aye-radio-group v-model="checked2" icon-active-color="#aa00ff" icon-normal-color="#aaaaff" label-color="#9a00e7">
-              <aye-radio value="1" label="新设计1" ></aye-radio>
-              <aye-radio value="2" label="新设计2"></aye-radio>
-          </aye-radio-group>
+          <z-radio-group2 v-model="checked2" icon-active-color="#aa00ff" icon-normal-color="#aaaaff" label-color="#9a00e7">
+              <z-radio2 value="1" label="新设计1" ></z-radio2>
+              <z-radio2 value="2" label="新设计2"></z-radio2>
+          </z-radio-group2>
           <view class="ma-30"></view>
         <z-radio-group v-model="checked" direction="horizontal">
           <z-radio name="1" checked-color="#ee0a24">单选框 1</z-radio>
@@ -75,10 +75,10 @@
       </demo-block>
       
       <demo-block title="自定义大小">
-          <aye-radio-group v-model="checked2" icon-size="70rpx" label-size="50rpx">
-              <aye-radio value="1" label="新设计1" ></aye-radio>
-              <aye-radio value="2" label="新设计2"></aye-radio>
-          </aye-radio-group>
+          <z-radio-group2 v-model="checked2" icon-size="70rpx" label-size="50rpx">
+              <z-radio2 value="1" label="新设计1" ></z-radio2>
+              <z-radio2 value="2" label="新设计2"></z-radio2>
+          </z-radio-group2>
           
           <view class="ma-30"></view>
         <z-radio-group v-model="checked" direction="horizontal">
@@ -126,17 +126,17 @@
       
       <demo-block title="其他">
           <view class="mb-30 text-size-n text-greyDark">纵向排列 + 占满一行</view>
-          <aye-radio-group v-model="checked2" layout="vertical" vertical-full >
-              <aye-radio value="1" label="新设计1"></aye-radio>
-              <aye-radio value="2" label="新设计2"></aye-radio>
-          </aye-radio-group>
+          <z-radio-group2 v-model="checked2" layout="vertical" vertical-full >
+              <z-radio2 value="1" label="新设计1"></z-radio2>
+              <z-radio2 value="2" label="新设计2"></z-radio2>
+          </z-radio-group2>
           <view class="ma-30"></view>
           
           <view class="my-30 text-size-n text-greyDark">纵向排列 + 占满一行 + 文字与图标换位</view>
-          <aye-radio-group v-model="checked2" layout="vertical" vertical-full reverse-align>
-              <aye-radio value="1" label="新设计1"></aye-radio>
-              <aye-radio value="2" label="新设计2"></aye-radio>
-          </aye-radio-group>
+          <z-radio-group2 v-model="checked2" layout="vertical" vertical-full reverse-align>
+              <z-radio2 value="1" label="新设计1"></z-radio2>
+              <z-radio2 value="2" label="新设计2"></z-radio2>
+          </z-radio-group2>
           <view class="ma-30"></view>
           
           <view class="my-30 text-size-n text-greyDark">旧设计-搭配单元格组件使用</view>

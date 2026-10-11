@@ -54,6 +54,7 @@
           "
         />
       </demo-block>
+      
       <demo-block title="按钮风格">
         <z-cell
           title="提示弹窗"
@@ -84,6 +85,12 @@
               title: '标题',
               theme: 'round-button',
               message: '这是一个示例提示'
+            })
+            .then(() => {
+              toast.showToast('点击确认按钮')
+            })
+            .catch(() => {
+              toast.showToast('点击取消按钮')
             })
           "
         />

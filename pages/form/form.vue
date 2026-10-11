@@ -72,26 +72,26 @@
             
             <z-field name="checkbox2" label="复选框2">
               <template #input>
-                 <aye-checkbox label="复选框2" v-model="checkbox"></aye-checkbox>
+                 <z-checkbox2 label="复选框2" v-model="checkbox"></z-checkbox2>
               </template>
             </z-field>
             <z-field name="checkboxGroup2" label="复选框组2">
                 <template #input>
-                    <aye-checkbox-group v-model="checkboxGroup" layout="vertical">
-                        <aye-checkbox value="1" label="蜂蜜"></aye-checkbox>
-                        <aye-checkbox value="2" label="罗汉果"></aye-checkbox>
-                        <aye-checkbox value="3" label="绿茶"></aye-checkbox>
-                    </aye-checkbox-group>
+                    <z-checkbox-group2 v-model="checkboxGroup" layout="vertical">
+                        <z-checkbox2 value="1" label="蜂蜜"></z-checkbox2>
+                        <z-checkbox2 value="2" label="罗汉果"></z-checkbox2>
+                        <z-checkbox2 value="3" label="绿茶"></z-checkbox2>
+                    </z-checkbox-group2>
                 </template>
             </z-field>
             <z-field name="radio" label="单选框2">
                 <template #input>
-                    <aye-radio-group v-model="radio2" >
-                        <aye-radio value="a" label="黑豆"></aye-radio>
-                        <aye-radio value="b" label="绿豆"></aye-radio>
-                        <aye-radio value="c" label="黄豆"></aye-radio>
-                        <aye-radio value="d" label="红豆"></aye-radio>
-                    </aye-radio-group>
+                    <z-radio-group2 v-model="radio2" >
+                        <z-radio2 value="a" label="黑豆"></z-radio2>
+                        <z-radio2 value="b" label="绿豆"></z-radio2>
+                        <z-radio2 value="c" label="黄豆"></z-radio2>
+                        <z-radio2 value="d" label="红豆"></z-radio2>
+                    </z-radio-group2>
                 </template>
             </z-field>
             <z-field name="stepper" label="步进器">
@@ -111,7 +111,7 @@
             </z-field>
             <z-field name="stepper" label="步进器-禁用加号">
               <template #input>
-                <z-stepper v-model="stepper" disable-plus min="-5" max="8"/>
+                <z-stepper v-model="stepper2" disable-plus min="-500" />
               </template>
             </z-field>
             <z-field name="stepper" label="步进器-禁用输入框">
@@ -141,7 +141,7 @@
             </z-field>
             <z-field name="checkbox" label="复选框">
               <template #input>
-                <z-checkbox v-model="checkbox" shape="square" />
+                <z-checkbox v-model="checkbox" shape="square" >是否确认</z-checkbox>
               </template>
             </z-field>
             <z-field name="checkboxGroup" label="复选框组">
@@ -326,6 +326,7 @@ const radio2 = ref('b')
 const slider = ref(50)
 const slider2 = ref([10, 70]);
 const stepper = ref(3)
+const stepper2 = ref(2)
 const uploader = ref([
   { url: 'https://cdn.zebraui.com/zebra-ui/images/swipe-demo/swipe1.jpg' }
 ])

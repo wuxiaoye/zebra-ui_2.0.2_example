@@ -86,7 +86,15 @@ const props = defineProps(
     safeAreaInsetBottom: Boolean,
     customStyle: Object,
     customClass: String,
-    closeIconStyle: Object
+    closeIconStyle: Object,
+    isShowShadow: { // 是否显示外阴影
+        type: Boolean,
+        default: true
+    },
+    isShowBorder: { // 是否显示边框
+        type: Boolean,
+        default: false
+    },
   })
 )
 
@@ -138,7 +146,9 @@ const style = computed(() => {
     boxSizing: 'border-box',
     background: 'var(--z-popup-background)',
     transition: 'var(--z-popup-transition)',
-    WebkitOverflowScrolling: 'touch'
+    WebkitOverflowScrolling: 'touch',
+    boxShadow: props.isShowShadow ? 'var(--z-popup-shadow)' : '',
+    border: props.isShowBorder ? '1px solid var(--z-popup-border-color)' : '',
   }
 
   let positionStyle = {}

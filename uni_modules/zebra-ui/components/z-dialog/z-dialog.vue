@@ -36,6 +36,13 @@
             </template>
           </view>
         </template>
+        <!-- 没有标题，则展示图标 -->
+        <template v-else>
+          <view style="display: flex; justify-content: center; align-items: center; padding-top:20rpx; padding-bottom:20rpx;">
+              <z-icon name="bell" size="80rpx" color="var(--z-dialog-no-has-title-icon-color)" style="transform: rotate(15deg)"></z-icon>
+          </view>
+        </template>
+        
         <template v-if="instance.slots.default">
           <view :class="bem('content')">
             <slot></slot>
@@ -243,6 +250,8 @@ const cancelStyle = computed(() => {
   }
   if (getProps('cancelButtonColor')) {
     styleObject['color'] = getProps('cancelButtonColor')
+  }else{
+      styleObject['color'] = 'var(--z-dialog-cancel-button-text-color)'
   }
   return styleObject
 })
@@ -268,6 +277,8 @@ const cancelRoundStyle = computed(() => {
   }
   if (getProps('confirmButtonColor')) {
     styleObject['color'] = getProps('cancelButtonColor')
+  }else{
+      styleObject['color'] = 'var(--z-dialog-cancel-button-text-color)'
   }
   return styleObject
 })
@@ -371,7 +382,7 @@ export default {
     font-weight: var(--z-dialog-header-font-weight);
     line-height: var(--z-dialog-header-line-height);
     // color: var(--z-text-color);
-    color: var(--zzz-greyDark);
+    color: var(--z-dialog-title-text-color);
     text-align: center;
 
     &--isolated {
@@ -382,7 +393,7 @@ export default {
 
   &__content {
       box-sizing: border-box;
-      box-shadow: var(--zzz-shadow-more-big);
+      box-shadow: var(--zzz-shadow);
       border-radius: 12px;
       margin: 30rpx;
       // padding: 10rpx 0;
@@ -401,8 +412,8 @@ export default {
     overflow-y: auto;
     font-size: var(--z-dialog-message-font-size);
     line-height: var(--z-dialog-message-line-height);
-    color: var(--z-text-color);
-    // color: var(--zzz-greyDark);
+    // color: var(--z-text-color);
+    color: var(--z-dialog-message-text-color);
     text-align: center;
     word-wrap: break-word;
     white-space: pre-wrap;
@@ -411,7 +422,7 @@ export default {
 
     &--has-title {
       // padding-top: var(--z-dialog-has-title-message-padding-top);
-      color: var(--z-dialog-has-title-message-text-color);
+      // color: var(--z-dialog-has-title-message-text-color);
     }
 
     &--left {
@@ -442,7 +453,8 @@ export default {
 
     .z-dialog__message {
       // padding-bottom: var(--z-padding-md);
-      color: var(--z-text-color);
+      // color: var(--z-text-color);
+      color: var(--z-dialog-message-text-color);
     }
 
     .z-dialog__confirm,

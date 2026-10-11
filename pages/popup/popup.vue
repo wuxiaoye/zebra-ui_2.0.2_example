@@ -1,12 +1,24 @@
 <template>
   <DemoPage title="Popup">
     <view class="demo-popup">
+        
       <demo-block title="基础用法">
-        <z-cell title="展示弹出层" is-link @click="show = true" />
-        <z-popup v-model:show="show">
-          <view class="popup-content"> 内容 </view>
-        </z-popup>
+            <z-cell title="弹出层-默认有外阴影" is-link @click="show = true" />
+            <z-popup v-model:show="show" >
+              <view class="popup-content"> 内容 </view>
+            </z-popup>
+        
+            <z-cell title="弹出层-没有阴影" is-link @click="showNoShadow = true" />
+            <z-popup v-model:show="showNoShadow" :is-show-shadow="false">
+              <view class="popup-content"> 内容 </view>
+            </z-popup>
+            
+            <z-cell title="弹出层-有灰白色边框" is-link @click="showBorder = true" />
+            <z-popup v-model:show="showBorder" :is-show-border="true">
+              <view class="popup-content"> 内容 </view>
+            </z-popup>
       </demo-block>
+      
       <demo-block title="弹出位置">
         <z-cell title="顶部弹出" is-link @click="showTop = true" />
         <z-cell title="底部弹出" is-link @click="showBottom = true" />
@@ -102,6 +114,8 @@ import { useToast } from '../../uni_modules/zebra-ui'
 import { ref } from 'vue'
 const toast = useToast()
 const show = ref(false)
+let showNoShadow = ref(false)
+let showBorder = ref(false)
 const showTop = ref(false)
 const showBottom = ref(false)
 const showLeft = ref(false)

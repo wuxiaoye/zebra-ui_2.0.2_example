@@ -112,6 +112,7 @@ export default {
   background: var(--z-number-keyboard-key-background);
   border-radius: var(--z-radius-lg);
   box-shadow: var(--z-number-keyboard-key-box-shadow);
+  color: var(--z-number-keyboard-key-text-color);
 
   &--large {
     position: absolute;

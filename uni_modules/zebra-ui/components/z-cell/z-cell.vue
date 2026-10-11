@@ -316,10 +316,16 @@ export default {
   }
 
   &--clickable {
-    cursor: pointer;
-    &:active {
-      background-color: var(--z-cell-active-color);
-    }
+    // cursor: pointer;
+    // &:active {
+    //   background-color: var(--z-cell-active-color);
+    // }
+    
+        cursor: pointer;
+      transition: opacity 0.15s ease;
+      &:active {
+        opacity: var(--z-active-opacity); /* 已有变量，默认 0.6 */
+      }
   }
 
   &--center {
