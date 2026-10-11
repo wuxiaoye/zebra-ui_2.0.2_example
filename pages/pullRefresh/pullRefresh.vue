@@ -16,6 +16,7 @@
             />
           </z-pull-refresh>
         </z-tab>
+        
         <z-tab title="成功提示">
           <z-pull-refresh
             id="refresh2"

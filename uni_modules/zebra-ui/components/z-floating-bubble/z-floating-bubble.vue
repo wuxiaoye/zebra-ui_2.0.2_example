@@ -12,7 +12,7 @@
   >
     <slot></slot>
     <template v-if="!instance.slots.default">
-      <z-icon :name="props.icon" size="var(--z-floating-bubble-icon-size)" />
+      <z-icon :name="props.icon" size="var(--z-floating-bubble-icon-size)" color="var(--z-floating-bubble-icon-color)" />
     </template>
   </view>
 </template>

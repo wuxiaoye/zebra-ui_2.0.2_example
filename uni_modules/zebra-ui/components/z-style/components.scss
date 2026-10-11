@@ -62,7 +62,7 @@
       --z-ease-in: ease-in;
       
       // Border
-      --z-border-color: #9baacf;//var(--z-gray-3);//var(--zzz-greyDark);
+      --z-border-color: var(--zzz-ri-grey-dark_ye-shen-hei);//var(--z-gray-3);//var(--zzz-greyDark);
       --z-border-width: 2rpx;
       --z-radius-sm: 4rpx;
       --z-radius-md: 8rpx;
@@ -532,12 +532,13 @@
     //阴影
     --z-field-shadow : var(--zzz-shadow-inset);
     
-    // floatingBubble
+    // floatingBubble 浮动气泡
     --z-floating-bubble-size: 96rpx;
     --z-floating-bubble-initial-gap: 48rpx;
     --z-floating-bubble-icon-size: 56rpx;
+    --z-floating-bubble-icon-color: #f5f5f5;
     --z-floating-bubble-background: var(--z-primary-color);
-    --z-floating-bubble-color: var(--z-background-2);
+    --z-floating-bubble-color: #f5f5f5;//var(--z-background-2);
     --z-floating-bubble-z-index: 999;
     --z-floating-bubble-border-radius: var(--z-radius-max);
     
@@ -1065,7 +1066,7 @@ page {
     --z-text-color-3: #4d4d4d;
     --z-active-color: #3a3a3c;
     --z-background: #000;
-    --z-background-2: #1c1c1e;//#262628;//var(--zzz-greyLight-1);
+    --z-background-2: #191919;//#1c1c1e;//#262628;//var(--zzz-greyLight-1);
     --z-background-3: #37363b;
     
     @include z-theme-vars;
