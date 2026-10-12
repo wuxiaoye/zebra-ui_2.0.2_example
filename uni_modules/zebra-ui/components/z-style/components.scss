@@ -1,32 +1,32 @@
 @mixin z-theme-vars {
     
       /* 卡片外阴影样式 -超大*/
-      --zzz-shadow-more-big: 0.4rem 0.4rem 0.8rem var(--zzz-greyLight-2),  -0.4rem -0.4rem 0.8rem var(--zzz-white);
+      --zzz-shadow-more-big: 0.4rem 0.4rem 0.8rem var(--zzz-shadow-vars-black),  -0.4rem -0.4rem 0.8rem var(--zzz-shadow-vars-white);
       /* 卡片外阴影样式 -大一些*/
-      --zzz-shadow-big: 6px 6px 12px var(--zzz-greyLight-2), -4px -4px 10px var(--zzz-white);
+      --zzz-shadow-big: 6px 6px 12px var(--zzz-shadow-vars-black), -4px -4px 10px var(--zzz-shadow-vars-white);
        /* 卡片外阴影样式 */
-      --zzz-shadow:  3px 3px 6px var(--zzz-greyLight-2), -2px -2px 5px var(--zzz-white);
+      --zzz-shadow:  3px 3px 6px var(--zzz-shadow-vars-black), -2px -2px 5px var(--zzz-shadow-vars-white);
        /* 卡片外阴影样式 - 小一些*/
-      --zzz-shadow-mini: 2px 2px 4px var(--zzz-greyLight-2), -1px -1px 3px var(--zzz-white);
+      --zzz-shadow-mini: 2px 2px 4px var(--zzz-shadow-vars-black), -1px -1px 3px var(--zzz-shadow-vars-white);
        
        /* 内凹阴影-大一些 */
-       --zzz-shadow-inset-more-big: inset 0.4rem 0.4rem 0.8rem var(--zzz-greyLight-2), inset -0.4rem -0.4rem 0.8rem var(--zzz-white);
+       --zzz-shadow-inset-more-big: inset 0.4rem 0.4rem 0.8rem var(--zzz-shadow-vars-black), inset -0.4rem -0.4rem 0.8rem var(--zzz-shadow-vars-white);
        /* 内凹阴影 */
-      --zzz-shadow-inset: inset 2px 2px 4px var(--zzz-greyLight-2), inset -2px -2px 4px var(--zzz-white);
+      --zzz-shadow-inset: inset 2px 2px 4px var(--zzz-shadow-vars-black), inset -2px -2px 4px var(--zzz-shadow-vars-white);
        /* 内凹阴影-小一些 */
-      --zzz-shadow-inset-mini: inset 1px 1px 1px var(--zzz-greyLight-2), inset -2px -2px 4px var(--zzz-white);
+      --zzz-shadow-inset-mini: inset 1px 1px 1px var(--zzz-shadow-vars-black), inset -2px -2px 4px var(--zzz-shadow-vars-white);
       
       /* 浅灰色阴影 - 顶部向上阴影 */
-      --zzz-shadow-grey-light-top: -4rpx -4rpx 16rpx var(--zzz-greyLight-1-dark);
+      --zzz-shadow-grey-light-top: -4rpx -4rpx 16rpx var(--zzz-shadow-vars-grey);
       /* 浅灰色阴影 - 底部阴影 */
-      --zzz-shadow-grey-light-bottom: 4rpx 4rpx 16rpx var(--zzz-greyLight-1-dark);
+      --zzz-shadow-grey-light-bottom: 4rpx 4rpx 16rpx var(--zzz-shadow-vars-grey);
        
        /* 仅有顶部 - 白色阴影 */
-      --zzz-shadow-top: -2px -2px 5px var(--zzz-white);
+      --zzz-shadow-top: -2px -2px 5px var(--zzz-shadow-vars-white);
        /*  仅有底部 - 灰色阴影*/
-      --zzz-shadow-bottom: 3px 3px 6px var(--zzz-greyLight-2);
+      --zzz-shadow-bottom: 3px 3px 6px var(--zzz-shadow-vars-black);
        /*  仅有底部 - 灰色阴影 - 小一些*/
-      --zzz-shadow-bottom-mini: 1px 1px 3px var(--zzz-greyLight-2);
+      --zzz-shadow-bottom-mini: 1px 1px 3px var(--zzz-shadow-vars-black);
       
       
       // Padding
@@ -719,19 +719,26 @@
     --z-search-action-font-size: var(--z-font-size-md);
     
     
-    // shareSheet
+    // shareSheet 分享面板
+    // 标题
     --z-share-sheet-header-padding: var(--z-padding-sm) var(--z-padding-md);
-    --z-share-sheet-title-color: var(--z-text-color);
+    --z-share-sheet-title-color: var(--zzz-ri-hei_ye-bai); //var(--z-text-color);
     --z-share-sheet-title-font-size: var(--z-font-size-md);
     --z-share-sheet-title-line-height: var(--z-line-height-md);
+    // 描述
     --z-share-sheet-description-color: var(--zzz-ri-hui_ye-hui);
     --z-share-sheet-description-font-size: var(--z-font-size-sm);
     --z-share-sheet-description-line-height: 32rpx;
     --z-share-sheet-icon-size: 96rpx;
-    --z-share-sheet-option-name-color: var(--z-gray-7);
+    //选项
+    --z-share-sheet-option-icon-color: var(--zzz-ri-ye-tong-hui);
+    --z-share-sheet-option-background-color: var(--z-gray-6);//var(--zzz-ri-hui_ye-hui);
+    --z-share-sheet-option-name-color: var(--zzz-ri-ye-tong-hui);//var(--z-gray-7);
     --z-share-sheet-option-name-font-size: var(--z-font-size-sm);
     --z-share-sheet-option-description-color: var(--z-text-color-3);
     --z-share-sheet-option-description-font-size: var(--z-font-size-sm);
+    //取消
+    --z-share-sheet-cancel-button-color: var(--zzz-ri-hui_ye-hui);
     --z-share-sheet-cancel-button-font-size: var(--z-font-size-lg);
     --z-share-sheet-cancel-button-height: 96rpx;
     --z-share-sheet-cancel-button-background: var(--z-background-2);
@@ -825,7 +832,7 @@
     --z-tabs-bottom-bar-height: 6rpx;
     --z-tabs-bottom-bar-color: var(--z-primary-color);
     
-    // Tag
+    // Tag 标签
     --z-tag-text-color: var(--z-white);
     --z-tag-font-size: 22rpx;
     --z-tag-radius: 12rpx;
@@ -897,19 +904,22 @@
     --z-uploader-disabled-opacity: var(--z-disabled-opacity);
     --z-uploader-border-radius: 10rpx;
     
-    // sidebar
+    // sidebar 侧边导航，这个组件分成 sidebar、sidebar-item 两部分
     --z-sidebar-width: 160rpx;
     --z-sidebar-border-radius: 24rpx;
     --z-sidebar-font-size: 20rpx;
     --z-sidebar-padding: 20rpx;
     --z-sidebar-text-line-height: 1.4;
-    --z-sidebar-text-color: var(--zzz-greyDark);
     --z-sidebar-disabled-text-color: var(--zzz-greyLight-2);
-    --z-sidebar-background: var(var(--zzz-greyLight-1));
+    --z-sidebar-background: var(--zzz-greyLight-1);
     --z-sidebar-active-color: var(--zzz-white);
+    --z-sidebar-text-color: var(--zzz-greyDark);
+    //图标
+    --z-sidebar-icon-color: var(--zzz-ri-grey-dark_ye-shen-hui);
+    --z-sidebar-active-icon-color: #f3f3f3;
     // 激活
     --z-sidebar-selected-font-weight: var(--z-font-bold);
-    --z-sidebar-selected-text-color: var(--zzz-white);
+    --z-sidebar-selected-text-color: var(--z-white);
     --z-sidebar-selected-background: linear-gradient( 120deg, var(--zzz-primary-light), var(--zzz-primary) );
     --z-sidebar-selected-border-radius: 0 20rpx 20rpx 0;
     // --z-sidebar-selected-border-width: 8rpx;
@@ -950,6 +960,11 @@ page {
     --zzz-greyLight-2: #c8d0e7;
     --zzz-greyLight-3: #bec8e4;
     --zzz-greyDark: #9baacf;
+    
+    --zzz-shadow-vars-white: #ffffff; //常用于上边阴影-白色
+    --zzz-shadow-vars-black: #c8d0e7; //常用于下边阴影-黑色
+    --zzz-shadow-vars-grey: #c8d0e7; //常用于下边阴影-灰色
+    
     // ==========白天样式=========
     //名称释义：--zzz-日间模式-颜色值_夜间模式-颜色值
     // ====== 比 --zzz-greyDark  更黑====== 一般用于标题： 白天-黑色，夜间-白色
@@ -1036,6 +1051,10 @@ page {
     --zzz-greyLight-3: #595d6b;
     --zzz-greyDark: #c1babc;
     
+    --zzz-shadow-vars-white: #7b7a79; //常用于上边阴影-白色
+    --zzz-shadow-vars-black: #555555; //常用于下边阴影-黑色
+    --zzz-shadow-vars-grey: #7b7a79; //常用于下边阴影-灰色
+    
     --zzz-qian-huang: #cfb0a7; //黄色
     // ==========夜间样式=========
     //名称释义：--zzz-日间模式-颜色值_夜间模式-颜色值
@@ -1043,7 +1062,7 @@ page {
    	--zzz-ri-hei_ye-bai: #b3b3b3;//#f5f5f5;
     
     // ====== 比 --zzz-greyDark  更深灰====== 一般用于 辅助描述：白天-深灰色，夜间-偏亮黄灰色
-    --zzz-ri-hui_ye-hui: #c1babc; //夜间-偏黄亮色
+    --zzz-ri-hui_ye-hui: #afa9ab; //夜间-偏黄亮色
     
     // ======  --zzz-greyDark  原色====== 
     --zzz-ri-grey-dark_ye-qian-hui: #acbde5; //白天-基准灰色，夜间-更偏白

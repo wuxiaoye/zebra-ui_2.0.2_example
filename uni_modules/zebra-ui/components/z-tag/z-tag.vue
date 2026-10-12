@@ -9,6 +9,7 @@
       <template v-if="closeable">
         <z-icon
           name="close"
+          color="#ffffff"
           :custom-style="{ 'margin-left': '4rpx' }"
           :custom-class="[HAPTICS_FEEDBACK]"
           @click.stop="onClose"

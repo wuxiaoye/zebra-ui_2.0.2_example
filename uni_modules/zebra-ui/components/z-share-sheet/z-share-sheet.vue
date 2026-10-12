@@ -60,7 +60,7 @@
                 </template>
                 <template v-else>
                   <view :class="bem('icon', [option.icon])">
-                    <z-icon :name="iconMap[option.icon] || option.icon" />
+                    <z-icon :name="iconMap[option.icon] || option.icon" color="#fff" />
                   </view>
                 </template>
                 <text v-if="option.name" :class="bem('name')">{{
@@ -88,7 +88,7 @@
               </template>
               <template v-else>
                 <view :class="bem('icon', [option.icon])">
-                  <z-icon :name="iconMap[option.icon] || option.icon" />
+                  <z-icon :name="iconMap[option.icon] || option.icon"  color="#fff" />
                 </view>
               </template>
               <text v-if="option.name" :class="bem('name')">{{
@@ -239,8 +239,8 @@ export default {
     align-items: center;
     justify-content: center;
     font-size: 60rpx;
-    color: var(--z-gray-7);
-    background-color: var(--z-gray-2);
+    color: var(--z-share-sheet-option-icon-color);
+    background-color: var(--z-share-sheet-option-background-color);
     border-radius: 100%;
     box-shadow: var(--zzz-shadow);
 
@@ -298,7 +298,7 @@ export default {
     padding: 0;
     font-size: var(--z-share-sheet-cancel-button-font-size);
     line-height: var(--z-share-sheet-cancel-button-height);
-    color: var(--z-text-color);
+    color: var(--z-share-sheet-cancel-button-color);
     text-align: center;
     cursor: pointer;
     background: var(--z-share-sheet-cancel-button-background);
