@@ -915,10 +915,10 @@
     --z-sidebar-font-size: 20rpx;
     --z-sidebar-padding: 20rpx;
     --z-sidebar-text-line-height: 1.4;
-    --z-sidebar-disabled-text-color: var(--zzz-greyLight-2);
+    --z-sidebar-disabled-text-color: var(--zzz-ri-qian-bai_ye-qian-hei);//禁用状态
     --z-sidebar-background: var(--zzz-greyLight-1);
-    --z-sidebar-active-color: var(--zzz-white);
     --z-sidebar-text-color: var(--zzz-greyDark);
+    --z-sidebar-active-color: var(--zzz-white);
     //图标
     --z-sidebar-icon-color: var(--zzz-ri-grey-dark_ye-shen-hui);
     --z-sidebar-active-icon-color: #f3f3f3;
@@ -931,14 +931,14 @@
     // --z-sidebar-selected-border-height: 32rpx;
     // --z-sidebar-selected-border-color: var(--z-primary-color);
     
-    // tree select
+    // tree select  侧边导航+右侧勾选 = 分类选择。此组件实际上由 z-sidebar 和 z-sidebar-item 组成，一些样式的调整需要到 z-sidebar 和 z-sidebar-item 样式处。
     --z-tree-select-font-size: var(--z-font-size-md);
     --z-tree-select-nav-background: var(--z-background);
     --z-tree-select-content-background: var(--z-background-2);
     --z-tree-select-nav-item-padding: 28rpx var(--z-padding-sm);
     --z-tree-select-item-height: 96rpx;
     --z-tree-select-item-active-color: var(--z-primary-color);
-    --z-tree-select-item-disabled-color: var(--z-gray-5);
+    --z-tree-select-item-disabled-color: var(--zzz-ri-qian-bai_ye-qian-hei);//禁用状态
     --z-tree-select-item-selected-size: 32rpx;
     --z-tree-select-item-color: var(--z-text-color);
     
@@ -989,6 +989,7 @@ page {
     --zzz-ri-qian-hui_ye-qian-hui: var(--zzz-greyLight-3); //临时，未敲定
     
     // ====== 比 --zzz-greyDark  更白====== 一般用于 辅助：白天-浅灰色（非常白），夜间-浅灰色（非常黑）
+    --zzz-ri-qian-bai_ye-qian-hei: #eaeaea; //常用于：禁用状态
     --zzz-ri-ji-bai_ye-ji-hei: #f5f5f7;
     
     // 一般用于 选中值：白天-基准灰色（--zzz-greyDark），夜间-品牌绿色
@@ -1079,6 +1080,7 @@ page {
     --zzz-ri-qian-hui_ye-qian-hui: #908b8d; //临时，未敲定
     
     // ====== 比 --zzz-greyDark  更白====== 一般用于 辅助：白天-浅灰色（非常白），夜间-浅灰色（非常黑）
+    --zzz-ri-qian-bai_ye-qian-hei: #3f3f3f; //常用于：禁用状态
     --zzz-ri-ji-bai_ye-ji-hei: #2a2a2d;
     
     // 一般用于 选中值：白天-基准灰色（--zzz-greyDark），夜间-品牌绿色
