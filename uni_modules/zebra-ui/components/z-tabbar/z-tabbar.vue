@@ -92,20 +92,31 @@ const props = defineProps({
   border: truthProp,
   zIndex: numericProp,
   placeholder: Boolean,
-  activeColor: String,
   beforeChange: Function as PropType<Interceptor>,
-  inactiveColor: String,
+  inactiveColor: {
+      type: String,
+      default: 'var(--z-tabbar-item-text-color)'
+  },
+  activeColor: {
+      type: String,
+      default: 'var(--z-tabbar-item-active-color)'
+  },
   modelValue: makeNumericProp(0),
   safeAreaInsetBottom: {
     type: Boolean as PropType<boolean | null>,
     default: null
   },
-  background: Boolean,
   float: Boolean,
   animate: Boolean,
+  background: Boolean, //是否启用背景模式
+  //背景模式，点击时会有一个背景块元素在移动到激活子项，这里设置该背景块元素，是否启用内阴影。自定义样式时可能需要关闭内阴影。
   isBoxShadow: {
       type: Boolean,
       default: true
+  },
+  primaryBackground: { //是否启用-品牌色背景模式, 需要搭配 background 属性一同开启
+      type: Boolean,
+      default: false
   }
 })
 
@@ -128,7 +139,7 @@ const backgroundStyle = computed(() => {
   }
   return { ...styles }
 })
-
+//背景模式，点击时会有一个背景块元素在移动到激活子项，这里设置该背景块元素的样式
 const backgroundContentStyle = computed(() => {
   const styles: CSSProperties = {}
   if (props.float) {
@@ -144,6 +155,13 @@ const backgroundContentStyle = computed(() => {
   //设置内阴影
   if( props.isBoxShadow ){
       styles['box-shadow'] = 'var(--zzz-shadow-inset)'
+  }
+  //设置背景
+  if( props.primaryBackground ){
+      styles['box-shadow'] = '';
+      styles['background'] = 'var(--z-tabbar-item-primary-background-active-background)';
+  }else{
+      styles['background'] = 'var(--z-tabbar-item-active-background)';
   }
   return { ...styles }
 })
@@ -220,7 +238,6 @@ export default {
     &--content {
       width: 100%;
       height: 100%;
-      background: var(--z-tabbar-item-active-background);
       border-radius: 10rpx;
     }
   }

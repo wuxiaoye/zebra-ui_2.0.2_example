@@ -4,7 +4,8 @@
         bem({ 
             active: active, 
             animate: parent.props.animate ,
-            background: parent.props.background
+            background: parent.props.background,
+            'primary-background': parent.props.primaryBackground
             })
         ]"
     :style="{
@@ -84,8 +85,16 @@ const badgeStyle = computed(() => {
 })
 
 const iconStyle = computed(() => {
+    let color_style = '';
+  if(parent.props.primaryBackground){
+       color_style = active.value ? 'var(--z-tabbar-item-primary-background-active-text-color)' : 'var(--z-tabbar-item-primary-background-text-color)'
+  }else{
+       color_style = active.value ? parent.props.activeColor : parent.props.inactiveColor
+  }
+  
   const styles = {
-    display: 'block'
+      display: 'block',
+      color : color_style
   }
   return { ...styles }
 })
@@ -127,11 +136,16 @@ export default {
   line-height: var(--z-tabbar-item-line-height);
   color: var(--z-tabbar-item-text-color);
   transition: all 0.3s ease;
-
   &--active {
     color: var(--z-tabbar-item-active-color);
     animation: bump 0.3s;
   }
+    &--primary-background{
+        color: var(--z-tabbar-item-primary-background-text-color) !important;
+    }
+      &--primary-background.z-tabbar-item--active {
+        color: var(--z-tabbar-item-primary-background-active-text-color) !important;
+      }
   
   // animate模式 pulse
     // &--active.z-tabbar-item--animate {

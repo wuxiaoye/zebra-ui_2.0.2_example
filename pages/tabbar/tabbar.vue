@@ -1,12 +1,12 @@
 <template>
   <DemoPage title="Tabbar">
     <view class="demo-tabbar">
-      <demo-block title="基础用法">
+      <demo-block title="基础用法 + 不要边框">
         <z-tabbar :fixed="false" v-model="active" :border="false">
-          <z-tabbar-item icon="home">标签</z-tabbar-item>
-          <z-tabbar-item icon="search">标签</z-tabbar-item>
-          <z-tabbar-item icon="bell">标签</z-tabbar-item>
-          <z-tabbar-item icon="setting">标签</z-tabbar-item>
+          <z-tabbar-item icon="home">首页</z-tabbar-item>
+          <z-tabbar-item icon="search">搜索</z-tabbar-item>
+          <z-tabbar-item icon="bell">消息</z-tabbar-item>
+          <z-tabbar-item icon="setting">设置</z-tabbar-item>
         </z-tabbar>
       </demo-block>
       <demo-block title="通过名称匹配">
@@ -73,9 +73,9 @@
           </z-tabbar>
           
           <view class="my-20 text-greyDark text-size-n">
-          背景样式 + 自定义颜色 + 取消内阴影
+          背景样式 + 品牌色背景
           </view>
-        <z-tabbar :fixed="false" v-model="active_bg_2" background  class="ceui-tabbar" :is-box-shadow="false">
+        <z-tabbar :fixed="false" v-model="active_bg_2" background primary-background>
           <z-tabbar-item icon="home">标签</z-tabbar-item>
           <z-tabbar-item icon="search">标签</z-tabbar-item>
           <z-tabbar-item icon="bell">标签</z-tabbar-item>
@@ -84,7 +84,7 @@
       </demo-block>
       
       <demo-block title="圆角">
-        <z-tabbar :fixed="false" v-model="active7" float background class="ceui-tabbar" :is-box-shadow="false">
+        <z-tabbar :fixed="false" v-model="active7" float background  primary-background>
           <z-tabbar-item icon="home">标签</z-tabbar-item>
           <z-tabbar-item icon="search">标签</z-tabbar-item>
           <z-tabbar-item icon="bell">标签</z-tabbar-item>
@@ -114,9 +114,9 @@
           </z-tabbar>
           
           <view class="my-20 text-greyDark text-size-n">
-            背景样式 - 默认动画
+            品牌色背景样式 - 默认动画
             </view>
-          <z-tabbar :fixed="false" v-model="an_3" background class="ceui-tabbar"  :is-box-shadow="false">
+          <z-tabbar :fixed="false" v-model="an_3" background  primary-background>
             <z-tabbar-item icon="home">标签</z-tabbar-item>
             <z-tabbar-item icon="search">标签</z-tabbar-item>
             <z-tabbar-item icon="bell">标签</z-tabbar-item>
@@ -124,9 +124,9 @@
           </z-tabbar>
           
           <view class="my-20 text-greyDark text-size-n">
-          背景样式 + 开启 animate=true 动画
+          品牌色背景样式 + 开启 animate=true 动画
           </view>
-        <z-tabbar :fixed="false" v-model="an_4" background animate class="ceui-tabbar" :is-box-shadow="false">
+        <z-tabbar :fixed="false" v-model="an_4" background animate  primary-background>
           <z-tabbar-item icon="home">标签</z-tabbar-item>
           <z-tabbar-item icon="search">标签</z-tabbar-item>
           <z-tabbar-item icon="bell">标签</z-tabbar-item>
@@ -181,10 +181,5 @@ const onChange = (index: number) => {
   }
 }
 
-.ceui-tabbar{
-    --z-tabbar-item-text-color: var(--greyDark);
-    --z-tabbar-item-active-color: #fff;
-    --z-tabbar-item-active-background: linear-gradient(135deg,  var(--primary-light),  var(--primary) );
-}
 
 </style>
