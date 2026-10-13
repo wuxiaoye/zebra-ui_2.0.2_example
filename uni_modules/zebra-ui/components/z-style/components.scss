@@ -120,13 +120,13 @@
     --z-button-default-background: var(--zzz-greyLight-1);
     --z-button-default-border-color: var(--zzz-greyLight-1);
     --z-button-primary-color: var(--z-white);
-    --z-button-primary-background: var(--z-primary-color);
+    --z-button-primary-background: linear-gradient(135deg, var(--zzz-primary-light) 0%, var(--zzz-primary) 50%, var(--zzz-primary-dark) 100%);
     --z-button-primary-border-color: var(--z-primary-color);
     --z-button-zi-color: var(--z-white);
     --z-button-zi-background: var(--zzz-secondary);
     --z-button-zi-border-color: var(--zzz-secondary);
     --z-button-success-color: var(--z-white);
-    --z-button-success-background: var(--z-success-color);
+    --z-button-success-background:  linear-gradient(90deg, var(--zzz-primary-light) 0%, var(--zzz-primary) 50%, var(--zzz-primary-dark) 100%);
     --z-button-success-border-color: var(--z-success-color);
     --z-button-danger-color: var(--z-white);
     --z-button-danger-background: var(--z-danger-color);
@@ -560,10 +560,11 @@
     --z-grid-item-content-background: var(--z-background-2);
     --z-grid-item-content-active-color: var(--z-active-color);
     --z-grid-item-icon-size: 36rpx;
-    --z-grid-item-text-color: var(--zzz-ri-hui_ye-hui);
+    --z-grid-item-text-color: var(--zzz-greyDark);
     --z-grid-item-text-font-size: var(--z-font-size-sm);
-    --z-grid-item-icon-box-shadow: var(--zzz-shadow);
+    --z-grid-item-icon-box-shadow: var(--zzz-ri-shadow_ye-wu);
     
+    --z-grid-item-default-icon-background:  linear-gradient(315deg, var(--zzz-primary-dark) 0%, var(--zzz-primary) 50%, var(--zzz-primary-light) 100%);
     
     // highlight
     --z-highlight-tag-color: var(--z-primary-color);
@@ -597,12 +598,15 @@
     --z-notice-bar-height: 80rpx;
     --z-notice-bar-padding: 0 var(--z-padding-md);
     --z-notice-bar-wrapable-padding: var(--z-padding-xs) var(--z-padding-md);
-    --z-notice-bar-text-color: var(--z-orange-dark);
+    --z-notice-bar-text-color: var(--zzz-ri-hei_ye-bai);
     --z-notice-bar-font-size: var(--z-font-size-md);
     --z-notice-bar-line-height: 48rpx;
-    --z-notice-bar-background: var(--z-orange-light);
+    --z-notice-bar-background: var(--zzz-greyLight-1);
     --z-notice-bar-icon-size: 32rpx;
     --z-notice-bar-icon-min-width: 48rpx;
+    --z-notice-bar-shadow: var(--zzz-shadow);
+    --z-notice-bar-border-radius: 24rpx;
+    --z-notice-bar-right-icon-color: var(--zzz-ri-ye-tong-hui);
     
     // notify 消息通知-顶端状态栏往下展示
     --z-notify-text-color: var(--z-white);

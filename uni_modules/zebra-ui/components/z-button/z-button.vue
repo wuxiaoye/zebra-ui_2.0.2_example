@@ -164,6 +164,7 @@ const props = defineProps({
 })
 const emit = defineEmits(['click', 'clickLoading'])
 
+//动态匹配 图标颜色
 // iconColor 的默认色（未显式传入时，plain 按钮会自动跟随类型色）
 const DEFAULT_ICON_COLOR = '#f3f3f3'
 const PLAIN_ICON_COLOR: Record<string, string> = {
@@ -193,7 +194,7 @@ const currentIconColor = computed(() => {
   if (color) {
     return color
   }
-  
+  //如果是 plain 样式，没有其他设置
   return PLAIN_ICON_COLOR[type] || PLAIN_ICON_COLOR.default
 })
 

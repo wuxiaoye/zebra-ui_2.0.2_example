@@ -2,7 +2,7 @@
   <DemoPage title="Uploader">
     <view class="demo-uploader">
       <demo-block title="基础用法">
-        <z-uploader :after-read="afterRead" />
+        <z-uploader :after-read="afterRead" upload-text="点击上传"/>
       </demo-block>
       <demo-block title="文件预览">
         <z-uploader v-model="fileList" multiple />

@@ -1,21 +1,26 @@
 <template>
   <DemoPage title="NoticeBar">
     <view class="demo-notice-bar">
-      <demo-block title="基础用法">
-        <z-notice-bar
-          left-icon="sound"
-          scrollable
-          text="zebra-swiper是基于uniapp开发的一款移动端轮播组件。"
-        />
-      </demo-block>
+        
+        <view class="py-10 px-20" style="color: var(--greyDark);">基础用法</view>
+        <view class="pt-10 pb-20 px-20">
+            <z-notice-bar
+              wrapable
+              text="【多行展示】zebra-swiper是基于uniapp开发的一款移动端轮播组件。"
+            />
+        </view>
+        
       <demo-block title="滚动播放">
         <z-notice-bar
+            left-icon="sound"
           scrollable
-          text="zebra-swiper是基于uniapp开发的一款移动端轮播组件。"
+          text="【开启滚动】zebra-swiper是基于uniapp开发的一款移动端轮播组件。"
         />
+        
+        <view class="w-100 h-20"></view>
         <z-notice-bar
           :scrollable="false"
-          text="zebra-swiper是基于uniapp开发的一款移动端轮播组件。"
+          text="【关闭滚动】zebra-swiper是基于uniapp开发的一款移动端轮播组件。"
         />
       </demo-block>
 
@@ -32,6 +37,8 @@
           mode="closeable"
           text="zebra-swiper是基于uniapp开发的一款移动端轮播组件。"
         />
+        <view class="w-100 h-20"></view>
+        
         <z-notice-bar
           mode="link"
           text="zebra-swiper是基于uniapp开发的一款移动端轮播组件。"
@@ -41,8 +48,8 @@
       <demo-block title="自定义样式">
         <z-notice-bar
           text="zebra-swiper是基于uniapp开发的一款移动端轮播组件。"
-          color="#1989fa"
-          background="#ecf9ff"
+          color="#9baacf"
+          background="#E4EBF5"
           left-icon="setting"
         />
       </demo-block>

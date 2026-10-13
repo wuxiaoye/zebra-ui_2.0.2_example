@@ -67,7 +67,7 @@ const props = defineProps({
   },
   iconBackground:{
       type: String,
-      default: 'var(--zzz-primary)'
+      default: 'var(--z-grid-item-default-icon-background)'
   },
   iconPrefix: String,
   badgeProps: Object

@@ -8,7 +8,9 @@
       <slot name="left-icon"></slot>
     </template>
     <template v-else-if="props.leftIcon">
-      <z-icon :custom-style="leftIconStyle" :name="props.leftIcon" />
+        <view style="background: linear-gradient( 120deg, #f59e0b, #fcd34d ); border-radius: 50%; padding: 10rpx; margin: 10rpx 10rpx 10rpx 0;">
+            <z-icon :custom-style="leftIconStyle" :name="props.leftIcon" color="#fff"/>
+        </view>
     </template>
     <view class="z-notice-wrap" :class="bem('wrap')">
       <view
@@ -38,6 +40,7 @@
       <z-icon
         :custom-style="rightIconStyle"
         :name="getRightIconName()"
+        color="var(--z-notice-bar-right-icon-color)"
         @click="onClickRightIcon"
       />
     </template>
@@ -74,7 +77,10 @@ const props = defineProps({
   color: String,
   delay: makeNumericProp(1),
   speed: makeNumericProp(60),
-  leftIcon: String,
+  leftIcon: {
+      type: String,
+      default: 'sound'
+  },
   wrapable: Boolean,
   background: String,
   scrollable: {
@@ -206,6 +212,8 @@ export default {
   line-height: var(--z-notice-bar-line-height);
   color: var(--z-notice-bar-text-color);
   background: var(--z-notice-bar-background);
+  box-shadow: var(--z-notice-bar-shadow);
+  border-radius: var(--z-notice-bar-border-radius);
 
   &__wrap {
     position: relative;
