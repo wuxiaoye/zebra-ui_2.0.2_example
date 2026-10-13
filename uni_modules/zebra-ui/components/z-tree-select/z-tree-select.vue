@@ -6,22 +6,24 @@
       @change="onSidebarChange"
     >
       <template v-for="(item, index) in props.items" :key="index">
-        <view :class="[bem('nav-item'), item.className]">
+        <view :class="[bem('nav-item'), item.className]" >
           <z-sidebar-item
+            :title="item.text"
             :dot="item.dot"
             :badge="item.badge"
             :disabled="item.disabled"
-            :custom-style="{ padding: 'var(--z-tree-select-nav-item-padding)' }"
             @click="onClickSidebarItem"
           >
+            <!-- :custom-style="{ padding: 'var(--z-tree-select-nav-item-padding)' }" -->
+            <!--  这里不能使用自定义模板，一旦自定义，z-sidebar-item 默认的 dot、badge徽标功能会失效。查找了好久才找到原因。已修改 z-sidebar-item 组件，去掉自定义模板。
             <template #title>
               {{ item.text }}
-            </template>
+            </template> -->
           </z-sidebar-item>
         </view>
       </template>
     </z-sidebar>
-    <view :class="bem('content')">
+    <view :class="bem('content')" style="margin-left: 6px;">
       <template v-if="instance.slots.content">
         <slot name="content"></slot>
       </template>

@@ -232,10 +232,10 @@
     // --z-stepper-button-icon-color: var(--z-text-color);
     --z-stepper-btn-minus-background: var(--zzz-greyLight-1);
     --z-stepper-btn-plus-background: var(--zzz-primary);
-    --z-stepper-btn-minus-color: var(--zzz-greyDark);
-    --z-stepper-btn-plus-color: #fff;//var(--zzz-ri-ji-bai_ye-ji-hei);
+    --z-stepper-btn-minus-color: var(--zzz-ri-ye-tong-hui);
+    --z-stepper-btn-plus-color: #fff;
     
-    --z-stepper-button-disabled-color: var(--zzz-greyLight-2);
+    --z-stepper-button-disabled-color: var(--z-gray-5);
     --z-stepper-button-disabled-icon-color: var(--z-gray-5);
     //圆形
     --z-stepper-btn-round-background-color: var(--z-primary-color);
@@ -334,7 +334,7 @@
       --z-signature-content-border: 1px dotted var(--zzz-ri-ye-tong-hui);
       
     
-    // badge
+    // badge 徽章
     --z-badge-size: 32rpx;
     --z-badge-color: var(--z-white);
     --z-badge-padding: 0 6rpx;
@@ -346,7 +346,7 @@
     --z-badge-dot-size: 16rpx;
     --z-badge-font: -apple-system-font, helvetica neue, arial, sans-serif;
     
-    // actionSheet
+    // actionSheet 动作面板
     --z-action-sheet-max-height: 80%;
     --z-action-sheet-header-height: 96rpx;
     --z-action-sheet-header-font-size: var(--z-font-size-lg);
@@ -357,7 +357,7 @@
     --z-action-sheet-item-font-size: var(--z-font-size-lg);
     --z-action-sheet-item-line-height: var(--z-line-height-lg);
     --z-action-sheet-item-text-color: var(--z-text-color);
-    --z-action-sheet-item-disabled-text-color: var(--zzz-greyLight-2);
+    --z-action-sheet-item-disabled-text-color: var(--zzz-ri-qian-bai_ye-qian-hei);
     // --z-action-sheet-subname-color: var(--z-text-color-2);
     --z-action-sheet-subname-color: var(--zzz-greyDark);
     --z-action-sheet-subname-font-size: var(--z-font-size-sm);
@@ -378,7 +378,7 @@
     --move-distance: 0;
     
     
-    // image
+    // image 图片
     --z-image-placeholder-text-color: var(--zzz-greyDark);
     --z-image-placeholder-font-size: var(--z-font-size-md);
     --z-image-placeholder-background: var(--zzz-greyLight-1);
@@ -388,7 +388,7 @@
     --z-image-error-icon-size: 64rpx;
     --z-image-error-icon-color: var(--zzz-greyDark);
     
-    // card
+    // card 卡片
     --card-border-radius: var(--z-radius-md);
     --card-body-padding: var(--z-padding-sm) var(--z-padding-md);
     --card-header-padding: var(--z-padding-sm) var(--z-padding-md);
@@ -402,7 +402,7 @@
     --card-description-margin: var(--z-padding-xs);
     --card-title-margin: var(--z-padding-xs);
     
-    // cascader
+    // cascader 日历
     --z-cascader-header-height: 96rpx;
     --z-cascader-header-padding: 0 var(--z-padding-md);
     --z-cascader-title-font-size: var(--z-font-size-lg);
@@ -428,7 +428,7 @@
     --z-circle-text-font-size: var(--z-font-size-md);
     --z-circle-text-line-height: var(--z-line-height-md);
     
-    // collapse
+    // collapse 折叠面板
     --z-collapse-item-duration: var(--z-duration-base);
     --z-collapse-item-content-padding: var(--z-padding-sm) var(--z-padding-md);
     --z-collapse-item-content-font-size: var(--z-font-size-md);
@@ -436,7 +436,7 @@
     // --z-collapse-item-content-text-color: var(--z-text-color-2);
     --z-collapse-item-content-text-color: var(--zzz-greyDark);
     --z-collapse-item-content-background: var(--z-background-2);
-    --z-collapse-item-title-disabled-color: var(--zzz-greyLight-3);
+    --z-collapse-item-title-disabled-color: var(--zzz-ri-qian-bai_ye-qian-hei);
     
     // countDown
     --z-count-down-text-color: var(--z-text-color);
@@ -490,7 +490,7 @@
     --z-dropdown-menu-title-font-size: 30rpx;
     --z-dropdown-menu-title-text-color: var(--z-text-color);
     --z-dropdown-menu-title-active-text-color: var(--z-primary-color);
-    --z-dropdown-menu-title-disabled-text-color: var(--z-text-color-2);
+    --z-dropdown-menu-title-disabled-text-color: var(--zzz-ri-qian-bai_ye-qian-hei);
     --z-dropdown-menu-title-padding: 0 var(--z-padding-xs);
     --z-dropdown-menu-title-line-height: var(--z-line-height-lg);
     --z-dropdown-menu-option-active-color: var(--z-primary-color);
@@ -508,13 +508,13 @@
     
     // input
     --z-field-label-width: 6.2em;
-    --z-field-label-color: var(--z-text-color);
+    --z-field-label-color: var(--zzz-ri-hei_ye-bai);//var(--z-text-color);
     --z-field-label-margin-right: var(--z-padding-sm);
     // --z-field-input-text-color: var(--z-text-color);
     --z-field-input-text-color: var(--zzz-greyDark);
     --z-field-textarea-text-color: #555;
     --z-field-input-error-text-color: var(--z-danger-color);
-    --z-field-input-disabled-text-color: var(--z-text-color-3);
+    --z-field-input-disabled-text-color: var(--zzz-ri-qian-bai_ye-qian-hei);
     // --z-field-placeholder-text-color: var(--z-text-color-3);
     --z-field-placeholder-text-color: var(--zzz-greyLight-3);
     --z-field-icon-size: 36rpx;
@@ -536,13 +536,14 @@
     --z-floating-bubble-size: 96rpx;
     --z-floating-bubble-initial-gap: 48rpx;
     --z-floating-bubble-icon-size: 56rpx;
-    --z-floating-bubble-icon-color: #f5f5f5;
+    --z-floating-bubble-icon-color: var(--zzz-lv-di-bai-zi); //图标颜色
     --z-floating-bubble-background: var(--z-primary-color);
-    --z-floating-bubble-color: #f5f5f5;//var(--z-background-2);
+    //这个似乎没有起到作用，设定了按钮内部文字的颜色，但按钮内部没有文字，只有 icon 图标，而 icon 图标的颜色需要在< z-icon> 标签内设置
+    --z-floating-bubble-color: #f3f3f3;//var(--z-background-2);
     --z-floating-bubble-z-index: 999;
     --z-floating-bubble-border-radius: var(--z-radius-max);
     
-    // floatingPanel
+    // floatingPanel  浮动面板
     --z-floating-panel-border-radius: 32rpx;
     --z-floating-panel-header-height: 60rpx;
     --z-floating-panel-z-index: 999;
@@ -551,7 +552,7 @@
     --z-floating-panel-bar-height: 6rpx;
     --z-floating-panel-bar-color: var(--z-gray-5);
     
-    // grid
+    // grid 宫格
     --z-grid-item-content-padding: var(--z-padding-md) var(--z-padding-xs);
     --z-grid-item-content-background: var(--z-background-2);
     --z-grid-item-content-active-color: var(--z-active-color);
@@ -633,10 +634,10 @@
     --z-password-input-cursor-height: 40%;
     --z-password-input-cursor-duration: 1s;
     
-    // sticky
+    // sticky 吸顶
     --z-sticky-z-index: 99;
     
-    // popover
+    // popover 气泡弹框
     --z-popover-arrow-size: 12rpx;
     --z-popover-radius: var(--z-radius-lg);
     --z-popover-action-width: 256rpx;
@@ -653,7 +654,7 @@
     --z-popover-dark-background: #4a4a4a;
     --z-popover-dark-action-disabled-text-color: var(--z-text-color-2);
     
-    // progress
+    // progress 进度条
     --z-progress-height: 8rpx;
     --z-progress-color: linear-gradient(to right, var(--zzz-primary-light), var(--zzz-primary) );
     --z-progress-inactive-color: var(--z-gray-5);
@@ -743,7 +744,7 @@
     --z-share-sheet-cancel-button-height: 96rpx;
     --z-share-sheet-cancel-button-background: var(--z-background-2);
     
-    // slider
+    // slider 滑块
     --z-slider-active-background: linear-gradient(-1deg, var(--zzz-primary-dark) 0%, var(--zzz-primary) 50%, var(--zzz-primary-light) 100%);
     //被禁用时, 进度条颜色
     --z-slider-disabled-bar-background: linear-gradient(-1deg, var(--zzz-greyLight-3), var(--zzz-greyLight-2) );
@@ -753,11 +754,14 @@
     --z-slider-button-height: 40rpx;
     --z-slider-button-radius: 50%;
     --z-slider-button-background: var(--zzz-white);
-    --z-slider-button-shadow: 0.6rem 0.6rem 1.2rem var(--zzz-greyLight-2), -0.4rem -0.4rem 1rem var(--zzz-white);
+    //滑块按钮-阴影样式
+    --z-slider-button-shadow: 0.6rem 0.6rem 1.2rem var(--zzz-shadow-vars-black), -0.4rem -0.4rem 1rem var(--zzz-shadow-vars-white);
+    //滑条主体-内阴影样式
+    --z-slider-shadow: inset 4rpx 4rpx 10rpx var(--zzz-shadow-vars-black), inset -4rpx -4rpx 10rpx var(--zzz-shadow-vars-white);
     // --z-slider-inactive-background: var(--z-gray-3);
     
     
-    // swipe
+    // swipe 轮播框架（如：图片轮播）
     --z-swipe-indicator-size: 12rpx;
     --z-swipe-indicator-margin: var(--z-padding-sm);
     --z-swipe-indicator-active-opacity: 1;
@@ -765,7 +769,7 @@
     --z-swipe-indicator-active-background: var(--z-primary-color);
     --z-swipe-indicator-inactive-background: var(--z-border-color);
     
-    // Skeleton
+    // Skeleton 骨架屏
     --z-skeleton-duration: 1.2s;
     --z-skeleton-avatar-size: 64rpx;
     --z-skeleton-avatar-background: var(--zzz-greyLight-2);
@@ -776,7 +780,7 @@
     --z-skeleton-paragraph-margin-top: var(--z-padding-sm);
     --z-skeleton-title-width: 40%;
     
-    // Steps
+    // Steps 步骤条
     --z-steps-background: var(--z-background-2);
     // --z-step-text-color: var(--z-text-color-2);
     // --z-step-active-color: var(--z-primary-color);
@@ -793,7 +797,7 @@
     --z-step-circle-color: var(--zzz-greyDark);
     --z-step-horizontal-title-font-size: var(--z-font-size-sm);
     
-    // switch
+    // switch 开关
     //关闭状态
     --z-switch-background: var(--zzz-greyLight-1);
     //开启状态
@@ -807,17 +811,17 @@
     //关闭时-圆点颜色
     --z-switch-node-background: var(--zzz-greyDark);
     //开启时-圆点颜色
-    --z-switch-on-node-background: #fff;
+    --z-switch-on-node-background: #f3f3f3;
     --z-switch-node-shadow: 0 6rpx 2rpx 0 rgb(0 0 0 / 5%);
     --z-switch-disabled-opacity: var(--z-disabled-opacity);
     
     // tabs 切换tab导航
-    --z-tab-line-text-color: var(--zzz-greyDark);
+    --z-tab-line-text-color: var(--zzz-ri-grey-dark_ye-shen-hui);
     --z-tab-line-active-text-color: var(--zzz-ri-hei_ye-bai);
-    --z-tab-card-text-color: var(--zzz-greyDark);
-    --z-tab-card-active-text-color: var(--z-white);
+    --z-tab-card-text-color: var(--zzz-ri-grey-dark_ye-shen-hui);//var(--zzz-greyDark);
+    --z-tab-card-active-text-color: var(--zzz-lv-di-bai-zi);
     --z-tab-card-active-background-color: linear-gradient(135deg,  var(--zzz-primary-light),  var(--zzz-primary) );
-    --z-tab-disabled-text-color: var(--zzz-greyLight-3);
+    --z-tab-disabled-text-color: var(--zzz-ri-qian-bai_ye-qian-hei);// var(--zzz-greyLight-3);
     --z-tab-font-size: var(--z-font-size-md);
     --z-tab-line-height: var(--z-line-height-md);
     
@@ -851,11 +855,11 @@
     --z-tag-default-color: var(--z-gray-6);
     --z-tag-plain-background: rgba(255, 255, 255, 0);
     
-    // TextEllipsis
+    // TextEllipsis 文本省略
     --z-text-ellipsis-line-height: 1.6;
     --z-text-ellipsis-action-color: var(--zzz-primary);
     
-    // Waternark
+    // Waternark 水印
     --z-watermark-z-index: 100;
     
     // Tabbar 标签栏导航，这个组件分成 tabbar、tabbar-item
@@ -872,10 +876,10 @@
     --z-tabbar-item-icon-margin-bottom: var(--z-padding-base);
     //新增-品牌色背景样式
     --z-tabbar-item-primary-background-text-color: var(--zzz-greyDark);//非激活状态-文字与图标颜色
-    --z-tabbar-item-primary-background-active-text-color: #fff; //激活状态-文字与图标颜色
+    --z-tabbar-item-primary-background-active-text-color: var(--zzz-lv-di-bai-zi); //激活状态-文字与图标颜色
     --z-tabbar-item-primary-background-active-background: linear-gradient(135deg,  var(--zzz-primary-light),  var(--zzz-primary) );//激活状态-背景色
     
-    // uploader
+    // uploader 上传
     --z-uploader-size: 160rpx;
     --z-uploader-icon-size: 48rpx;
     --z-uploader-icon-color: var(--zzz-primary);
@@ -917,30 +921,26 @@
     --z-sidebar-text-line-height: 1.4;
     --z-sidebar-disabled-text-color: var(--zzz-ri-qian-bai_ye-qian-hei);//禁用状态
     --z-sidebar-background: var(--zzz-greyLight-1);
-    --z-sidebar-text-color: var(--zzz-greyDark);
-    --z-sidebar-active-color: var(--zzz-white);
-    //图标
-    --z-sidebar-icon-color: var(--zzz-ri-grey-dark_ye-shen-hui);
-    --z-sidebar-active-icon-color: #f3f3f3;
-    // 激活
-    --z-sidebar-selected-font-weight: var(--z-font-bold);
-    --z-sidebar-selected-text-color: var(--z-white);
+    
+    --z-sidebar-text-color: var(--zzz-greyDark); //非激活状态
+    --z-sidebar-selected-text-color: var(--zzz-lv-di-bai-zi); // 激活
     --z-sidebar-selected-background: linear-gradient( 120deg, var(--zzz-primary-light), var(--zzz-primary) );
+    --z-sidebar-selected-font-weight: var(--z-font-bold);
     --z-sidebar-selected-border-radius: 0 20rpx 20rpx 0;
     // --z-sidebar-selected-border-width: 8rpx;
     // --z-sidebar-selected-border-height: 32rpx;
     // --z-sidebar-selected-border-color: var(--z-primary-color);
     
-    // tree select  侧边导航+右侧勾选 = 分类选择。此组件实际上由 z-sidebar 和 z-sidebar-item 组成，一些样式的调整需要到 z-sidebar 和 z-sidebar-item 样式处。
+    // tree select  侧边导航+右侧勾选 = 分类选择。左边侧边导航部分，实际上由 z-sidebar 和 z-sidebar-item 组成，一些样式的调整需要到 z-sidebar 和 z-sidebar-item 样式处。
     --z-tree-select-font-size: var(--z-font-size-md);
-    --z-tree-select-nav-background: var(--z-background);
+    --z-tree-select-nav-background: var(--zzz-greyLight-1);//var(--z-background);
     --z-tree-select-content-background: var(--z-background-2);
     --z-tree-select-nav-item-padding: 28rpx var(--z-padding-sm);
     --z-tree-select-item-height: 96rpx;
-    --z-tree-select-item-active-color: var(--z-primary-color);
     --z-tree-select-item-disabled-color: var(--zzz-ri-qian-bai_ye-qian-hei);//禁用状态
     --z-tree-select-item-selected-size: 32rpx;
-    --z-tree-select-item-color: var(--z-text-color);
+    --z-tree-select-item-color: var(--z-text-color);//非激活状态
+    --z-tree-select-item-active-color: var(--z-primary-color);//激活状态
     
     // icon
     --z-icon-default-color: var(--zzz-ri-hei_ye-bai);
@@ -975,7 +975,7 @@ page {
     // ====== 比 --zzz-greyDark  更黑====== 一般用于标题： 白天-黑色，夜间-白色
     --zzz-ri-hei_ye-bai: #212121;
     
-        // ====== 比 --zzz-greyDark  更深灰====== 一般用于 辅助描述：白天-深灰色，夜间-偏亮黄灰色
+    // ====== 比 --zzz-greyDark  更深灰====== 一般用于 辅助描述：白天-深灰色，夜间-偏亮黄灰色
     --zzz-ri-hui_ye-hui: #969799;
     
     
@@ -989,11 +989,12 @@ page {
     --zzz-ri-qian-hui_ye-qian-hui: var(--zzz-greyLight-3); //临时，未敲定
     
     // ====== 比 --zzz-greyDark  更白====== 一般用于 辅助：白天-浅灰色（非常白），夜间-浅灰色（非常黑）
-    --zzz-ri-qian-bai_ye-qian-hei: #eaeaea; //常用于：禁用状态
+    --zzz-ri-qian-bai_ye-qian-hei: #c3c3c3; //常用于：禁用状态
     --zzz-ri-ji-bai_ye-ji-hei: #f5f5f7;
     
     // 一般用于 选中值：白天-基准灰色（--zzz-greyDark），夜间-品牌绿色
     --zzz-ri-hui_ye-lv : var(--zzz-greyDark);
+    --zzz-lv-di-bai-zi: #ffffff; //绿底白字，品牌绿色作为背景时，上面白字尽量不刺眼
     
     // Color Palette
     --z-black: #000;
@@ -1073,19 +1074,19 @@ page {
     // ======  --zzz-greyDark  原色====== 
     --zzz-ri-grey-dark_ye-qian-hui: #acbde5; //白天-基准灰色，夜间-更偏白
     --zzz-ri-ye-tong-hui: #9baacf ; //日夜同一个灰色
-    --zzz-ri-grey-dark_ye-shen-hui: #686868; //白天-基准灰色，夜间-更偏黑。
+    --zzz-ri-grey-dark_ye-shen-hui: #7f7f7f; //白天-基准灰色，夜间-更偏黑。
     --zzz-ri-grey-dark_ye-shen-hei: #333; //白天-基准灰色，夜间-深黑色。用于 checbox2 多选项、radio2 但选项，未选中图标颜色
     
     // ====== 比 --zzz-greyDark  更浅灰====== 一般用于 辅助描述：白天-比灰色更偏白，夜间-比灰色更偏黑
     --zzz-ri-qian-hui_ye-qian-hui: #908b8d; //临时，未敲定
     
     // ====== 比 --zzz-greyDark  更白====== 一般用于 辅助：白天-浅灰色（非常白），夜间-浅灰色（非常黑）
-    --zzz-ri-qian-bai_ye-qian-hei: #3f3f3f; //常用于：禁用状态
+    --zzz-ri-qian-bai_ye-qian-hei: #4f4f4f; //常用于：禁用状态
     --zzz-ri-ji-bai_ye-ji-hei: #2a2a2d;
     
     // 一般用于 选中值：白天-基准灰色（--zzz-greyDark），夜间-品牌绿色
     --zzz-ri-hui_ye-lv : var(--zzz-primary);
-    
+    --zzz-lv-di-bai-zi: #cdf3de; //绿底白字，品牌绿色作为背景时，上面白字尽量不刺眼
     
     --z-text-color: #f5f5f5;
     --z-text-color-2: #707070;

@@ -1,12 +1,12 @@
 <template>
   <DemoPage title="Sidebar">
     <view class="demo-sidebar">
-        <view class="py-30 text-greyDark text-size-n px-20">基础用法</view>
+        <view class="py-30 text-greyDark text-size-n px-20">基础用法 -有 icon 与 无 icon</view>
         <view class=" mb-30 add_shadow_big round-12 overflow" style="">
             <z-sidebar v-model="active1">
-              <z-sidebar-item title="名道德经" />
-              <z-sidebar-item title="标签名道德" />
-              <z-sidebar-item title="标签名道" />
+              <z-sidebar-item title="名道德经" icon="home" />
+              <z-sidebar-item title="标签名道德" icon="home"  />
+              <z-sidebar-item title="标签名道" icon="home"  />
               <z-sidebar-item title="标签名" />
               <z-sidebar-item title="标签" />
               <z-sidebar-item title="标签名" />
@@ -15,9 +15,9 @@
         
       <demo-block title="基础用法">
         <z-sidebar v-model="active1">
-          <z-sidebar-item title="标签名" />
-          <z-sidebar-item title="标签名" />
-          <z-sidebar-item title="标签名" />
+          <z-sidebar-item title="标签名"  icon="home" />
+          <z-sidebar-item title="标签名"  icon="home" />
+          <z-sidebar-item title="标签名"  icon="home" />
         </z-sidebar>
       </demo-block>
       
@@ -40,7 +40,8 @@
         <z-sidebar v-model="active4">
           <z-sidebar-item title="标签名" dot />
           <z-sidebar-item title="标签名" badge="59"/>
-          <z-sidebar-item title="标签名" />
+          <z-sidebar-item title="标签名" dot icon="home" />
+          <z-sidebar-item title="标签名" badge="59" icon="home" />
         </z-sidebar>
       </demo-block>
     </view>

@@ -385,7 +385,7 @@ export default {
   border-radius: var(--z-radius-max);
   //  未激活状态颜色
   // background: var(--z-slider-inactive-background);
-  box-shadow: inset 4rpx 4rpx 10rpx var(--zzz-greyLight-2), inset -4rpx -4rpx 10rpx var(--zzz-white);
+  box-shadow: var(--z-slider-shadow);
 
   &::before {
     position: absolute;

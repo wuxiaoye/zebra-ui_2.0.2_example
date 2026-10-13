@@ -414,7 +414,7 @@ page {
   --z-sidebar-text-color: var(--z-text-color);
   --z-sidebar-disabled-text-color: var(--z-text-color-3);
   --z-sidebar-padding: 40rpx var(--z-padding-sm);
-  --z-sidebar-active-color: var(--z-active-color);
+  --z-sidebar-active-color: var(--z-active-color); //根本没有用到这个属性
   --z-sidebar-background: var(--z-background);
   --z-sidebar-selected-font-weight: var(--z-font-bold);
   --z-sidebar-selected-text-color: var(--z-text-color);

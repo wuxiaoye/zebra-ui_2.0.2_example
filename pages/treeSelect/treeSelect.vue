@@ -16,6 +16,7 @@
           :items="items"
         />
       </demo-block>
+      
       <demo-block title="自定义内容">
         <z-tree-select
           v-model:main-active-index="activeIndex3"
@@ -32,6 +33,7 @@
           </template>
         </z-tree-select>
       </demo-block>
+      
       <demo-block title="徽标提示">
         <z-tree-select
           v-model:active-id="activeId2"
@@ -75,21 +77,21 @@ const simpleItems = ref([{ text: '分组 1' }, { text: '分组 2' }])
 const badgeItems = ref([
   {
     text: '浙江',
+    dot: true,
     children: [
       { text: '杭州', id: 1 },
       { text: '温州', id: 2 },
       { text: '宁波', id: 3, disabled: true }
-    ],
-    dot: true
+    ]
   },
   {
     text: '江苏',
+    badge: 5,
     children: [
       { text: '南京', id: 4 },
       { text: '无锡', id: 5 },
       { text: '徐州', id: 6 }
-    ],
-    badge: 5
+    ]
   }
 ])
 </script>

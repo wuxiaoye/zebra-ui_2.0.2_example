@@ -4,19 +4,24 @@
     :style="customStyle"
     @click="onClick"
   >
-      <template v-if="instance.slots.title">
-        <slot name="title"></slot>
-      </template>
-      <template v-else>
-          <view class="content-wrap">
+    <view class="content-wrap">
+          <!--  如果：有图标 -->
+          <template v-if="icon != undefined">
                 <z-badge v-bind="badgeProps" :dot="dot" :content="badge">
-                      <z-icon :name="props.icon" :size="props.iconSize" 
+                      <z-icon   :name="props.icon" :size="props.iconSize" 
                         :color="disabled ? 'var(--z-sidebar-disabled-text-color)' : ( selected ? props.activeIconColor :  props.iconColor) "
                         ></z-icon>
                 </z-badge>
               <text class="title-text">{{ title }}</text>
-          </view>
-      </template>
+          </template>
+          
+          <!-- 如果：无图标 -->
+          <template v-else>
+                <z-badge v-bind="badgeProps" :dot="dot" :content="badge">
+                    <text class="title-text">{{ title }}</text>
+                </z-badge>
+          </template>
+    </view>
   </view>
 </template>
 
@@ -46,7 +51,7 @@ const props = defineProps({
   },
   icon:{
       type: String,
-      default: 'home'
+      default: undefined
   },
   iconSize:{
       type: String,
@@ -54,11 +59,11 @@ const props = defineProps({
   },
   iconColor:{
       type: String,
-      default: 'var(--z-sidebar-icon-color)'
+      default: 'var(--z-sidebar-text-color)'
   },
   activeIconColor:{
       type: String,
-      default: 'var(--z-sidebar-active-icon-color)'
+      default: 'var(--z-sidebar-selected-text-color)'
   },
 })
 const emit = defineEmits(['click'])
@@ -118,9 +123,9 @@ export default {
       transition: all 0.4s ease;
   }
 
-  &:not(:last-child)::after {
+  // &:not(:last-child)::after {
     // border-bottom-width: 1px;
-  }
+  // }
 
   &__text {
     word-break: break-all;
