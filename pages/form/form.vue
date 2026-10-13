@@ -4,12 +4,12 @@
         <demo-block title="表单项类型">
             <z-field name="switch2" label="开关2">
                 <template #input>
-                      <aye-switch v-model="switchChecked"></aye-switch>
+                      <z-switch2 v-model="switchChecked"></z-switch2>
                 </template>
             </z-field>
             <z-field name="switch3" label="开关3">
                 <template #input>
-                      <aye-switch2 v-model="switchChecked"></aye-switch2>
+                      <z-switch3 v-model="switchChecked"></z-switch3>
                 </template>
             </z-field>
             

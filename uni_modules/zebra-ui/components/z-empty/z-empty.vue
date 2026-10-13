@@ -139,7 +139,7 @@ export default {
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: var(--zzz-greyDark);
+  color: var(--z-empty-icon-color);
 }
 
 .aye-error-network:before {
@@ -162,8 +162,8 @@ export default {
   width: 128rpx;
   height: 128rpx;
   border-radius: 50%;
-  background: var(--zzz-greyLight-1);
-  box-shadow: inset 0.4rem 0.4rem 0.8rem var(--zzz-greyLight-2), inset -0.4rem -0.4rem 0.8rem var(--zzz-white);
+  background: var(--z-empty-empty-icon-background-color);
+  box-shadow: var(--z-empty-empty-icon-shadow);
 }
 
 .z-empty {
@@ -200,7 +200,7 @@ export default {
   }
 }
 
-.z-theme-dark .z-empty {
-  opacity: 0.5;
-}
+// .z-theme-dark .z-empty {
+  // opacity: 0.5;
+// }
 </style>

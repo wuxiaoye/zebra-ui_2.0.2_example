@@ -208,7 +208,7 @@
     --z-checkbox-disabled-background: var(--z-border-color);
     
     // checkbox2
-    --z-checkbox2-final-inactive-icon-color: var(--zzz-ri-grey-dark_ye-shen-hei); //最终非活跃图标颜色
+    --z-checkbox2-final-inactive-icon-color: var(--zzz-ri-qian-hui_ye-shen-hei); //最终非活跃图标颜色
     --z-checkbox2-final-label-color: var(--zzz-ri-hei_ye-bai); //最终文字颜色
     
     // radio 单选项
@@ -224,7 +224,7 @@
     --z-radio-disabled-background: var(--z-border-color);
     
     // radio2
-    --z-radio2-inactive-icon-color: var(--zzz-ri-grey-dark_ye-shen-hei);
+    --z-radio2-inactive-icon-color: var(--zzz-ri-qian-hui_ye-shen-hei);
     --z-radio2-label-color: var(--zzz-ri-hei_ye-bai);
     
     // stepper 步进器
@@ -467,7 +467,7 @@
     --z-dialog-confirm-button-text-color: var(--z-primary-color);
     --z-dialog-no-has-title-icon-color: var(--zzz-primary);//var(--zzz-secondary);//var(--zzz-ri-ye-tong-hui);
     
-    // divider
+    // divider 分割线
     --z-divider-margin: var(--z-padding-md) 0;
     --z-divider-vertical-margin: 0 var(--z-padding-xs);
     --z-divider-text-color: var(--zzz-greyDark);
@@ -495,15 +495,19 @@
     --z-dropdown-menu-option-active-color: var(--z-primary-color);
     --z-dropdown-menu-content-max-height: 80%;
     
-    // empty
+    // empty 空状态
     --z-empty-padding: var(--z-padding-xl) 0;
     --z-empty-image-size: 360rpx;
     --z-empty-description-margin-top: var(--z-padding-md);
     --z-empty-description-padding: 0 120rpx;
-    --z-empty-description-color: var(--zzz-greyDark);
+    --z-empty-description-color: var(--zzz-ri-ye-tong-hui);
     --z-empty-description-font-size: var(--z-font-size-md);
     --z-empty-description-line-height: var(--z-line-height-md);
     --z-empty-bottom-margin-top: 48rpx;
+    --z-empty-icon-color: var(--zzz-greyDark);
+    //自绘空图标
+    --z-empty-empty-icon-shadow: var(--zzz-shadow-inset-more-big);//inset 0.4rem 0.4rem 0.8rem #c8d0e7, inset -0.4rem -0.4rem 0.8rem #fff;
+    --z-empty-empty-icon-background-color: var(--zzz-greyLight-1);
     
     // input
     --z-field-label-width: 6.2em;
@@ -564,13 +568,13 @@
     // highlight
     --z-highlight-tag-color: var(--z-primary-color);
     
-    // list
+    // list 列表（下滑自动加载更多）
     --z-list-text-color: var(--zzz-ri-hui_ye-hui);
     --z-list-text-font-size: var(--z-font-size-md);
     --z-list-text-line-height: 100rpx;
     --z-list-loading-icon-size: 38rpx;
     
-    // loading
+    // loading 加载中
     --z-loading-text-color: var(--zzz-primary);
     --z-loading-text-font-size: var(--z-font-size-md);
     // --z-loading-spinner-color: var(--z-gray-5);
@@ -578,7 +582,7 @@
     --z-loading-spinner-size: 60rpx;
     --z-loading-spinner-duration: 0.8s;
     
-    // navbar
+    // navbar 页头栏
     --z-nav-bar-height: 88rpx;
     --z-nav-bar-background: var(--z-background-2);
     --z-nav-bar-arrow-size: 38rpx;
@@ -589,7 +593,7 @@
     --z-nav-bar-z-index: 100;
     --z-nav-bar-disabled-opacity: var(--z-disabled-opacity);
     
-    // noticeBar
+    // noticeBar 滚动通知栏（样式不好看，传统古老）
     --z-notice-bar-height: 80rpx;
     --z-notice-bar-padding: 0 var(--z-padding-md);
     --z-notice-bar-wrapable-padding: var(--z-padding-xs) var(--z-padding-md);
@@ -600,7 +604,7 @@
     --z-notice-bar-icon-size: 32rpx;
     --z-notice-bar-icon-min-width: 48rpx;
     
-    // notify
+    // notify 消息通知-顶端状态栏往下展示
     --z-notify-text-color: var(--z-white);
     --z-notify-padding: var(--z-padding-xs) var(--z-padding-md);
     --z-notify-font-size: var(--z-font-size-md);
@@ -1006,6 +1010,7 @@ page {
     
     // ====== 比 --zzz-greyDark  更白====== 一般用于 辅助：白天-浅灰色（非常白），夜间-浅灰色（非常黑）
     --zzz-ri-qian-bai_ye-qian-hei: #c3c3c3; //常用于：禁用状态
+    --zzz-ri-qian-hui_ye-shen-hei: #bbd0f9; //用于：表单-多选框，单选框。不可更改！
     --zzz-ri-ji-bai_ye-ji-hei: #f5f5f7;
     
     //  白天-基准灰色（--zzz-greyDark），夜间-品牌绿色。一般用于 选中值
@@ -1015,6 +1020,7 @@ page {
     // ====== 阴影 ======
     //白天-有阴影，夜间-无阴影
     --zzz-ri-shadow_ye-wu: 3px 3px 6px var(--zzz-shadow-vars-black), -2px -2px 5px var(--zzz-shadow-vars-white);
+    
     
     // Color Palette
     --z-black: #000;
@@ -1102,6 +1108,7 @@ page {
     
     // ====== 比 --zzz-greyDark  更白====== 一般用于 辅助：白天-浅灰色（非常白），夜间-浅灰色（非常黑）
     --zzz-ri-qian-bai_ye-qian-hei: #4f4f4f; //常用于：禁用状态
+    --zzz-ri-qian-hui_ye-shen-hei: #333; //用于：表单-多选框，单选框。不可更改！
     --zzz-ri-ji-bai_ye-ji-hei: #2a2a2d;
     
     //  白天-基准灰色（--zzz-greyDark），夜间-品牌绿色。一般用于 选中值

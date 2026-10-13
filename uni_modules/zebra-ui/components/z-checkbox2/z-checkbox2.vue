@@ -315,7 +315,7 @@ const handleClick = () => {
     transform: scale(0.85);
   }
   100% {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 }
 /* .check-icon, */

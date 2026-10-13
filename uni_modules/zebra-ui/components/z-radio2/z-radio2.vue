@@ -203,7 +203,7 @@ const handleTap = () => {
     transform: scale(0.85);
   }
   100% {
-    transform: scale(1);
+    transform: scale(1.1);
   }
 }
 .aye-radio {
