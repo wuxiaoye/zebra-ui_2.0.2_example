@@ -213,7 +213,6 @@ export default {
   max-width: 560rpx;
   background: #000;
   border-radius: 12rpx;
-  box-shadow: 0 4rpx 30rpx rgba(0, 0, 0, 0.12);
   padding: 24rpx;
   box-sizing: border-box;
   display: flex;
@@ -222,7 +221,8 @@ export default {
   pointer-events: auto;
   /* 进场动画：每次插入元素自动播放（从左到右划入） */
   animation: aye-tip-in 0.3s ease both;
-  box-shadow: 3px 3px 6px var(--greyLight-2), -2px -2px 5px var(--white);
+  /* box-shadow: 3px 3px 6px var(--greyLight-2), -2px -2px 5px var(--white); */
+  box-shadow: var(--z-tip-shadow);
 }
 
 /* 进场：右侧两类从右到左划入 */

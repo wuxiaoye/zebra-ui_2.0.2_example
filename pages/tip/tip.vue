@@ -1,17 +1,19 @@
 <template>
+    <z-config-provider theme="dark">
   <view class="page" style="
-  background-color: var(--greyLight-1); 
   min-height: 100vh;
+  background-color: #000;
   ">
+  <!-- background-color: var(--zzz-greyLight-1); -->
     <view class="my-10"></view>
 
     <!-- 方位选择 -->
     <view class="section-title">1. 弹出方位（切换后点击下方触发）</view>
     <view class="btn-row">
-      <z-button size="mini" @click="setPlacement('top-left')">左上</z-button>
-      <z-button size="mini" @click="setPlacement('top-right')">右上</z-button>
-      <z-button size="mini" @click="setPlacement('bottom-left')">左下(距底100px)</z-button>
-      <z-button size="mini" @click="setPlacement('bottom-right')">右下</z-button>
+      <z-button type="text" size="mini" @click="setPlacement('top-left')">左上</z-button>
+      <z-button type="text"  size="mini" @click="setPlacement('top-right')">右上</z-button>
+      <z-button type="text"  size="mini" @click="setPlacement('bottom-left')">左下(距底100px)</z-button>
+      <z-button type="text"  size="mini" @click="setPlacement('bottom-right')">右下</z-button>
     </view>
     <view class="cur-placement">当前方位：{{ tipPlacement }}</view>
 
@@ -20,10 +22,10 @@
     <!-- 类型演示 -->
     <view class="section-title">2. 四种类型</view>
     <view class="btn-row">
-      <z-button size="mini" @click="fire('default')">默认</z-button>
-      <z-button size="mini" @click="fire('success')">成功</z-button>
-      <z-button size="mini" @click="fire('warning')">警告</z-button>
-      <z-button size="mini" @click="fire('error')">错误</z-button>
+      <z-button type="text"  size="mini" @click="fire('default')">默认</z-button>
+      <z-button type="text"  size="mini" @click="fire('success')">成功</z-button>
+      <z-button type="text"  size="mini" @click="fire('warning')">警告</z-button>
+      <z-button type="text"  size="mini" @click="fire('error')">错误</z-button>
     </view>
 
     <view class="my-10"></view>
@@ -62,7 +64,7 @@
     </view>
 
     <!-- 引用组件，placement 可动态切换 -->
-    <aye-tip ref="tipRef" :placement="tipPlacement" />
+    <z-tip ref="tipRef" :placement="tipPlacement" />
 
     <!-- 添加标签弹窗（点击通知的“添加标签”按钮唤起） -->
     <z-popup v-model:show="showTagPopup" mode="bottom">
@@ -77,21 +79,23 @@
             @click="toggleTag(t)"
           >{{ t }}</view>
         </view>
-        <z-button @click="confirmTags">确定</z-button>
+        <z-button type="success" @click="confirmTags" >确定</z-button>
       </view>
     </z-popup>
   </view>
+  
+  </z-config-provider>
 </template>
 
 <script>
-import ayeTip from "@/components/aye-tip/aye-tip.vue";
+// import zTip from "@/components/z-tip/z-tip.vue";
 export default {
-  components: {
-    ayeTip,
-  },
+  // components: {
+  //   zTip,
+  // },
   data() {
     return {
-      tipPlacement: "bottom-right",
+      tipPlacement: "top-left",
       showTagPopup: false,
       tagOptions: ["前端", "后端", "移动端", "设计", "产品", "算法"],
       selectedTags: [],
