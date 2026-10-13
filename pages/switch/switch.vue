@@ -2,18 +2,18 @@
   <DemoPage title="Switch">
     <view class="demo-switch">
       <demo-block title="基础用法">
-        <aye-switch width="45px" v-model="checked2"></aye-switch>
+        <z-switch2 width="45px" v-model="checked2"></z-switch2>
         <view class="my-20"></view>
-        <aye-switch2  width="45px" v-model="checked2"></aye-switch2>
+        <z-switch3  width="45px" v-model="checked2"></z-switch3>
         <view class="my-20"></view>
         
         <z-switch  size="20px" v-model="checked" />
       </demo-block>
       
       <demo-block title="禁用状态">
-          <aye-switch v-model="checked2" :disabled="true"></aye-switch>
+          <z-switch2 v-model="checked2" :disabled="true"></z-switch2>
           <view class="my-20"></view>
-          <aye-switch2 v-model="checked2" disabled></aye-switch2>
+          <z-switch3 v-model="checked2" disabled></z-switch3>
           <view class="my-20"></view>
           
         <z-switch v-model="checked" disabled />
@@ -24,9 +24,9 @@
       </demo-block>
       
       <demo-block title="自定义大小">
-          <aye-switch2 v-model="checked2" width="120rpx"></aye-switch2>
+          <z-switch3 v-model="checked2" width="120rpx"></z-switch3>
           <view class="my-20"></view>
-          <aye-switch v-model="checked2" width="100rpx"></aye-switch>
+          <z-switch2 v-model="checked2" width="100rpx"></z-switch2>
           <view class="my-20"></view>
           
         <z-switch v-model="checked" size="30rpx" />
@@ -55,11 +55,11 @@
       </demo-block>
       
       <demo-block title="异步控制">
-         <aye-switch v-model="switchVal" asyncChange @change="handleSwitchChange" />
+         <z-switch2 v-model="switchVal" asyncChange @change="handleSwitchChange" />
          
          <view class="my-20"></view>
          
-         <aye-switch2 v-model="switchVal2" asyncChange @change="handleSwitchChange2" />
+         <z-switch3 v-model="switchVal2" asyncChange @change="handleSwitchChange2" />
          
          <view class="my-20"></view>
          
@@ -69,12 +69,12 @@
       <demo-block title="搭配单元格使用">
           <z-cell center title="标题">
             <template #right-icon>
-              <aye-switch v-model="checked" />
+              <z-switch2 v-model="checked" />
             </template>
           </z-cell>
           <z-cell center title="标题">
             <template #right-icon>
-              <aye-switch2 v-model="checked" />
+              <z-switch3 v-model="checked" />
             </template>
           </z-cell>
         <z-cell center title="标题">

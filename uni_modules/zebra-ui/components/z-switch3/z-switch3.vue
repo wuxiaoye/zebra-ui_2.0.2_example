@@ -69,28 +69,12 @@ const toggle = () => {
 </script>
 
 <style scoped>
-/* 定义全局变量（可迁移至公共样式，这里保留以便独立使用） */
-:root {
-  --primary-light: #2fe25f;
-  --primary: #07c160;
-  --primary-dark: #0eb805;
-  --secondary-light: #8abdff;
-  --secondary: #6d5dfc;
-  --secondary-dark: #5b0eeb;
-  --white: #FFFFFF;
-  --greyLight-1: #E4EBF5;
-  --greyLight-1-dark: #d8e4f5;
-  --greyLight-2: #c8d0e7;
-  --greyLight-3: #bec8e4;
-  --greyDark: #9baacf;
-}
-
 
 .neu-toggle-track {
   width: 88rpx;
   height: 48rpx;
-  background: var(--greyLight-1);
-  box-shadow: inset 0.4rem 0.4rem 0.8rem var(--greyLight-2), inset -0.4rem -0.4rem 0.8rem var(--white);
+  background: var(--z-switch3-track-background-color);
+  box-shadow: var(--z-switch3-track-shadow);
   border-radius: 24rpx;
   position: relative;
   cursor: pointer;
@@ -104,8 +88,8 @@ const toggle = () => {
 .neu-toggle-thumb {
   width: 36rpx;
   height: 36rpx;
-  background: var(--greyLight-2);
-  box-shadow: 0.2rem 0.2rem 0.4rem var(--greyLight-2), -0.15rem -0.15rem 0.3rem var(--white);
+  background: var(--z-switch3-dot-background-color);
+  box-shadow: var(--z-switch3-dot-shadow);
   border-radius: 50%;
   position: absolute;
   top: 6rpx;
@@ -121,22 +105,18 @@ const toggle = () => {
 }
 
 .neu-toggle-track.active {
-  background: var(--primary-light);
+  background: var(--z-switch3-track-active-background-color);
 }
 
 .neu-toggle-track.active .neu-toggle-thumb {
   left: 46rpx;
-  background: var(--primary);
+  background: var(--z-switch3-dot-active-background-color);
   /* 选中时 left = 宽度 * 46/88 */
   left: calc(var(--sw-width) * 0.522);
 }
 
 .neu-toggle-track.is-disabled {
-    background: var(--greyLight-1-dark);
-    box-shadow: 0 0 0;
-}
-.neu-toggle-track.is-disabled .neu-toggle-thumb{
-    background: var(--greyLight-2);
-    box-shadow: 0 0 0;
+    cursor: not-allowed;
+    opacity: var(--z-switch-disabled-opacity);
 }
 </style>

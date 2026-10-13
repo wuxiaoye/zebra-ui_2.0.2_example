@@ -72,21 +72,6 @@ const toggle = () => {
 </script>
 
 <style scoped>
-/* 样式部分与之前完全相同，此处略... (保留完整样式) */
-:root {
-  --primary-light: #2fe25f;
-  --primary: #07c160;
-  --primary-dark: #0eb805;
-  --secondary-light: #8abdff;
-  --secondary: #6d5dfc;
-  --secondary-dark: #5b0eeb;
-  --white: #FFFFFF;
-  --greyLight-1: #E4EBF5;
-  --greyLight-1-dark: #d8e4f5;
-  --greyLight-2: #c8d0e7;
-  --greyLight-3: #bec8e4;
-  --greyDark: #9baacf;
-}
 
 .aye-switch {
   display: flex;
@@ -95,7 +80,7 @@ const toggle = () => {
   width: var(--sw-width);
   height: var(--sw-height);
   border-radius: calc(var(--sw-height) / 2);
-  box-shadow: 6rpx 6rpx 12rpx var(--greyLight-2), -4rpx -4rpx 10rpx var(--white);
+  box-shadow: var(--z-switch2-track-shadow);
   background: rgba(255, 255, 255, 0);
   transition: all 0.4s ease;
   cursor: pointer;
@@ -108,7 +93,7 @@ const toggle = () => {
   width: 100%;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(330deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+  background: var(--z-switch2-track-active-background-color);
   opacity: 0;
   transition: opacity 0.4s ease;
 }
@@ -121,29 +106,17 @@ const toggle = () => {
   width: calc(var(--sw-width) * 0.35);
   height: calc(var(--sw-width) * 0.35);
   border-radius: 50%;
-  background: var(--greyDark);
+  background: var(--z-switch2-dot-background-color);
   left: calc(var(--sw-width) * 0.0667);
   transition: all 0.4s ease;
 }
 .aye-switch-thumb.checked {
   left: calc(var(--sw-width) - var(--sw-width) * 0.35 - var(--sw-width) * 0.0667);
-  background: var(--greyLight-1);
+  background: var(--z-switch2-dot-active-background-color);
 }
 
 .aye-switch.is-disabled {
   cursor: not-allowed;
-  opacity: 0.6;
-  background: var(--greyLight-1-dark) !important;
-  box-shadow: 0 0 0;
-}
-
-.aye-switch.is-disabled .aye-switch-track {
-  background: var(--greyLight-1-dark) !important;
-  box-shadow: 0 0 0;
-}
-
-.aye-switch.is-disabled .aye-switch-thumb {
-  background: var(--greyLight-2) !important;
-  box-shadow: 0 0 0;
+  opacity: var(--z-switch-disabled-opacity);
 }
 </style>

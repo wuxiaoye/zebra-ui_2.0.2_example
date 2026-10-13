@@ -159,13 +159,13 @@
       
       <demo-block title="自定义按钮">
         <view class="demo-button-item">
-          <z-button color="#ffaa00">单色按钮</z-button>
+          <z-button color="#ffaa00" >单色按钮</z-button>
         </view>
         <view class="demo-button-item">
-          <z-button color="#ffaa00" plain>单色按钮</z-button>
+          <z-button color="#ffaa00" plain >单色按钮</z-button>
         </view>
         <view class="demo-button-item">
-          <z-button color="linear-gradient(to right, #ff6034, #ee0a24)">
+          <z-button color="linear-gradient(to right, #ff6034, #ee0a24)"  >
             渐变色按钮
           </z-button>
         </view>

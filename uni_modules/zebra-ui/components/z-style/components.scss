@@ -815,6 +815,19 @@
     --z-switch-node-shadow: 0 6rpx 2rpx 0 rgb(0 0 0 / 5%);
     --z-switch-disabled-opacity: var(--z-disabled-opacity);
     
+    
+    --z-switch2-track-shadow: var(--zzz-shadow);//6rpx 6rpx 12rpx var(--greyLight-2), -4rpx -4rpx 10rpx var(--white);
+    --z-switch2-track-active-background-color: linear-gradient(330deg, var(--zzz-primary-dark) 0%, var(--zzz-primary) 50%, var(--zzz-primary-light) 100%); //激活状态-轨道
+    --z-switch2-dot-background-color: var(--zzz-ri-ye-tong-hui); //非激活状态-圆点
+    --z-switch2-dot-active-background-color: #E4EBF5;//激活状态-圆点
+    
+    --z-switch3-track-shadow: inset 0.4rem 0.4rem 0.8rem #c8d0e7, inset -0.4rem -0.4rem 0.8rem #ffffff;
+    --z-switch3-dot-shadow: var(--zzz-shadow); //0.2rem 0.2rem 0.4rem #c8d0e7, -0.15rem -0.15rem 0.3rem #ffffff;
+    --z-switch3-track-background-color: var(--zzz-greyLight-1); //非激活状态-轨道
+    --z-switch3-track-active-background-color: var(--zzz-primary-light); //激活状态-轨道
+    --z-switch3-dot-background-color: var(--zzz-ri-ye-tong-hui); //非激活状态-圆点
+    --z-switch3-dot-active-background-color: var(--zzz-primary-light);//激活状态-圆点
+    
     // tabs 切换tab导航
     --z-tab-line-text-color: var(--zzz-greyDark);
     --z-tab-line-active-text-color: var(--zzz-ri-hei_ye-bai);
@@ -992,9 +1005,9 @@ page {
     --zzz-ri-qian-bai_ye-qian-hei: #c3c3c3; //常用于：禁用状态
     --zzz-ri-ji-bai_ye-ji-hei: #f5f5f7;
     
-    // 一般用于 选中值：白天-基准灰色（--zzz-greyDark），夜间-品牌绿色
+    // 一般用于 选中值：白天-基准灰色，夜间-品牌绿色
     --zzz-ri-hui_ye-lv : var(--zzz-greyDark);
-    --zzz-lv-di-bai-zi: #ffffff; //绿底白字，品牌绿色作为背景时，上面白字尽量不刺眼
+    --zzz-lv-di-bai-zi: #f3f3f3; //绿底白字，品牌绿色作为背景时，上面白字尽量不刺眼
     
     // Color Palette
     --z-black: #000;
