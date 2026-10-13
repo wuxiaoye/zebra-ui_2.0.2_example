@@ -45,6 +45,7 @@
           <z-button plain type="zi">紫色按钮</z-button>
         </view>
       </demo-block>
+      
       <demo-block title="禁用">
         <view class="demo-button-item">
           <z-button disabled type="zi">主要按钮</z-button>
@@ -64,6 +65,9 @@
         <view class="demo-button-item">
           <z-button loading type="success" loading-text="加载中..." />
         </view>
+        <view style="display: block;">
+          <z-button :loading="test_loading"  type="success" @click="test_loading = !test_loading" >点击确定</z-button>
+        </view>
       </demo-block>
       
       <demo-block title="形状">
@@ -76,21 +80,64 @@
       </demo-block>
       
       <demo-block title="图标按钮">
-        <view class="demo-button-item">
-          <z-button icon="plus" type="primary"></z-button>
-        </view>
-        <view class="demo-button-item">
-          <z-button icon="plus" type="success">按钮</z-button>
-        </view>
+          <view class="demo-button-item">
+            <z-button plain type="primary"  icon="plus" >主要按钮</z-button>
+          </view>
+          <view class="demo-button-item">
+            <z-button plain type="success" icon="plus" >成功按钮</z-button>
+          </view>
+          <view class="demo-button-item">
+            <z-button plain type="default" icon="plus" >默认按钮</z-button>
+          </view>
+          <view class="demo-button-item">
+            <z-button plain type="warning" icon="plus" >警告按钮</z-button>
+          </view>
+          <view class="demo-button-item">
+            <z-button plain type="danger" icon="plus" >危险按钮</z-button>
+          </view>
+          <view class="demo-button-item">
+            <z-button plain type="zi" icon="plus" >紫色按钮</z-button>
+          </view>
+          
+                <view class="demo-button-item">
+                    <z-button type="primary" icon="plus" >主要按钮</z-button>
+                  </view>
+                  <view class="demo-button-item">
+                    <z-button type="success" icon="plus" >成功按钮</z-button>
+                  </view>
+                  <view class="demo-button-item">
+                    <z-button type="default" icon="plus" >默认按钮</z-button>
+                  </view>
+                  <view class="demo-button-item">
+                    <z-button type="warning" icon="plus" >警告按钮</z-button>
+                  </view>
+                  <view class="demo-button-item">
+                    <z-button type="danger" icon="plus" >危险按钮</z-button>
+                  </view>
+                  <view class="demo-button-item">
+                    <z-button type="text" icon="plus" >文字按钮</z-button>
+                  </view>
+                  <view class="demo-button-item">
+                    <z-button type="zi" icon="plus" >紫色按钮</z-button>
+                  </view>
+                  
+                  <view class="demo-button-item">
+                    <z-button plain icon-color="#3bb4f2" type="zi" icon="plus" >自定义 icon-color</z-button>
+                  </view>
+                  <view class="demo-button-item">
+                    <z-button plain color="#3bb4f2" type="zi" icon="plus" >自定义 color</z-button>
+                  </view>
+          
         <view class="demo-button-item">
           <z-button
             icon="https://cdn.zebraui.com/zebra-ui/images/assets/demo-select.png"
             type="primary"
           >
-            按钮
+            网络图标
           </z-button>
         </view>
       </demo-block>
+      
       <demo-block title="尺寸">
         <view class="demo-button-item" style="display: block">
           <z-button size="large" type="primary">大号按钮</z-button>
@@ -142,6 +189,12 @@
     </view>
   </DemoPage>
 </template>
+
+<script setup>
+    import { ref } from 'vue'
+    
+    let test_loading = ref(false)
+</script>
 <style scoped lang="scss">
 .demo-button {
   &-item {

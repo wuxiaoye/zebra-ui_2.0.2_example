@@ -48,7 +48,11 @@
         </template>
         <template v-else-if="props.icon">
           <view :class="bem('icon')">
-            <z-icon :name="props.icon" :class-prefix="props.iconPrefix" />
+            <z-icon
+              :name="props.icon"
+              :class-prefix="props.iconPrefix"
+              :color="currentIconColor"
+            />
           </view>
         </template>
       </template>
@@ -92,7 +96,11 @@
         </template>
         <template v-else-if="props.icon">
           <view :class="bem('icon')">
-            <z-icon :name="props.icon" :class-prefix="props.iconPrefix" />
+            <z-icon
+              :name="props.icon"
+              :class-prefix="props.iconPrefix"
+              :color="currentIconColor"
+            />
           </view>
         </template>
       </template>
@@ -101,7 +109,7 @@
 </template>
 
 <script setup lang="ts">
-import { type PropType, getCurrentInstance } from 'vue'
+import { type PropType, computed, getCurrentInstance } from 'vue'
 import {
   makeStringProp,
   createNamespace,
@@ -122,6 +130,10 @@ const instance = getCurrentInstance()!
 const props = defineProps({
   text: String,
   icon: String,
+  iconColor: {
+      type: String,
+      default: '#f3f3f3'
+  },
   type: makeStringProp<ButtonType>('default'),
   size: makeStringProp<ButtonSize>('normal'),
   color: String,
@@ -151,6 +163,40 @@ const props = defineProps({
   hideRadius: Boolean
 })
 const emit = defineEmits(['click', 'clickLoading'])
+
+// iconColor 的默认色（未显式传入时，plain 按钮会自动跟随类型色）
+const DEFAULT_ICON_COLOR = '#f3f3f3'
+const PLAIN_ICON_COLOR: Record<string, string> = {
+  default: 'var(--z-button-default-color)',
+  primary: 'var(--z-button-primary-border-color)',
+  zi: 'var(--z-button-zi-border-color)',
+  success: 'var(--z-button-success-border-color)',
+  warning: 'var(--z-button-warning-border-color)',
+  danger: 'var(--z-button-danger-border-color)',
+  text: 'var(--z-primary-color)'
+}
+const currentIconColor = computed(() => {
+  const { plain, color, type, iconColor } = props;
+  // text 样式仅有一个品牌色
+  if (type === 'text') {
+    return 'var(--z-primary-color)'
+  }
+  if( type=='default'){
+    return  'var(--z-button-default-color)'
+  }
+  //如果不是 plain 样式或者 用户手动设置了 iconColor，则使用 iconColor
+  if (!plain || iconColor !== DEFAULT_ICON_COLOR) {
+    return iconColor
+  }
+  
+  //如果是 plain 样式，并且用户手动设置了 color，则使用 color
+  if (color) {
+    return color
+  }
+  
+  return PLAIN_ICON_COLOR[type] || PLAIN_ICON_COLOR.default
+})
+
 const getStyle = () => {
   const { color, plain } = props
   if (color) {
