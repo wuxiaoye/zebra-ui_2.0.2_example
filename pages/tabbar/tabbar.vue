@@ -1,6 +1,15 @@
 <template>
   <DemoPage title="Tabbar">
     <view class="demo-tabbar">
+        
+        <view class="py-30 px-10 mb-20">
+            <view class="py-20 pl-20" style="color: var(--greyDark);">新式样式 z-tabbar2</view>
+            <z-tabbar2 v-model="activeTabbar2"  :tabs="['全部评论', '段评']" />
+            
+            <view class="w-100 h-40"></view>
+            <z-tabbar2 v-model="activeTabbar3"  :tabs="['首页', '分类', '购物车', '我的', 'Tab 5']" />
+        </view>
+        
       <demo-block title="基础用法 + 不要边框">
         <z-tabbar :fixed="false" v-model="active" :border="false">
           <z-tabbar-item icon="home">首页</z-tabbar-item>
@@ -9,6 +18,7 @@
           <z-tabbar-item icon="setting">设置</z-tabbar-item>
         </z-tabbar>
       </demo-block>
+      
       <demo-block title="通过名称匹配">
         <z-tabbar :fixed="false" v-model="activeName">
           <z-tabbar-item name="home" icon="home"> 标签 </z-tabbar-item>
@@ -163,6 +173,8 @@ const an_3 = ref(0)
 const an_4 = ref(0)
 const active8 = ref(0)
 const activeName = ref('home')
+const activeTabbar2 = ref(0)
+const activeTabbar3 = ref(0)
 
 const icon = {
   active: 'https://cdn.zebraui.com/zebra-ui/images/assets/demo-select.png',

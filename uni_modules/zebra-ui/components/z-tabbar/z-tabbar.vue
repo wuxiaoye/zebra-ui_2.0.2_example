@@ -245,10 +245,11 @@ export default {
   &--float {
     width: 100%;
     border-radius: 50rpx;
-    box-shadow:
-      0rpx 8rpx 10rpx -4rpx rgb(0 0 0 / 8%),
-      0rpx 16rpx 24rpx 2rpx rgb(0 0 0 / 4%),
-      0rpx 6rpx 30rpx 6rpx rgb(0 0 0 / 5%);
+    box-shadow: var(--z-tabbar-float-shadow);
+    // box-shadow:
+    //   0rpx 8rpx 10rpx -4rpx rgb(0 0 0 / 8%),
+    //   0rpx 16rpx 24rpx 2rpx rgb(0 0 0 / 4%),
+    //   0rpx 6rpx 30rpx 6rpx rgb(0 0 0 / 5%);
   }
 }
 
@@ -257,10 +258,11 @@ export default {
   left: 50%;
   width: 90%;
   border-radius: 50rpx;
-  box-shadow:
-    0rpx 8rpx 10rpx -4rpx rgb(0 0 0 / 8%),
-    0rpx 16rpx 24rpx 2rpx rgb(0 0 0 / 4%),
-    0rpx 6rpx 30rpx 6rpx rgb(0 0 0 / 5%);
+  // box-shadow:
+  //   0rpx 8rpx 10rpx -4rpx rgb(0 0 0 / 8%),
+  //   0rpx 16rpx 24rpx 2rpx rgb(0 0 0 / 4%),
+  //   0rpx 6rpx 30rpx 6rpx rgb(0 0 0 / 5%);
+  box-shadow: var(--z-tabbar-float-shadow);
   transform: translateX(-50%);
 }
 </style>

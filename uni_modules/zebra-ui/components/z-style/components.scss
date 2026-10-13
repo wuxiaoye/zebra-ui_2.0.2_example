@@ -886,6 +886,7 @@
     --z-tabbar-height: 110rpx;
     --z-tabbar-z-index: 1;
     --z-tabbar-background: var(--z-background-2);
+    --z-tabbar-float-shadow: var(--zzz-shadow);
     //组件子项
     --z-tabbar-item-text-color: var(--zzz-greyDark); //非激活状态-文字与图标颜色
     --z-tabbar-item-active-color: var(--zzz-primary); //激活状态-文字与图标颜色
@@ -898,6 +899,9 @@
     --z-tabbar-item-primary-background-text-color: var(--zzz-greyDark);//非激活状态-文字与图标颜色
     --z-tabbar-item-primary-background-active-text-color: var(--zzz-lv-di-bai-zi); //激活状态-文字与图标颜色
     --z-tabbar-item-primary-background-active-background: linear-gradient(135deg,  var(--zzz-primary-light),  var(--zzz-primary) );//激活状态-背景色
+    
+    --z-tabbar2-shadow: var(--zzz-shadow);//导航栏外阴影
+    --z-tabbar2-active-item-shadow:  inset 4rpx 4rpx 10rpx #c8d0e7, inset -4rpx -4rpx 10rpx #ffffff; //激活元素块阴影，固定颜色
     
     // uploader 上传
     --z-uploader-size: 160rpx;
