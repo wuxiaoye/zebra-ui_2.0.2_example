@@ -88,7 +88,7 @@
               </template>
               <template v-else>
                 <view :class="bem('icon', [option.icon])">
-                  <z-icon :name="iconMap[option.icon] || option.icon"  color="#fff" />
+                  <z-icon :name="iconMap[option.icon] || option.icon" color="#fff" />
                 </view>
               </template>
               <text v-if="option.name" :class="bem('name')">{{
@@ -239,10 +239,10 @@ export default {
     align-items: center;
     justify-content: center;
     font-size: 60rpx;
-    color: var(--z-share-sheet-option-icon-color);
+    // color: var(--z-share-sheet-option-icon-color);
     background-color: var(--z-share-sheet-option-background-color);
     border-radius: 100%;
-    box-shadow: var(--zzz-shadow);
+    box-shadow: var(--z-share-sheet-option-box-shadow);
 
     &--link,
     &--poster,
@@ -308,7 +308,6 @@ export default {
       display: block;
       height: var(--z-padding-xs);
       content: ' ';
-      // background-color: var(--z-background);
       box-shadow: var(--zzz-shadow-inset);
     }
 

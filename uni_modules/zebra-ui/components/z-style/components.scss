@@ -1,5 +1,4 @@
 @mixin z-theme-vars {
-    
       /* 卡片外阴影样式 -超大*/
       --zzz-shadow-more-big: 0.4rem 0.4rem 0.8rem var(--zzz-shadow-vars-black),  -0.4rem -0.4rem 0.8rem var(--zzz-shadow-vars-white);
       /* 卡片外阴影样式 -大一些*/
@@ -365,7 +364,7 @@
     --z-action-sheet-close-icon-size: 44rpx;
     --z-action-sheet-close-icon-color: var(--z-gray-5);
     --z-action-sheet-close-icon-padding: 0 var(--z-padding-md);
-    --z-action-sheet-cancel-text-color: var(--z-gray-7);
+    --z-action-sheet-cancel-text-color: var(--zzz-greyDark);
     --z-action-sheet-cancel-padding-top: var(--z-padding-xs);
     --z-action-sheet-cancel-padding-color: var(--zzz-greyLight-1);
     --z-action-sheet-loading-icon-size: 44rpx;
@@ -732,12 +731,13 @@
     --z-share-sheet-description-line-height: 32rpx;
     --z-share-sheet-icon-size: 96rpx;
     //选项
-    --z-share-sheet-option-icon-color: var(--zzz-ri-ye-tong-hui);
-    --z-share-sheet-option-background-color: var(--z-gray-6);//var(--zzz-ri-hui_ye-hui);
+    --z-share-sheet-option-icon-color: var(--zzz-ri-ye-tong-hui); //这个似乎无用，父元素设置的 color 无法作用到 z-icon。
+    --z-share-sheet-option-background-color: var(--zzz-ri-grey-dark_ye-shen-hei);//var(--zzz-greyLight-1);//var(--z-gray-6);//var(--zzz-ri-hui_ye-hui);
     --z-share-sheet-option-name-color: var(--zzz-ri-ye-tong-hui);//var(--z-gray-7);
     --z-share-sheet-option-name-font-size: var(--z-font-size-sm);
-    --z-share-sheet-option-description-color: var(--z-text-color-3);
+    --z-share-sheet-option-description-color: var(--zzz-ri-qian-hui_ye-qian-hui);//var(--z-text-color-3); //描述文字颜色
     --z-share-sheet-option-description-font-size: var(--z-font-size-sm);
+    --z-share-sheet-option-box-shadow: var(--zzz-ri-shadow_ye-wu); //阴影
     //取消
     --z-share-sheet-cancel-button-color: var(--zzz-ri-hui_ye-hui);
     --z-share-sheet-cancel-button-font-size: var(--z-font-size-lg);
@@ -1008,9 +1008,13 @@ page {
     --zzz-ri-qian-bai_ye-qian-hei: #c3c3c3; //常用于：禁用状态
     --zzz-ri-ji-bai_ye-ji-hei: #f5f5f7;
     
-    // 一般用于 选中值：白天-基准灰色，夜间-品牌绿色
+    //  白天-基准灰色（--zzz-greyDark），夜间-品牌绿色。一般用于 选中值
     --zzz-ri-hui_ye-lv : var(--zzz-greyDark);
     --zzz-lv-di-bai-zi: #f3f3f3; //绿底白字，品牌绿色作为背景时，上面白字尽量不刺眼
+    
+    // ====== 阴影 ======
+    //白天-有阴影，夜间-无阴影
+    --zzz-ri-shadow_ye-wu: 3px 3px 6px var(--zzz-shadow-vars-black), -2px -2px 5px var(--zzz-shadow-vars-white);
     
     // Color Palette
     --z-black: #000;
@@ -1100,9 +1104,13 @@ page {
     --zzz-ri-qian-bai_ye-qian-hei: #4f4f4f; //常用于：禁用状态
     --zzz-ri-ji-bai_ye-ji-hei: #2a2a2d;
     
-    // 一般用于 选中值：白天-基准灰色（--zzz-greyDark），夜间-品牌绿色
+    //  白天-基准灰色（--zzz-greyDark），夜间-品牌绿色。一般用于 选中值
     --zzz-ri-hui_ye-lv : var(--zzz-primary);
     --zzz-lv-di-bai-zi: #f3f3f3; //绿底白字，品牌绿色作为背景时，上面白字尽量不刺眼。常用于：绿色背景按钮、导航色块。
+    
+    // ====== 阴影 ======
+    //白天-有阴影，夜间-无阴影
+    --zzz-ri-shadow_ye-wu: 0 0 0;
     
     --z-text-color: #f5f5f5;
     --z-text-color-2: #707070;
@@ -1111,7 +1119,6 @@ page {
     --z-background: #000;
     --z-background-2: #191919;//#1c1c1e;//#262628;//var(--zzz-greyLight-1);
     --z-background-3: #37363b;
-    
     @include z-theme-vars;
 }
 
