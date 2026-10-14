@@ -283,7 +283,10 @@
       "path": "pages/pullRefresh/pullRefresh",
       "style": {
         "navigationBarTitleText": "PullRefresh",
-        "navigationStyle": "custom"
+        "navigationStyle": "custom",
+        "app-plus": {
+            "bounce" : "none"
+        }
       }
     },
     {

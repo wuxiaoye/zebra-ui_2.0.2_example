@@ -1,5 +1,10 @@
 <template>
-  <view class="z-tabs-rect" :class="[bem([props.type])]" :style="customStyle">
+  <view class="z-tabs-rect" 
+    :class="[
+        bem([props.type])
+        ]" 
+    :style="customStyle"
+    >
     <template v-if="props.showHeader">
       <z-sticky
         v-if="props.sticky"
@@ -11,7 +16,7 @@
         <view
           class="z-tabs__wrap-rect"
           :class="[
-            bem('wrap'),
+            bem('wrap',  { 'margin-y': props.isMarginY , 'margin-x': props.isMarginX } ),
             { [BORDER_TOP_BOTTOM]: type === 'line' && border }
           ]"
         >
@@ -99,7 +104,7 @@
         <view
           class="z-tabs__wrap-rect"
           :class="[
-            bem('wrap'),
+            bem('wrap', { 'margin-y': props.isMarginY , 'margin-x': props.isMarginX } ),
             { [BORDER_TOP_BOTTOM]: type === 'line' && border }
           ]"
         >
@@ -297,7 +302,15 @@ const props = defineProps({
   titleInactiveColor: String,
   customNavbar: Boolean,
   customStyle: Object,
-  titleStyle: Object
+  titleStyle: Object,
+  isMarginY:{ //是否启用上下边距
+      type: Boolean,
+      default: true
+  },
+  isMarginX:{ //是否启用左右边距
+      type: Boolean,
+      default: true
+  },
 })
 
 const scrollLeft = ref(0)
@@ -912,64 +925,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.z-tab {
-  position: relative;
-  box-sizing: border-box;
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  padding: 0 var(--z-padding-base);
-  font-size: var(--z-tab-font-size);
-  line-height: var(--z-tab-line-height);
-  color: var(--z-tab-line-text-color);
-
-  &--active {
-    font-weight: var(--z-font-bold);
-    color: var(--z-tab-line-active-text-color);
-  }
-
-  &--disabled {
-    color: var(--z-tab-disabled-text-color);
-    cursor: not-allowed;
-  }
-
-  &--grow {
-    flex: 1 0 auto;
-    padding: 0 var(--z-padding-sm);
-  }
-
-  &--shrink {
-    flex: none;
-    padding: 0 var(--z-padding-xs);
-  }
-
-  &--card {
-    
-    
-    &:last-child {
-      // border-right: none;
-    }
-
-    &.z-tab--active {
-      
-    }
-
-    &--disabled {
-      color: var(--z-tab-disabled-text-color);
-    }
-  }
-
-  &__text {
-    &--ellipsis {
-      display: -webkit-box;
-      overflow: hidden;
-      -webkit-line-clamp: 1;
-      -webkit-box-orient: vertical;
-    }
-  }
-}
-
 .z-tabs {
   position: relative;
 
@@ -985,7 +940,16 @@ export default {
     overflow: hidden;
     border-radius: var(--z-tab-border-radius);
     box-shadow: var(--z-tab-wrap-box-shadow);
-    margin: var(--z-tab-wrap-margin);
+    background: var(--z-tabs-nav-background);
+    
+    &--margin-y{
+        margin-top: var(--z-tabs-margin-y);
+        margin-bottom: var(--z-tabs-margin-y);
+    }
+    &--margin-x{
+        margin-left: var(--z-tabs-margin-x);
+        margin-right: var(--z-tabs-margin-x);
+    }
 
     &--page-top {
       position: fixed;
@@ -1137,6 +1101,65 @@ export default {
         background-color: var(--z-swipe-indicator-active-background);
         opacity: var(--z-swipe-indicator-active-opacity);
       }
+    }
+  }
+}
+
+.z-tab {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--z-padding-base);
+  font-size: var(--z-tab-font-size);
+  line-height: var(--z-tab-line-height);
+  color: var(--z-tab-line-text-color);
+  
+
+  &--active {
+    font-weight: var(--z-font-bold);
+    color: var(--z-tab-line-active-text-color);
+  }
+
+  &--disabled {
+    color: var(--z-tab-disabled-text-color);
+    cursor: not-allowed;
+  }
+
+  &--grow {
+    flex: 1 0 auto;
+    padding: 0 var(--z-padding-sm);
+  }
+
+  &--shrink {
+    flex: none;
+    padding: 0 var(--z-padding-xs);
+  }
+
+  &--card {
+    
+    
+    &:last-child {
+      // border-right: none;
+    }
+
+    &.z-tab--active {
+      
+    }
+
+    &--disabled {
+      color: var(--z-tab-disabled-text-color);
+    }
+  }
+
+  &__text {
+    &--ellipsis {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
     }
   }
 }

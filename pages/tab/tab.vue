@@ -2,7 +2,7 @@
   <DemoPage title="Tab">
     <view class="demo-tab">
       <demo-block title="基础用法">
-        <z-tabs v-model:active="active" >
+        <z-tabs v-model:active="active" isMarginY :isMarginX="false">
           <z-tab
             v-for="(item, index) in 4"
             :key="index"
@@ -13,6 +13,7 @@
           </z-tab>
         </z-tabs>
       </demo-block>
+      
       <demo-block title="通过名称匹配">
         <z-tabs v-model:active="activeName">
           <z-tab
@@ -26,7 +27,7 @@
         </z-tabs>
       </demo-block>
       <demo-block title="吸顶">
-        <z-tabs v-model:active="active" sticky custom-navbar >
+        <z-tabs v-model:active="active" sticky custom-navbar  :isMarginX="false">
           <z-tab
             v-for="(item, index) in 4"
             :key="index"

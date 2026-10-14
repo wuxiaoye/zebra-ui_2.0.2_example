@@ -97,9 +97,9 @@ const onRefresh = (isShowToast: boolean) => {
 }
 </script>
 <style lang="scss" scoped>
-.demo-pull-refresh {
   .demo-pull-refresh {
     background-color: var(--z-background-2);
+    padding-top: 10px;
 
     .z-pull-refresh {
       height: calc(100vh - 100rpx);
@@ -117,5 +117,4 @@ const onRefresh = (isShowToast: boolean) => {
       margin: 0;
     }
   }
-}
 </style>
