@@ -10,6 +10,7 @@
           @select="onSelect"
         />
       </demo-block>
+      
       <demo-block title="展示多行选项">
         <z-cell is-link title="显示分享面板" @click="showMultiLine = true" />
         <z-share-sheet
@@ -19,7 +20,8 @@
           @select="onSelect"
         />
       </demo-block>
-      <demo-block card title="自定义图标">
+      
+      <demo-block card title="自定义图标与颜色">
         <z-cell is-link title="显示分享面板" @click="showCustomIcon = true" />
         <z-share-sheet
           v-model:show="showCustomIcon"
@@ -27,6 +29,7 @@
           @select="onSelect"
         />
       </demo-block>
+      
       <demo-block title="展示描述信息">
         <z-cell is-link title="显示分享面板" @click="showWithDesc = true" />
         <z-share-sheet
@@ -53,7 +56,7 @@ const showCustomIcon = ref(false)
 const options = computed(() => [
   { name: '微信', icon: 'wechat' },
   { name: '微博', icon: 'weibo' },
-  { name: '复制链接', icon: 'link' },
+  { name: '复制链接', icon: 'link' , description: '描述' },
   { name: '分享海报', icon: 'poster' },
   { name: '二维码', icon: 'qrcode' }
 ])
@@ -73,20 +76,32 @@ const multiLineOptions = computed(() => [
   ]
 ])
 
+//自定义图标
 const customIconOptions = computed(() => [
+    { name: '默认',
+      icon: 'zhihu' ,
+      },
   {
-    name: '名称',
-    icon: 'https://cdn.zebraui.com/zebra-ui/images/assets/demo-select.png'
+    name: '渐变背景',
+    icon: 'zhihu',
+    iconColor: '#fff',        // 图标字形颜色（覆盖预设白）
+    iconBgColor: 'linear-gradient(135deg, #ff6a00 0%, #aa55ff 100%)',      // 圆形背景色
   },
   {
-    name: '名称',
-    icon: 'zhihu'
+    name: '纯色背景',
+    icon: 'zhihu',
+    iconColor: '#fff',        // 图标字形颜色（覆盖预设白）
+    iconBgColor: '#38b5e2'       // 圆形背景色
   },
-  {
-    name: '名称',
-    icon: 'linkedin'
-  },
-  { name: '名称', icon: 'facebook' }
+  { name: '文字颜色',
+    icon: 'zhihu' ,
+    iconColor:'#17d042',
+    iconBgColor: 'var(--greyLight-1)'
+    },
+    {
+      name: '网络图片',
+      icon: 'https://cdn.zebraui.com/zebra-ui/images/assets/demo-select.png'
+    }
 ])
 
 const optionsWithDesc = computed(() => [
@@ -109,3 +124,8 @@ const onSelect = (option: any) => {
   showCustomIcon.value = false
 }
 </script>
+
+<style scoped>
+    
+    
+</style>

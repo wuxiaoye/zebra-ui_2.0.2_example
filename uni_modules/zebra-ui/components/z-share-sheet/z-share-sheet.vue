@@ -59,8 +59,17 @@
                   <image :src="option.icon" :class="bem('image-icon')" />
                 </template>
                 <template v-else>
-                  <view :class="bem('icon', [option.icon])">
-                    <z-icon :name="iconMap[option.icon] || option.icon" color="#fff" />
+                  <view
+                    :class="bem('icon', [option.icon])"
+                    :style="{
+                      background: option.iconBgColor,
+                      color: option.iconColor
+                    }"
+                  >
+                    <z-icon
+                      :name="iconMap[option.icon] || option.icon"
+                      :color="option.iconColor || '#fff'"
+                    />
                   </view>
                 </template>
                 <text v-if="option.name" :class="bem('name')">{{
@@ -87,8 +96,17 @@
                 <image :src="option.icon" :class="bem('image-icon')" />
               </template>
               <template v-else>
-                <view :class="bem('icon', [option.icon])">
-                  <z-icon :name="iconMap[option.icon] || option.icon" color="#fff" />
+                <view
+                  :class="bem('icon', [option.icon])"
+                  :style="{
+                    background: option.iconBgColor,
+                    color: option.iconColor
+                  }"
+                >
+                  <z-icon
+                    :name="iconMap[option.icon] || option.icon"
+                    :color="option.iconColor || '#fff'"
+                  />
                 </view>
               </template>
               <text v-if="option.name" :class="bem('name')">{{
@@ -131,6 +149,8 @@ type ShareSheetOption = {
   icon: string
   className?: string
   description?: string
+  iconColor?: string
+  iconBgColor?: string
 }
 const isImage = (name?: string) => name?.includes('/')
 
