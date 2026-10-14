@@ -228,6 +228,7 @@ export default {
     line-height: var(--z-dropdown-menu-title-line-height);
     color: var(--z-dropdown-menu-title-text-color);
 
+    // 标题右边向下角标
     &::after {
       position: absolute;
       top: 50%;
@@ -235,7 +236,7 @@ export default {
       margin-top: -10rpx;
       content: '';
       border: 6rpx solid;
-      border-color: transparent transparent var(--z-gray-4) var(--z-gray-4);
+      border-color: transparent transparent var(--z-dropdown-menu-title-right-icon-color) var(--z-dropdown-menu-title-right-icon-color);
       opacity: 0.8;
       transform: rotate(-45deg);
     }

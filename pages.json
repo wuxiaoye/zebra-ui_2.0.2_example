@@ -10,10 +10,10 @@
         }
       },
       {
-        "path": "pages/aye-swiper-cube-demo/aye-swiper-cube-demo",
+        "path": "pages/swiper-cube-demo/swiper-cube-demo",
         "style": {
             "navigationStyle": "custom",
-          "navigationBarTitleText": "aye-swiper-cube",
+          "navigationBarTitleText": "swiper-cube",
           "app-plus": {
               "bounce" : "none"
           }

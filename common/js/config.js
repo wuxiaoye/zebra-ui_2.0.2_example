@@ -368,7 +368,7 @@ export default [
         image: 'treeSelect'
       },
       {
-        path: '/aye-swiper-cube-demo',
+        path: '/swiper-cube-demo',
         title: '3D 翻转页面 ',
         image: 'treeSelect'
       }

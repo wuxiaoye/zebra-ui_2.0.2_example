@@ -1,6 +1,6 @@
 <template>
   <view class="demo-page">
-        <aye-swiper-cube
+        <z-swiper-cube
           v-model="activeIndex2"
           :list="tabbarIcon"
           width="100vw"
@@ -19,7 +19,7 @@
                   <buttonPage v-else-if="index === 4" />
             </scroll-view>
           </template>
-        </aye-swiper-cube>
+        </z-swiper-cube>
         
         <z-tabbar
           v-model="active"
