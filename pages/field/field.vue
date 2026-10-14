@@ -4,8 +4,9 @@
       <demo-block title="基础用法">
                 <z-field v-model="value" label="文本" placeholder="请输入文本" is-link/>
             <view class="my-20 text-greyDark text-size-n">无边框阴影</view>
-                <z-field v-model="value" label="文本" placeholder="请输入文本" :box-shadow="false"/>
+                <z-field v-model="value" label="文本" placeholder="请输入文本" :box-shadow="false" :border-bottom="true" />
       </demo-block>
+      
       <demo-block title="自定义类型">
         <z-field v-model="text" label="文本" placeholder="请输入文本" />
         <z-field
@@ -33,10 +34,12 @@
           placeholder="请输入密码"
         />
       </demo-block>
+      
       <demo-block title="禁用输入框">
         <z-field label="文本" model-value="输入框只读" readonly />
         <z-field label="文本" model-value="输入框已禁用" disabled />
       </demo-block>
+      
       <demo-block title="显示图标">
         <z-field
           v-model="value1"
@@ -53,6 +56,7 @@
           placeholder="显示清除图标"
         />
       </demo-block>
+      
       <demo-block title="必填星号">
         <z-field
           v-model="username"
@@ -67,6 +71,7 @@
           placeholder="请输入手机号"
         />
       </demo-block>
+      
       <demo-block title="错误提示">
         <z-field
           v-model="username"
@@ -81,6 +86,7 @@
           error-message="手机号格式错误"
         />
       </demo-block>
+      
       <demo-block title="插入按钮">
         <z-field
           v-model="sms"
@@ -94,6 +100,7 @@
           </template>
         </z-field>
       </demo-block>
+      
       <demo-block title="格式化输入内容">
         <z-field
           v-model="value3"
@@ -109,6 +116,7 @@
           placeholder="在失焦时执行格式化"
         />
       </demo-block>
+      
       <demo-block title="高度自适应">
         <z-field
           v-model="message"
@@ -125,9 +133,12 @@
           autosize
           label="留言"
           type="textarea"
-          placeholder="请输入留言"   :box-shadow="false"
+          placeholder="请输入留言"
+          :box-shadow="false"
+          :border-bottom="true"
         />
       </demo-block>
+      
       <demo-block title="显示字数统计">
         <z-field
           v-model="message"
@@ -140,6 +151,7 @@
           show-word-limit
         />
       </demo-block>
+      
       <demo-block title="输入框内容对齐">
         <z-field
           v-model="value5"

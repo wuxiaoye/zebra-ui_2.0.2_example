@@ -125,7 +125,8 @@
                     error: showError,
                     custom: !!instance.slots.input,
                     'min-height': props.type === 'textarea' && !props.autosize,
-                    'textarea-box-shadow': props.boxShadow
+                    'textarea-box-shadow': props.boxShadow,
+                    'border-bottom' : props.borderBottom
                   }
                 ])
               "
@@ -168,7 +169,8 @@
                     custom: !!instance.slots.input,
                     // @ts-ignore
                     'min-height': props.type === 'textarea' && !props.autosize,
-                    'input-box-shadow': props.boxShadow
+                    'input-box-shadow': props.boxShadow,
+                    'border-bottom' : props.borderBottom
                   }
                 ])
               "
@@ -334,6 +336,10 @@ const props = defineProps(
       // 是否开启-超出隐藏
      isOverflowHidden:{
          type:Boolean,
+         default: false
+     },
+     borderBottom:{
+         type: Boolean,
          default: false
      }
   })
@@ -784,8 +790,10 @@ export default {
     resize: none;
     user-select: auto;
     background-color: transparent;
-    border-bottom: var(--z-field-input-border-bottom);/* 下边 */
     
+    &--border-bottom{
+        border-bottom: var(--z-field-input-border-bottom);/* 下边 */
+    }
     // 有阴影状态
      &--input-box-shadow{
         box-shadow: var(--zzz-shadow-inset);

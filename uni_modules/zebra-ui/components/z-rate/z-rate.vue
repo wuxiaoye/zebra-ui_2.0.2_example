@@ -134,7 +134,7 @@ let minRectTop = Number.MAX_SAFE_INTEGER
 let maxRectTop = Number.MIN_SAFE_INTEGER
 
 const updateRanges = () => {
-  Promise.all([
+  return Promise.all([
     getRect(instance, '.z-rate-rect'),
     getAllRect(instance, '.z-rate__item')
   ]).then(([groupRect, itemRects]: any) => {
@@ -233,12 +233,18 @@ const itemStyle = (index: any) => {
   return style
 }
 
-const onClickItem = (event: any, index: any) => {
-  const touchs = event.touches[0]
+const onClickItem = async (event: any, index: any) => {
+  // 只读或禁用时点击不应有任何反应
+  if (unselectable.value) return
+
   const score = index + 1
-  updateRanges()
+  // 等待异步测量完成，确保 ranges 已就绪
+  await updateRanges()
+
+  // 兼容无 touches 的点击（如 H5 鼠标 click，直接使用 clientX/clientY）
+  const point = event.touches?.[0] || event.changedTouches?.[0] || event
   let value = props.allowHalf
-    ? getScoreByPosition(touchs.clientX, touchs.clientY)
+    ? getScoreByPosition(point.clientX, point.clientY)
     : score
   if (props.clearable && touch.isTap.value && value === props.modelValue) {
     value = 0
