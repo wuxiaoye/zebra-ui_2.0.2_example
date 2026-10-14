@@ -116,7 +116,7 @@
     --z-button-default-height: 88rpx;
     --z-button-default-line-height: 1.1;
     --z-button-default-font-size: var(--z-font-size-lg);
-    --z-button-default-color: var(--zzz-greyDark);
+    --z-button-default-color: var(--zzz-ri-ye-tong-hui);
     --z-button-default-background: var(--zzz-greyLight-1);
     --z-button-default-border-color: var(--zzz-greyLight-1);
     --z-button-primary-color: var(--z-white);
@@ -509,15 +509,13 @@
     --z-empty-empty-icon-shadow: var(--zzz-shadow-inset-more-big);//inset 0.4rem 0.4rem 0.8rem #c8d0e7, inset -0.4rem -0.4rem 0.8rem #fff;
     --z-empty-empty-icon-background-color: var(--zzz-greyLight-1);
     
-    // input
+    // input  / field 输入框
     --z-field-label-width: 6.2em;
     --z-field-label-color: var(--zzz-ri-hei_ye-bai);//var(--z-text-color);
     --z-field-label-margin-right: var(--z-padding-sm);
-    // --z-field-input-text-color: var(--z-text-color);
-    --z-field-input-text-color: var(--zzz-greyDark);
-    --z-field-textarea-text-color: #555;
+    --z-field-input-text-color: var(--zzz-ri-ye-tong-hui);
     --z-field-input-error-text-color: var(--z-danger-color);
-    --z-field-input-disabled-text-color: var(--zzz-ri-qian-bai_ye-qian-hei);
+    --z-field-input-disabled-text-color: var(--zzz-ri-hui_ye-hui);
     // --z-field-placeholder-text-color: var(--z-text-color-3);
     --z-field-placeholder-text-color: var(--zzz-greyLight-3);
     --z-field-icon-size: 36rpx;
@@ -534,6 +532,7 @@
     --z-field-required-mark-color: var(--z-red);
     //阴影
     --z-field-shadow : var(--zzz-shadow-inset);
+    --z-field-input-border-bottom: 1px solid var(--zzz-ri-grey-dark_ye-shen-hui);/* 下边框*/
     
     // floatingBubble 浮动气泡
     --z-floating-bubble-size: 96rpx;

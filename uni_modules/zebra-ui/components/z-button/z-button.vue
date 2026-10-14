@@ -362,7 +362,7 @@ export default {
     box-shadow: var(--zzz-shadow-inset);
 
     &.z-button--primary {
-      color: var(--z-button-primary-background);
+      color: var(--z-button-primary-border-color);
     }
     
     &.z-button--zi {
@@ -370,7 +370,7 @@ export default {
     }
 
     &.z-button--success {
-      color: var(--z-button-success-background);
+      color: var(--z-button-success-border-color);
     }
 
     &.z-button--danger {

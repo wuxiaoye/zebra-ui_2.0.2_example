@@ -130,7 +130,7 @@
                 ])
               "
               :auto-height="!!props.autosize"
-              :disabled="getProp('disabled') || getProp('readonly')"
+              :disabled="getProp('disabled')"
               :readonly="getProp('readonly')"
               :autofocus="props.autofocus"
               :placeholder="props.placeholder"
@@ -172,7 +172,7 @@
                   }
                 ])
               "
-              :disabled="getProp('disabled') || getProp('readonly')"
+              :disabled="getProp('disabled')"
               :readonly="getProp('readonly')"
               :autofocus="props.autofocus"
               :placeholder="props.placeholder"
@@ -784,27 +784,28 @@ export default {
     resize: none;
     user-select: auto;
     background-color: transparent;
-    border: 0;
+    border-bottom: var(--z-field-input-border-bottom);/* 下边 */
     
-    
+    // 有阴影状态
      &--input-box-shadow{
         box-shadow: var(--zzz-shadow-inset);
+        border: 0;
         border-radius: 20rpx;
         padding-left: 22rpx !important;
         padding-right: 18rpx !important;
-        color: var(--z-field-input-text-color);
     }
-    
+    // 有阴影状态
     &--textarea-box-shadow{
         box-shadow: var(--zzz-shadow-inset);
+        border: 0;
         border-radius: 20rpx;
         padding:  18rpx !important;
-        color: var(--z-field-textarea-text-color);
     }
 
-    &:read-only {
-      cursor: default;
-    }
+    // &:read-only {
+    //   cursor: default;
+    //   color: var(--z-field-input-disabled-text-color);
+    // }
 
     &:disabled {
       color: var(--z-field-input-disabled-text-color);
