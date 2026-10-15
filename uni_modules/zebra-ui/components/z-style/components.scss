@@ -594,10 +594,10 @@
     --z-nav-bar-z-index: 100;
     --z-nav-bar-disabled-opacity: var(--z-disabled-opacity);
     
-    // noticeBar 滚动通知栏（样式不好看，传统古老）
+    // noticeBar 滚动通知栏
     --z-notice-bar-height: 80rpx;
-    --z-notice-bar-padding: 0 var(--z-padding-md);
-    --z-notice-bar-wrapable-padding: var(--z-padding-xs) var(--z-padding-md);
+    --z-notice-bar-padding: 0 var(--z-padding-md) 0 20rpx;
+    --z-notice-bar-wrapable-padding: var(--z-padding-xs) var(--z-padding-md) var(--z-padding-xs)  20rpx;
     --z-notice-bar-text-color: var(--zzz-ri-hei_ye-bai);
     --z-notice-bar-font-size: var(--z-font-size-md);
     --z-notice-bar-line-height: 48rpx;
@@ -606,6 +606,9 @@
     --z-notice-bar-icon-min-width: 48rpx;
     --z-notice-bar-shadow: var(--zzz-shadow);
     --z-notice-bar-border-radius: 24rpx;
+    --z-notice-bar-left-icon-padding: 10rpx;
+    --z-notice-bar-left-icon-shadow: var(--zzz-ri-shadow_ye-wu);
+    --z-notice-bar-left-icon-background:  linear-gradient( 120deg, #fcd34d , #f59e0b );
     --z-notice-bar-right-icon-color: var(--zzz-ri-ye-tong-hui);
     
     // notify 消息通知-顶端状态栏往下展示
@@ -879,6 +882,8 @@
     --z-tag-warning-color: var(--z-warning-color);
     --z-tag-default-color: var(--z-gray-6);
     --z-tag-plain-background: rgba(255, 255, 255, 0);
+    --z-tag-close-icon-color: #fff;
+    --z-tag-close-icon-plain-color:var(--zzz-ri-ye-tong-hui);
     
     // TextEllipsis 文本省略
     --z-text-ellipsis-line-height: 1.6;

@@ -36,7 +36,7 @@
           <view class="flex-row flex-around gap-10">
               <view class="flex-col flex-center ">
                   <view class="mb-10">
-                      <z-badge :content="56" color="var(--primary)" max="999">
+                      <z-badge :content="56" color="var(--primary)" max="9999">
                         <z-icon name="heart" size="60rpx" color="var(--greyDark)"></z-icon>
                       </z-badge>
                   </view>
@@ -47,7 +47,7 @@
               
               <view class="flex-col flex-center ">
                   <view class="mb-10">
-                      <z-badge :content="1500" color="var(--primary)" max="999">
+                      <z-badge :content="15000" color="var(--primary)" max="9999">
                         <z-icon name="adduser" size="60rpx" color="var(--greyDark)"></z-icon>
                       </z-badge>
                   </view>
@@ -58,7 +58,7 @@
               
               <view class="flex-col flex-center">
                   <view class="mb-10">
-                      <z-badge :content="10" color="var(--secondary)" max="999">
+                      <z-badge :content="10" color="var(--secondary)" max="9999">
                         <!-- <z-icon name="comment" size="60rpx" color="var(--greyDark)"></z-icon> -->
                         <z-icon name="message" size="60rpx" color="var(--greyDark)"></z-icon>
                       </z-badge>
@@ -89,6 +89,7 @@
           </z-col>
         </z-row>
       </demo-block>
+      
       <demo-block title="自定义颜色">
         <z-row gutter="20">
           <z-col span="6">
@@ -115,7 +116,7 @@
             <z-badge>
               <view class="child" />
               <template #content>
-                <z-icon name="download" />
+                <z-icon name="download" color="#fff" />
               </template>
             </z-badge>
           </z-col>

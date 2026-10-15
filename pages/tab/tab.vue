@@ -105,6 +105,7 @@
           </z-tab>
         </z-tabs>
       </demo-block>
+      
       <demo-block title="自定义标题">
         <z-tabs v-model:active="active">
           <template #title="{ item }">
@@ -115,6 +116,7 @@
           </z-tab>
         </z-tabs>
       </demo-block>
+      
       <demo-block title="切换动画">
         <z-tabs v-model:active="active" animated>
           <z-tab
@@ -126,6 +128,7 @@
           </z-tab>
         </z-tabs>
       </demo-block>
+      
       <demo-block title="滑动切换">
         <z-tabs v-model:active="active" swipeable>
           <z-tab

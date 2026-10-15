@@ -9,7 +9,7 @@
       <template v-if="closeable">
         <z-icon
           name="close"
-          color="#ffffff"
+          :color="closeIconStyle"
           :custom-style="{ 'margin-left': '4rpx' }"
           :custom-class="[HAPTICS_FEEDBACK]"
           @click.stop="onClose"
@@ -57,6 +57,15 @@ const typeColorMap: Record<TagType, string> = {
   success: 'var(--z-tag-success-color)',
   warning: 'var(--z-tag-warning-color)'
 }
+
+//关闭图标的样式
+const closeIconStyle = computed(()=>{
+    if(props.plain === true || props.noneBorder === true){
+        return  'var(--z-tag-close-icon-plain-color)';
+    }else{
+        return 'var(--z-tag-close-icon-color)';
+    }
+})
 
 const getStyle = computed(() => {
   // noneBorder 最高优先级

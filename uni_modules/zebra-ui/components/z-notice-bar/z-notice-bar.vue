@@ -8,7 +8,7 @@
       <slot name="left-icon"></slot>
     </template>
     <template v-else-if="props.leftIcon">
-        <view style="background: linear-gradient( 120deg, #f59e0b, #fcd34d ); border-radius: 50%; padding: 10rpx; margin: 10rpx 10rpx 10rpx 0;">
+        <view style="background:var(--z-notice-bar-left-icon-background); border-radius: 50%; padding: var(--z-notice-bar-left-icon-padding); margin: 10rpx 10rpx 10rpx 0; box-shadow: var(--z-notice-bar-left-icon-shadow);">
             <z-icon :custom-style="leftIconStyle" :name="props.leftIcon" color="#fff"/>
         </view>
     </template>

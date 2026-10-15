@@ -1,6 +1,7 @@
 <template>
   <DemoPage title="List">
-    <view class="demo-list">
+    <view class="demo-list" style="background-color: var(--zzz-greyLight-1);">
+      <view class="w-100 py-10"></view>
       <z-tabs animated sticky swipeable custom-navbar>
         <z-tab title="基础用法">
           <z-list
