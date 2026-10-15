@@ -45,7 +45,22 @@
           
         <z-cell title="空心样式"  :value-overflow-hidden="false">
           <template #value>
+            <z-tag plain type="default">标签</z-tag>
+          </template>
+        </z-cell>
+        <z-cell title="空心样式"  :value-overflow-hidden="false">
+          <template #value>
             <z-tag plain type="primary">标签</z-tag>
+          </template>
+        </z-cell>
+        <z-cell title="空心样式"  :value-overflow-hidden="false">
+          <template #value>
+            <z-tag plain type="danger">标签</z-tag>
+          </template>
+        </z-cell>
+        <z-cell title="空心样式"  :value-overflow-hidden="false">
+          <template #value>
+            <z-tag plain type="warning">标签</z-tag>
           </template>
         </z-cell>
         
@@ -87,7 +102,21 @@
         <z-cell title="可关闭标签" :value-overflow-hidden="false">
           <template #value>
             <z-tag
-            none-border
+                none-border
+              closeable
+              :show="show"
+              size="medium"
+              type="primary"
+              @close="close"
+            >
+              标签
+            </z-tag>
+          </template>
+        </z-cell>
+        <z-cell title="可关闭标签" :value-overflow-hidden="false">
+          <template #value>
+            <z-tag
+                plain
               closeable
               :show="show"
               size="medium"
