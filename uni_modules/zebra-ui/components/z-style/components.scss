@@ -998,7 +998,7 @@ page {
     --zzz-greyLight-1-dark: #d8e4f5;
     --zzz-greyLight-2: #c8d0e7;
     --zzz-greyLight-3: #bec8e4;
-    --zzz-greyDark: #9baacf;
+    --zzz-greyDark: #9baacf; //基准灰色
     
     --zzz-shadow-vars-white: #ffffff; //常用于上边阴影-白色
     --zzz-shadow-vars-black: #c8d0e7; //常用于下边阴影-黑色
@@ -1006,29 +1006,24 @@ page {
     
     // ==========白天样式=========
     //名称释义：--zzz-日间模式-颜色值_夜间模式-颜色值
-    // ====== 比 --zzz-greyDark  更黑====== 一般用于标题： 白天-黑色，夜间-白色
-    --zzz-ri-hei_ye-bai: #212121;
+    // ====== 比 --zzz-greyDark  更黑====== 
+    --zzz-ri-hei_ye-bai: #212121; //白天-黑色，夜间-白色，一般用于标题
+    --zzz-ri-hui_ye-hui: #969799;//白天-深灰色，夜间-偏亮黄灰色，一般用于 辅助描述
     
-    // ====== 比 --zzz-greyDark  更深灰====== 一般用于 辅助描述：白天-深灰色，夜间-偏亮黄灰色
-    --zzz-ri-hui_ye-hui: #969799;
-    
-    
-    // ======  --zzz-greyDark  原色====== 
+    // ======  --zzz-greyDark  基准灰色====== 
     --zzz-ri-grey-dark_ye-qian-hui: #9baacf; //白天-基准灰色，夜间-更偏白
     --zzz-ri-ye-tong-hui: #9baacf ; //日夜同一个灰色
     --zzz-ri-grey-dark_ye-shen-hui: #9baacf; //白天-基准灰色，夜间-更偏黑
     --zzz-ri-grey-dark_ye-shen-hei: #9baacf; //白天-基准灰色，夜间-深黑色。用于 checbox2 多选项、radio2 但选项，未选中图标颜色
+    --zzz-ri-hui_ye-lv : var(--zzz-greyDark);//  白天-基准灰色，夜间-品牌绿色。一般用于 选中值
     
-    // ====== 比 --zzz-greyDark  更浅灰====== 一般用于 辅助描述：白天-比灰色更偏白，夜间-比灰色更偏黑
-    --zzz-ri-qian-hui_ye-qian-hui: var(--zzz-greyLight-3); //临时，未敲定
+    // ====== 比 --zzz-greyDark  更白====== 
+    --zzz-ri-qian-hui_ye-qian-hui: var(--zzz-greyLight-3); //白天-浅灰，夜间-浅灰，一般用于 辅助描述
+    --zzz-ri-qian-bai_ye-qian-hei: #c3c3c3; //白天-浅白，夜间-浅黑，常用于：禁用状态
+    --zzz-ri-qian-hui_ye-shen-hei: #bbd0f9; //白天-浅灰，夜间-深黑，用于：表单-多选框，单选框。不可更改！
+    --zzz-ri-ji-bai_ye-ji-hei: #f5f5f7;//白天-极白，夜间-极黑。看起来非常模糊。
     
-    // ====== 比 --zzz-greyDark  更白====== 一般用于 辅助：白天-浅灰色（非常白），夜间-浅灰色（非常黑）
-    --zzz-ri-qian-bai_ye-qian-hei: #c3c3c3; //常用于：禁用状态
-    --zzz-ri-qian-hui_ye-shen-hei: #bbd0f9; //用于：表单-多选框，单选框。不可更改！
-    --zzz-ri-ji-bai_ye-ji-hei: #f5f5f7;
     
-    //  白天-基准灰色（--zzz-greyDark），夜间-品牌绿色。一般用于 选中值
-    --zzz-ri-hui_ye-lv : var(--zzz-greyDark);
     --zzz-lv-di-bai-zi: #f3f3f3; //绿底白字，品牌绿色作为背景时，上面白字尽量不刺眼
     
     // ====== 阴影 ======
@@ -1104,29 +1099,25 @@ page {
     --zzz-qian-huang: #cfb0a7; //黄色
     // ==========夜间样式=========
     //名称释义：--zzz-日间模式-颜色值_夜间模式-颜色值
-    // ====== 比 --zzz-greyDark  更黑====== 一般用于标题： 白天-黑色，夜间-白色
-   	--zzz-ri-hei_ye-bai: #c3c3c3;//#f5f5f5;
+    // ====== 比 --zzz-greyDark  更黑====== 
+   	--zzz-ri-hei_ye-bai: #c3c3c3;//白天-黑色，夜间-白色，一般用于标题
+    --zzz-ri-hui_ye-hui: #afa9ab; //白天-深灰色，夜间-偏亮黄灰色，一般用于 辅助描述
     
-    // ====== 比 --zzz-greyDark  更深灰====== 一般用于 辅助描述：白天-深灰色，夜间-偏亮黄灰色
-    --zzz-ri-hui_ye-hui: #afa9ab; //夜间-偏黄亮色
-    
-    // ======  --zzz-greyDark  原色====== 
+    // ======  --zzz-greyDark  基准灰色====== 
     --zzz-ri-grey-dark_ye-qian-hui: #acbde5; //白天-基准灰色，夜间-更偏白
     --zzz-ri-ye-tong-hui: #9baacf ; //日夜同一个灰色，亮蓝白色（像亮荧光色，在纯黑背景有些晃眼）
     --zzz-greyDark: #c1babc; //白天-基准灰色，夜间-更偏暖黄白
     --zzz-ri-grey-dark_ye-shen-hui: #7f7f7f; //白天-基准灰色，夜间-更偏黑。
     --zzz-ri-grey-dark_ye-shen-hei: #333; //白天-基准灰色，夜间-深黑色。用于 checbox2 多选项、radio2 但选项，未选中图标颜色
+    --zzz-ri-hui_ye-lv : var(--zzz-primary); //  白天-基准灰色，夜间-品牌绿色。一般用于 选中值
     
-    // ====== 比 --zzz-greyDark  更浅灰====== 一般用于 辅助描述：白天-比灰色更偏白，夜间-比灰色更偏黑
-    --zzz-ri-qian-hui_ye-qian-hui: #908b8d; //临时，未敲定
+    // ====== 比 --zzz-greyDark  更白====== 
+    --zzz-ri-qian-hui_ye-qian-hui: #908b8d; //白天-浅灰，夜间-浅灰，一般用于 辅助描述
+    --zzz-ri-qian-bai_ye-qian-hei: #4f4f4f; //白天-浅白，夜间-浅黑，常用于：禁用状态
+    --zzz-ri-qian-hui_ye-shen-hei: #333; //白天-浅灰，夜间-深黑，用于：表单-多选框，单选框。不可更改！
+    --zzz-ri-ji-bai_ye-ji-hei: #2a2a2d;//白天-极白，夜间-极黑。看起来非常模糊。
     
-    // ====== 比 --zzz-greyDark  更白====== 一般用于 辅助：白天-浅灰色（非常白），夜间-浅灰色（非常黑）
-    --zzz-ri-qian-bai_ye-qian-hei: #4f4f4f; //常用于：禁用状态
-    --zzz-ri-qian-hui_ye-shen-hei: #333; //用于：表单-多选框，单选框。不可更改！
-    --zzz-ri-ji-bai_ye-ji-hei: #2a2a2d;
     
-    //  白天-基准灰色（--zzz-greyDark），夜间-品牌绿色。一般用于 选中值
-    --zzz-ri-hui_ye-lv : var(--zzz-primary);
     --zzz-lv-di-bai-zi: #f3f3f3; //绿底白字，品牌绿色作为背景时，上面白字尽量不刺眼。常用于：绿色背景按钮、导航色块。
     
     // ====== 阴影 ======
@@ -1138,7 +1129,7 @@ page {
     --z-text-color-3: #4d4d4d;
     --z-active-color: #3a3a3c;
     --z-background: #000;
-    --z-background-2: #191919;//#1c1c1e;//#262628;//var(--zzz-greyLight-1);
+    --z-background-2: #191919;
     --z-background-3: #37363b;
     @include z-theme-vars;
 }
