@@ -176,7 +176,7 @@ export default {
 <style lang="scss" scoped>
     
 .z-badge--box-shadow{
-    box-shadow:0.2rem 0.2rem 0.4rem var(--zzz-greyLight-2), -0.15rem -0.15rem 0.3rem var(--zzz-white);
+    box-shadow: var(--z-badge-shadow);
 }
 
 .z-badge {

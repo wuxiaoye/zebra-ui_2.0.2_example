@@ -148,7 +148,6 @@ export default {
 .z-card {
   position: relative;
   box-sizing: border-box;
-  color: var(--card-color);
   background-color: var(--card-background);
   border-radius: var(--card-border-radius);
   transition: box-shadow var(--z-duration-base) var(--z-ease-in);
@@ -178,6 +177,7 @@ export default {
     padding: var(--card-body-padding);
     font-size: var(--z-font-size-md);
     line-height: var(--z-line-height-md);
+    color:var(--card-content-color);
   }
 
   &__header {
@@ -208,7 +208,7 @@ export default {
   &__title {
     margin-right: var(--card-title-margin);
     font-size: var(--z-font-size-cx);
-    color: var(--card-color);
+    color: var(--card-title-color);
     word-break: break-all;
   }
 
@@ -222,7 +222,7 @@ export default {
   &__description {
     margin-top: var(--card-description-margin);
     font-size: var(--z-font-size-md);
-    color: var(--card-subtitle-color);
+    color: var(--card-description-color);
     word-break: break-all;
   }
 }

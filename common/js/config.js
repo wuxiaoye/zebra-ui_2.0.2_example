@@ -2,6 +2,11 @@ export default [
   {
     groupName: '基础组件',
     list: [
+        {
+            path: '/colorVars',
+            title: 'CSS 颜色变量',
+            image: 'style'
+        },
       {
         path: '/button',
         title: 'Button 按钮',

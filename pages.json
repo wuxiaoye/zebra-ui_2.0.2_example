@@ -511,6 +511,12 @@
         "style": {
             "navigationBarTitleText": ""
         }
+    },
+    {
+        "path": "pages/colorVars/colorVars",
+        "style": {
+            "navigationBarTitleText": ""
+        }
     }
     
   ],

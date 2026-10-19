@@ -149,12 +149,12 @@
     --z-cell-line-height: 58rpx;
     --z-cell-vertical-padding: 20rpx;
     --z-cell-horizontal-padding: var(--z-padding-md);
-    --z-cell-text-color: var(--zzz-ri-hei_ye-bai);
+    --z-cell-text-color: var(--zzz-ri-hei_ye-bai-2);
     --z-cell-background: var(--z-background-2);
     --z-cell-border-color: var(--z-border-color);
     --z-cell-active-color: var(--zzz-greyLight-1-dark);
     --z-cell-required-color: var(--z-danger-color);
-    --z-cell-label-color: var(--zzz-ri-hui_ye-hui);
+    --z-cell-label-color: var(--zzz-ri-hei_ye-bai-4);
     --z-cell-label-font-size: var(--z-font-size-sm);
     --z-cell-label-line-height: var(--z-line-height-sm);
     --z-cell-label-margin-top: var(--z-padding-base);
@@ -168,7 +168,7 @@
     --z-cell-large-label-font-size: var(--z-font-size-md);
     --z-cell-large-value-font-size: inherit;
     --z-cell-group-background: var(--z-background-2);
-    --z-cell-group-title-color: var(--zzz-ri-hui_ye-hui);
+    --z-cell-group-title-color: var(--zzz-ri-hei_ye-bai-4);
     --z-cell-group-title-padding: var(--z-padding-md) var(--z-padding-md);
     --z-cell-group-title-font-size: var(--z-font-size-md);
     --z-cell-group-title-line-height: 32rpx;
@@ -201,7 +201,7 @@
     --z-checkbox-border-color: var(--zzz-ri-ye-tong-hui);
     --z-checkbox-duration: var(--z-duration-fast);
     --z-checkbox-label-margin: var(--z-padding-xs);
-    --z-checkbox-label-color: var(--zzz-ri-hei_ye-bai);
+    --z-checkbox-label-color: var(--zzz-ri-hei_ye-bai-2);
     --z-checkbox-checked-icon-color: var(--z-primary-color);
     --z-checkbox-disabled-icon-color: var(--z-gray-5);
     --z-checkbox-disabled-label-color: var(--z-text-color-3);
@@ -209,7 +209,7 @@
     
     // checkbox2
     --z-checkbox2-final-inactive-icon-color: var(--zzz-ri-qian-hui_ye-shen-hei); //最终非活跃图标颜色
-    --z-checkbox2-final-label-color: var(--zzz-ri-hei_ye-bai); //最终文字颜色
+    --z-checkbox2-final-label-color: var(--zzz-ri-hei_ye-bai-2); //最终文字颜色
     
     // radio 单选项
     --z-radio-size: 40rpx;
@@ -225,7 +225,7 @@
     
     // radio2
     --z-radio2-inactive-icon-color: var(--zzz-ri-qian-hui_ye-shen-hei);
-    --z-radio2-label-color: var(--zzz-ri-hei_ye-bai);
+    --z-radio2-label-color: var(--zzz-ri-hei_ye-bai-2);
     
     // stepper 步进器
     // --z-stepper-button-icon-color: var(--z-text-color);
@@ -243,7 +243,7 @@
     --z-stepper-input-height: 56rpx;
     --z-stepper-input-font-size: var(--z-font-size-md);
     --z-stepper-input-line-height: normal;
-    --z-stepper-input-text-color: var(--zzz-ri-hei_ye-bai);
+    --z-stepper-input-text-color: var(--zzz-ri-hei_ye-bai-2);
     --z-stepper-input-disabled-text-color: #999;
     --z-stepper-input-disabled-background: var(--z-active-color);
     --z-stepper-radius: var(--z-radius-md);
@@ -254,7 +254,7 @@
     
     
     // numberkeyBoard ，数字键盘， 这是分成两个 .vue 文件的，z-number-keyboard 和 z-number-keyboard-key，循环 z-number-keyboard-key 生成一个个按钮
-    --z-number-keyboard-key-text-color: var(--zzz-ri-hei_ye-bai);
+    --z-number-keyboard-key-text-color: var(--zzz-ri-hei_ye-bai-2);
     --z-number-keyboard-key-height: 96rpx;
     --z-number-keyboard-key-font-size: 56rpx;
     --z-number-keyboard-delete-font-size: var(--z-font-size-lg);
@@ -302,7 +302,7 @@
     --z-picker-confirm-action-margin : 16px 20px 6px 0;
     --z-picker-cancel-action-margin : 16px 0 6px 20px;
     --z-picker-confirm-action-color: var(--z-primary-color);
-    --z-picker-cancel-action-color: var(--zzz-ri-hui_ye-hui);
+    --z-picker-cancel-action-color: var(--zzz-ri-hei_ye-bai-4);
     
     --z-picker-option-font-size: var(--z-font-size-lg);
     --z-picker-option-padding: 0 var(--z-padding-base);
@@ -344,6 +344,7 @@
     --z-badge-dot-color: var(--z-danger-color);
     --z-badge-dot-size: 16rpx;
     --z-badge-font: -apple-system-font, helvetica neue, arial, sans-serif;
+    --z-badge-shadow: var(--zzz-ri-shadow_ye-wu);
     
     // actionSheet 动作面板
     --z-action-sheet-max-height: 80%;
@@ -393,13 +394,15 @@
     --card-header-padding: var(--z-padding-sm) var(--z-padding-md);
     --card-footer-padding: var(--z-padding-md);
     --card-avatar-size: 50rpx;
-    --card-border-color: var(--z-border-color);
-    --card-background: var(--z-background-2);
-    --card-color: var(--z-text-color);
-    --card-subtitle-color: var(--zzz-ri-hui_ye-hui);
     --card-avatar-margin: var(--z-padding-xs);
     --card-description-margin: var(--z-padding-xs);
     --card-title-margin: var(--z-padding-xs);
+    --card-border-color: var(--z-border-color);
+    --card-background: var(--z-background-2);
+    --card-title-color: var(--zzz-ri-hei_ye-bai-2);
+    --card-subtitle-color: var(--zzz-ri-ye-tong-hui);
+    --card-description-color: var(--zzz-ri-hui_ye-hui);
+    --card-content-color: var(--zzz-ri-hei_ye-bai-3);
     
     // cascader 日历
     --z-cascader-header-height: 96rpx;
@@ -407,7 +410,7 @@
     --z-cascader-title-font-size: var(--z-font-size-lg);
     --z-cascader-title-line-height: 40rpx;
     --z-cascader-close-icon-size: 44rpx;
-    --z-cascader-close-icon-color: var(--zzz-ri-hui_ye-hui);
+    --z-cascader-close-icon-color: var(--zzz-ri-hui_ye-hui-3);
     --z-cascader-selected-icon-size: 36rpx;
     --z-cascader-selected-icon-color:var(--zzz-primary);
     --z-cascader-tabs-height: 96rpx;
@@ -416,7 +419,7 @@
     --z-cascader-option-disabled-color: var(--z-text-color-3);
     // --z-cascader-tab-color: var(--z-text-color);
     --z-cascader-tab-color: var(--zzz-primary);
-    --z-cascader-unselected-tab-color: var(--zzz-ri-hui_ye-hui);
+    --z-cascader-unselected-tab-color: var(--zzz-ri-hei_ye-bai-4);
     
     // circle
     --z-circle-size: 200rpx;
@@ -512,11 +515,11 @@
     
     // input  / field 输入框
     --z-field-label-width: 6.2em;
-    --z-field-label-color: var(--zzz-ri-hei_ye-bai);//var(--z-text-color);
+    --z-field-label-color: var(--zzz-ri-hei_ye-bai-2);//var(--z-text-color);
     --z-field-label-margin-right: var(--z-padding-sm);
     --z-field-input-text-color: var(--zzz-ri-ye-tong-hui);
     --z-field-input-error-text-color: var(--z-danger-color);
-    --z-field-input-disabled-text-color: var(--zzz-ri-hui_ye-hui);
+    --z-field-input-disabled-text-color: var(--zzz-ri-bai_ye-bai-3);
     // --z-field-placeholder-text-color: var(--z-text-color-3);
     --z-field-placeholder-text-color: var(--zzz-greyLight-3);
     --z-field-icon-size: 36rpx;
@@ -570,7 +573,7 @@
     --z-highlight-tag-color: var(--z-primary-color);
     
     // list 列表（下滑自动加载更多）
-    --z-list-text-color: var(--zzz-ri-hui_ye-hui);
+    --z-list-text-color: var(--zzz-ri-hei_ye-bai-4);
     --z-list-text-font-size: var(--z-font-size-md);
     --z-list-text-line-height: 100rpx;
     --z-list-loading-icon-size: 38rpx;
@@ -598,7 +601,7 @@
     --z-notice-bar-height: 80rpx;
     --z-notice-bar-padding: 0 var(--z-padding-md) 0 20rpx;
     --z-notice-bar-wrapable-padding: var(--z-padding-xs) var(--z-padding-md) var(--z-padding-xs)  20rpx;
-    --z-notice-bar-text-color: var(--zzz-ri-hei_ye-bai);
+    --z-notice-bar-text-color: var(--zzz-ri-hei_ye-bai-2);
     --z-notice-bar-font-size: var(--z-font-size-md);
     --z-notice-bar-line-height: 48rpx;
     --z-notice-bar-background: var(--zzz-greyLight-1);
@@ -632,7 +635,7 @@
     --z-password-input-font-size: 40rpx;
     --z-password-input-radius: 12rpx;
     --z-password-input-background: var(--z-background-2);
-    --z-password-input-info-color: var(--zzz-ri-hui_ye-hui);
+    --z-password-input-info-color: var(--zzz-ri-hei_ye-bai-4);
     --z-password-input-info-font-size: var(--z-font-size-md);
     --z-password-input-error-info-color: var(--z-danger-color);
     --z-password-input-dot-size: 20rpx;
@@ -680,10 +683,10 @@
     --z-progress-pivot-background:  var(--z-primary-color);
     --z-progress-pivot-box-shadow:  var(--zzz-shadow);
     
-    // pullrefresh
+    // pullrefresh 下拉刷新
     --z-pull-refresh-head-height: 100rpx;
     --z-pull-refresh-head-font-size: var(--z-font-size-md);
-    --z-pull-refresh-head-text-color: var(--zzz-ri-hui_ye-hui);
+    --z-pull-refresh-head-text-color: var(--zzz-ri-hei_ye-bai-4);
     --z-pull-refresh-loading-icon-size: 42rpx;
     
     // rate
@@ -733,20 +736,20 @@
     // shareSheet 分享面板
     // 标题
     --z-share-sheet-header-padding: var(--z-padding-sm) var(--z-padding-md);
-    --z-share-sheet-title-color: var(--zzz-ri-hei_ye-bai); //var(--z-text-color);
+    --z-share-sheet-title-color: var(--zzz-ri-hei_ye-bai-2);
     --z-share-sheet-title-font-size: var(--z-font-size-md);
     --z-share-sheet-title-line-height: var(--z-line-height-md);
     // 描述
-    --z-share-sheet-description-color: var(--zzz-ri-hui_ye-hui);
+    --z-share-sheet-description-color: var(--zzz-ri-bai_ye-hei);
     --z-share-sheet-description-font-size: var(--z-font-size-sm);
     --z-share-sheet-description-line-height: 32rpx;
     --z-share-sheet-icon-size: 96rpx;
     //选项
     --z-share-sheet-option-icon-color: var(--zzz-ri-ye-tong-hui); //这个似乎无用，父元素设置的 color 无法作用到 z-icon。
-    --z-share-sheet-option-background-color: var(--zzz-ri-grey-dark_ye-shen-hei);//var(--zzz-greyLight-1);//var(--z-gray-6);//var(--zzz-ri-hui_ye-hui);
+    --z-share-sheet-option-background-color: var(--zzz-ri-grey-dark_ye-shen-hei);//var(--zzz-greyLight-1);
     --z-share-sheet-option-name-color: var(--zzz-ri-ye-tong-hui);//var(--z-gray-7);
     --z-share-sheet-option-name-font-size: var(--z-font-size-sm);
-    --z-share-sheet-option-description-color: var(--zzz-ri-qian-hui_ye-qian-hui);//var(--z-text-color-3); //描述文字颜色
+    --z-share-sheet-option-description-color: var(--zzz-ri-bai_ye-hei-5);//var(--z-text-color-3); //描述文字颜色
     --z-share-sheet-option-description-font-size: var(--z-font-size-sm);
     --z-share-sheet-option-box-shadow: var(--zzz-ri-shadow_ye-wu); //阴影
     //取消
@@ -853,7 +856,7 @@
     --z-tabs-bottom-bar-color: var(--z-primary-color);
     
     --z-tab-line-text-color: var(--zzz-greyDark);
-    --z-tab-line-active-text-color: var(--zzz-ri-hei_ye-bai);
+    --z-tab-line-active-text-color: var(--zzz-primary);//var(--zzz-ri-hei_ye-bai);
     --z-tab-card-text-color: var(--zzz-greyDark);
     --z-tab-card-active-text-color: var(--zzz-lv-di-bai-zi);
     --z-tab-card-active-background-color: linear-gradient(135deg,  var(--zzz-primary-light),  var(--zzz-primary) );
@@ -977,7 +980,7 @@
     --z-tree-select-item-active-color: var(--z-primary-color);//激活状态
     
     // icon
-    --z-icon-default-color: var(--zzz-ri-hei_ye-bai);
+    --z-icon-default-color: var(--zzz-ri-hei_ye-bai-2);
 }
 
 :root,
@@ -998,17 +1001,14 @@ page {
     --zzz-greyLight-1-dark: #d8e4f5;
     --zzz-greyLight-2: #c8d0e7;
     --zzz-greyLight-3: #bec8e4;
-    --zzz-greyDark: #9baacf; //基准灰色
+    --zzz-greyDark: #95a4c7;// #9baacf; //基准灰色
     
-    --zzz-shadow-vars-white: #ffffff; //常用于上边阴影-白色
-    --zzz-shadow-vars-black: #c8d0e7; //常用于下边阴影-黑色
-    --zzz-shadow-vars-grey: #c8d0e7; //常用于下边阴影-灰色
     
     // ==========白天样式=========
     //名称释义：--zzz-日间模式-颜色值_夜间模式-颜色值
     // ====== 比 --zzz-greyDark  更黑====== 
-    --zzz-ri-hei_ye-bai: #212121; //白天-黑色，夜间-白色，一般用于标题
-    --zzz-ri-hui_ye-hui: #969799;//白天-深灰色，夜间-偏亮黄灰色，一般用于 辅助描述
+    // --zzz-ri-hei_ye-bai: #212121; //白天-黑色，夜间-白色，一般用于标题
+    // --zzz-ri-hui_ye-hui: #969799;//白天-深灰色，夜间-偏亮黄灰色，一般用于 辅助描述
     
     // ======  --zzz-greyDark  基准灰色====== 
     --zzz-ri-grey-dark_ye-qian-hui: #9baacf; //白天-基准灰色，夜间-更偏白
@@ -1024,9 +1024,12 @@ page {
     --zzz-ri-ji-bai_ye-ji-hei: #f5f5f7;//白天-极白，夜间-极黑。看起来非常模糊。
     
     
-    --zzz-lv-di-bai-zi: #f3f3f3; //绿底白字，品牌绿色作为背景时，上面白字尽量不刺眼
+    
     
     // ====== 阴影 ======
+    --zzz-shadow-vars-white: #ffffff; //常用于上边阴影-白色
+    --zzz-shadow-vars-black: #c8d0e7; //常用于下边阴影-黑色
+    --zzz-shadow-vars-grey: #c8d0e7; //常用于下边阴影-灰色
     //白天-有阴影，夜间-无阴影
     --zzz-ri-shadow_ye-wu: 3px 3px 6px var(--zzz-shadow-vars-black), -2px -2px 5px var(--zzz-shadow-vars-white);
     
@@ -1070,6 +1073,39 @@ page {
     --z-background: var(--z-gray-1);
     --z-background-2: var(--zzz-greyLight-1);
     --z-background-3: var(--z-white);
+    
+    
+    //======白天样式======
+    //======比基准灰色更黑======
+    --zzz-ri-hei_ye-bai: #131313;
+    --zzz-ri-hei_ye-bai-2: #333;
+    --zzz-ri-hei_ye-bai-3: #636363;
+    --zzz-ri-hei_ye-bai-4: #838383;
+    
+    //======基准灰色======
+    --zzz-ri-hui_ye-lv: #95a4c7;
+    --zzz-ri-hui_ye-hui: #95a4c7;
+    --zzz-ri-hui_ye-hui-2: #95a4c7;
+    --zzz-ri-hui_ye-hui-3: #95a4c7;
+    
+    //======比基准灰色更淡======
+    --zzz-ri-bai_ye-hei: #a3a3a3;
+    --zzz-ri-bai_ye-hei-2: #a3a3a3;
+    
+    --zzz-ri-bai_ye-hei-3: #c3c3c3;
+    --zzz-ri-bai_ye-hei-4: #c3c3c3;
+    
+    --zzz-ri-bai_ye-hei-5: #b0c4e8;
+    --zzz-ri-bai_ye-hei-6: #b8cdf4;
+    
+    //======非常淡 - 可能用于：禁用状态======
+    --zzz-ri-ji-bai_ye-ji-hei:#b8cdf4;
+    --zzz-ri-ji-bai_ye-ji-hei-2: #c8d0e7;
+    --zzz-ri-ji-bai_ye-ji-hei-3: #d8e4f5;
+    --zzz-ri-ji-bai_ye-ji-hei-4: #f5f5f7; //日历组件会用到
+    
+    --zzz-lv-di-bai-zi: #f3f3f3; //绿底白字，品牌绿色作为背景时，上面白字尽量不刺眼
+    
     @include z-theme-vars;
 }
 
@@ -1100,12 +1136,12 @@ page {
     // ==========夜间样式=========
     //名称释义：--zzz-日间模式-颜色值_夜间模式-颜色值
     // ====== 比 --zzz-greyDark  更黑====== 
-   	--zzz-ri-hei_ye-bai: #c3c3c3;//白天-黑色，夜间-白色，一般用于标题
-    --zzz-ri-hui_ye-hui: #afa9ab; //白天-深灰色，夜间-偏亮黄灰色，一般用于 辅助描述
+   	// --zzz-ri-hei_ye-bai: #c3c3c3;//白天-黑色，夜间-白色，一般用于标题
+    // --zzz-ri-hui_ye-hui: #afa9ab; //白天-深灰色，夜间-偏亮黄灰色，一般用于 辅助描述
     
     // ======  --zzz-greyDark  基准灰色====== 
-    --zzz-ri-grey-dark_ye-qian-hui: #acbde5; //白天-基准灰色，夜间-更偏白
     --zzz-ri-ye-tong-hui: #9baacf ; //日夜同一个灰色，亮蓝白色（像亮荧光色，在纯黑背景有些晃眼）
+    --zzz-ri-grey-dark_ye-qian-hui: #acbde5; //白天-基准灰色，夜间-更偏白
     --zzz-greyDark: #c1babc; //白天-基准灰色，夜间-更偏暖黄白
     --zzz-ri-grey-dark_ye-shen-hui: #7f7f7f; //白天-基准灰色，夜间-更偏黑。
     --zzz-ri-grey-dark_ye-shen-hei: #333; //白天-基准灰色，夜间-深黑色。用于 checbox2 多选项、radio2 但选项，未选中图标颜色
@@ -1119,6 +1155,37 @@ page {
     
     
     --zzz-lv-di-bai-zi: #f3f3f3; //绿底白字，品牌绿色作为背景时，上面白字尽量不刺眼。常用于：绿色背景按钮、导航色块。
+    
+    
+    //======比基准灰色更黑======
+    --zzz-ri-hei_ye-bai: #f3f3f3;
+    --zzz-ri-hei_ye-bai-2: #dedede;
+    --zzz-ri-hei_ye-bai-3: #bfbfbf;
+    --zzz-ri-hei_ye-bai-4: #aaa5a7;
+    
+    //======基准灰色======
+    --zzz-ri-hui_ye-lv: var(--zzz-primary);
+    --zzz-ri-hui_ye-hui: #9baacf;
+    --zzz-ri-hui_ye-hui-2: #bcbcbc;
+    --zzz-ri-hui_ye-hui-3: #7f7f7f;
+    
+    //======比基准灰色更淡======
+    --zzz-ri-bai_ye-hei: #7f7f7f;
+    --zzz-ri-bai_ye-hei-2: #4f4f4f;
+    
+    --zzz-ri-bai_ye-hei-3: #7f7f7f;
+    --zzz-ri-bai_ye-hei-4: #4f4f4f;
+    
+    --zzz-ri-bai_ye-hei-5: #7f7f7f;
+    --zzz-ri-bai_ye-hei-6: #4f4f4f;
+    
+    //======非常淡 - 可能用于：禁用状态======
+    --zzz-ri-ji-bai_ye-ji-hei:#444;
+    --zzz-ri-ji-bai_ye-ji-hei-2: #444;
+    --zzz-ri-ji-bai_ye-ji-hei-3: #444;
+    --zzz-ri-ji-bai_ye-ji-hei-4: #2a2a2d; //日历组件会用到
+    
+    --zzz-lv-di-bai-zi: #ececec; //绿底白字，品牌绿色作为背景时，上面白字尽量不刺眼
     
     // ====== 阴影 ======
     //白天-有阴影，夜间-无阴影

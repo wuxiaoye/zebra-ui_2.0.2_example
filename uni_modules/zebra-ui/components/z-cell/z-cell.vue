@@ -220,7 +220,6 @@ export default {
   display: flex;
   width: 100%;
   padding: var(--z-cell-vertical-padding) var(--z-cell-horizontal-padding);
-  /* ❗删除写死overflow:hidden，交给修饰符 &--overflow-hidden控制 */
   font-size: var(--z-cell-font-size);
   line-height: var(--z-cell-line-height);
   color: var(--z-cell-text-color);
