@@ -30,40 +30,41 @@
         {
             title: '比基准灰色更黑',
             list: [
-                { name: '--zzz-ri-hei_ye-bai', ri: '#131313', ye: '#f3f3f3' },
+                { name: '--zzz-ri-hei_ye-bai-1', ri: '#131313', ye: '#f3f3f3' },
                 { name: '--zzz-ri-hei_ye-bai-2', ri: '#333', ye: '#dedede' },
-                { name: '--zzz-ri-hei_ye-bai-3', ri: '#636363', ye: '#bfbfbf' },
-                { name: '--zzz-ri-hei_ye-bai-4', ri: '#838383', ye: '#aaa5a7' },
+                { name: '--zzz-ri-hei_ye-bai-3', ri: '#6f7c94', ye: '#bfbfbf' },
+                { name: '--zzz-ri-hei_ye-bai-4', ri: '#7988a2', ye: '#aaa5a7' },
+                { name: '--zzz-ri-hei_ye-bai-5', ri: 'var(--zzz-greyDark-3)', ye: '#bfbfbf' },
             ]
         },
         {
             title: '基准灰色',
             list: [
-                { name: '--zzz-ri-hui_ye-lv', ri: '#9baacf', ye: 'var(--zzz-primary)' },
-                { name: '--zzz-ri-ye-tong-hui', ri: '#9baacf', ye: '#9baacf' },
-                { name: '--zzz-ri-hui_ye-hui', ri: '#95a4c7', ye: '#bcbcbc' },
-                { name: '--zzz-ri-hui_ye-hui-2', ri: '#9baacf', ye: '#7f7f7f' },
+                { name: '--zzz-ri-hui_ye-lv', ri: '#92a1c3', ye: 'var(--zzz-primary)' },
+                { name: '--zzz-ri-ye-tong-hui', ri: 'var(--zzz-greyDark)', ye: '#9baacf' },
+                { name: '--zzz-ri-hui_ye-hui-1', ri: '#92a1c3', ye: '#c1babc' },
+                { name: '--zzz-ri-hui_ye-hui-2', ri: 'var(--zzz-greyDark)', ye: '#7f7f7f' },
             ]
         },
         {
             title: '比基准灰色更淡',
             list: [
-                { name: '--zzz-ri-bai_ye-hei', ri: '#a3a3a3', ye: '#7f7f7f' },
-                { name: '--zzz-ri-bai_ye-hei-2', ri: '#a3a3a3', ye: '#4f4f4f' },
+                { name: '--zzz-ri-bai_ye-hei-1', ri: '#aec3e3', ye: '#7f7f7f' },
+                { name: '--zzz-ri-bai_ye-hei-2', ri: '#aec3e3', ye: '#4f4f4f' },
                 
-                { name: '--zzz-ri-bai_ye-hei-3', ri: '#c3c3c3', ye: '#7f7f7f' },
-                { name: '--zzz-ri-bai_ye-hei-4', ri: '#c3c3c3', ye: '#4f4f4f' },
+                { name: '--zzz-ri-bai_ye-hei-3', ri: '#a3a3a3', ye: '#7f7f7f' },
+                { name: '--zzz-ri-bai_ye-hei-4', ri: '#a3a3a3', ye: '#4f4f4f' },
                 
-                { name: '--zzz-ri-bai_ye-hei-5', ri: '#b0c4e8', ye: '#7f7f7f' },
-                { name: '--zzz-ri-bai_ye-hei-6', ri: '#b8cdf4', ye: '#4f4f4f' },
+                { name: '--zzz-ri-bai_ye-hei-5', ri: '#c3c3c3', ye: '#7f7f7f' },
+                { name: '--zzz-ri-bai_ye-hei-6', ri: '#c3c3c3', ye: '#4f4f4f' },
             ]
         },
         {
             title: '非常淡 - 可能用于：禁用状态',
             list: [
-                { name: '--zzz-ri-ji-bai_ye-ji-hei', ri: '#b8cdf4', ye: '#444' , ye_background:'#191919' },
+                { name: '--zzz-ri-ji-bai_ye-ji-hei-1', ri: '#c8d0e7', ye: '#444'  , ye_background:'#191919' },
+                { name: '--zzz-ri-ji-bai_ye-ji-hei-2', ri: '#b8cdf4', ye: '#444' , ye_background:'#191919' },
                 
-                { name: '--zzz-ri-ji-bai_ye-ji-hei-2', ri: '#c8d0e7', ye: '#444'  , ye_background:'#191919' },
                 
                 { name: '--zzz-ri-ji-bai_ye-ji-hei-3', ri: '#d8e4f5', ye: '#444'  , ye_background:'#191919' },
                 //日历组件会用到
@@ -79,34 +80,6 @@
                     ri_background: 'var(--zzz-primary)',
                     ye_background: 'var(--zzz-primary)'
                 },
-            ]
-        },
-        {
-            title: '【旧】比基准灰色更黑',
-            list: [
-                { name: '--zzz-ri-hei_ye-bai', ri: 'var(--zzz-ri-hei_ye-bai)', ye: '#c3c3c3' },
-                { name: '--zzz-ri-hui_ye-hui', ri: 'var(--zzz-ri-hui_ye-hui)', ye: '#afa9ab' },
-            ]
-        },
-        {
-            title: '【旧】基准灰色',
-            list: [
-                { name: '--zzz-ri-ye-tong-hui', ri: 'var(--zzz-ri-ye-tong-hui)', ye: '#9baacf' },
-                { name: '--zzz-ri-grey-dark_ye-qian-hui', ri: 'var(--zzz-ri-grey-dark_ye-qian-hui)', ye: '#acbde5' },
-                { name: '--zzz-greyDark', ri: 'var(--zzz-greyDark)', ye: '#c1babc' },
-                { name: '--zzz-ri-grey-dark_ye-shen-hui', ri: 'var(--zzz-ri-grey-dark_ye-shen-hui)', ye: '#7f7f7f' },
-                
-                { name: '--zzz-ri-grey-dark_ye-shen-hei', ri: 'var(--zzz-ri-grey-dark_ye-shen-hei)', ye: '#333' },
-                { name: '--zzz-ri-hui_ye-lv', ri: 'var(--zzz-ri-hui_ye-lv)', ye: 'var(--zzz-primary)' },
-            ]
-        },
-        {
-            title: '【旧】比基准灰色更白',
-            list: [
-                { name: '--zzz-ri-qian-hui_ye-qian-hui', ri: 'var(--zzz-ri-qian-hui_ye-qian-hui)', ye: '#908b8d' },
-                { name: '--zzz-ri-qian-bai_ye-qian-hei', ri: 'var(--zzz-ri-qian-bai_ye-qian-hei)', ye: '#4f4f4f' },
-                { name: '--zzz-ri-qian-hui_ye-shen-hei', ri: 'var(--zzz-ri-qian-hui_ye-shen-hei)', ye: '#333' },
-                { name: '--zzz-ri-ji-bai_ye-ji-hei', ri: 'var(--zzz-ri-ji-bai_ye-ji-hei)', ye: '#2a2a2d' },
             ]
         },
         {

@@ -376,7 +376,7 @@ export default {
     position: relative;
     display: flex;
     cursor: grab;
-    box-shadow:  -4rpx -4rpx 16rpx var(--zzz-greyLight-1-dark);
+    box-shadow:  var(--z-picker-columns-shadow);
   }
 
   &__frame {
@@ -388,9 +388,7 @@ export default {
     pointer-events: none;
     transform: translateY(-50%);
     border-radius: 24rpx;
-    box-shadow: 
-        12rpx 12rpx 32rpx var(--zzz-greyLight-2), -12rpx -12rpx 30rpx var(--zzz-white),  
-        inset 0.4rem 0.4rem 0.8rem var(--zzz-greyLight-2), inset -0.4rem -0.4rem 0.8rem var(--zzz-white);
+    box-shadow: var(--z-picker-frame-shadow);
   }
 
   &__mask {

@@ -417,7 +417,7 @@ export default {
       width: var(--z-slider-bar-height);
       height: var(--z-slider-bar-height);
       border-radius: 50%;
-      box-shadow: inset 4rpx 4rpx 10rpx var(--zzz-greyLight-2), inset -4rpx -4rpx 10rpx var(--zzz-white);
+      box-shadow: var(--z-slider-bar-dot-shadow);
       transform: translate(50%, 50%);
     }
 
