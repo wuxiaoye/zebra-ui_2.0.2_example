@@ -44,6 +44,7 @@
           <z-cell title="单元格" is-link arrow-direction="down" value="内容" />
         </z-cell-group>
       </demo-block>
+      
       <demo-block title="分组标题">
         <z-cell-group title="分组1" :border="false" class="add_shadow" style="margin-bottom: 20px; border-radius: 10px; overflow: hidden;">
           <z-cell title="单元格" value="内容" />

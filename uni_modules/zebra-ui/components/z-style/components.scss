@@ -61,7 +61,7 @@
       --z-ease-in: ease-in;
       
       // Border
-      --z-border-color: var(--zzz-ri-ji-bai_ye-ji-hei-1);
+      --z-border-color: var(--zzz-ri-hui_ye-hui-1);
       --z-border-width: 2rpx;
       --z-radius-sm: 4rpx;
       --z-radius-md: 8rpx;
@@ -515,8 +515,7 @@
     --z-field-label-margin-right: var(--z-padding-sm);
     --z-field-input-text-color: var(--zzz-ri-ye-tong-hui);
     --z-field-input-error-text-color: var(--z-danger-color);
-    --z-field-input-disabled-text-color: var(--zzz-ri-bai_ye-bai-3);
-    // --z-field-placeholder-text-color: var(--z-text-color-3);
+    --z-field-input-disabled-text-color: var(--zzz-ri-bai_ye-hei-3);
     --z-field-placeholder-text-color: var(--zzz-greyLight-3);
     --z-field-icon-size: 36rpx;
     --z-field-clear-icon-size: 36rpx;
@@ -528,7 +527,7 @@
     --z-field-word-limit-color: var(--zzz-ri-hui_ye-hui-1);
     --z-field-word-limit-font-size: var(--z-font-size-sm);
     --z-field-word-limit-line-height: 32rpx;
-    --z-field-disabled-text-color: var(--z-text-color-3);
+    --z-field-disabled-text-color: var(--zzz-ri-bai_ye-hei-3);
     --z-field-required-mark-color: var(--z-red);
     //阴影
     --z-field-shadow : var(--zzz-shadow-inset);
@@ -657,10 +656,10 @@
     --z-popover-horizontal-action-icon-size: 32rpx;
     --z-popover-light-text-color: var(--z-text-color);
     --z-popover-light-background: var(--z-background-2);
-    --z-popover-light-action-disabled-text-color: var(--z-text-color-3);
+    --z-popover-light-action-disabled-text-color: var(--zzz-ri-ji-bai_ye-ji-hei-1);
     --z-popover-dark-text-color: var(--z-white);
     --z-popover-dark-background: #4a4a4a;
-    --z-popover-dark-action-disabled-text-color: var(--z-text-color-2);
+    --z-popover-dark-action-disabled-text-color: var(--zzz-ri-bai_ye-hei-5);
     
     // progress 进度条
     --z-progress-height: 8rpx;
@@ -882,6 +881,7 @@
     --z-tag-plain-background: rgba(255, 255, 255, 0);
     --z-tag-close-icon-color: #fff;
     --z-tag-close-icon-plain-color:var(--zzz-ri-ye-tong-hui);
+    --z-tag-shadow: var(--zzz-shadow-mini);
     
     // TextEllipsis 文本省略
     --z-text-ellipsis-line-height: 1.6;
@@ -919,11 +919,10 @@
     --z-uploader-text-color: var(--zzz-ri-hui_ye-hui-1);
     --z-uploader-text-font-size: var(--z-font-size-sm);
     --z-uploader-text-margin-top: 8rpx;
-    // --z-uploader-upload-background: var(--z-gray-1);
     --z-uploader-upload-background: var(--zzz-greyLight-1);
     --z-uploader-box-shadow: var(--zzz-shadow-inset-more-big);
     --z-uploader-upload-active-color: var(--z-active-color);
-    --z-uploader-delete-color: var(--z-white);
+    --z-uploader-delete-color: #fff;//var(--z-white);
     --z-uploader-delete-icon-size: 24rpx;
     --z-uploader-delete-size: 36rpx;
     --z-uploader-delete-background: rgb(0 0 0 / 40%);
@@ -1077,8 +1076,8 @@ page {
     --zzz-ri-bai_ye-hei-6: #c3c3c3;
     
     //======非常淡 - 可能用于：禁用状态======
-    --zzz-ri-ji-bai_ye-ji-hei-1: #c8d0e7;
-    --zzz-ri-ji-bai_ye-ji-hei-2:#b8cdf4;
+    --zzz-ri-ji-bai_ye-ji-hei-1: #c3c3c3;
+    --zzz-ri-ji-bai_ye-ji-hei-2:#c8d0e7;
     --zzz-ri-ji-bai_ye-ji-hei-3: #d8e4f5;
     --zzz-ri-ji-bai_ye-ji-hei-4: #f5f5f7; //日历组件会用到
     

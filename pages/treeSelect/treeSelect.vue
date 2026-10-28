@@ -60,7 +60,9 @@ const items = ref([
     children: [
       { text: '杭州', id: 1 },
       { text: '温州', id: 2 },
-      { text: '宁波', id: 3, disabled: true }
+      { text: '宁波', id: 3, disabled: true },
+      { text: '湖州', id: 21 },
+      { text: '嘉兴', id: 22 },
     ]
   },
   {
@@ -71,7 +73,19 @@ const items = ref([
       { text: '徐州', id: 6 }
     ]
   },
-  { text: '福建', disabled: true }
+  { text: '福建', disabled: true },
+  {
+      text: '广东',
+      children:[
+          { text: '广州', id:7 },
+          { text: '深圳', id:8 },
+          { text: '惠州', id:9 },
+          { text: '茂名', id:10 },
+          { text: '江门', id:11 },
+          { text: '佛山', id:12 },
+          { text: '肇庆', id:13 },
+      ]
+  }
 ])
 const simpleItems = ref([{ text: '分组 1' }, { text: '分组 2' }])
 const badgeItems = ref([

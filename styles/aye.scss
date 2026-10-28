@@ -1,40 +1,40 @@
 /* 卡片外阴影样式 -更大*/
 .add_shadow_more_big{
-    box-shadow: 0.4rem 0.4rem 0.8rem var(--greyLight-2),  -0.4rem -0.4rem 0.8rem var(--white);
+    box-shadow: var(--zzz-shadow-more-big);
 }
 /* 卡片外阴影样式 -大一些*/
 .add_shadow_big {
-    box-shadow: 6px 6px 12px var(--greyLight-2), -4px -4px 10px var(--white);
+    box-shadow: var(--zzz-shadow-big);
 }
 /* 卡片外阴影样式 */
 .add_shadow {
-    box-shadow: 3px 3px 6px var(--greyLight-2), -2px -2px 5px var(--white);
+    box-shadow: var(--zzz-shadow);
 }
 /* 卡片外阴影样式 - 小一些*/
 .add_shadow_mini {
-    box-shadow: 2px 2px 4px var(--greyLight-2), -1px -1px 3px var(--white);
+    box-shadow: var(--zzz-shadow-mini);
 }
 
 /* 内凹阴影 */
 .add_shadow_inset {
-    box-shadow: inset 2px 2px 4px var(--greyLight-2), inset -2px -2px 4px var(--white);
+    box-shadow: var(--zzz-shadow-inset);
 }
 /* 内凹阴影-小一些 */
 .add_shadow_inset_mini {
-    box-shadow: inset 1px 1px 1px var(--greyLight-2), inset -2px -2px 4px var(--white);
+    box-shadow: var(--zzz-shadow-inset-mini);
 }
 
 /* 仅有顶部 - 白色阴影 */
 .add_shadow_top {
-    box-shadow: -2px -2px 5px var(--white);
+    box-shadow: var(--zzz-shadow-top);
 }
 /*  仅有底部 - 灰色阴影*/
 .add_shadow_bottom{
-    box-shadow: 3px 3px 6px var(--greyLight-2);
+    box-shadow: var(--zzz-shadow-bottom);
 }
 /*  仅有底部 - 灰色阴影 - 小一些*/
 .add_shadow_bottom_mini{
-    box-shadow: 1px 1px 3px var(--greyLight-2);
+    box-shadow: var(--zzz-shadow-bottom-mini);
 }
 
 /*  动画-放大, 旋转*/

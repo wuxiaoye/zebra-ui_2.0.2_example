@@ -68,7 +68,19 @@
           @select="onSelect"
         >
           <template #reference>
-            <z-button type="primary"> 禁用选项 </z-button>
+            <z-button type="primary"> 禁用选项-浅色 </z-button>
+          </template>
+        </z-popover>
+        
+        <z-popover
+          v-model:show="show.disableAction"
+          :custom-style="{ 'margin-left': '30rpx' }"
+          :actions="actionsDisabled"
+          theme="dark"
+          @select="onSelect"
+        >
+          <template #reference>
+            <z-button type="primary"> 禁用选项-深色 </z-button>
           </template>
         </z-popover>
       </demo-block>

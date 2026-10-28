@@ -13,13 +13,6 @@
             </z-sidebar>
         </view>
         
-      <demo-block title="基础用法">
-        <z-sidebar v-model="active1">
-          <z-sidebar-item title="标签名"  icon="home" />
-          <z-sidebar-item title="标签名"  icon="home" />
-          <z-sidebar-item title="标签名"  icon="home" />
-        </z-sidebar>
-      </demo-block>
       
       <demo-block title="禁用选项">
         <z-sidebar v-model="active2">

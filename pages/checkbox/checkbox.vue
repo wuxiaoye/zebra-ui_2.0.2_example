@@ -142,7 +142,7 @@
         <text style="color: var(--greyDark);">纵向排列 + 占满一行 + 两端对齐 + 文字图标反转位置</text>
         <view class="ma-15">
             <z-checkbox-group2
-              v-model="checkedAll"
+              v-model="checkedAll2"
               ref="groupRef"
               layout="vertical"
               vertical-full
@@ -152,9 +152,9 @@
             >
               <z-checkbox2 label="选项一" value="1" />
               <z-checkbox2 label="选项二" value="2" />
-              <z-checkbox2 label="禁用项（全选反选跳过）" value="3" disabled />
+              <z-checkbox2 label="选项三" value="3"  />
               <z-checkbox2 label="选项四" value="4" />
-              <z-checkbox2 label="选项五" value="5" />
+              <z-checkbox2 label="禁用项（全选反选跳过）" value="5" disabled/>
               <z-checkbox2 label="选项六" value="6" />
             </z-checkbox-group2>
         
@@ -221,6 +221,7 @@ const checkedGroup = ref(['a', 'b'])
 const checkedMax = ref([])
 const checkedMax2 = ref([])
 const checkedAll = ref([])
+const checkedAll2 = ref([])
 const checkedCell = ref([])
 const activeIcon =
   'https://cdn.zebraui.com/zebra-ui/images/assets/demo-select.png'
@@ -235,6 +236,7 @@ const checkAll = () => {
 const toggleAll = () => {
   checkboxGroup.value.toggleAll()
 }
+
 const checkboxRefs = ref<any>([])
 const toggle = (index: number) => {
   checkboxRefs.value[index].toggle()

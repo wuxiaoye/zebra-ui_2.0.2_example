@@ -358,6 +358,11 @@ export default [
         image: 'sidebar'
       },
       {
+        path: '/treeSelect',
+        title: 'TreeSelect 分类选择',
+        image: 'treeSelect'
+      },
+      {
         path: '/tab',
         title: 'Tab 标签页',
         image: 'tab'
@@ -367,11 +372,7 @@ export default [
         title: 'Tabbar 标签栏',
         image: 'tabbar'
       },
-      {
-        path: '/treeSelect',
-        title: 'TreeSelect 分类选择',
-        image: 'treeSelect'
-      },
+      
       {
         path: '/swiper-cube-demo',
         title: '3D 翻转页面 ',

@@ -41,7 +41,7 @@ export default {
 @import '../../common/style/var';
 
 .this-add-shabox{
-    box-shadow: var(--aye-shadow);
+    box-shadow: var(--zzz-shadow);
       // var(--zebra-shadow-size1) var(--zebra-shadow-size1)
       //   var(--zebra-shadow-size3) var(--zebra-shadow-background1),
       // var(--zebra-shadow-size2) var(--zebra-shadow-size2)

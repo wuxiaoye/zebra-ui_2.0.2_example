@@ -43,7 +43,7 @@
             { dot: props.dot, fixed: !!instance.slots.default, 'box-shadow': props.isBoxShadow }
           ])
         "
-        :style="style"
+        :style="[style, wrapperStyle, wrapperOuterStyle]"
       >
         <template v-if="!dot && hasContent()">
           <template v-if="instance.slots.content">

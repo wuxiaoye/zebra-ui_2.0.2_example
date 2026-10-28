@@ -56,7 +56,7 @@
         <slot name="preview-delete"></slot>
       </template>
       <template v-else>
-        <z-icon name="close" :badge-wrapper-style="deleteIconStyle" />
+        <z-icon name="close" :custom-style="deleteIconStyle" />
       </template>
     </view>
   </view>
