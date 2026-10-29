@@ -517,6 +517,105 @@
         "style": {
             "navigationBarTitleText": ""
         }
+    },
+    {
+        "path": "pages/temp/temp",
+        "style": {
+            "navigationBarTitleText": ""
+        }
+    },
+    {
+        "path": "pages/login/login",
+        "style": {
+            "navigationBarTitleText": "",
+            "navigationStyle": "custom",
+             "app-plus":{
+                    "bounce": "none" //关闭窗口回弹效果
+                }
+        }
+    },
+    
+    {
+        "path": "pages/ui/ui",
+        "style": {
+            "navigationBarTitleText": ""
+        }
+    },
+    {
+        "path": "pages/ui/ui2",
+        "style": {
+            "navigationBarTitleText": ""
+        }
+    },
+    {
+        "path": "pages/ui/chat",
+        "style": {
+            "navigationBarTitleText": "",
+            "navigationStyle": "custom" ,//自定义顶部导航栏
+            "app-plus":{
+                "bounce": "none" //关闭窗口回弹效果
+            }
+        }
+    },
+    {
+        "path": "pages/ui/ui-components",
+        "style": {
+            "navigationBarTitleText": "",
+            "navigationStyle": "custom" ,//自定义顶部导航栏
+            "app-plus":{
+                "bounce": "none" //关闭窗口回弹效果
+            }
+        }
+    },
+    {
+        "path": "pages/ui/ranking",
+        "style": {
+            "navigationBarTitleText": "",
+            "navigationStyle": "custom" ,//自定义顶部导航栏
+            "app-plus":{
+                "bounce": "none" //关闭窗口回弹效果
+            }
+        }
+    },
+    {
+        "path": "pages/ui/post-detail",
+        "style": {
+            "navigationBarTitleText": "",
+            "navigationStyle": "custom" ,//自定义顶部导航栏
+            "app-plus":{
+                "bounce": "none" //关闭窗口回弹效果
+            }
+        }
+    },
+    {
+        "path": "pages/ui/messages",
+        "style": {
+            "navigationBarTitleText": "",
+            "navigationStyle": "custom" ,//自定义顶部导航栏
+            "app-plus":{
+                "bounce": "none" //关闭窗口回弹效果
+            }
+        }
+    },
+    {
+        "path": "pages/ui/home-page",
+        "style": {
+            "navigationBarTitleText": "",
+            "navigationStyle": "custom" ,//自定义顶部导航栏
+            "app-plus":{
+                "bounce": "none" //关闭窗口回弹效果
+            }
+        }
+    },
+    {
+        "path": "pages/ui/forum",
+        "style": {
+            "navigationBarTitleText": "",
+            "navigationStyle": "custom" ,//自定义顶部导航栏
+            "app-plus":{
+                "bounce": "none" //关闭窗口回弹效果
+            }
+        }
     }
     
   ],

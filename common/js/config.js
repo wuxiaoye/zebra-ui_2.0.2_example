@@ -289,7 +289,7 @@ export default [
       },
       {
         path: '/popover',
-        title: 'Popover 气泡弹框',
+        title: 'Popover 气泡菜单',
         image: 'popover'
       },
       {
@@ -336,6 +336,11 @@ export default [
         path: '/watermark',
         title: 'Watermark 水印',
         image: 'watermark'
+      },
+      {
+        path: '/temp',
+        title: 'template 示例页面',
+        image: 'swipe'
       }
     ]
   },

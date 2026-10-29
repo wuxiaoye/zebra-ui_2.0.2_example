@@ -45,13 +45,14 @@
         />
       </demo-block>
 
+
       <demo-block title="自定义样式">
         <z-notice-bar
           text="zebra-swiper是基于uniapp开发的一款移动端轮播组件。"
-          color="#9baacf"
-          background="#E4EBF5"
+          color="var(--z-orange-dark)"
           left-icon="setting"
         />
+          <!-- background="#E4EBF5" -->
       </demo-block>
 
       <demo-block title="垂直滚动">

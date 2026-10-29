@@ -87,7 +87,7 @@
     <template v-else-if="props.isLink">
       <view :class="bem('right-icon')">
         <z-icon
-          :custom-style="rightIconStyle"
+          :custom-style="rightIconStyleComputed"
           :name="
             props.arrowDirection && props.arrowDirection !== 'right'
               ? `${props.arrowDirection}-big`
@@ -185,6 +185,13 @@ const onClick = () => {
  */
 const componentSlotsShow = computed(() => {
   return isObject(props.componentSlots)
+})
+
+const rightIconStyleComputed = computed(() => {
+    const style = {
+        color: 'var(--z-cell-right-icon-color)'
+    }
+    return { ...style, ...(props.rightIconStyle || {}) }
 })
 
 /**
@@ -311,7 +318,6 @@ export default {
 
   &__right-icon {
     margin-left: var(--z-padding-base);
-    color: var(--z-cell-right-icon-color);
   }
 
   &--clickable {

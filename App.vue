@@ -7,6 +7,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "@/static/icon/aye-iconfont.css";
+
 @import './uni_modules/zebra-ui/index';
 /**
  *  这里定义了一些基础属性， 
