@@ -56,7 +56,8 @@ const onClick = (event: any) => {
 <style scoped lang="scss">
 .card-icon-content {
   font-size: 76rpx;
-  color: #1874ca;
+  // color: #1874ca;
+  color: var(--zzz-secondary);
 }
 
 .demo-home-nav__title {
@@ -95,7 +96,8 @@ const onClick = (event: any) => {
       margin-top: 20rpx;
       font-size: 32rpx;
       font-weight: bold;
-      color: #1874ca;
+      // color: #1874ca;
+      color: var(--zzz-secondary);
     }
 
     .block-card-text {

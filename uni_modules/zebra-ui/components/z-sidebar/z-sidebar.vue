@@ -1,5 +1,5 @@
 <template>
-  <view :class="bem()" :style="customStyle">
+  <view :class="bem('', { shadow: isShadow })" :style="customStyle">
     <slot></slot>
   </view>
 </template>
@@ -13,6 +13,10 @@ const props = defineProps({
   customStyle: {
     type: Object,
     default: () => {}
+  },
+  isShadow:{
+      type: Boolean,
+      default: true
   }
 })
 const emit = defineEmits(['change', 'update:modelValue'])
@@ -44,12 +48,14 @@ export default {
   width: var(--z-sidebar-width);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  box-shadow: var(--zzz-shadow);
   border-radius: var(--z-sidebar-border-radius);
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
   min-width: 0;
   overflow: hidden;
+}
+.z-sidebar--shadow{
+    box-shadow: var(--zzz-shadow);
 }
 </style>
