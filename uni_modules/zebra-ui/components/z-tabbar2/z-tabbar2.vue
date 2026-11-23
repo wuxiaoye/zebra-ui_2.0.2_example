@@ -1,4 +1,3 @@
-<!-- components/AyeSegmentedControl/index.vue -->
 <template>
   <view class="segmented-control" :style="controlStyle">
     <!-- Tab 选项 -->
@@ -6,11 +5,10 @@
       v-for="(item, idx) in tabs"
       :key="idx"
       class="segmented-control-item"
-      :class="{ active: modelValue === idx }"
       :style="itemStyle"
       @tap="select(idx)"
     >
-      <text :style="textStyle">{{ item }}</text>
+      <text class="item-text" :class="{ 'item-active' : modelValue === idx}" :style="textStyle">{{ item }}</text>
     </view>
 
     <!-- 高亮滑块 -->
@@ -42,7 +40,7 @@ const props = defineProps({
   }
 });
 
-const emit = defineEmits(['update:modelValue']);
+const emit = defineEmits(['update:modelValue', 'change']);
 
 // 解析高度，生成 CSS 变量
 const controlStyle = computed(() => {
@@ -101,25 +99,17 @@ const sliderStyle = computed(() => {
 const select = (index) => {
   if (index >= 0 && index < props.tabs.length) {
     emit('update:modelValue', index);
+    // 新增：触发点击/切换事件，传出索引
+    emit('change', index);
   }
 };
 </script>
 
 <style scoped>
-/* CSS 变量（可移至全局） */
-:root {
-  --greyLight-1: #E4EBF5;
-  --greyLight-2: #c8d0e7;
-  --greyLight-3: #bec8e4;
-  --greyDark: #9baacf;
-  --white: #FFFFFF;
-  --primary: #07c160;
-}
 
 .segmented-control {
   width: 100%;
   height: var(--seg-height);
-  /* box-shadow: 6rpx 6rpx 12rpx var(--greyLight-2), -4rpx -4rpx 10rpx var(--white); */
   box-shadow: var(--z-tabbar2-shadow);
   border-radius: calc(var(--seg-height) * 0.25);
   display: flex;
@@ -134,16 +124,18 @@ const select = (index) => {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--greyDark);
   transition: color 0.3s ease;
   position: relative;
   z-index: 10;
   text-align: center;
   /* 高度、字体、行高由内联样式覆盖 */
 }
+.item-text{
+    color: var(--z-tabbar2-text-color);
+}
 
-.segmented-control-item.active {
-  color: var(--primary);
+.item-active {
+  color: var(--z-tabbar2-active-text-color);
 }
 
 /* 高亮滑块 */

@@ -7,7 +7,7 @@
             <z-tabbar2 v-model="activeTabbar2"  :tabs="['全部评论', '段评']" />
             
             <view class="w-100 h-40"></view>
-            <z-tabbar2 v-model="activeTabbar3"  :tabs="['首页', '分类', '购物车', '我的', 'Tab 5']" />
+            <z-tabbar2 v-model="activeTabbar3"  :tabs="['首页', '分类', '购物车', '我的', 'Tab 5']"  @change="change_tabbar2"/>
         </view>
         
       <demo-block title="基础用法 + 不要边框">
@@ -183,6 +183,10 @@ const icon = {
 
 const onChange = (index: number) => {
   toast.showToast(`标签 ${index + 1}`)
+}
+
+const change_tabbar2 = (index: number)=>{
+    console.log('change_tabbar2', index)
 }
 </script>
 <style lang="scss" scoped>
