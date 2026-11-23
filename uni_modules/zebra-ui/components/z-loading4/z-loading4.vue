@@ -46,7 +46,7 @@ const props = defineProps({
     },
     textColor: {
         type: String,
-        default: 'var(--greyDark)'
+        default: 'var(--zzz-greyDark)'
     }
 });
 
@@ -61,37 +61,6 @@ const textStyle = computed(() => {
 </script>
 
 <style scoped>
-:root{
-    /* 变量定义 */
-    --primary-light: #2fe25f;
-    --primary: #07c160;
-    --primary-dark: #0eb805;
-    --secondary-light: #8abdff;
-    --secondary: #6d5dfc;
-    --secondary-dark: #5b0eeb;
-    --white: #FFFFFF;
-    --greyLight-1: #E4EBF5;
-    --greyLight-1-dark: #d8e4f5;
-    --greyLight-2: #c8d0e7;
-    --greyLight-3: #bec8e4;
-    --greyDark: #9baacf;
-    /* 卡片外阴影样式 -超大*/
-    --aye-shadow-more-big: 0.4rem 0.4rem 0.8rem var(--greyLight-2),  -0.4rem -0.4rem 0.8rem var(--white);
-    /* 卡片外阴影样式 -大一些*/
-    --aye-shadow-big: 6px 6px 12px var(--greyLight-2), -4px -4px 10px var(--white);
-     /* 卡片外阴影样式 */
-    --aye-shadow:  3px 3px 6px var(--greyLight-2), -2px -2px 5px var(--white);
-     /* 卡片外阴影样式 - 小一些*/
-    --aye-shadow-mini: 2px 2px 4px var(--greyLight-2), -1px -1px 3px var(--white);
-     
-     /* 内凹阴影-大一些 */
-     --aye-shadow-inset-more-big: inset 0.4rem 0.4rem 0.8rem var(--greyLight-2), inset -0.4rem -0.4rem 0.8rem var(--white);
-     /* 内凹阴影 */
-    --aye-shadow-inset: inset 2px 2px 4px var(--greyLight-2), inset -2px -2px 4px var(--white);
-     /* 内凹阴影-小一些 */
-    --aye-shadow-inset-mini: inset 1px 1px 1px var(--greyLight-2), inset -2px -2px 4px var(--white);
-}
-
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
@@ -109,22 +78,22 @@ const textStyle = computed(() => {
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    box-shadow: var(--aye-shadow);
+    box-shadow: var(--zzz-loading4-shadow-item-wrap);
 }
 .neu-spinner {
     flex-shrink: 0;
   width: 52rpx;
   height: 52rpx;
   border-radius: 50%;
-  border: 6rpx solid var(--greyLight-2);
-  border-top-color: var(--primary);
+  border: 6rpx solid var(--zzz-loading4-neu-spinner-border-color);
+  border-top-color: var(--zzz-primary);
   animation: spin 0.9s linear infinite;
-  box-shadow: inset -2px -2px 4px var(--white);
+  box-shadow: var(--zzz-loading4-neu-spinner-shadow);
 }
 
 .forum-caption {
     font-size: 24rpx;
-    color: var(--greyDark);
+    color: var(--zzz-loading4-forum-caption-color);
     line-height: 1.5;
 }
 

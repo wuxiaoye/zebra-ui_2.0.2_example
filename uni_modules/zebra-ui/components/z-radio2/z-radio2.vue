@@ -186,14 +186,6 @@ const handleTap = () => {
 
 <style scoped>
 /* ========== 完全还原你最初原始CSS，一行未改动 ========== */
-:root {
-  --greyLight-1: #E4EBF5;
-  --greyLight-2: #c8d0e7;
-  --greyLight-3: #bec8e4;
-  --greyDark: #9baacf;
-  --white: #FFFFFF;
-  --primary: #07c160;
-}
 /* 定义回弹动画：先缩小，0.7秒后恢复原状 */
 @keyframes radioDotBounce {
   0% {
@@ -207,7 +199,7 @@ const handleTap = () => {
   }
 }
 .aye-radio {
-  box-shadow: 6rpx 6rpx 12rpx var(--greyLight-2), -4rpx -4rpx 10rpx var(--white);
+  box-shadow: var(--z-radio2-shadow);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -217,18 +209,18 @@ const handleTap = () => {
   transition: all 0.4s ease;
 }
 .aye-radio.checked {
-  box-shadow: inset 4rpx 4rpx 10rpx var(--greyLight-2), inset -4rpx -4rpx 10rpx var(--white);
+  box-shadow: var(--z-radio2-shadow-checked);
 }
 .radio-dot {
   width: 25rpx;
   height: 25rpx;
-  background-color: var(--greyDark);
+  background-color: var(--z-radio2-radio-dot-background);
   border-radius: 50%;
     transform: scale(1);
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .aye-radio.checked .radio-dot {
-  background-color: var(--primary);
+  background-color: var(--zzz-primary);
   /* transform: scale(0.85); */
   animation: radioDotBounce 0.6s ease forwards;
 }
@@ -257,7 +249,7 @@ const handleTap = () => {
 
 
 .aye-radio-wrap.is-disabled .radio-dot {
-  background-color: var(--greyLight-2) !important;
+  background-color: var(--z-radio2-disabled-dot-background) !important;
 }
 .radio-label {
   flex-shrink: 0;

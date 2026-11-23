@@ -227,11 +227,6 @@ const handleClick = () => {
 </script>
 
 <style scoped>
-:root {
-  --greyLight-2: #c8d0e7;
-  --white: #FFFFFF;
-}
-
 /* 内嵌勾选字体图标 */
 @font-face {
   font-family: "ayeIconfont";
@@ -287,7 +282,7 @@ const handleClick = () => {
 
 /* 勾选框外凸阴影 */
 .aye-checkbox {
-  box-shadow: 6rpx 6rpx 12rpx var(--greyLight-2), -4rpx -4rpx 10rpx var(--white);
+  box-shadow: var(--z-checkbox2-shadow);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -303,7 +298,7 @@ const handleClick = () => {
 }
 /* 选中内凹阴影 */
 .aye-checkbox.checked {
-  box-shadow: inset 4rpx 4rpx 10rpx var(--greyLight-2), inset -4rpx -4rpx 10rpx var(--white);
+  box-shadow: var(--z-checkbox2-shadow-inset);
 }
 
 /* 定义回弹动画：先缩小，0.7秒后恢复原状 */

@@ -1,31 +1,31 @@
 @mixin z-theme-vars {
-      /* 卡片外阴影样式 -超大*/
-      --zzz-shadow-more-big: 0.4rem 0.4rem 0.8rem var(--zzz-shadow-vars-black),  -0.4rem -0.4rem 0.8rem var(--zzz-shadow-vars-white);
-      /* 卡片外阴影样式 -大一些*/
-      --zzz-shadow-big: 6px 6px 12px var(--zzz-shadow-vars-black), -4px -4px 10px var(--zzz-shadow-vars-white);
-       /* 卡片外阴影样式 */
-      --zzz-shadow:  3px 3px 6px var(--zzz-shadow-vars-black), -2px -2px 5px var(--zzz-shadow-vars-white);
-       /* 卡片外阴影样式 - 小一些*/
-      --zzz-shadow-mini: 2px 2px 4px var(--zzz-shadow-vars-black), -1px -1px 3px var(--zzz-shadow-vars-white);
-       
-       /* 内凹阴影-大一些 */
-       --zzz-shadow-inset-more-big: inset 0.4rem 0.4rem 0.8rem var(--zzz-shadow-vars-black), inset -0.4rem -0.4rem 0.8rem var(--zzz-shadow-vars-white);
-       /* 内凹阴影 */
-      --zzz-shadow-inset: inset 2px 2px 4px var(--zzz-shadow-vars-black), inset -2px -2px 4px var(--zzz-shadow-vars-white);
-       /* 内凹阴影-小一些 */
-      --zzz-shadow-inset-mini: inset 1px 1px 1px var(--zzz-shadow-vars-black), inset -2px -2px 4px var(--zzz-shadow-vars-white);
-      
-      /* 浅灰色阴影 - 顶部向上阴影 */
-      --zzz-shadow-grey-light-top: -4rpx -4rpx 16rpx var(--zzz-shadow-vars-grey);
-      /* 浅灰色阴影 - 底部阴影 */
-      --zzz-shadow-grey-light-bottom: 4rpx 4rpx 16rpx var(--zzz-shadow-vars-grey);
-       
-       /* 仅有顶部 - 白色阴影 */
-      --zzz-shadow-top: -2px -2px 5px var(--zzz-shadow-vars-white);
-       /*  仅有底部 - 灰色阴影*/
-      --zzz-shadow-bottom: 3px 3px 6px var(--zzz-shadow-vars-black);
-       /*  仅有底部 - 灰色阴影 - 小一些*/
-      --zzz-shadow-bottom-mini: 1px 1px 3px var(--zzz-shadow-vars-black);
+  /* 卡片外阴影样式 -超大*/
+  --zzz-shadow-more-big: 0.4rem 0.4rem 0.8rem var(--zzz-shadow-vars-black),  -0.4rem -0.4rem 0.8rem var(--zzz-shadow-vars-white);
+  /* 卡片外阴影样式 -大一些*/
+  --zzz-shadow-big: 6px 6px 12px var(--zzz-shadow-vars-black), -4px -4px 10px var(--zzz-shadow-vars-white);
+   /* 卡片外阴影样式 */
+  --zzz-shadow:  3px 3px 6px var(--zzz-shadow-vars-black), -2px -2px 5px var(--zzz-shadow-vars-white);
+   /* 卡片外阴影样式 - 小一些*/
+  --zzz-shadow-mini: 2px 2px 4px var(--zzz-shadow-vars-black), -1px -1px 3px var(--zzz-shadow-vars-white);
+   
+   /* 内凹阴影-大一些 */
+   --zzz-shadow-inset-more-big: inset 0.4rem 0.4rem 0.8rem var(--zzz-shadow-vars-black), inset -0.4rem -0.4rem 0.8rem var(--zzz-shadow-vars-white);
+   /* 内凹阴影 */
+  --zzz-shadow-inset: inset 2px 2px 4px var(--zzz-shadow-vars-black), inset -2px -2px 4px var(--zzz-shadow-vars-white);
+   /* 内凹阴影-小一些 */
+  --zzz-shadow-inset-mini: inset 1px 1px 1px var(--zzz-shadow-vars-black), inset -2px -2px 4px var(--zzz-shadow-vars-white);
+  
+  /* 浅灰色阴影 - 顶部向上阴影 */
+  --zzz-shadow-grey-light-top: -4rpx -4rpx 16rpx var(--zzz-shadow-vars-grey);
+  /* 浅灰色阴影 - 底部阴影 */
+  --zzz-shadow-grey-light-bottom: 4rpx 4rpx 16rpx var(--zzz-shadow-vars-grey);
+   
+   /* 仅有顶部 - 白色阴影 */
+  --zzz-shadow-top: -2px -2px 5px var(--zzz-shadow-vars-white);
+   /*  仅有底部 - 灰色阴影*/
+  --zzz-shadow-bottom: 3px 3px 6px var(--zzz-shadow-vars-black);
+   /*  仅有底部 - 灰色阴影 - 小一些*/
+  --zzz-shadow-bottom-mini: 1px 1px 3px var(--zzz-shadow-vars-black);
       
       
       // Padding
@@ -209,6 +209,8 @@
     // checkbox2
     --z-checkbox2-final-inactive-icon-color: var(--zzz-ri-ji-bai_ye-ji-hei-1); //最终非活跃图标颜色
     --z-checkbox2-final-label-color: var(--zzz-ri-hei_ye-bai-2); //最终文字颜色
+    --z-checkbox2-shadow: var(--zzz-shadow);
+    --z-checkbox2-shadow-inset: var(--zzz-shadow-inset);
     
     // radio 单选项
     --z-radio-size: 40rpx;
@@ -225,6 +227,11 @@
     // radio2
     --z-radio2-inactive-icon-color: var(--zzz-ri-ji-bai_ye-ji-hei-1);
     --z-radio2-label-color: var(--zzz-ri-hei_ye-bai-2);
+    --z-radio2-radio-dot-background: var(--zzz-greyDark);
+    --z-radio2-shadow: var(--zzz-shadow);
+    --z-radio2-shadow-checked: inset 4rpx 4rpx 10rpx var(--zzz-shadow-vars-black), inset -4rpx -4rpx 10rpx var(--zzz-shadow-vars-white);
+    --z-radio2-disabled-dot-background: var(--zzz-ri-ji-bai_ye-ji-hei-1);
+    
     
     // stepper 步进器
     // --z-stepper-button-icon-color: var(--z-text-color);
@@ -580,6 +587,35 @@
     --z-loading-spinner-size: 60rpx;
     --z-loading-spinner-duration: 0.8s;
     
+    // loading2
+    --z-loading-shadow1: 
+        inset 2px 2px 4px var(--zzz-shadow-vars-black), inset -2px -2px 4px var(--zzz-shadow-vars-white),
+          6rpx 6rpx 12rpx var(--zzz-shadow-vars-black), -4rpx -4rpx 10rpx var(--zzz-shadow-vars-white);
+          
+    --z-loading-shadow2:
+        inset 6px 6px 12px var(--zzz-shadow-vars-white), inset -6px -6px 12px var(--zzz-shadow-vars-white),
+        6rpx 6rpx 12rpx var(--zzz-shadow-vars-black), -4rpx -4rpx 10rpx var(--zzz-shadow-vars-white);
+        
+    --z-loading-shadow-circle__back-1: 8rpx 8rpx 16rpx var(--zzz-shadow-vars-black), -8rpx -8rpx 16rpx var(--zzz-shadow-vars-white);
+    --z-loading-bg-circle__back-1: linear-gradient(to bottom right, var(--zzz-shadow-vars-black) 0%, var(--zzz-shadow-vars-white) 100%);
+    
+    --z-loading-shadow-circle__back-2: 8rpx 8rpx 16rpx var(--zzz-shadow-vars-black), -8rpx -8rpx 16rpx var(--zzz-shadow-vars-white);
+    
+    // loading3
+    --zzz-loading3-shadow-circle__btn: 6rpx 6rpx 12rpx var(--zzz-shadow-vars-black), -4rpx -4rpx 10rpx var(--zzz-shadow-vars-white);
+    --zzz-loading3-shadow-neu-spinner: inset 0.4rem 0.4rem 0.8rem var(--zzz-shadow-vars-black), inset -0.4rem -0.4rem 0.8rem var(--zzz-shadow-vars-white);
+    
+    --zzz-loading3-shadow-circle__back-1: 8rpx 8rpx 16rpx var(--zzz-shadow-vars-black), -8rpx -8rpx 16rpx var(--zzz-shadow-vars-white);
+    --zzz-loading3-circle__back-1: linear-gradient(to bottom right, var(--zzz-shadow-vars-black) 0%, var(--zzz-shadow-vars-white) 100%);
+    
+    --zzz-loading3-shadow-circle__back-2: 8rpx 8rpx 16rpx var(--zzz-shadow-vars-black), -8rpx -8rpx 16rpx var(--zzz-shadow-vars-white);
+    
+    // loading4
+    --zzz-loading4-shadow-item-wrap: var(--zzz-shadow);
+    --zzz-loading4-forum-caption-color: var(--zzz-greyDark);
+    --zzz-loading4-neu-spinner-border-color: var(--zzz-greyLight-2);
+    --zzz-loading4-neu-spinner-shadow: inset -2px -2px 4px var(--zzz-shadow-vars-white);
+    
     // navbar 页头栏
     --z-nav-bar-height: 88rpx;
     --z-nav-bar-background: var(--z-background-2);
@@ -824,7 +860,7 @@
     --z-switch-disabled-opacity: var(--z-disabled-opacity);
     
     
-    --z-switch2-track-shadow: var(--zzz-shadow);//6rpx 6rpx 12rpx var(--greyLight-2), -4rpx -4rpx 10rpx var(--white);
+    --z-switch2-track-shadow: var(--zzz-shadow);
     --z-switch2-track-active-background-color: linear-gradient(330deg, var(--zzz-primary-dark) 0%, var(--zzz-primary) 50%, var(--zzz-primary-light) 100%); //激活状态-轨道
     --z-switch2-dot-background-color: var(--zzz-ri-ye-tong-hui); //非激活状态-圆点
     --z-switch2-dot-active-background-color: #E4EBF5;//激活状态-圆点

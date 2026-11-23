@@ -46,23 +46,20 @@ page {
     --greyDark: #9baacf;
         
   // --zebra-background: #d8e3f3;
-  --zebra-background: var(--greyLight-1);
+  --zebra-background: var(--zzz-greyLight-1);
   --zebra-shadow-background1: #b8c1cf;
   --zebra-shadow-background2: #f8ffff;
   --zebra-shadow-size1: 10rpx;
   --zebra-shadow-size2: -10rpx;
   --zebra-shadow-size3: 20rpx;
   // --zebra-text-color: #323233;
-  --zebra-text-color: var(--greyDark);
+  --zebra-text-color: var(--zzz-greyDark);
   --z-text-color-2: #969799;
   // --z-line-color: #f7f8fa;
-  --z-line-color: var(--greyLight-3);
+  --z-line-color: var(--zzz-greyLight-3);
 }
 
 .z-theme-dark {
-    // --white: #a05e31;
-    // --greyLight-1: #E4EBF5;
-    // --greyLight-2: #a05e31;
     
   // --zebra-background: #202124;
   --zebra-background: #000;
