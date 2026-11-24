@@ -2,18 +2,18 @@
   /* 卡片外阴影样式 -超大*/
   --zzz-shadow-more-big: 0.4rem 0.4rem 0.8rem var(--zzz-shadow-vars-black),  -0.4rem -0.4rem 0.8rem var(--zzz-shadow-vars-white);
   /* 卡片外阴影样式 -大一些*/
-  --zzz-shadow-big: 6px 6px 12px var(--zzz-shadow-vars-black), -4px -4px 10px var(--zzz-shadow-vars-white);
+  --zzz-shadow-big: 12rpx 12rpx 24rpx var(--zzz-shadow-vars-black), -8rpx -8rpx 20rpx var(--zzz-shadow-vars-white);
    /* 卡片外阴影样式 */
-  --zzz-shadow:  3px 3px 6px var(--zzz-shadow-vars-black), -2px -2px 5px var(--zzz-shadow-vars-white);
+  --zzz-shadow:  6rpx 6rpx 16px var(--zzz-shadow-vars-black), -4rpx -4rpx 10rpx var(--zzz-shadow-vars-white);
    /* 卡片外阴影样式 - 小一些*/
-  --zzz-shadow-mini: 2px 2px 4px var(--zzz-shadow-vars-black), -1px -1px 3px var(--zzz-shadow-vars-white);
+  --zzz-shadow-mini: 4rpx 4rpx 8rpx var(--zzz-shadow-vars-black), -2rpx -2rpx 6rpx var(--zzz-shadow-vars-white);
    
    /* 内凹阴影-大一些 */
    --zzz-shadow-inset-more-big: inset 0.4rem 0.4rem 0.8rem var(--zzz-shadow-vars-black), inset -0.4rem -0.4rem 0.8rem var(--zzz-shadow-vars-white);
    /* 内凹阴影 */
-  --zzz-shadow-inset: inset 2px 2px 4px var(--zzz-shadow-vars-black), inset -2px -2px 4px var(--zzz-shadow-vars-white);
+  --zzz-shadow-inset: inset 4rpx 4rpx 8rpx var(--zzz-shadow-vars-black), inset -4rpx -4rpx 8rpx var(--zzz-shadow-vars-white);
    /* 内凹阴影-小一些 */
-  --zzz-shadow-inset-mini: inset 1px 1px 1px var(--zzz-shadow-vars-black), inset -2px -2px 4px var(--zzz-shadow-vars-white);
+  --zzz-shadow-inset-mini: inset 2rpx 2rpx 4rpx var(--zzz-shadow-vars-black), inset -2rpx -2rpx 4rpx var(--zzz-shadow-vars-white);
   
   /* 浅灰色阴影 - 顶部向上阴影 */
   --zzz-shadow-grey-light-top: -4rpx -4rpx 16rpx var(--zzz-shadow-vars-grey);
@@ -21,11 +21,11 @@
   --zzz-shadow-grey-light-bottom: 4rpx 4rpx 16rpx var(--zzz-shadow-vars-grey);
    
    /* 仅有顶部 - 白色阴影 */
-  --zzz-shadow-top: -2px -2px 5px var(--zzz-shadow-vars-white);
+  --zzz-shadow-top: -4rpx -4rpx 16rpx var(--zzz-shadow-vars-white);
    /*  仅有底部 - 灰色阴影*/
-  --zzz-shadow-bottom: 3px 3px 6px var(--zzz-shadow-vars-black);
+  --zzz-shadow-bottom: 6rpx 6rpx 16rpx var(--zzz-shadow-vars-black);
    /*  仅有底部 - 灰色阴影 - 小一些*/
-  --zzz-shadow-bottom-mini: 1px 1px 3px var(--zzz-shadow-vars-black);
+  --zzz-shadow-bottom-mini: 2rpx 2rpx 6rpx var(--zzz-shadow-vars-black);
       
       
       // Padding
