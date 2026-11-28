@@ -2,18 +2,18 @@
   /* 卡片外阴影样式 -超大*/
   --zzz-shadow-more-big: 0.4rem 0.4rem 0.8rem var(--zzz-shadow-vars-black),  -0.4rem -0.4rem 0.8rem var(--zzz-shadow-vars-white);
   /* 卡片外阴影样式 -大一些*/
-  --zzz-shadow-big: 12rpx 12rpx 24rpx var(--zzz-shadow-vars-black), -8rpx -8rpx 20rpx var(--zzz-shadow-vars-white);
+  --zzz-shadow-big: 6px 6px 12px var(--zzz-shadow-vars-black), -4px -4px 10px var(--zzz-shadow-vars-white);
    /* 卡片外阴影样式 */
-  --zzz-shadow:  6rpx 6rpx 16px var(--zzz-shadow-vars-black), -4rpx -4rpx 10rpx var(--zzz-shadow-vars-white);
+  --zzz-shadow:  3px 3px 6px var(--zzz-shadow-vars-black), -2px -2px 5px var(--zzz-shadow-vars-white);
    /* 卡片外阴影样式 - 小一些*/
-  --zzz-shadow-mini: 4rpx 4rpx 8rpx var(--zzz-shadow-vars-black), -2rpx -2rpx 6rpx var(--zzz-shadow-vars-white);
+  --zzz-shadow-mini: 2px 2px 4px var(--zzz-shadow-vars-black), -1px -1px 3px var(--zzz-shadow-vars-white);
    
    /* 内凹阴影-大一些 */
    --zzz-shadow-inset-more-big: inset 0.4rem 0.4rem 0.8rem var(--zzz-shadow-vars-black), inset -0.4rem -0.4rem 0.8rem var(--zzz-shadow-vars-white);
    /* 内凹阴影 */
-  --zzz-shadow-inset: inset 4rpx 4rpx 8rpx var(--zzz-shadow-vars-black), inset -4rpx -4rpx 8rpx var(--zzz-shadow-vars-white);
+  --zzz-shadow-inset: inset 2px 2px 4px var(--zzz-shadow-vars-black), inset -2px -2px 4px var(--zzz-shadow-vars-white);
    /* 内凹阴影-小一些 */
-  --zzz-shadow-inset-mini: inset 2rpx 2rpx 4rpx var(--zzz-shadow-vars-black), inset -2rpx -2rpx 4rpx var(--zzz-shadow-vars-white);
+  --zzz-shadow-inset-mini: inset 1px 1px 1px var(--zzz-shadow-vars-black), inset -2px -2px 4px var(--zzz-shadow-vars-white);
   
   /* 浅灰色阴影 - 顶部向上阴影 */
   --zzz-shadow-grey-light-top: -4rpx -4rpx 16rpx var(--zzz-shadow-vars-grey);
@@ -21,11 +21,11 @@
   --zzz-shadow-grey-light-bottom: 4rpx 4rpx 16rpx var(--zzz-shadow-vars-grey);
    
    /* 仅有顶部 - 白色阴影 */
-  --zzz-shadow-top: -4rpx -4rpx 16rpx var(--zzz-shadow-vars-white);
+  --zzz-shadow-top: -2px -2px 5px var(--zzz-shadow-vars-white);
    /*  仅有底部 - 灰色阴影*/
-  --zzz-shadow-bottom: 6rpx 6rpx 16rpx var(--zzz-shadow-vars-black);
+  --zzz-shadow-bottom: 3px 3px 6px var(--zzz-shadow-vars-black);
    /*  仅有底部 - 灰色阴影 - 小一些*/
-  --zzz-shadow-bottom-mini: 2rpx 2rpx 6rpx var(--zzz-shadow-vars-black);
+  --zzz-shadow-bottom-mini: 1px 1px 3px var(--zzz-shadow-vars-black);
       
       
       // Padding
@@ -296,7 +296,7 @@
     --z-popup-close-icon-margin: 32rpx;
     --z-popup-close-icon-z-index: 1;
     --z-popup-border-color: var(--zzz-ri-ye-tong-hui);
-    --z-popup-shadow: var(--zzz-shadow-mini);
+    --z-popup-shadow: var(--zzz-ri-wu_ye-shadow);
     
     // picker  竖向滑动选择器（省份地点、日期时间）
     --z-picker-background: var(--z-background-2);
@@ -471,7 +471,8 @@
     --z-dialog-round-button-height: 72rpx;
     --z-dialog-cancel-button-text-color: var(--zzz-ri-hui_ye-hui-1);
     --z-dialog-confirm-button-text-color: var(--z-primary-color);
-    --z-dialog-no-has-title-icon-color: var(--zzz-primary);//var(--zzz-secondary);//var(--zzz-ri-ye-tong-hui);
+    --z-dialog-no-has-title-icon-color: var(--zzz-primary);
+    //dialog 的外阴影设置在 popup 组件
     
     // divider 分割线
     --z-divider-margin: var(--z-padding-md) 0;
@@ -1086,6 +1087,8 @@ page {
     --zzz-shadow-vars-grey: #c8d0e7; //常用于下边阴影-灰色
     //白天-有阴影，夜间-无阴影
     --zzz-ri-shadow_ye-wu: 3px 3px 6px var(--zzz-shadow-vars-black), -2px -2px 5px var(--zzz-shadow-vars-white);
+    //白天-无阴影，夜间-有阴影。用于dialog外框阴影。
+    --zzz-ri-wu_ye-shadow: 0 0 0;
     
     // ==========白天样式=========
     //名称释义：--zzz-日间模式-颜色值_夜间模式-颜色值
@@ -1190,6 +1193,8 @@ page {
     // ====== 阴影 -夜间样式 ======
     //白天-有阴影，夜间-无阴影
     --zzz-ri-shadow_ye-wu: 0 0 0;
+    //白天-无阴影，夜间-有阴影。用于dialog外框阴影。
+    --zzz-ri-wu_ye-shadow: 3px 3px 6px var(--zzz-shadow-vars-black), -2px -2px 5px var(--zzz-shadow-vars-white);
     
     --z-text-color: #f5f5f5;
     --z-text-color-2: #707070;

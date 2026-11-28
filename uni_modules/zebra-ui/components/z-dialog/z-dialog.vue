@@ -17,6 +17,8 @@
       :close-on-click-overlay="getProps('closeOnClickOverlay')"
       :transition="getProps('transition')"
       :close-on-popstate="getProps('closeOnPopstate')"
+      :isShowShadow="getProps('isShowShadow')"
+      :isShowBorder="getProps('isShowBorder')"
       @update:show="updateShow"
     >
       <view :class="bem([getProps('theme')])">
@@ -191,7 +193,15 @@ const props = defineProps(
     showConfirmButton: truthProp,
     closeOnClickOverlay: Boolean,
     useComponent: Boolean,
-    name: String
+    name: String,
+    isShowShadow: { // 是否显示外阴影
+        type: Boolean,
+        default: true
+    },
+    isShowBorder: { // 是否显示边框
+        type: Boolean,
+        default: false
+    }
   })
 )
 const instance = getCurrentInstance()!

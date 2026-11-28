@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>uni-app 工具 CSS 类库 - 使用文档</title>
+<title>uni-app px 工具 CSS 类库 - 详尽使用文档（tool-px.css）</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{--sidebar-w:260px;--primary:#0081ff;--primary-light:#e8f4ff;--bg:#f8f9fa;--border:#e8e8e8;--text:#333;--text-light:#666;--code-bg:#f5f7fa;--radius:6px;}
@@ -24,7 +24,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hira
 .nav-item:hover{color:var(--primary);background:var(--primary-light);}
 .nav-item.active{color:var(--primary);background:var(--primary-light);border-left-color:var(--primary);font-weight:600;}
 /* 主内容 */
-.main{margin-left:var(--sidebar-w);padding:30px 40px 60px;max-width:960px;}
+.main{margin-left:var(--sidebar-w);padding:30px 40px 60px;max-width:1080px;}
 .section{background:#fff;border-radius:var(--radius);padding:28px 32px;margin-bottom:20px;box-shadow:0 1px 3px rgba(0,0,0,.04);}
 .section h2{font-size:20px;color:var(--text);margin-bottom:16px;padding-bottom:12px;border-bottom:2px solid var(--primary);display:flex;align-items:center;gap:8px;}
 .section h2 .badge{background:var(--primary);color:#fff;font-size:11px;padding:2px 8px;border-radius:10px;font-weight:500;}
@@ -34,7 +34,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hira
 /* 表格 */
 table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px;}
 th{background:var(--code-bg);text-align:left;padding:10px 14px;font-weight:600;border:1px solid var(--border);}
-td{padding:8px 14px;border:1px solid var(--border);}
+td{padding:8px 14px;border:1px solid var(--border);vertical-align:top;}
 tr:hover td{background:#fafbfc;}
 code{background:var(--code-bg);padding:2px 6px;border-radius:3px;font-size:12px;color:#c7254e;font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;}
 /* 代码块 */
@@ -46,8 +46,9 @@ pre code{background:none;padding:0;color:var(--text);font-size:13px;}
 .warn{background:#fff8e6;border-left:4px solid #fbbd08;padding:12px 16px;border-radius:0 var(--radius) var(--radius) 0;margin:12px 0;font-size:13px;}
 /* 颜色演示 */
 .color-demo{display:inline-block;width:24px;height:24px;border-radius:4px;vertical-align:middle;margin-right:6px;border:1px solid #eee;}
-/* 标签 */
-.tag{display:inline-block;padding:2px 8px;border-radius:3px;font-size:11px;margin:2px;background:var(--code-bg);color:var(--text-light);}
+/* 紧凑代码清单 */
+.code-list{display:flex;flex-wrap:wrap;gap:4px 6px;}
+.code-list code{white-space:nowrap;}
 /* 响应式 */
 .menu-toggle{display:none;position:fixed;top:10px;left:10px;z-index:200;background:var(--primary);color:#fff;border:none;border-radius:var(--radius);padding:8px 12px;cursor:pointer;font-size:14px;}
 @media(max-width:768px){
@@ -55,6 +56,8 @@ pre code{background:none;padding:0;color:var(--text);font-size:13px;}
   .sidebar{transform:translateX(-100%);transition:transform .3s;}
   .sidebar.open{transform:translateX(0);}
   .main{margin-left:0;padding:20px 16px 40px;}
+  table{font-size:12px;}
+  th,td{padding:6px 8px;}
 }
 </style>
 </head>
@@ -64,8 +67,8 @@ pre code{background:none;padding:0;color:var(--text);font-size:13px;}
 
 <aside class="sidebar">
   <div class="sidebar-header">
-    <h1>CSS Tool 类库</h1>
-    <p>uni-app 原子化 CSS 工具库</p>
+    <h1>CSS Tool 类库（px 版）</h1>
+    <p>uni-app 原子化 CSS · tool-px.css 详尽文档</p>
   </div>
   <div class="search-box">
     <input type="text" id="searchInput" placeholder="搜索类名..." oninput="filterNav(this.value)">
@@ -73,44 +76,45 @@ pre code{background:none;padding:0;color:var(--text);font-size:13px;}
   <nav>
     <div class="nav-group">
       <div class="nav-group-title">快速开始</div>
-      <a class="nav-item" href="#intro" data-text="简介 引入方式 设计理念">简介与引入</a>
+      <a class="nav-item" href="#intro" data-text="简介 引入方式 设计理念 px rpx 版本对比">简介与引入</a>
     </div>
     <div class="nav-group">
-      <div class="nav-group-title">基础类</div>
-      <a class="nav-item" href="#misc" data-text="杂类 overflow relative absolute fixed fulled display">1. 杂类</a>
-      <a class="nav-item" href="#text" data-text="文本 text-size text-weight text-align text-overflow leading">2. 文本类</a>
-      <a class="nav-item" href="#radius" data-text="圆角 round rounded tl tr bl br">3. 圆角</a>
-      <a class="nav-item" href="#opacity" data-text="透明度 opacity">4. 透明度</a>
-      <a class="nav-item" href="#shadow" data-text="投影 shadow">5. 投影</a>
-      <a class="nav-item" href="#border" data-text="边线 border">6. 边线</a>
-      <a class="nav-item" href="#zindex" data-text="zIndex 层级">7. zIndex 层级</a>
+      <div class="nav-group-title">基础类（1-7）</div>
+      <a class="nav-item" href="#misc" data-text="杂类 overflow clear pointer safe-height 安全区">1. 杂类</a>
+      <a class="nav-item" href="#text" data-text="文本 font-size font-weight text-align text-overflow line-clamp leading tracking letter-spacing delete underline wrap nowrap 换行">2. 文本类</a>
+      <a class="nav-item" href="#radius" data-text="圆角 round rounded round-pill tl tr bl br t b l r">3. 圆角</a>
+      <a class="nav-item" href="#opacity" data-text="透明度 opacity 0 10">4. 透明度</a>
+      <a class="nav-item" href="#shadow" data-text="投影 shadow box-shadow 0 25">5. 投影</a>
+      <a class="nav-item" href="#border" data-text="边线 border border-t border-b border-l border-r border-a">6. 边线</a>
+      <a class="nav-item" href="#zindex" data-text="zIndex 层级 堆叠 z-index n1 n5">7. zIndex 层级</a>
     </div>
     <div class="nav-group">
-      <div class="nav-group-title">颜色</div>
-      <a class="nav-item" href="#color" data-text="颜色 text- bg- red blue green white black">8. 颜色类</a>
+      <div class="nav-group-title">颜色（8）</div>
+      <a class="nav-item" href="#color" data-text="颜色 text- bg- red blue green white black primary secondary greyLight gray gray-100 灰度滤镜">8. 颜色类</a>
     </div>
     <div class="nav-group">
-      <div class="nav-group-title">布局</div>
-      <a class="nav-item" href="#flex" data-text="Flex flex-row flex-col flex-center flex-between">9. Flex 布局</a>
-      <a class="nav-item" href="#grid" data-text="Grid 网格 grid-col">10. Grid 网格</a>
-      <a class="nav-item" href="#gap" data-text="Gap 间隙 gap-row gap-col">11. Gap 间隙</a>
+      <div class="nav-group-title">布局（9-14）</div>
+      <a class="nav-item" href="#layout" data-text="布局 盒模型 box-sizing box-border box-content 显示模式 display d-block d-inline d-none 行内垂直对齐 vertical-align">9. 布局</a>
+      <a class="nav-item" href="#flexalign" data-text="Flex 对齐 flex-none flex-row row-reverse flex-col col-reverse wrap wrap-reverse nowrap shrink-0 min-w-0 flex-0~12 self order 子项 justify-content align-items 25 组合 start center end between around baseline stretch full 撑满">10. Flex 对齐</a>
+      <a class="nav-item" href="#grid" data-text="Grid 网格 grid-col-1 12">11. Grid 网格</a>
+      <a class="nav-item" href="#gap" data-text="Gap 间隙 gap-row gap-col">12. Gap 间隙</a>
     </div>
     <div class="nav-group">
-      <div class="nav-group-title">间距与定位</div>
-      <a class="nav-item" href="#position" data-text="位置控制 top left right bottom 定位">12. 位置控制</a>
-      <a class="nav-item" href="#margin" data-text="外边距 margin ma mt mb ml mr mx my">13. 外边距</a>
-      <a class="nav-item" href="#padding" data-text="内边距 padding pa pt pb pl pr px py">14. 内边距</a>
+      <div class="nav-group-title">间距与定位（15-17）</div>
+      <a class="nav-item" href="#position" data-text="定位类 absolute fixed relative top left right bottom t l r b 定位 n 4倍数 负值">13. 定位类</a>
+      <a class="nav-item" href="#margin" data-text="外边距 margin ma mt mb ml mr mx my 步进2 偶数 2~100 auto ml-auto mr-auto mt-auto mx-auto my-auto 自动外边距 推开 无负值">14. 外边距</a>
+      <a class="nav-item" href="#padding" data-text="内边距 padding pa pt pb pl pr px py 步进2 偶数 2~100 无负值 border-box">15. 内边距</a>
     </div>
     <div class="nav-group">
-      <div class="nav-group-title">尺寸</div>
-      <a class="nav-item" href="#width" data-text="宽度 w-full w-half width">15. 宽度类</a>
-      <a class="nav-item" href="#height" data-text="高度 h-full h-screen height">16. 高度类</a>
+      <div class="nav-group-title">尺寸（18-19）</div>
+      <a class="nav-item" href="#width" data-text="宽度 w-0 w-full w-half w-third w-quarter fulled">16. 宽度类</a>
+      <a class="nav-item" href="#height" data-text="高度 h-0 h-full h-half h-screen fulled-height">17. 高度类</a>
     </div>
     <div class="nav-group">
-      <div class="nav-group-title">实战</div>
-      <a class="nav-item" href="#examples" data-text="示例 组合 卡片 导航栏 网格 标签">常用组合示例</a>
-      <a class="nav-item" href="#rules" data-text="命名规则 总结">命名规则总结</a>
-      <a class="nav-item" href="#notes" data-text="注意事项 优先级 性能 兼容">注意事项</a>
+      <div class="nav-group-title">实战与参考</div>
+      <a class="nav-item" href="#examples" data-text="示例 组合 卡片 导航栏 网格 标签 安全区">常用组合示例</a>
+      <a class="nav-item" href="#rules" data-text="命名规则 总结 前缀 速查">命名规则总结</a>
+      <a class="nav-item" href="#notes" data-text="注意事项 优先级 性能 兼容 viewport-fit 混用">注意事项</a>
     </div>
   </nav>
 </aside>
@@ -120,267 +124,481 @@ pre code{background:none;padding:0;color:var(--text);font-size:13px;}
 <!-- 简介 -->
 <div class="section" id="intro">
   <h2><span class="badge">开始</span> 简介与引入</h2>
-  <p>本类库采用 <strong>原子化 CSS</strong> 设计思路，灵感来自 TMUI CSS Tool。每个类只做一件事，通过组合多个类来完成布局，<strong>无需写一行样式代码</strong>。分两个版本，一份的单位为 <code>rpx</code>，另一份的单位为 <code>px</code>。</p>
+  <p>本类库采用 <strong>原子化 CSS</strong> 设计思路，灵感来自 TMUI CSS Tool。每个类只负责一条或一组固定的 CSS 声明，通过组合多个类完成布局，绝大多数日常界面无需再手写样式。</p>
+  <p><strong>本文档对应 <code>styles/tool-px.css</code>（px 版本）</strong>。文中所有数值单位都是 <code>px</code>，所有示例都可直接用于 px 版本。表格中的「CSS 等价声明」一栏给出该类在样式表中的原始声明，便于精确理解其行为。</p>
+
+  <h3>两个版本的区别</h3>
+  <table>
+    <tr><th>版本</th><th>文件</th><th>类名前缀</th><th>单位</th><th>适用场景</th></tr>
+    <tr><td>px 版（本文档）</td><td><code>styles/tool-px.css</code></td><td>无前缀，如 <code>pa-20</code></td><td><code>px</code></td><td>需要固定尺寸、精确按设计稿像素还原、或与其他 px 体系混用</td></tr>
+    <tr><td>rpx 版</td><td><code>styles/tool-rpx.css</code></td><td>统一带 <code>rpx-</code> 前缀，如 <code>rpx-pa-20</code></td><td><code>rpx</code></td><td>按 750rpx 设计稿自动适配不同屏宽</td></tr>
+  </table>
+  <p>两个版本的类名一一对应（rpx 版仅在最前面多加 <code>rpx-</code>），但因为前缀不同，<strong>可以同时引入而不会互相覆盖</strong>。注意：两版的数值含义不同，例如 <code>pa-20</code> 是 20px，<code>rpx-pa-20</code> 是 20rpx，不能按同一套数值习惯书写。</p>
+
   <h3>引入方式</h3>
-  <p>在 <code>App.vue</code> 的 <code>&lt;style&gt;</code> 标签中引入：</p>
+  <p>在 <code>App.vue</code> 的 <code>&lt;style&gt;</code> 标签中引入（路径按项目实际目录调整，本项目的目录是 <code>styles</code>）：</p>
   <pre><code>&lt;style&gt;
-@import '@/css/tool.css';
+/* 引入 px 版本（本文档对应的版本） */
+@import '@/styles/tool-px.css';
 &lt;/style&gt;</code></pre>
-  <p>引入后即可在任意组件的 <code>class</code> 中直接使用。</p>
-  <div class="tip"><strong>设计理念：</strong>命名规则统一，易于记忆和推断。95% 的日常布局可通过本类库完成。</div>
+  <p>本项目当前 <code>App.vue</code> 中实际启用的是 rpx 版，要使用 px 版需要把 <code>@import '@/styles/tool-rpx.css';</code> 换成上面的路径，或取消 px 版那一行注释。</p>
+  <p>引入后即可在任意组件的 <code>class</code> 中直接使用，例如：</p>
+  <pre><code>&lt;view class="flex flex-row flex-start-center pa-20 bg-white round-10 shadow-3"&gt;
+  &lt;text class="text-size-n text-weight-b"&gt;内容&lt;/text&gt;
+&lt;/view&gt;</code></pre>
+  <div class="tip"><strong>设计理念：</strong>命名统一，易于记忆和推断。表格中写明每一个实际存在的类，范围写法（如 <code>0~25</code>）均指<strong>连续整数逐一生成</strong>的类；凡是存在例外的（如内外边距只提供 2~100 的偶数档、负数从 1 开始），都在对应章节明确标出。</div>
 </div>
 
 <!-- 1. 杂类 -->
 <div class="section" id="misc">
   <h2><span class="badge">1</span> 杂类</h2>
+  <p>这一节只保留 CSS 文件第 1 节「杂类」中真正不便归类的 6 个类：安全区、溢出、清除浮动与鼠标指针。其余类已按用途重新归位：定位类（<code>absolute</code> / <code>fixed</code> / <code>relative</code> / <code>sticky</code>）见第 13 节，盒模型与显示、垂直对齐类见第 9 节，换行类见第 2 节，灰度滤镜见第 8 节，<code>fulled</code> / <code>fulled-height</code> 见第 16 / 17 节。</p>
   <table>
-    <tr><th>类名</th><th>作用</th></tr>
-    <tr><td><code>safe-height</code></td><td>底部安全区域高度（iPhone 底部横条）</td></tr>
-    <tr><td><code>overflow</code></td><td>溢出隐藏</td></tr>
-    <tr><td><code>overflow-x</code></td><td>横向溢出隐藏，纵向自动滚动</td></tr>
-    <tr><td><code>overflow-y</code></td><td>纵向溢出隐藏，横向自动滚动</td></tr>
-    <tr><td><code>relative</code></td><td>相对定位</td></tr>
-    <tr><td><code>absolute</code></td><td>绝对定位</td></tr>
-    <tr><td><code>fixed</code></td><td>固定定位</td></tr>
-    <tr><td><code>sticky</code></td><td>粘性定位（顶部）</td></tr>
-    <tr><td><code>clear</code></td><td>清除浮动</td></tr>
-    <tr><td><code>fulled</code></td><td>宽度 100%</td></tr>
-    <tr><td><code>fulled-height</code></td><td>高度 100%</td></tr>
-    <tr><td><code>gray-100</code></td><td>完全灰度</td></tr>
-    <tr><td><code>gray</code></td><td>25% 灰度</td></tr>
-    <tr><td><code>d-inline-block</code></td><td>内联块元素</td></tr>
-    <tr><td><code>d-block</code></td><td>块元素</td></tr>
-    <tr><td><code>d-inline</code></td><td>内联元素</td></tr>
-    <tr><td><code>d-none</code></td><td>隐藏元素</td></tr>
-    <tr><td><code>vertical-align-top</code></td><td>内联顶部对齐</td></tr>
-    <tr><td><code>vertical-align-middle</code></td><td>内联居中对齐</td></tr>
-    <tr><td><code>vertical-align-bottom</code></td><td>内联底部对齐</td></tr>
-    <tr><td><code>wrap</code></td><td>强制断行（含数字、单词）</td></tr>
-    <tr><td><code>nowrap</code></td><td>不断行</td></tr>
-    <tr><td><code>pointer</code></td><td>鼠标指针样式</td></tr>
-    <tr><td><code>box-border</code></td><td>box-sizing: border-box</td></tr>
-    <tr><td><code>box-content</code></td><td>box-sizing: content-box</td></tr>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>详细说明</th></tr>
+    <tr><td><code>safe-height</code></td><td><code>height: constant(safe-area-inset-bottom); height: env(safe-area-inset-bottom)</code></td><td>底部安全区高度，用于适配 iPhone 底部横条。第二行会覆盖第一行：支持 <code>env()</code> 的端用第二行，旧版 iOS 用 <code>constant()</code> 兜底。通常放在页面最底部作为占位块，本身不设置宽度。</td></tr>
+    <tr><td><code>overflow</code></td><td><code>overflow: hidden</code></td><td>横纵两个方向都裁剪溢出内容，不产生滚动条。</td></tr>
+    <tr><td><code>overflow-x</code></td><td><code>overflow-x: hidden; overflow-y: auto</code></td><td>横向溢出隐藏、纵向溢出时自动滚动。注意类名虽叫 x，实际是把 x 方向锁死、放开 y 方向滚动，常用于横向不滚动的列表容器。</td></tr>
+    <tr><td><code>overflow-y</code></td><td><code>overflow-y: hidden; overflow-x: auto</code></td><td>纵向溢出隐藏、横向溢出时自动滚动，常用于横向滑动标签栏。</td></tr>
+    <tr><td><code>clear</code></td><td><code>.clear::after { content: ''; display: table; clear: both }</code></td><td>通过 <code>::after</code> 伪元素清除浮动，写在浮动元素的<strong>父容器</strong>上。注意它作用的是伪元素，不是元素本身。</td></tr>
+    <tr><td><code>pointer</code></td><td><code>cursor: pointer</code></td><td>鼠标悬停显示手型指针，用于提示可点击。</td></tr>
   </table>
+  <div class="tip"><strong>按用途归位：</strong>本节原先承载的基础类已按功能拆分到对应章节，均为真实存在的独立类，可通过本节开头的说明或侧边栏搜索快速找到。</div>
 </div>
 
 <!-- 2. 文本类 -->
 <div class="section" id="text">
   <h2><span class="badge">2</span> 文本类</h2>
-  <h3>文本大小</h3>
+
+  <h3>文本大小（font-size）</h3>
+  <p>9 个类，单位 px。字母含义：xxs 极小、xs 超小、s 小、n 标准（normal）、g 略大、lg 大、xl 超大、xxl 特大、xxxl 最大。</p>
   <table>
-    <tr><th>类名</th><th>大小</th></tr>
-    <tr><td><code>text-size-xxs</code></td><td>20rpx</td></tr>
-    <tr><td><code>text-size-xs</code></td><td>24rpx</td></tr>
-    <tr><td><code>text-size-s</code></td><td>26rpx</td></tr>
-    <tr><td><code>text-size-n</code></td><td>28rpx（默认）</td></tr>
-    <tr><td><code>text-size-g</code></td><td>30rpx</td></tr>
-    <tr><td><code>text-size-lg</code></td><td>32rpx</td></tr>
-    <tr><td><code>text-size-xl</code></td><td>36rpx</td></tr>
-    <tr><td><code>text-size-xxl</code></td><td>40rpx</td></tr>
-    <tr><td><code>text-size-xxxl</code></td><td>48rpx</td></tr>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>说明</th></tr>
+    <tr><td><code>text-size-xxs</code></td><td><code>font-size: 10px</code></td><td>极小号，仅用于角标等</td></tr>
+    <tr><td><code>text-size-xs</code></td><td><code>font-size: 12px</code></td><td>辅助说明文字</td></tr>
+    <tr><td><code>text-size-s</code></td><td><code>font-size: 13px</code></td><td>次要文字</td></tr>
+    <tr><td><code>text-size-n</code></td><td><code>font-size: 14px</code></td><td>标准字号（n = normal），类库基准</td></tr>
+    <tr><td><code>text-size-g</code></td><td><code>font-size: 15px</code></td><td>略大于标准</td></tr>
+    <tr><td><code>text-size-lg</code></td><td><code>font-size: 16px</code></td><td>正文强调、小标题</td></tr>
+    <tr><td><code>text-size-xl</code></td><td><code>font-size: 18px</code></td><td>标题</td></tr>
+    <tr><td><code>text-size-xxl</code></td><td><code>font-size: 20px</code></td><td>大标题</td></tr>
+    <tr><td><code>text-size-xxxl</code></td><td><code>font-size: 24px</code></td><td>超大标题、数字</td></tr>
   </table>
-  <h3>文本粗细</h3>
+
+  <h3>文本粗细（font-weight）</h3>
   <table>
-    <tr><th>类名</th><th>效果</th></tr>
-    <tr><td><code>text-weight-thin</code></td><td>细体 (300)</td></tr>
-    <tr><td><code>text-weight-s</code></td><td>正常 (400)</td></tr>
-    <tr><td><code>text-weight-n</code></td><td>中等 (500)</td></tr>
-    <tr><td><code>text-weight-b</code></td><td>加粗 (700)</td></tr>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>说明</th></tr>
+    <tr><td><code>text-weight-thin</code></td><td><code>font-weight: 300</code></td><td>细体</td></tr>
+    <tr><td><code>text-weight-s</code></td><td><code>font-weight: 400</code></td><td>常规（s = small/standard）</td></tr>
+    <tr><td><code>text-weight-n</code></td><td><code>font-weight: 500</code></td><td>中等（n = normal，比 400 略粗）</td></tr>
+    <tr><td><code>text-weight-b</code></td><td><code>font-weight: 700</code></td><td>加粗（b = bold）</td></tr>
   </table>
-  <h3>文本对齐</h3>
+
+  <h3>文本对齐（text-align）</h3>
   <table>
-    <tr><th>类名</th><th>效果</th></tr>
-    <tr><td><code>text-align-left</code></td><td>左对齐</td></tr>
-    <tr><td><code>text-align-center</code></td><td>居中对齐</td></tr>
-    <tr><td><code>text-align-right</code></td><td>右对齐</td></tr>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>说明</th></tr>
+    <tr><td><code>text-align-left</code></td><td><code>text-align: left</code></td><td>左对齐</td></tr>
+    <tr><td><code>text-align-center</code></td><td><code>text-align: center</code></td><td>居中对齐</td></tr>
+    <tr><td><code>text-align-right</code></td><td><code>text-align: right</code></td><td>右对齐</td></tr>
   </table>
+
+  <h3>文本装饰（text-decoration）</h3>
+  <table>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>说明</th></tr>
+    <tr><td><code>text-delete</code></td><td><code>text-decoration: line-through</code></td><td>删除线，常用于原价</td></tr>
+    <tr><td><code>text-underline</code></td><td><code>text-decoration: underline</code></td><td>下划线，常用于链接文案</td></tr>
+  </table>
+
+  <h3>换行控制（<code>wrap</code> / <code>nowrap</code>）</h3>
+  <p>这两个类控制文本是否允许换行，原本归在杂类，现按用途移入文本类。注意 <code>nowrap</code> 不只是设置 <code>white-space</code>，还带有 <code>display: inline</code>。</p>
+  <table>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>详细说明</th></tr>
+    <tr><td><code>wrap</code></td><td><code>word-wrap: break-word; word-break: break-all; white-space: normal</code></td><td>允许强制断行：长英文单词、连续数字、URL 都会换行，同时把 <code>white-space</code> 恢复为 <code>normal</code>。用于内容长度不可控的文案。</td></tr>
+    <tr><td><code>nowrap</code></td><td><code>white-space: nowrap; display: inline</code></td><td>禁止换行。<strong>注意它同时把元素改成 <code>display: inline</code></strong>，可能导致宽高设置失效，这通常正是标签类元素想要的效果。若需要保持块级显示，叠加第 9 节的 <code>d-block</code> 是无效的：<code>d-block</code> 在 CSS 文件中位于 <code>nowrap</code> 之前，会被后者的 <code>display: inline</code> 覆盖，请改用内联样式重置。</td></tr>
+  </table>
+
   <h3>文本溢出省略</h3>
+  <p>共 6 个类。<code>text-overflow</code> 是单行省略；<code>text-overflow-1</code> ~ <code>text-overflow-5</code> 是多行省略，数字就是保留的行数，5 个类都真实存在。</p>
   <table>
-    <tr><th>类名</th><th>效果</th></tr>
-    <tr><td><code>text-overflow</code></td><td>单行省略号</td></tr>
-    <tr><td><code>text-overflow-{1~5}</code></td><td>指定行数省略号</td></tr>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>说明</th></tr>
+    <tr><td><code>text-overflow</code></td><td><code>overflow: hidden; text-overflow: ellipsis; white-space: nowrap</code></td><td>单行省略号。要求元素有确定的宽度（例如配合 <code>fulled</code>、<code>w-200</code> 或父级 Flex 收缩）。</td></tr>
+    <tr><td><code>text-overflow-1</code></td><td><code>overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical</code></td><td>最多 1 行，超出显示省略号</td></tr>
+    <tr><td><code>text-overflow-2</code></td><td>同上，<code>-webkit-line-clamp: 2</code></td><td>最多 2 行</td></tr>
+    <tr><td><code>text-overflow-3</code></td><td>同上，<code>-webkit-line-clamp: 3</code></td><td>最多 3 行</td></tr>
+    <tr><td><code>text-overflow-4</code></td><td>同上，<code>-webkit-line-clamp: 4</code></td><td>最多 4 行</td></tr>
+    <tr><td><code>text-overflow-5</code></td><td>同上，<code>-webkit-line-clamp: 5</code></td><td>最多 5 行</td></tr>
   </table>
-  <h3>其它文本</h3>
+
+  <h3>行高（line-height）</h3>
   <table>
-    <tr><th>类名</th><th>效果</th></tr>
-    <tr><td><code>text-delete</code></td><td>删除线</td></tr>
-    <tr><td><code>text-underline</code></td><td>下划线</td></tr>
-    <tr><td><code>leading-none</code></td><td>行高 1</td></tr>
-    <tr><td><code>leading-tight</code></td><td>行高 1.25</td></tr>
-    <tr><td><code>leading-normal</code></td><td>行高 1.5</td></tr>
-    <tr><td><code>leading-loose</code></td><td>行高 2</td></tr>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>说明</th></tr>
+    <tr><td><code>leading-none</code></td><td><code>line-height: 1</code></td><td>无额外行距，最紧凑</td></tr>
+    <tr><td><code>leading-tight</code></td><td><code>line-height: 1.25</code></td><td>紧凑</td></tr>
+    <tr><td><code>leading-normal</code></td><td><code>line-height: 1.5</code></td><td>常规</td></tr>
+    <tr><td><code>leading-loose</code></td><td><code>line-height: 2</code></td><td>宽松</td></tr>
+  </table>
+
+  <h3>字间距（letter-spacing）</h3>
+  <p>这 4 个类在旧版说明中被整节遗漏，实际存在于 CSS 文件第 2 节末尾。</p>
+  <table>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>说明</th></tr>
+    <tr><td><code>tracking-tight</code></td><td><code>letter-spacing: -0.25px</code></td><td>收紧字距，适合大号标题</td></tr>
+    <tr><td><code>tracking-normal</code></td><td><code>letter-spacing: 0</code></td><td>重置为正常字距</td></tr>
+    <tr><td><code>tracking-wide</code></td><td><code>letter-spacing: 0.5px</code></td><td>略微拉开字距</td></tr>
+    <tr><td><code>tracking-wider</code></td><td><code>letter-spacing: 1px</code></td><td>明显拉开字距，适合英文短标签</td></tr>
   </table>
 </div>
 
 <!-- 3. 圆角 -->
 <div class="section" id="radius">
   <h2><span class="badge">3</span> 圆角</h2>
-  <h3>四边圆角 <code>round-{0~25}</code></h3>
-  <pre><code>&lt;view class="round-10"&gt;圆角 10rpx&lt;/view&gt;
-&lt;view class="rounded"&gt;50% 圆形&lt;/view&gt;
-&lt;view class="round-pill"&gt;胶囊形&lt;/view&gt;</code></pre>
+
+  <h3>四边统一圆角 <code>round-{0~25}</code></h3>
+  <p>0 到 25 每个整数都有对应的类，共 26 个，值就是同数字的 px。另有 <code>rounded</code> 与 <code>round-pill</code> 两个特殊类。</p>
+  <table>
+    <tr><th>类型</th><th>类名</th><th>CSS 等价声明</th></tr>
+    <tr><td>数值圆角</td><td><div class="code-list"><code>round-0</code><code>round-1</code><code>round-2</code><code>round-3</code><code>round-4</code><code>round-5</code><code>round-6</code><code>round-7</code><code>round-8</code><code>round-9</code><code>round-10</code><code>round-11</code><code>round-12</code><code>round-13</code><code>round-14</code><code>round-15</code><code>round-16</code><code>round-17</code><code>round-18</code><code>round-19</code><code>round-20</code><code>round-21</code><code>round-22</code><code>round-23</code><code>round-24</code><code>round-25</code></div></td><td><code>border-radius: Npx</code>（N 为类名中的数字）</td></tr>
+    <tr><td>圆形</td><td><code>rounded</code></td><td><code>border-radius: 50%</code></td></tr>
+    <tr><td>胶囊形</td><td><code>round-pill</code></td><td><code>border-radius: 499px</code></td></tr>
+  </table>
+  <p>示例：<code>&lt;view class="round-10"&gt;</code> → 四角 10px；<code>&lt;view class="rounded"&gt;</code> → 圆形（需宽高相等）；<code>&lt;view class="round-pill"&gt;</code> → 两端半圆的胶囊条。</p>
+
   <h3>单角圆角 <code>round-{方向}-{0~25}</code></h3>
+  <p>四个方向的名称与 CSS 属性一一对应，每个方向均有 <code>0~25</code> 共 26 个类（例如 <code>round-tl-0</code> 到 <code>round-tl-25</code>）。</p>
   <table>
-    <tr><th>方向</th><th>含义</th></tr>
-    <tr><td><code>tl</code></td><td>左上 (top-left)</td></tr>
-    <tr><td><code>tr</code></td><td>右上 (top-right)</td></tr>
-    <tr><td><code>bl</code></td><td>左下 (bottom-left)</td></tr>
-    <tr><td><code>br</code></td><td>右下 (bottom-right)</td></tr>
+    <tr><th>方向</th><th>含义</th><th>CSS 属性</th><th>完整类名（共 26 个 / 方向）</th></tr>
+    <tr><td><code>tl</code></td><td>左上 top-left</td><td><code>border-top-left-radius</code></td><td><div class="code-list"><code>round-tl-0</code> … <code>round-tl-25</code></div></td></tr>
+    <tr><td><code>tr</code></td><td>右上 top-right</td><td><code>border-top-right-radius</code></td><td><div class="code-list"><code>round-tr-0</code> … <code>round-tr-25</code></div></td></tr>
+    <tr><td><code>bl</code></td><td>左下 bottom-left</td><td><code>border-bottom-left-radius</code></td><td><div class="code-list"><code>round-bl-0</code> … <code>round-bl-25</code></div></td></tr>
+    <tr><td><code>br</code></td><td>右下 bottom-right</td><td><code>border-bottom-right-radius</code></td><td><div class="code-list"><code>round-br-0</code> … <code>round-br-25</code></div></td></tr>
   </table>
-  <h3>组合圆角</h3>
+  <p>这里明确写出 <code>…</code> 代表 0、1、2、…、25 逐个存在的类，不是只提供首尾两个类。</p>
+
+  <h3>同侧两角组合圆角</h3>
+  <p>组合类只提供 <code>0、5、10、15、20、25</code> 六档，不是 0~25 全部整数。每个方向恰好 6 个类，共 24 个。</p>
   <table>
-    <tr><th>方向</th><th>含义</th><th>可用值</th></tr>
-    <tr><td><code>t</code></td><td>顶部两角</td><td>0, 5, 10, 15, 20, 25</td></tr>
-    <tr><td><code>b</code></td><td>底部两角</td><td>0, 5, 10, 15, 20, 25</td></tr>
-    <tr><td><code>l</code></td><td>左侧两角</td><td>0, 5, 10, 15, 20, 25</td></tr>
-    <tr><td><code>r</code></td><td>右侧两角</td><td>0, 5, 10, 15, 20, 25</td></tr>
+    <tr><th>方向</th><th>含义</th><th>CSS 等价声明</th><th>完整类名（6 个）</th></tr>
+    <tr><td><code>t</code></td><td>顶部两角</td><td><code>border-top-left-radius + border-top-right-radius</code></td><td><div class="code-list"><code>round-t-0</code><code>round-t-5</code><code>round-t-10</code><code>round-t-15</code><code>round-t-20</code><code>round-t-25</code></div></td></tr>
+    <tr><td><code>b</code></td><td>底部两角</td><td><code>border-bottom-left-radius + border-bottom-right-radius</code></td><td><div class="code-list"><code>round-b-0</code><code>round-b-5</code><code>round-b-10</code><code>round-b-15</code><code>round-b-20</code><code>round-b-25</code></div></td></tr>
+    <tr><td><code>l</code></td><td>左侧两角</td><td><code>border-top-left-radius + border-bottom-left-radius</code></td><td><div class="code-list"><code>round-l-0</code><code>round-l-5</code><code>round-l-10</code><code>round-l-15</code><code>round-l-20</code><code>round-l-25</code></div></td></tr>
+    <tr><td><code>r</code></td><td>右侧两角</td><td><code>border-top-right-radius + border-bottom-right-radius</code></td><td><div class="code-list"><code>round-r-0</code><code>round-r-5</code><code>round-r-10</code><code>round-r-15</code><code>round-r-20</code><code>round-r-25</code></div></td></tr>
   </table>
-  <pre><code>&lt;view class="round-t-10"&gt;顶部两角圆角 10rpx&lt;/view&gt;</code></pre>
+  <pre><code>&lt;view class="round-t-10"&gt;顶部两角 10px 圆角&lt;/view&gt;
+&lt;view class="round-tl-25 round-br-0"&gt;仅左上角 25px 圆角&lt;/view&gt;</code></pre>
 </div>
 
 <!-- 4. 透明度 -->
 <div class="section" id="opacity">
   <h2><span class="badge">4</span> 透明度</h2>
-  <p><code>opacity-{0~10}</code>，对应 0.0 ~ 1.0</p>
-  <pre><code>&lt;view class="opacity-5"&gt;50% 透明&lt;/view&gt;</code></pre>
+  <p>11 个类，从完全透明到完全不透明，每档 0.1。数值越大越不透明。</p>
+  <table>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>类名</th><th>CSS 等价声明</th></tr>
+    <tr><td><code>opacity-0</code></td><td><code>opacity: 0.0</code></td><td><code>opacity-6</code></td><td><code>opacity: 0.6</code></td></tr>
+    <tr><td><code>opacity-1</code></td><td><code>opacity: 0.1</code></td><td><code>opacity-7</code></td><td><code>opacity: 0.7</code></td></tr>
+    <tr><td><code>opacity-2</code></td><td><code>opacity: 0.2</code></td><td><code>opacity-8</code></td><td><code>opacity: 0.8</code></td></tr>
+    <tr><td><code>opacity-3</code></td><td><code>opacity: 0.3</code></td><td><code>opacity-9</code></td><td><code>opacity: 0.9</code></td></tr>
+    <tr><td><code>opacity-4</code></td><td><code>opacity: 0.4</code></td><td><code>opacity-10</code></td><td><code>opacity: 1.0</code></td></tr>
+    <tr><td><code>opacity-5</code></td><td><code>opacity: 0.5</code></td><td>—</td><td>—</td></tr>
+  </table>
+  <div class="warn"><strong>注意：</strong><code>opacity-0</code> 只是看不见，元素仍占据布局空间并且可以接收事件；要真正移除布局占位请用第 9 节的 <code>d-none</code>。</div>
 </div>
 
 <!-- 5. 投影 -->
 <div class="section" id="shadow">
   <h2><span class="badge">5</span> 投影</h2>
-  <p><code>shadow-{0~25}</code>，数值越大阴影越强</p>
-  <pre><code>&lt;view class="shadow-5"&gt;轻微投影&lt;/view&gt;
-&lt;view class="shadow-15"&gt;中等投影&lt;/view&gt;
-&lt;view class="shadow-25"&gt;强烈投影&lt;/view&gt;</code></pre>
+  <p>26 个类（<code>shadow-0</code> ~ <code>shadow-25</code>）。数值每加 1，垂直偏移 +1px、模糊半径 +2px，阴影颜色统一为黑色半透明。下表列出每一档的完整声明，不再用「数值越大越强」一句带过。</p>
+  <table>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>类名</th><th>CSS 等价声明</th></tr>
+    <tr><td><code>shadow-0</code></td><td><code>box-shadow: none</code></td><td><code>shadow-13</code></td><td><code>0 13px 27px rgba(0,0,0,0.18)</code></td></tr>
+    <tr><td><code>shadow-1</code></td><td><code>0 1px 3px rgba(0,0,0,0.09)</code></td><td><code>shadow-14</code></td><td><code>0 14px 29px rgba(0,0,0,0.19)</code></td></tr>
+    <tr><td><code>shadow-2</code></td><td><code>0 2px 5px rgba(0,0,0,0.10)</code></td><td><code>shadow-15</code></td><td><code>0 15px 31px rgba(0,0,0,0.20)</code></td></tr>
+    <tr><td><code>shadow-3</code></td><td><code>0 3px 7px rgba(0,0,0,0.10)</code></td><td><code>shadow-16</code></td><td><code>0 16px 33px rgba(0,0,0,0.21)</code></td></tr>
+    <tr><td><code>shadow-4</code></td><td><code>0 4px 9px rgba(0,0,0,0.11)</code></td><td><code>shadow-17</code></td><td><code>0 17px 35px rgba(0,0,0,0.22)</code></td></tr>
+    <tr><td><code>shadow-5</code></td><td><code>0 5px 11px rgba(0,0,0,0.12)</code></td><td><code>shadow-18</code></td><td><code>0 18px 37px rgba(0,0,0,0.22)</code></td></tr>
+    <tr><td><code>shadow-6</code></td><td><code>0 6px 13px rgba(0,0,0,0.13)</code></td><td><code>shadow-19</code></td><td><code>0 19px 39px rgba(0,0,0,0.23)</code></td></tr>
+    <tr><td><code>shadow-7</code></td><td><code>0 7px 15px rgba(0,0,0,0.14)</code></td><td><code>shadow-20</code></td><td><code>0 20px 41px rgba(0,0,0,0.24)</code></td></tr>
+    <tr><td><code>shadow-8</code></td><td><code>0 8px 17px rgba(0,0,0,0.14)</code></td><td><code>shadow-21</code></td><td><code>0 21px 43px rgba(0,0,0,0.24)</code></td></tr>
+    <tr><td><code>shadow-9</code></td><td><code>0 9px 19px rgba(0,0,0,0.15)</code></td><td><code>shadow-22</code></td><td><code>0 22px 45px rgba(0,0,0,0.24)</code></td></tr>
+    <tr><td><code>shadow-10</code></td><td><code>0 10px 21px rgba(0,0,0,0.16)</code></td><td><code>shadow-23</code></td><td><code>0 23px 47px rgba(0,0,0,0.24)</code></td></tr>
+    <tr><td><code>shadow-11</code></td><td><code>0 11px 23px rgba(0,0,0,0.17)</code></td><td><code>shadow-24</code></td><td><code>0 24px 49px rgba(0,0,0,0.24)</code></td></tr>
+    <tr><td><code>shadow-12</code></td><td><code>0 12px 25px rgba(0,0,0,0.18)</code></td><td><code>shadow-25</code></td><td><code>0 25px 51px rgba(0,0,0,0.24)</code></td></tr>
+  </table>
+  <p>表中省略了 <code>box-shadow:</code> 前缀，实际声明形如 <code>box-shadow: 0 5px 11px rgba(0,0,0,0.12)</code>。常用建议：<code>shadow-1</code>~<code>shadow-5</code> 用于卡片，<code>shadow-10</code> 以上用于浮层。</p>
 </div>
 
 <!-- 6. 边线 -->
 <div class="section" id="border">
   <h2><span class="badge">6</span> 边线</h2>
+  <p>所有边线类的颜色固定为 <code>#e5e5e5</code>，样式固定为 <code>solid</code>，只有粗细和方向不同。需要其他颜色/样式时请使用内联样式或自定义类。</p>
+
   <h3>四边边线</h3>
   <table>
-    <tr><th>类名</th><th>效果</th></tr>
-    <tr><td><code>border</code></td><td>1rpx 四边边线</td></tr>
-    <tr><td><code>border-0</code></td><td>无边线</td></tr>
-    <tr><td><code>border-{1~10}</code></td><td>对应粗细的四边边线</td></tr>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>说明</th></tr>
+    <tr><td><code>border</code></td><td><code>border: 1px solid #e5e5e5</code></td><td>别名，等价于 <code>border-1</code> / <code>border-a-1</code></td></tr>
+    <tr><td><code>border-0</code></td><td><code>border: none</code></td><td>清除四边边线，等价于 <code>border-a-0</code></td></tr>
+    <tr><td>四边粗细（11 个）</td><td><code>border: Npx solid #e5e5e5</code>（<code>N=0</code> 为 <code>none</code>）</td><td><div class="code-list"><code>border-0</code><code>border-1</code><code>border-2</code><code>border-3</code><code>border-4</code><code>border-5</code><code>border-6</code><code>border-7</code><code>border-8</code><code>border-9</code><code>border-10</code></div></td></tr>
+    <tr><td><code>border-a</code></td><td><code>border: 1px solid #e5e5e5</code></td><td>别名，a = all，等价于 <code>border</code></td></tr>
+    <tr><td><code>border-a-0</code> ~ <code>border-a-5</code></td><td><code>border: Npx solid #e5e5e5</code>（0 为 <code>none</code>）</td><td>0、1、2、3、4、5 共 6 个类，与 <code>border-N</code> 效果相同</td></tr>
   </table>
-  <h3>方向边线 <code>border-{方向}-{粗细}</code></h3>
+
+  <h3>单边边线 <code>border-{方向}-{粗细}</code></h3>
+  <p>每个方向都提供无数字别名（=1px）、<code>-0</code>（none）以及 <code>-1</code> ~ <code>-5</code>，共 7 个类 × 5 个方向 = 35 个类。</p>
   <table>
-    <tr><th>方向</th><th>含义</th></tr>
-    <tr><td><code>t</code></td><td>上边线</td></tr>
-    <tr><td><code>b</code></td><td>下边线</td></tr>
-    <tr><td><code>l</code></td><td>左边线</td></tr>
-    <tr><td><code>r</code></td><td>右边线</td></tr>
-    <tr><td><code>a</code></td><td>四边边线</td></tr>
+    <tr><th>方向</th><th>CSS 属性</th><th>无数字别名</th><th>完整类名</th></tr>
+    <tr><td><code>t</code> 上</td><td><code>border-top</code></td><td><code>border-t</code>（1px）</td><td><div class="code-list"><code>border-t</code><code>border-t-0</code><code>border-t-1</code><code>border-t-2</code><code>border-t-3</code><code>border-t-4</code><code>border-t-5</code></div></td></tr>
+    <tr><td><code>b</code> 下</td><td><code>border-bottom</code></td><td><code>border-b</code>（1px）</td><td><div class="code-list"><code>border-b</code><code>border-b-0</code><code>border-b-1</code><code>border-b-2</code><code>border-b-3</code><code>border-b-4</code><code>border-b-5</code></div></td></tr>
+    <tr><td><code>l</code> 左</td><td><code>border-left</code></td><td><code>border-l</code>（1px）</td><td><div class="code-list"><code>border-l</code><code>border-l-0</code><code>border-l-1</code><code>border-l-2</code><code>border-l-3</code><code>border-l-4</code><code>border-l-5</code></div></td></tr>
+    <tr><td><code>r</code> 右</td><td><code>border-right</code></td><td><code>border-r</code>（1px）</td><td><div class="code-list"><code>border-r</code><code>border-r-0</code><code>border-r-1</code><code>border-r-2</code><code>border-r-3</code><code>border-r-4</code><code>border-r-5</code></div></td></tr>
+    <tr><td><code>a</code> 四边</td><td><code>border</code></td><td><code>border-a</code>（1px）</td><td><div class="code-list"><code>border-a</code><code>border-a-0</code><code>border-a-1</code><code>border-a-2</code><code>border-a-3</code><code>border-a-4</code><code>border-a-5</code></div></td></tr>
   </table>
-  <pre><code>&lt;view class="border-b-2"&gt;底部 2rpx 边线&lt;/view&gt;</code></pre>
+  <pre><code>&lt;view class="border-b-2"&gt;底部 2px 边线&lt;/view&gt;
+&lt;view class="border-t border-b-0"&gt;仅顶部 1px 边线&lt;/view&gt;</code></pre>
+  <div class="tip"><strong>覆盖关系：</strong>单边类只修改对应方向，不会清除其他方向；例如 <code>border-t-0</code> 只清上边线。若同时写 <code>border</code> 与 <code>border-t-2</code>，结果取决于它们在 CSS 文件中的先后顺序（单边类在文件中位于四边类之后，因此单边类胜出）。</div>
 </div>
 
 <!-- 7. zIndex -->
 <div class="section" id="zindex">
   <h2><span class="badge">7</span> zIndex 层级</h2>
+  <p>共 31 个类：正数 0~25 共 26 个，负数 <code>n1</code>~<code>n5</code> 共 5 个。这里的 <code>n</code> 表示 negative（负），不是「乘以 4」。</p>
   <table>
-    <tr><th>类名</th><th>效果</th></tr>
-    <tr><td><code>zIndex-{0~25}</code></td><td>z-index: 0~25</td></tr>
-    <tr><td><code>zIndex-n{1~5}</code></td><td>z-index: -1~-5</td></tr>
+    <tr><th>分组</th><th>CSS 等价声明</th><th>完整类名</th></tr>
+    <tr><td>非负层级</td><td><code>z-index: 0</code> ~ <code>z-index: 25</code></td><td><div class="code-list"><code>zIndex-0</code><code>zIndex-1</code><code>zIndex-2</code><code>zIndex-3</code><code>zIndex-4</code><code>zIndex-5</code><code>zIndex-6</code><code>zIndex-7</code><code>zIndex-8</code><code>zIndex-9</code><code>zIndex-10</code><code>zIndex-11</code><code>zIndex-12</code><code>zIndex-13</code><code>zIndex-14</code><code>zIndex-15</code><code>zIndex-16</code><code>zIndex-17</code><code>zIndex-18</code><code>zIndex-19</code><code>zIndex-20</code><code>zIndex-21</code><code>zIndex-22</code><code>zIndex-23</code><code>zIndex-24</code><code>zIndex-25</code></div></td></tr>
+    <tr><td>负层级</td><td><code>z-index: -1</code> ~ <code>z-index: -5</code></td><td><div class="code-list"><code>zIndex-n1</code><code>zIndex-n2</code><code>zIndex-n3</code><code>zIndex-n4</code><code>zIndex-n5</code></div></td></tr>
   </table>
+  <div class="warn"><strong>生效条件：</strong><code>z-index</code> 只对定位元素（<code>relative</code> / <code>absolute</code> / <code>fixed</code> / <code>sticky</code>）或 Flex / Grid 容器的直接子元素有效。普通静态定位元素上加 <code>zIndex-10</code> 不会有效果。类名大小写为 <code>zIndex-</code>（大写 I），写错不会生效。</div>
 </div>
 
 <!-- 8. 颜色类 -->
 <div class="section" id="color">
   <h2><span class="badge">8</span> 颜色类</h2>
-  <h3>文字颜色 <code>text-{颜色名}</code></h3>
+  <p>颜色分为两组：基础色 15 个、品牌色 10 个。文字色使用 <code>text-</code> 前缀（设置 <code>color</code>），背景色使用 <code>bg-</code> 前缀（设置 <code>background-color</code>），两者色值完全一一对应。下面逐项列出，不再用「与文字颜色相同」省略。</p>
+
+  <h3>基础文字颜色 <code>text-{颜色名}</code></h3>
   <table>
-    <tr><th>类名</th><th>预览</th></tr>
-    <tr><td><code>text-white</code></td><td><span class="color-demo" style="background:#fff"></span>#ffffff</td></tr>
-    <tr><td><code>text-black</code></td><td><span class="color-demo" style="background:#000"></span>#000000</td></tr>
-    <tr><td><code>text-red</code></td><td><span class="color-demo" style="background:#e54d42"></span>#e54d42</td></tr>
-    <tr><td><code>text-orange</code></td><td><span class="color-demo" style="background:#f37b1d"></span>#f37b1d</td></tr>
-    <tr><td><code>text-yellow</code></td><td><span class="color-demo" style="background:#fbbd08"></span>#fbbd08</td></tr>
-    <tr><td><code>text-olive</code></td><td><span class="color-demo" style="background:#8dc63f"></span>#8dc63f</td></tr>
-    <tr><td><code>text-green</code></td><td><span class="color-demo" style="background:#39b54a"></span>#39b54a</td></tr>
-    <tr><td><code>text-cyan</code></td><td><span class="color-demo" style="background:#1cbbb4"></span>#1cbbb4</td></tr>
-    <tr><td><code>text-blue</code></td><td><span class="color-demo" style="background:#0081ff"></span>#0081ff</td></tr>
-    <tr><td><code>text-purple</code></td><td><span class="color-demo" style="background:#6739b6"></span>#6739b6</td></tr>
-    <tr><td><code>text-mauve</code></td><td><span class="color-demo" style="background:#9c26b0"></span>#9c26b0</td></tr>
-    <tr><td><code>text-pink</code></td><td><span class="color-demo" style="background:#e03997"></span>#e03997</td></tr>
-    <tr><td><code>text-brown</code></td><td><span class="color-demo" style="background:#a5673f"></span>#a5673f</td></tr>
-    <tr><td><code>text-grey</code></td><td><span class="color-demo" style="background:#8799a3"></span>#8799a3</td></tr>
-    <tr><td><code>text-gray</code></td><td><span class="color-demo" style="background:#aaa"></span>#aaaaaa</td></tr>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>预览</th></tr>
+    <tr><td><code>text-white</code></td><td><code>color: #ffffff</code></td><td><span class="color-demo" style="background:#ffffff"></span>#ffffff</td></tr>
+    <tr><td><code>text-black</code></td><td><code>color: #000000</code></td><td><span class="color-demo" style="background:#000000"></span>#000000</td></tr>
+    <tr><td><code>text-red</code></td><td><code>color: #e54d42</code></td><td><span class="color-demo" style="background:#e54d42"></span>#e54d42</td></tr>
+    <tr><td><code>text-orange</code></td><td><code>color: #f37b1d</code></td><td><span class="color-demo" style="background:#f37b1d"></span>#f37b1d</td></tr>
+    <tr><td><code>text-yellow</code></td><td><code>color: #fbbd08</code></td><td><span class="color-demo" style="background:#fbbd08"></span>#fbbd08</td></tr>
+    <tr><td><code>text-olive</code></td><td><code>color: #8dc63f</code></td><td><span class="color-demo" style="background:#8dc63f"></span>#8dc63f</td></tr>
+    <tr><td><code>text-green</code></td><td><code>color: #39b54a</code></td><td><span class="color-demo" style="background:#39b54a"></span>#39b54a</td></tr>
+    <tr><td><code>text-cyan</code></td><td><code>color: #1cbbb4</code></td><td><span class="color-demo" style="background:#1cbbb4"></span>#1cbbb4</td></tr>
+    <tr><td><code>text-blue</code></td><td><code>color: #0081ff</code></td><td><span class="color-demo" style="background:#0081ff"></span>#0081ff</td></tr>
+    <tr><td><code>text-purple</code></td><td><code>color: #6739b6</code></td><td><span class="color-demo" style="background:#6739b6"></span>#6739b6</td></tr>
+    <tr><td><code>text-mauve</code></td><td><code>color: #9c26b0</code></td><td><span class="color-demo" style="background:#9c26b0"></span>#9c26b0</td></tr>
+    <tr><td><code>text-pink</code></td><td><code>color: #e03997</code></td><td><span class="color-demo" style="background:#e03997"></span>#e03997</td></tr>
+    <tr><td><code>text-brown</code></td><td><code>color: #a5673f</code></td><td><span class="color-demo" style="background:#a5673f"></span>#a5673f</td></tr>
+    <tr><td><code>text-grey</code></td><td><code>color: #8799a3</code></td><td><span class="color-demo" style="background:#8799a3"></span>#8799a3</td></tr>
+    <tr><td><code>text-gray</code></td><td><code>color: #aaaaaa</code></td><td><span class="color-demo" style="background:#aaaaaa"></span>#aaaaaa</td></tr>
   </table>
-  <h3>品牌颜色 <code>text-{颜色名}</code></h3>
+  <div class="warn"><strong>易混淆：</strong><code>text-grey</code>（#8799a3，偏蓝灰）和 <code>text-gray</code>（#aaaaaa，中性灰）是两个不同的类；本节的 <code>gray</code> / <code>gray-100</code> 是 <code>filter: grayscale()</code> 滤镜类，设置的是滤镜而不是 <code>color</code> / <code>background-color</code>，详见下方「灰度滤镜」。</div>
+
+  <h3>灰度滤镜（<code>gray</code> / <code>gray-100</code>）</h3>
+  <p>这两个类原本归在杂类，因作用与颜色表现相关，现移入颜色章节。它们设置的是 <code>filter</code>，会让元素及其所有子元素一起变灰。</p>
   <table>
-    <tr><th>类名</th><th>预览</th></tr>
-    <tr><td><code>text-primary-light</code></td><td><span class="color-demo" style="background:#2fe25f"></span>#2fe25f</td></tr>
-    <tr><td><code>text-primary</code></td><td><span class="color-demo" style="background:#07c160"></span>#07c160</td></tr>
-    <tr><td><code>text-primary-dark</code></td><td><span class="color-demo" style="background:#0eb805"></span>#0eb805</td></tr>
-    <tr><td><code>text-secondary-light</code></td><td><span class="color-demo" style="background:#8abdff"></span>#8abdff</td></tr>
-    <tr><td><code>text-secondary</code></td><td><span class="color-demo" style="background:#6d5dfc"></span>#6d5dfc</td></tr>
-    <tr><td><code>text-secondary-dark</code></td><td><span class="color-demo" style="background:#5b0eeb"></span>#5b0eeb</td></tr>
-    <tr><td><code>text-greyLight-1</code></td><td><span class="color-demo" style="background:#E4EBF5"></span>#E4EBF5</td></tr>
-    <tr><td><code>text-greyLight-2</code></td><td><span class="color-demo" style="background:#c8d0e7"></span>#c8d0e7</td></tr>
-    <tr><td><code>text-greyLight-3</code></td><td><span class="color-demo" style="background:#bec8e4"></span>#bec8e4</td></tr>
-    <tr><td><code>text-greyDark</code></td><td><span class="color-demo" style="background:#9baacf"></span>#9baacf</td></tr>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>说明</th></tr>
+    <tr><td><code>gray-100</code></td><td><code>filter: grayscale(100%)</code></td><td>完全灰度，常用于置灰禁用状态。</td></tr>
+    <tr><td><code>gray</code></td><td><code>filter: grayscale(25%)</code></td><td>25% 灰度，轻微降低饱和度；与 <code>gray-100</code> 是两个独立的类，不是同一组的数值变体。</td></tr>
   </table>
-  
-  <h3>背景颜色 <code>bg-{颜色名}</code></h3>
-  <p>与文字颜色相同，前缀改为 <code>bg-</code>，另有 <code>bg-transparent</code> 透明背景。</p>
+
+  <h3>品牌文字颜色 <code>text-{品牌色}</code></h3>
+  <table>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>预览</th></tr>
+    <tr><td><code>text-primary-light</code></td><td><code>color: #2fe25f</code></td><td><span class="color-demo" style="background:#2fe25f"></span>#2fe25f</td></tr>
+    <tr><td><code>text-primary</code></td><td><code>color: #07c160</code></td><td><span class="color-demo" style="background:#07c160"></span>#07c160</td></tr>
+    <tr><td><code>text-primary-dark</code></td><td><code>color: #0eb805</code></td><td><span class="color-demo" style="background:#0eb805"></span>#0eb805</td></tr>
+    <tr><td><code>text-secondary-light</code></td><td><code>color: #8abdff</code></td><td><span class="color-demo" style="background:#8abdff"></span>#8abdff</td></tr>
+    <tr><td><code>text-secondary</code></td><td><code>color: #6d5dfc</code></td><td><span class="color-demo" style="background:#6d5dfc"></span>#6d5dfc</td></tr>
+    <tr><td><code>text-secondary-dark</code></td><td><code>color: #5b0eeb</code></td><td><span class="color-demo" style="background:#5b0eeb"></span>#5b0eeb</td></tr>
+    <tr><td><code>text-greyLight-1</code></td><td><code>color: #E4EBF5</code></td><td><span class="color-demo" style="background:#E4EBF5"></span>#E4EBF5</td></tr>
+    <tr><td><code>text-greyLight-2</code></td><td><code>color: #c8d0e7</code></td><td><span class="color-demo" style="background:#c8d0e7"></span>#c8d0e7</td></tr>
+    <tr><td><code>text-greyLight-3</code></td><td><code>color: #bec8e4</code></td><td><span class="color-demo" style="background:#bec8e4"></span>#bec8e4</td></tr>
+    <tr><td><code>text-greyDark</code></td><td><code>color: #9baacf</code></td><td><span class="color-demo" style="background:#9baacf"></span>#9baacf</td></tr>
+  </table>
+
+  <h3>基础背景颜色 <code>bg-{颜色名}</code></h3>
+  <p>与基础文字色一一对应，共 15 个，设置的是 <code>background-color</code>。</p>
+  <table>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>预览</th></tr>
+    <tr><td><code>bg-white</code></td><td><code>background-color: #ffffff</code></td><td><span class="color-demo" style="background:#ffffff"></span>#ffffff</td></tr>
+    <tr><td><code>bg-black</code></td><td><code>background-color: #000000</code></td><td><span class="color-demo" style="background:#000000"></span>#000000</td></tr>
+    <tr><td><code>bg-red</code></td><td><code>background-color: #e54d42</code></td><td><span class="color-demo" style="background:#e54d42"></span>#e54d42</td></tr>
+    <tr><td><code>bg-orange</code></td><td><code>background-color: #f37b1d</code></td><td><span class="color-demo" style="background:#f37b1d"></span>#f37b1d</td></tr>
+    <tr><td><code>bg-yellow</code></td><td><code>background-color: #fbbd08</code></td><td><span class="color-demo" style="background:#fbbd08"></span>#fbbd08</td></tr>
+    <tr><td><code>bg-olive</code></td><td><code>background-color: #8dc63f</code></td><td><span class="color-demo" style="background:#8dc63f"></span>#8dc63f</td></tr>
+    <tr><td><code>bg-green</code></td><td><code>background-color: #39b54a</code></td><td><span class="color-demo" style="background:#39b54a"></span>#39b54a</td></tr>
+    <tr><td><code>bg-cyan</code></td><td><code>background-color: #1cbbb4</code></td><td><span class="color-demo" style="background:#1cbbb4"></span>#1cbbb4</td></tr>
+    <tr><td><code>bg-blue</code></td><td><code>background-color: #0081ff</code></td><td><span class="color-demo" style="background:#0081ff"></span>#0081ff</td></tr>
+    <tr><td><code>bg-purple</code></td><td><code>background-color: #6739b6</code></td><td><span class="color-demo" style="background:#6739b6"></span>#6739b6</td></tr>
+    <tr><td><code>bg-mauve</code></td><td><code>background-color: #9c26b0</code></td><td><span class="color-demo" style="background:#9c26b0"></span>#9c26b0</td></tr>
+    <tr><td><code>bg-pink</code></td><td><code>background-color: #e03997</code></td><td><span class="color-demo" style="background:#e03997"></span>#e03997</td></tr>
+    <tr><td><code>bg-brown</code></td><td><code>background-color: #a5673f</code></td><td><span class="color-demo" style="background:#a5673f"></span>#a5673f</td></tr>
+    <tr><td><code>bg-grey</code></td><td><code>background-color: #8799a3</code></td><td><span class="color-demo" style="background:#8799a3"></span>#8799a3</td></tr>
+    <tr><td><code>bg-gray</code></td><td><code>background-color: #aaaaaa</code></td><td><span class="color-demo" style="background:#aaaaaa"></span>#aaaaaa</td></tr>
+  </table>
+
+  <h3>品牌背景颜色 <code>bg-{品牌色}</code></h3>
+  <p>与品牌文字色一一对应，共 10 个；再加一个透明背景类，共 11 个。</p>
+  <table>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>预览</th></tr>
+    <tr><td><code>bg-primary-light</code></td><td><code>background-color: #2fe25f</code></td><td><span class="color-demo" style="background:#2fe25f"></span>#2fe25f</td></tr>
+    <tr><td><code>bg-primary</code></td><td><code>background-color: #07c160</code></td><td><span class="color-demo" style="background:#07c160"></span>#07c160</td></tr>
+    <tr><td><code>bg-primary-dark</code></td><td><code>background-color: #0eb805</code></td><td><span class="color-demo" style="background:#0eb805"></span>#0eb805</td></tr>
+    <tr><td><code>bg-secondary-light</code></td><td><code>background-color: #8abdff</code></td><td><span class="color-demo" style="background:#8abdff"></span>#8abdff</td></tr>
+    <tr><td><code>bg-secondary</code></td><td><code>background-color: #6d5dfc</code></td><td><span class="color-demo" style="background:#6d5dfc"></span>#6d5dfc</td></tr>
+    <tr><td><code>bg-secondary-dark</code></td><td><code>background-color: #5b0eeb</code></td><td><span class="color-demo" style="background:#5b0eeb"></span>#5b0eeb</td></tr>
+    <tr><td><code>bg-greyLight-1</code></td><td><code>background-color: #E4EBF5</code></td><td><span class="color-demo" style="background:#E4EBF5"></span>#E4EBF5</td></tr>
+    <tr><td><code>bg-greyLight-2</code></td><td><code>background-color: #c8d0e7</code></td><td><span class="color-demo" style="background:#c8d0e7"></span>#c8d0e7</td></tr>
+    <tr><td><code>bg-greyLight-3</code></td><td><code>background-color: #bec8e4</code></td><td><span class="color-demo" style="background:#bec8e4"></span>#bec8e4</td></tr>
+    <tr><td><code>bg-greyDark</code></td><td><code>background-color: #9baacf</code></td><td><span class="color-demo" style="background:#9baacf"></span>#9baacf</td></tr>
+    <tr><td><code>bg-transparent</code></td><td><code>background-color: transparent</code></td><td>透明背景，用于重置已有背景</td></tr>
+  </table>
+
   <pre><code>&lt;text class="text-red"&gt;红色文字&lt;/text&gt;
-&lt;view class="bg-blue"&gt;蓝色背景&lt;/view&gt;</code></pre>
+&lt;view class="bg-blue text-white pa-20"&gt;蓝底白字&lt;/view&gt;</code></pre>
 </div>
 
-<!-- 9. Flex 布局 -->
-<div class="section" id="flex">
-  <h2><span class="badge">9</span> Flex 布局</h2>
-  <h3>基础 Flex</h3>
+<!-- 9. 布局 -->
+<div class="section" id="layout">
+  <h2><span class="badge">9</span> 布局</h2>
+  <p>本节收录与布局直接相关的基础类：<strong>盒模型、显示模式、行内垂直对齐</strong>。它们原本归在杂类，现按用途移入本节。Flex 容器与子项相关的类统一放在第 10 节。</p>
+
+  <h3>盒模型（box-sizing）</h3>
   <table>
-    <tr><th>类名</th><th>效果</th></tr>
-    <tr><td><code>flex</code></td><td>开启 flex 布局</td></tr>
-    <tr><td><code>flex-row</code></td><td>横向排列</td></tr>
-    <tr><td><code>flex-col</code></td><td>纵向排列</td></tr>
-    <tr><td><code>flex-wrap</code></td><td>自动换行</td></tr>
-    <tr><td><code>flex-nowrap</code></td><td>不换行</td></tr>
-    <tr><td><code>flex-shrink</code></td><td>不被压缩</td></tr>
-    <tr><td><code>flex-{0~12}</code></td><td>flex 占比</td></tr>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>说明</th></tr>
+    <tr><td><code>box-border</code></td><td><code>box-sizing: border-box</code></td><td>宽度包含内边距和边框，设置 <code>w-*</code> 时更符合直觉。</td></tr>
+    <tr><td><code>box-content</code></td><td><code>box-sizing: content-box</code></td><td>宽度只包含内容区，内边距和边框额外加在宽度之外（浏览器默认值）。</td></tr>
   </table>
-  <h3>快捷排版</h3>
+  <div class="warn"><strong>内边距类自带 <code>box-sizing: border-box</code>：</strong>第 15 节的每一个 <code>p*</code> 类内部都写入了 <code>box-sizing: border-box</code>，因此只要元素上用了任意一个内边距类，就自动变成 border-box 盒模型。<strong>由于第 15 节在 CSS 文件中位于本节之后，<code>box-content</code> 会被它覆盖</strong>；确实需要 content-box 时，请改用内联样式 <code>style="box-sizing:content-box"</code> 或加 <code>!important</code>。第 14 节的外边距类<strong>不写</strong> <code>box-sizing</code>（margin 不影响盒模型尺寸计算）。</div>
+
+  <h3>显示模式（display）</h3>
   <table>
-    <tr><th>类名</th><th>效果</th></tr>
-    <tr><td><code>flex-start</code></td><td>居中左对齐</td></tr>
-    <tr><td><code>flex-end</code></td><td>居中右对齐</td></tr>
-    <tr><td><code>flex-center</code></td><td>完全居中</td></tr>
-    <tr><td><code>flex-between</code></td><td>两端对齐，垂直居中</td></tr>
-    <tr><td><code>flex-around</code></td><td>均分空间，垂直居中</td></tr>
-    <tr><td><code>flex-reverse</code></td><td>反转排列</td></tr>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>说明</th></tr>
+    <tr><td><code>d-inline-block</code></td><td><code>display: inline-block</code></td><td>行内块元素：不与前后内容换行，但可设置宽高。</td></tr>
+    <tr><td><code>d-block</code></td><td><code>display: block</code></td><td>块级元素：独占一行，可设置宽高。</td></tr>
+    <tr><td><code>d-inline</code></td><td><code>display: inline</code></td><td>行内元素：与前后内容同行，设置宽高无效。</td></tr>
+    <tr><td><code>d-none</code></td><td><code>display: none</code></td><td>完全隐藏元素，不占据布局空间（与 <code>opacity-0</code> 不同，后者仍占位）。</td></tr>
   </table>
-  <h3>Flex-row 精细排版</h3>
-  <p>需配合 <code>flex flex-row</code> 使用。格式：<code>flex-row-{纵向}-{横向}</code></p>
+
+  <h3>行内垂直对齐（vertical-align）</h3>
+  <p>作用于行内元素或表格单元格；Flex 容器内的对齐请使用第 10 节的 <code>flex-{justify}-{align}</code> 组合类（如 <code>flex-between-center</code>）。</p>
   <table>
-    <tr><th>纵向 \ 横向</th><th>start (左)</th><th>center (中)</th><th>end (右)</th><th>between</th></tr>
-    <tr><td><strong>top</strong></td><td><code>flex-row-top-start</code></td><td><code>flex-row-top-center</code></td><td><code>flex-row-top-end</code></td><td></td></tr>
-    <tr><td><strong>center</strong></td><td><code>flex-row-center-start</code></td><td><code>flex-row-center-center</code></td><td><code>flex-row-center-end</code></td><td><code>flex-row-center-between</code></td></tr>
-    <tr><td><strong>bottom</strong></td><td><code>flex-row-bottom-start</code></td><td><code>flex-row-bottom-center</code></td><td><code>flex-row-bottom-end</code></td><td></td></tr>
-  </table>
-  <pre><code>&lt;view class="flex flex-row flex-row-center-between"&gt;...&lt;/view&gt;</code></pre>
-  <h3>Flex-col 精细排版</h3>
-  <p>需配合 <code>flex flex-col</code> 使用。格式：<code>flex-col-{横向}-{纵向}</code></p>
-  <pre><code>&lt;view class="flex flex-col flex-col-center-center"&gt;...&lt;/view&gt;</code></pre>
-  <h3>基线对齐</h3>
-  <table>
-    <tr><th>类名</th><th>效果</th></tr>
-    <tr><td><code>flex-row-baseline-start</code></td><td>基线 + 起始对齐</td></tr>
-    <tr><td><code>flex-row-baseline-center</code></td><td>基线 + 居中对齐</td></tr>
-    <tr><td><code>flex-row-baseline-end</code></td><td>基线 + 末尾对齐</td></tr>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>说明</th></tr>
+    <tr><td><code>vertical-align-top</code></td><td><code>vertical-align: top</code></td><td>顶部对齐。</td></tr>
+    <tr><td><code>vertical-align-middle</code></td><td><code>vertical-align: middle</code></td><td>垂直居中对齐。</td></tr>
+    <tr><td><code>vertical-align-bottom</code></td><td><code>vertical-align: bottom</code></td><td>底部对齐。</td></tr>
   </table>
 </div>
 
-<!-- 10. Grid 网格 -->
+<!-- 10. Flex 对齐 -->
+<div class="section" id="flexalign">
+  <h2><span class="badge">10</span> Flex 对齐</h2>
+  <p>本节按三层组织：<strong>① 容器与子项基础类</strong>（<code>flex</code> / 方向 <code>row</code>·<code>col</code> 及其 <code>-reverse</code> / 换行 <code>wrap</code>·<code>nowrap</code>·<code>wrap-reverse</code> / <code>flex-shrink-0</code> / <code>flex-min-w-0</code> / 弹性占比 / <code>self</code> / <code>order</code>）→ <strong>② 对齐组合</strong>（<code>justify-content</code> × <code>align-items</code> 共 25 个）→ <strong>③ 纵向撑满</strong>（<code>flex-full</code>）。</p>
+
+  <h3>容器与项目基础类</h3>
+  <table>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>详细说明</th></tr>
+    <tr><td><code>flex</code></td><td><code>display: flex</code></td><td>开启 Flex 布局，默认主轴为横向 row</td></tr>
+    <tr><td><code>flex-none</code></td><td><code>flex: none</code>（即 <code>0 0 auto</code>）</td><td>项目不放大、不收缩，按自身内容尺寸显示</td></tr>
+    <tr><td><code>flex-row</code></td><td><code>display: flex; flex-direction: row</code></td><td>开启 Flex 并显式指定横向主轴</td></tr>
+    <tr><td><code>flex-row-reverse</code></td><td><code>display: flex; flex-direction: row-reverse</code></td><td>开启 Flex，主轴横向反向：子项从右往左排列，视觉顺序与 DOM 相反</td></tr>
+    <tr><td><code>flex-col</code></td><td><code>display: flex; flex-direction: column</code></td><td>开启 Flex 并显式指定纵向主轴</td></tr>
+    <tr><td><code>flex-col-reverse</code></td><td><code>display: flex; flex-direction: column-reverse</code></td><td>开启 Flex，主轴纵向反向：子项从下往上排列</td></tr>
+    <tr><td><code>flex-wrap</code></td><td><code>flex-wrap: wrap</code></td><td>项目超出一行时换行</td></tr>
+    <tr><td><code>flex-wrap-reverse</code></td><td><code>flex-wrap: wrap-reverse</code></td><td>换行，且换行方向反转：第一行落到下方（横向主轴时）或最右侧（纵向主轴时）</td></tr>
+    <tr><td><code>flex-nowrap</code></td><td><code>flex-wrap: nowrap</code></td><td>项目不换行（Flex 默认值），常与横向滚动配合</td></tr>
+    <tr><td><code>flex-shrink-0</code></td><td><code>flex-shrink: 0</code></td><td>禁止项目被压缩，固定住自身宽度</td></tr>
+    <tr><td><code>flex-min-w-0</code></td><td><code>min-width: 0</code></td><td>解除 Flex 子项默认的最小宽度限制，使内部 <code>text-overflow</code> / <code>text-overflow-1~5</code> 的省略号能正常生效</td></tr>
+  </table>
+  <div class="warn"><strong>只有 <code>flex</code> / <code>flex-row</code> / <code>flex-row-reverse</code> / <code>flex-col</code> / <code>flex-col-reverse</code> 带 <code>display: flex</code>。</strong><code>flex-wrap</code>、<code>flex-wrap-reverse</code>、<code>flex-nowrap</code>、<code>flex-shrink-0</code>、<code>flex-min-w-0</code>、<code>flex-{0~12}</code> 都只是单条属性，必须配合容器类或父级已有的 flex 使用。</div>
+
+  <h3>弹性占比 <code>flex-{0~12}</code></h3>
+  <p>13 个类，设置 <code>flex: N</code>。</p>
+  <table>
+    <tr><th>分组</th><th>类名</th><th>CSS 等价声明</th></tr>
+    <tr><td>不参与分配</td><td><code>flex-0</code></td><td><code>flex: 0</code></td></tr>
+    <tr><td>1 ~ 6 份</td><td><div class="code-list"><code>flex-1</code><code>flex-2</code><code>flex-3</code><code>flex-4</code><code>flex-5</code><code>flex-6</code></div></td><td><code>flex: N</code></td></tr>
+    <tr><td>7 ~ 12 份</td><td><div class="code-list"><code>flex-7</code><code>flex-8</code><code>flex-9</code><code>flex-10</code><code>flex-11</code><code>flex-12</code></div></td><td><code>flex: N</code></td></tr>
+  </table>
+
+  <h3>Flex 子项类（加在子元素上）</h3>
+  <p>下面两类是真正<strong>作用于子项</strong>的工具类，必须写在子元素的 class 上，写在容器上无效。本节后面的对齐组合类操作的是容器的 <code>justify-content</code> / <code>align-items</code>，对容器内所有子项一起生效，无法单独调整某一个子项。</p>
+  <table>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>说明</th></tr>
+    <tr><td><code>self-auto</code></td><td><code>align-self: auto</code></td><td>跟随父容器的 <code>align-items</code>（默认行为）</td></tr>
+    <tr><td><code>self-start</code></td><td><code>align-self: flex-start</code></td><td>交叉轴起点，无视父容器设置</td></tr>
+    <tr><td><code>self-center</code></td><td><code>align-self: center</code></td><td>交叉轴居中，最常用</td></tr>
+    <tr><td><code>self-end</code></td><td><code>align-self: flex-end</code></td><td>交叉轴末尾</td></tr>
+    <tr><td><code>self-stretch</code></td><td><code>align-self: stretch</code></td><td>未设固定尺寸时，在交叉轴方向拉满</td></tr>
+    <tr><td><code>self-baseline</code></td><td><code>align-self: baseline</code></td><td>按文字基线对齐</td></tr>
+    <tr><td><code>order-first</code></td><td><code>order: -1</code></td><td>排到兄弟节点最前（不改动 DOM）</td></tr>
+    <tr><td><code>order-last</code></td><td><code>order: 999</code></td><td>排到兄弟节点最后</td></tr>
+  </table>
+  <div class="tip"><strong>典型场景：</strong>父项用 <code>flex flex-row flex-start-start</code>（即 <code>align-items: flex-start</code>），其中某个子项需要单独垂直居中，就给<strong>这个子项</strong>加 <code>self-center</code>，父项其余子项不受影响。</div>
+
+  <h3>对齐组合命名格式 <code>flex-{justify}-{align}</code></h3>
+  <p>共 <strong>25 个类</strong>，由 <code>justify-content</code> 的 5 个取值与 <code>align-items</code> 的 5 个取值<strong>两两组合</strong>（5 × 5）构成。<strong>第一个词永远是 <code>justify-content</code>（主轴），第二个词永远是 <code>align-items</code>（交叉轴）</strong>，与 CSS 属性的书写顺序一致。</p>
+  <table>
+    <tr><th>CSS 取值</th><th>写在第一个词（justify-content）</th><th>写在第二个词（align-items）</th></tr>
+    <tr><td><code>flex-start</code></td><td><code>start</code></td><td><code>start</code></td></tr>
+    <tr><td><code>center</code></td><td><code>center</code></td><td><code>center</code></td></tr>
+    <tr><td><code>flex-end</code></td><td><code>end</code></td><td><code>end</code></td></tr>
+    <tr><td><code>space-between</code></td><td><code>between</code></td><td>—</td></tr>
+    <tr><td><code>space-around</code></td><td><code>around</code></td><td>—</td></tr>
+    <tr><td><code>baseline</code></td><td>—</td><td><code>baseline</code></td></tr>
+    <tr><td><code>stretch</code></td><td>—</td><td><code>stretch</code></td></tr>
+  </table>
+  <div class="warn"><strong>第一个词管主轴，与方向无关：</strong>在 <code>flex-row</code> 容器里，第一个词管左右、第二个词管上下；在 <code>flex-col</code> 容器里反过来，第一个词管上下、第二个词管左右。同一个 <code>flex-between-center</code>，row 容器中是「横向两端对齐 + 纵向居中」，col 容器中则是「纵向两端分布 + 横向居中」。</div>
+
+  <h3>25 个组合速查</h3>
+  <table>
+    <tr><th>justify ↓ &nbsp; align →</th><th>start</th><th>center</th><th>end</th><th>baseline</th><th>stretch</th></tr>
+    <tr><td><strong>start</strong><br><code>flex-start</code></td><td><code>flex-start-start</code></td><td><code>flex-start-center</code></td><td><code>flex-start-end</code></td><td><code>flex-start-baseline</code></td><td><code>flex-start-stretch</code></td></tr>
+    <tr><td><strong>center</strong><br><code>center</code></td><td><code>flex-center-start</code></td><td><code>flex-center-center</code></td><td><code>flex-center-end</code></td><td><code>flex-center-baseline</code></td><td><code>flex-center-stretch</code></td></tr>
+    <tr><td><strong>end</strong><br><code>flex-end</code></td><td><code>flex-end-start</code></td><td><code>flex-end-center</code></td><td><code>flex-end-end</code></td><td><code>flex-end-baseline</code></td><td><code>flex-end-stretch</code></td></tr>
+    <tr><td><strong>between</strong><br><code>space-between</code></td><td><code>flex-between-start</code></td><td><code>flex-between-center</code></td><td><code>flex-between-end</code></td><td><code>flex-between-baseline</code></td><td><code>flex-between-stretch</code></td></tr>
+    <tr><td><strong>around</strong><br><code>space-around</code></td><td><code>flex-around-start</code></td><td><code>flex-around-center</code></td><td><code>flex-around-end</code></td><td><code>flex-around-baseline</code></td><td><code>flex-around-stretch</code></td></tr>
+  </table>
+  <div class="tip"><strong>stretch 的注意点：</strong><code>align-items: stretch</code> 只有在子项没有设置固定尺寸时才生效。子项已写死 <code>w-200</code> 或 <code>h-100</code> 时，<code>*</code>-stretch 与 <code>*</code>-start 表现完全一样。另外 <code>baseline</code> 在 <code>flex-col</code> 容器中作用于横向基线，实际很少有意义。</div>
+
+  <h3>纵向撑满 <code>flex-full</code></h3>
+  <table>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>说明</th></tr>
+    <tr><td><code>flex-full</code></td><td><code>align-items: stretch</code>，另有 <code>.flex-full &gt; * { width: 100% }</code></td><td>直接子元素横向拉伸且宽度 100%，适合「纵向排列、每行撑满」的列表。</td></tr>
+  </table>
+
+  <pre><code>&lt;!-- 纵向容器：上下两端分布，横向居中 --&gt;
+&lt;view class="flex flex-col flex-between-center" style="height:600rpx"&gt;
+  &lt;view&gt;顶部&lt;/view&gt;
+  &lt;view&gt;底部&lt;/view&gt;
+&lt;/view&gt;
+
+&lt;!-- 横向容器：左右两端对齐，纵向顶部对齐 --&gt;
+&lt;view class="flex flex-row flex-between-start"&gt;
+  &lt;text&gt;左&lt;/text&gt;
+  &lt;text&gt;右&lt;/text&gt;
+&lt;/view&gt;</code></pre>
+
+  <div class="warn"><strong>对齐组合类必须配合容器类：</strong><code>flex-{justify}-{align}</code> 只设置 <code>justify-content</code> 与 <code>align-items</code>，<strong>不含 <code>display: flex</code>，也不含 <code>flex-direction</code></strong>。单独写在元素上不会产生 Flex 布局，必须再叠加 <code>flex-row</code>（横向）或 <code>flex-col</code>（纵向）；只想要居中对齐而不关心方向时，叠加 <code>flex</code> 即可。</div>
+</div>
+
+<!-- 11. Grid -->
 <div class="section" id="grid">
-  <h2><span class="badge">10</span> Grid 网格</h2>
+  <h2><span class="badge">11</span> Grid 网格排版</h2>
+  <div class="warn"><strong>名称说明：</strong>这里叫「Grid」，但 <code>grid</code> 类的实际声明是 <code>display: flex; flex-wrap: wrap</code>，<strong>不是 CSS Grid 布局</strong>。它通过给每个直接子元素设置百分比宽度实现多列，超出一行自动换行。</div>
   <table>
-    <tr><th>类名</th><th>效果</th></tr>
-    <tr><td><code>grid</code></td><td>开启网格布局</td></tr>
-    <tr><td><code>grid-col-{1~12}</code></td><td>一行几列</td></tr>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>说明</th></tr>
+    <tr><td><code>grid</code></td><td><code>display:flex; flex-wrap:wrap</code></td><td>开启「flex 版网格」容器</td></tr>
+  </table>
+  <p>列数类 <code>grid-col-N</code> 作用于容器，通过 <code>.grid-col-N &gt; *</code> 给所有直接子元素设定宽度。12 个类的精确宽度如下（原文档只写「一行几列」，未给出百分比）：</p>
+  <table>
+    <tr><th>类名</th><th>子元素宽度</th><th>类名</th><th>子元素宽度</th></tr>
+    <tr><td><code>grid-col-1</code></td><td><code>100.0000%</code></td><td><code>grid-col-7</code></td><td><code>14.2857%</code></td></tr>
+    <tr><td><code>grid-col-2</code></td><td><code>50.0000%</code></td><td><code>grid-col-8</code></td><td><code>12.5000%</code></td></tr>
+    <tr><td><code>grid-col-3</code></td><td><code>33.3333%</code></td><td><code>grid-col-9</code></td><td><code>11.1111%</code></td></tr>
+    <tr><td><code>grid-col-4</code></td><td><code>25.0000%</code></td><td><code>grid-col-10</code></td><td><code>10.0000%</code></td></tr>
+    <tr><td><code>grid-col-5</code></td><td><code>20.0000%</code></td><td><code>grid-col-11</code></td><td><code>9.0909%</code></td></tr>
+    <tr><td><code>grid-col-6</code></td><td><code>16.6667%</code></td><td><code>grid-col-12</code></td><td><code>8.3333%</code></td></tr>
   </table>
   <pre><code>&lt;view class="grid grid-col-3"&gt;
   &lt;view&gt;项目1&lt;/view&gt;
@@ -390,117 +608,219 @@ pre code{background:none;padding:0;color:var(--text);font-size:13px;}
 &lt;/view&gt;</code></pre>
 </div>
 
-<!-- 11. Gap 间隙 -->
+<!-- 12. Gap -->
 <div class="section" id="gap">
-  <h2><span class="badge">11</span> Gap 间隙</h2>
-  <div class="tip"><strong>规则：</strong>实际值 = x × 2rpx。与 margin/padding 不同，gap 只在元素之间产生间距。</div>
+  <h2><span class="badge">12</span> Gap 间隙</h2>
+  <div class="warn"><strong>单位已修正：</strong>px 版本中间隙是 <code>x × 1px</code>（CSS 源码注释也写作 <code>x*1px</code>），不是旧版文档所说的 <code>x × 2rpx</code>。例如 <code>gap-10</code> 就是 10px，不是 20px。</div>
+  <p><code>gap</code> 只在<strong>相邻子项之间</strong>产生间距，不会在容器边缘产生额外间距，这是它与 <code>ma-*</code> / <code>pa-*</code> 的本质区别。三组类各 25 个，数值都是 1~25 px。</p>
   <table>
-    <tr><th>类名</th><th>效果</th></tr>
-    <tr><td><code>gap-{1~25}</code></td><td>四周间隙 (x×2 rpx)</td></tr>
-    <tr><td><code>gap-row-{1~25}</code></td><td>行间隙</td></tr>
-    <tr><td><code>gap-col-{1~25}</code></td><td>列间隙</td></tr>
+    <tr><th>分组</th><th>CSS 属性</th><th>完整类名</th><th>取值</th></tr>
+    <tr><td>行列同时</td><td><code>gap</code></td><td><div class="code-list"><code>gap-1</code><code>gap-2</code><code>gap-3</code><code>gap-4</code><code>gap-5</code><code>gap-6</code><code>gap-7</code><code>gap-8</code><code>gap-9</code><code>gap-10</code><code>gap-11</code><code>gap-12</code><code>gap-13</code><code>gap-14</code><code>gap-15</code><code>gap-16</code><code>gap-17</code><code>gap-18</code><code>gap-19</code><code>gap-20</code><code>gap-21</code><code>gap-22</code><code>gap-23</code><code>gap-24</code><code>gap-25</code></div></td><td><code>Npx</code></td></tr>
+    <tr><td>仅行</td><td><code>row-gap</code></td><td><div class="code-list"><code>gap-row-1</code><code>gap-row-2</code><code>gap-row-3</code><code>gap-row-4</code><code>gap-row-5</code><code>gap-row-6</code><code>gap-row-7</code><code>gap-row-8</code><code>gap-row-9</code><code>gap-row-10</code><code>gap-row-11</code><code>gap-row-12</code><code>gap-row-13</code><code>gap-row-14</code><code>gap-row-15</code><code>gap-row-16</code><code>gap-row-17</code><code>gap-row-18</code><code>gap-row-19</code><code>gap-row-20</code><code>gap-row-21</code><code>gap-row-22</code><code>gap-row-23</code><code>gap-row-24</code><code>gap-row-25</code></div></td><td><code>Npx</code></td></tr>
+    <tr><td>仅列</td><td><code>column-gap</code></td><td><div class="code-list"><code>gap-col-1</code><code>gap-col-2</code><code>gap-col-3</code><code>gap-col-4</code><code>gap-col-5</code><code>gap-col-6</code><code>gap-col-7</code><code>gap-col-8</code><code>gap-col-9</code><code>gap-col-10</code><code>gap-col-11</code><code>gap-col-12</code><code>gap-col-13</code><code>gap-col-14</code><code>gap-col-15</code><code>gap-col-16</code><code>gap-col-17</code><code>gap-col-18</code><code>gap-col-19</code><code>gap-col-20</code><code>gap-col-21</code><code>gap-col-22</code><code>gap-col-23</code><code>gap-col-24</code><code>gap-col-25</code></div></td><td><code>Npx</code></td></tr>
   </table>
   <pre><code>&lt;view class="flex flex-row gap-10"&gt;
   &lt;view&gt;项1&lt;/view&gt;
-  &lt;view&gt;项2&lt;/view&gt;
+  &lt;view&gt;项2&lt;/view&gt; &lt;!-- 两项之间 10px --&gt;
 &lt;/view&gt;</code></pre>
 </div>
 
-<!-- 12. 位置控制 -->
+<!-- 13. 定位类 -->
 <div class="section" id="position">
-  <h2><span class="badge">12</span> 位置控制</h2>
-  <p>用于 <code>absolute</code> / <code>fixed</code> / <code>relative</code> 元素的精确定位。</p>
-  <p><strong>方向：</strong><code>t</code>=顶, <code>l</code>=左, <code>r</code>=右, <code>b</code>=底</p>
+  <h2><span class="badge">13</span> 定位类</h2>
+  <p>本节集中说明与定位有关的类：先列出 <code>absolute</code> / <code>fixed</code> / <code>relative</code> / <code>sticky</code> 四个<strong>真实存在的独立类</strong>，它们决定元素如何定位；再列出 <code>t-*</code> / <code>l-*</code> / <code>r-*</code> / <code>b-*</code> 偏移类，它们决定偏移多少。二者通常需要配合使用。</p>
+
+  <h3>定位方式类</h3>
   <table>
-    <tr><th>规则</th><th>说明</th><th>示例</th></tr>
-    <tr><td><code>{方向}-{0~50}</code></td><td>正值 (rpx)</td><td><code>t-20</code> → top: 20rpx</td></tr>
-    <tr><td><code>{方向}-n{1~25}</code></td><td>4的倍数 (rpx)</td><td><code>t-n10</code> → top: 40rpx</td></tr>
-    <tr><td><code>{方向}--{0~50}</code></td><td>负值 (rpx)</td><td><code>t--20</code> → top: -20rpx</td></tr>
-    <tr><td><code>{方向}--n{1~25}</code></td><td>负的4倍数</td><td><code>t--n10</code> → top: -40rpx</td></tr>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>详细说明</th></tr>
+    <tr><td><code>relative</code></td><td><code>position: relative</code></td><td>相对定位。不脱离文档流，同时让元素成为后续 <code>t-*</code> / <code>l-*</code> / <code>r-*</code> / <code>b-*</code> 的定位参照物。例：<code>relative t--5</code> 让元素相对自身原位上移 5px。</td></tr>
+    <tr><td><code>absolute</code></td><td><code>position: absolute</code></td><td>绝对定位。脱离文档流，需配合方向类指定偏移；若祖先都没有定位类，则相对初始包含块定位。例：<code>absolute t-10 l-20</code>。</td></tr>
+    <tr><td><code>fixed</code></td><td><code>position: fixed</code></td><td>固定定位。脱离文档流，相对视口定位，常用于悬浮按钮、底部操作栏。例：<code>fixed b-0 fulled</code>。</td></tr>
+    <tr><td><code>sticky</code></td><td><code>position: sticky; top: 0</code></td><td>粘性定位。类里自带 <code>top: 0</code>，滚动到顶部即吸附，因此<strong>不需要再叠加 <code>t-0</code></strong>；它不脱离文档流，常用于吸顶标题、吸底工具条。</td></tr>
   </table>
-  <pre><code>&lt;view class="absolute t-24 l-n10"&gt;定位元素&lt;/view&gt;
-&lt;view class="absolute t--20"&gt;上浮元素&lt;/view&gt;</code></pre>
+
+  <h3>偏移方向</h3>
+  <table>
+    <tr><th>方向前缀</th><th>CSS 属性</th><th>含义</th><th>示例</th></tr>
+    <tr><td><code>t</code></td><td><code>top</code></td><td>距参照物顶部</td><td><code>t-20</code> → <code>top: 20px</code></td></tr>
+    <tr><td><code>l</code></td><td><code>left</code></td><td>距参照物左侧</td><td><code>l-20</code> → <code>left: 20px</code></td></tr>
+    <tr><td><code>r</code></td><td><code>right</code></td><td>距参照物右侧</td><td><code>r-20</code> → <code>right: 20px</code></td></tr>
+    <tr><td><code>b</code></td><td><code>bottom</code></td><td>距参照物底部</td><td><code>b-20</code> → <code>bottom: 20px</code></td></tr>
+  </table>
+
+  <h3>四种数值模式</h3>
+  <p>每个方向都有 4 组类，下表给出精确范围（注意负数范围从 1 开始，没有 <code>--0</code>）：</p>
+  <table>
+    <tr><th>模式</th><th>取值范围</th><th>实际值</th><th>以 t 为例的完整类名</th><th>示例</th></tr>
+    <tr><td><code>{方向}-{数字}</code></td><td>0 ~ 50</td><td><code>0px ~ 50px</code>，每 1px 一个</td><td><code>t-0</code> … <code>t-50</code>（51 个）</td><td><code>t-20</code> → <code>top: 20px</code></td></tr>
+    <tr><td><code>{方向}-n{数字}</code></td><td>n = 1 ~ 25</td><td><code>数字 × 4px</code>，即 <code>4px ~ 100px</code></td><td><code>t-n1</code> … <code>t-n25</code>（25 个）</td><td><code>t-n10</code> → <code>top: 40px</code></td></tr>
+    <tr><td><code>{方向}--{数字}</code></td><td>1 ~ 50</td><td><code>-1px ~ -50px</code>，每 1px 一个</td><td><code>t--1</code> … <code>t--50</code>（50 个）</td><td><code>t--20</code> → <code>top: -20px</code></td></tr>
+    <tr><td><code>{方向}--n{数字}</code></td><td>n = 1 ~ 25</td><td><code>-(数字 × 4)px</code>，即 <code>-4px ~ -100px</code></td><td><code>t--n1</code> … <code>t--n25</code>（25 个）</td><td><code>t--n10</code> → <code>top: -40px</code></td></tr>
+  </table>
+  <div class="warn"><strong>最容易踩的坑：</strong><code>-n{数字}</code> 里的 <code>n</code> 表示 <strong>4 的倍数且为正值</strong>，不是 negative。例如 <code>t-n10</code> 是 <code>top: 40px</code>（向下），<code>t--n10</code> 才是 <code>top: -40px</code>（向上）。双横线 <code>--</code> 才代表负号。</div>
+
+  <h3>n 与 px 的换算表（4 个方向通用）</h3>
+  <table>
+    <tr><th>n</th><th>px</th><th>n</th><th>px</th><th>n</th><th>px</th><th>n</th><th>px</th><th>n</th><th>px</th></tr>
+    <tr><td>1</td><td>4</td><td>2</td><td>8</td><td>3</td><td>12</td><td>4</td><td>16</td><td>5</td><td>20</td></tr>
+    <tr><td>6</td><td>24</td><td>7</td><td>28</td><td>8</td><td>32</td><td>9</td><td>36</td><td>10</td><td>40</td></tr>
+    <tr><td>11</td><td>44</td><td>12</td><td>48</td><td>13</td><td>52</td><td>14</td><td>56</td><td>15</td><td>60</td></tr>
+    <tr><td>16</td><td>64</td><td>17</td><td>68</td><td>18</td><td>72</td><td>19</td><td>76</td><td>20</td><td>80</td></tr>
+    <tr><td>21</td><td>84</td><td>22</td><td>88</td><td>23</td><td>92</td><td>24</td><td>96</td><td>25</td><td>100</td></tr>
+  </table>
+  <pre><code>&lt;view class="absolute t-24 l-n10"&gt;距顶 24px、距左 40px&lt;/view&gt;
+&lt;view class="absolute t--20"&gt;相对参照物上移 20px&lt;/view&gt;
+&lt;view class="fixed b-0 fulled bg-white"&gt;吸底栏&lt;/view&gt;</code></pre>
 </div>
 
-<!-- 13. 外边距 -->
+<!-- 14. 外边距 -->
 <div class="section" id="margin">
-  <h2><span class="badge">13</span> 外边距 (Margin)</h2>
-  <p><strong>方向：</strong><code>a</code>=四周, <code>l</code>=左, <code>r</code>=右, <code>t</code>=顶, <code>b</code>=底, <code>x</code>=水平左右, <code>y</code>=垂直上下</p>
+  <h2><span class="badge">14</span> 外边距 (Margin)</h2>
+  <p>共 7 组方向前缀。数值为 <strong>2~100 的偶数档位，步进 2px</strong>（2、4、6 … 100），不提供 <code>0</code>；<strong>没有负值类，也没有 4 倍档（n 系列）</strong>。每方向 50 个类，7 方向共 350 个，外加 7 个 <code>auto</code>。</p>
+  <div class="tip"><strong>为什么去掉负值与 n 系列：</strong>旧版的 <code>n1~n12</code>（4~48px）与数字档完全重复——<code>ma-n10</code> 与 <code>ma-40</code> 都是 40px，但前者类名更长；负外边距容易造成不可预期的溢出与遮挡，项目里也从未使用。需要负向偏移时，改用第 13 节的定位类（<code>t--20</code> 等仍然保留）或 <code>transform: translate</code>。</div>
+  <div class="warn"><strong>不含 box-sizing：</strong>与内边距不同，本节所有 margin 类<strong>都不再写入 <code>box-sizing</code></strong>，因为 <code>margin</code> 本身不参与盒模型尺寸计算，加了也是空操作。需要统一盒模型时用第 9 节的 <code>box-border</code>。</div>
   <table>
-    <tr><th>规则</th><th>说明</th><th>示例</th></tr>
-    <tr><td><code>m{方向}-{0~50}</code></td><td>正值 (rpx)</td><td><code>ma-10</code> → 四周 10rpx</td></tr>
-    <tr><td><code>m{方向}-n{1~25}</code></td><td>4的倍数</td><td><code>ma-n10</code> → 四周 40rpx</td></tr>
-    <tr><td><code>m{方向}--{0~50}</code></td><td>负值</td><td><code>mt--20</code> → 顶部 -20rpx</td></tr>
-    <tr><td><code>m{方向}--n{1~25}</code></td><td>负的4倍数</td><td><code>mt--n10</code> → 顶部 -40rpx</td></tr>
+    <tr><th>方向前缀</th><th>对应的 CSS 属性</th><th>示例</th></tr>
+    <tr><td><code>a</code>（all）</td><td><code>margin</code>（四边）</td><td><code>ma-10</code> → 四边 10px</td></tr>
+    <tr><td><code>l</code></td><td><code>margin-left</code></td><td><code>ml-10</code> → 左 10px</td></tr>
+    <tr><td><code>r</code></td><td><code>margin-right</code></td><td><code>mr-10</code> → 右 10px</td></tr>
+    <tr><td><code>t</code></td><td><code>margin-top</code></td><td><code>mt-10</code> → 上 10px</td></tr>
+    <tr><td><code>b</code></td><td><code>margin-bottom</code></td><td><code>mb-10</code> → 下 10px</td></tr>
+    <tr><td><code>x</code></td><td><code>margin-left</code> + <code>margin-right</code></td><td><code>mx-10</code> → 左右各 10px</td></tr>
+    <tr><td><code>y</code></td><td><code>margin-top</code> + <code>margin-bottom</code></td><td><code>my-10</code> → 上下各 10px</td></tr>
   </table>
-  <pre><code>&lt;view class="ma-20"&gt;四周 20rpx 外边距&lt;/view&gt;
-&lt;view class="mx-n10"&gt;左右 40rpx 外边距&lt;/view&gt;
-&lt;view class="mt--10"&gt;向上负外边距&lt;/view&gt;</code></pre>
+
+  <h3>数值模式（7 个方向均适用）</h3>
+  <table>
+    <tr><th>模式</th><th>取值范围</th><th>实际值</th><th>以 a 为例的完整类名</th><th>示例</th></tr>
+    <tr><td><code>m{方向}-{数字}</code></td><td>2 ~ 100，步进 2</td><td><code>2px ~ 100px</code></td><td><code>ma-2</code>、<code>ma-4</code> … <code>ma-100</code>（50 个）</td><td><code>ma-10</code> → <code>margin: 10px</code></td></tr>
+  </table>
+  <div class="warn"><strong>这些类都不存在：</strong><code>ma-0</code>（不提供 0）、<code>ma-1</code> / <code>ma-3</code> 等全部奇数档、<code>ma-n10</code>（n 系列已删）、<code>mt--20</code>（负值已删）。<strong>写错的类名不会报错，只是完全不生效</strong>——例如习惯性写 <code>mt-15</code> 就没有任何效果，应改用 <code>mt-14</code> 或 <code>mt-16</code>。</div>
+  <pre><code>&lt;view class="ma-20"&gt;四周 20px 外边距&lt;/view&gt;
+&lt;view class="mx-40"&gt;左右各 40px 外边距&lt;/view&gt;
+&lt;view class="mt-10"&gt;顶部 10px 外边距&lt;/view&gt;</code></pre>
+  <div class="tip"><strong>补充：</strong>上下方向的相邻外边距在普通文档流中可能发生合并（margin collapse），Flex 容器中则不合并。若要精确控制间距，优先用第 12 节的 <code>gap-*</code>。</div>
+
+  <h3>自动外边距 <code>auto</code></h3>
+  <p>7 个方向前缀各多出一个取值 <code>auto</code> 的类。它的作用是<strong>吃掉该方向上的剩余空间</strong>，所以最常加在 Flex 子项上，把某一个子项单独推向一侧，而不必改动父容器的 <code>justify-content</code> / <code>align-items</code>。</p>
+  <table>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>典型用途</th></tr>
+    <tr><td><code>ma-auto</code></td><td><code>margin: auto</code></td><td>两个方向的剩余空间都平分，交叉轴上等效于居中</td></tr>
+    <tr><td><code>ml-auto</code></td><td><code>margin-left: auto</code></td><td>把子项推到主轴末尾（横向父容器中靠右）</td></tr>
+    <tr><td><code>mr-auto</code></td><td><code>margin-right: auto</code></td><td>把子项推到主轴起点（横向父容器中靠左）</td></tr>
+    <tr><td><code>mt-auto</code></td><td><code>margin-top: auto</code></td><td>纵向父容器中把子项压到底部</td></tr>
+    <tr><td><code>mb-auto</code></td><td><code>margin-bottom: auto</code></td><td>纵向父容器中把子项顶到顶部</td></tr>
+    <tr><td><code>mx-auto</code></td><td><code>margin-left:auto; margin-right:auto</code></td><td>横向父容器中让子项水平居中</td></tr>
+    <tr><td><code>my-auto</code></td><td><code>margin-top:auto; margin-bottom:auto</code></td><td>纵向父容器中让子项垂直居中</td></tr>
+  </table>
+  <div class="warn"><strong>生效前提：</strong>该方向必须真的存在剩余空间。子项已被 <code>flex-1</code> 撑满主轴，或被默认的 <code>align-items: stretch</code> 撑满交叉轴时，对应方向的 <code>auto</code> 不会有任何效果。另外，子项在交叉轴上写了 auto 外边距后，父项的 <code>align-items</code> 和该子项的 <code>self-*</code> 都会被忽略。</div>
 </div>
 
-<!-- 14. 内边距 -->
+<!-- 15. 内边距 -->
 <div class="section" id="padding">
-  <h2><span class="badge">14</span> 内边距 (Padding)</h2>
-  <p><strong>方向：</strong><code>a</code>=四周, <code>l</code>=左, <code>r</code>=右, <code>t</code>=顶, <code>b</code>=底, <code>x</code>=水平左右, <code>y</code>=垂直上下</p>
+  <h2><span class="badge">15</span> 内边距 (Padding)</h2>
+  <p>共 7 组方向前缀，与外边距完全对应。数值同样是 <strong>2~100 的偶数档位，步进 2px</strong>，不提供 <code>0</code>、奇数与负值，也没有 n 系列。每方向 50 个类，7 方向共 350 个。</p>
   <table>
-    <tr><th>规则</th><th>说明</th><th>示例</th></tr>
-    <tr><td><code>p{方向}-{0~50}</code></td><td>正值 (rpx)</td><td><code>pa-20</code> → 四周 20rpx</td></tr>
-    <tr><td><code>p{方向}-n{1~25}</code></td><td>4的倍数</td><td><code>pa-n10</code> → 四周 40rpx</td></tr>
+    <tr><th>方向前缀</th><th>对应的 CSS 属性</th><th>示例</th></tr>
+    <tr><td><code>a</code>（all）</td><td><code>padding</code>（四边）</td><td><code>pa-20</code> → 四边 20px</td></tr>
+    <tr><td><code>l</code></td><td><code>padding-left</code></td><td><code>pl-20</code> → 左 20px</td></tr>
+    <tr><td><code>r</code></td><td><code>padding-right</code></td><td><code>pr-20</code> → 右 20px</td></tr>
+    <tr><td><code>t</code></td><td><code>padding-top</code></td><td><code>pt-20</code> → 上 20px</td></tr>
+    <tr><td><code>b</code></td><td><code>padding-bottom</code></td><td><code>pb-20</code> → 下 20px</td></tr>
+    <tr><td><code>x</code></td><td><code>padding-left</code> + <code>padding-right</code></td><td><code>px-20</code> → 左右各 20px</td></tr>
+    <tr><td><code>y</code></td><td><code>padding-top</code> + <code>padding-bottom</code></td><td><code>py-20</code> → 上下各 20px</td></tr>
   </table>
-  <pre><code>&lt;view class="pa-30"&gt;四周 30rpx 内边距&lt;/view&gt;
-&lt;view class="px-20 py-10"&gt;左右 20rpx，上下 10rpx&lt;/view&gt;</code></pre>
+  <div class="warn"><strong>命名提醒：</strong><code>px-*</code> 是 <em>padding 横向</em>的缩写，和「像素单位 px」没有关系；<code>px-20</code> 表示左右内边距各 20px。</div>
+  <div class="warn"><strong>盒模型：</strong>本节每一条规则除 <code>padding</code> 外，都额外写入了 <code>box-sizing: border-box</code>，即 <code>width</code> 已包含内边距与边框。这意味着 <code>pa-20</code> + <code>w-200</code> 的元素，总宽仍是 200px 而不是 240px。</div>
+
+  <h3>数值模式（7 个方向均适用）</h3>
+  <table>
+    <tr><th>模式</th><th>取值范围</th><th>实际值</th><th>以 a 为例的完整类名</th><th>示例</th></tr>
+    <tr><td><code>p{方向}-{数字}</code></td><td>2 ~ 100，步进 2</td><td><code>2px ~ 100px</code></td><td><code>pa-2</code>、<code>pa-4</code> … <code>pa-100</code>（50 个）</td><td><code>pa-20</code> → <code>padding: 20px</code></td></tr>
+  </table>
+  <div class="warn"><strong>这些类都不存在：</strong><code>pa-0</code>、<code>pa-1</code> / <code>pa-3</code> 等奇数档、<code>pa-n10</code>（n 系列已删），负内边距本来就不符合 CSS 规范。<strong>奇数档失效是最容易踩的坑</strong>，例如 <code>px-15</code> 没有任何效果，应改用 <code>px-14</code> 或 <code>px-16</code>。</div>
+  <pre><code>&lt;view class="pa-30"&gt;四周 30px 内边距&lt;/view&gt;
+&lt;view class="px-20 py-10"&gt;左右 20px，上下 10px&lt;/view&gt;</code></pre>
 </div>
 
-<!-- 15. 宽度类 -->
+<!-- 16. 宽度类 -->
 <div class="section" id="width">
-  <h2><span class="badge">15</span> 宽度类</h2>
+  <h2><span class="badge">16</span> 宽度类</h2>
+  <h3>固定宽度 <code>w-{数字}</code></h3>
+  <p>固定宽度以 10px 为步进，覆盖 <code>0</code> 与 <code>10~800</code> 的全部 10 的倍数，共 81 个类。<code>w-110</code> 现已补齐（旧版文档称其不存在），最大到 <code>w-800</code>（旧版文档写成「10~750 步进 10rpx」，两处都不准确）。</p>
   <table>
-    <tr><th>类名</th><th>效果</th></tr>
-    <tr><td><code>w-{10~750}</code></td><td>固定宽度（步进 10rpx）</td></tr>
-    <tr><td><code>w-full</code></td><td>宽度 100%</td></tr>
-    <tr><td><code>w-half</code></td><td>宽度 50%</td></tr>
-    <tr><td><code>w-third</code></td><td>宽度 33.33%</td></tr>
-    <tr><td><code>w-quarter</code></td><td>宽度 25%</td></tr>
+    <tr><th>区间</th><th>完整类名</th><th>CSS 等价声明</th></tr>
+    <tr><td>零值</td><td><code>w-0</code></td><td><code>width: 0px</code></td></tr>
+    <tr><td>10 ~ 110</td><td><div class="code-list"><code>w-10</code><code>w-20</code><code>w-30</code><code>w-40</code><code>w-50</code><code>w-60</code><code>w-70</code><code>w-80</code><code>w-90</code><code>w-100</code><code>w-110</code></div></td><td><code>width: Npx</code></td></tr>
+    <tr><td>120 ~ 400</td><td><div class="code-list"><code>w-120</code><code>w-130</code><code>w-140</code><code>w-150</code><code>w-160</code><code>w-170</code><code>w-180</code><code>w-190</code><code>w-200</code><code>w-210</code><code>w-220</code><code>w-230</code><code>w-240</code><code>w-250</code><code>w-260</code><code>w-270</code><code>w-280</code><code>w-290</code><code>w-300</code><code>w-310</code><code>w-320</code><code>w-330</code><code>w-340</code><code>w-350</code><code>w-360</code><code>w-370</code><code>w-380</code><code>w-390</code><code>w-400</code></div></td><td><code>width: Npx</code></td></tr>
+    <tr><td>410 ~ 600</td><td><div class="code-list"><code>w-410</code><code>w-420</code><code>w-430</code><code>w-440</code><code>w-450</code><code>w-460</code><code>w-470</code><code>w-480</code><code>w-490</code><code>w-500</code><code>w-510</code><code>w-520</code><code>w-530</code><code>w-540</code><code>w-550</code><code>w-560</code><code>w-570</code><code>w-580</code><code>w-590</code><code>w-600</code></div></td><td><code>width: Npx</code></td></tr>
+    <tr><td>610 ~ 800</td><td><div class="code-list"><code>w-610</code><code>w-620</code><code>w-630</code><code>w-640</code><code>w-650</code><code>w-660</code><code>w-670</code><code>w-680</code><code>w-690</code><code>w-700</code><code>w-710</code><code>w-720</code><code>w-730</code><code>w-740</code><code>w-750</code><code>w-760</code><code>w-770</code><code>w-780</code><code>w-790</code><code>w-800</code></div></td><td><code>width: Npx</code></td></tr>
   </table>
+  <h3>百分比宽度</h3>
+  <table>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>说明</th></tr>
+    <tr><td><code>w-full</code></td><td><code>width: 100%</code></td><td>与 <code>fulled</code> 完全等价，两个类都真实存在</td></tr>
+    <tr><td><code>fulled</code></td><td><code>width: 100%</code></td><td>语义化别名，原本归在杂类，现按用途移入本节</td></tr>
+    <tr><td><code>w-half</code></td><td><code>width: 50%</code></td><td>一半宽度</td></tr>
+    <tr><td><code>w-third</code></td><td><code>width: 33.3333%</code></td><td>三分之一宽度</td></tr>
+    <tr><td><code>w-quarter</code></td><td><code>width: 25%</code></td><td>四分之一宽度</td></tr>
+  </table>
+  <div class="tip">固定宽度类本身不含 <code>box-sizing</code>，但只要有任意一个第 15 节的 <code>p*</code> 内边距类在同一元素上（它们都内置 <code>box-sizing: border-box</code>），宽度就会包含内边距与边框；没有任何内边距类时才是浏览器默认的 content-box，此时可加第 9 节的 <code>box-border</code>。第 14 节的外边距类不含 <code>box-sizing</code>，加再多也不影响盒模型。</div>
 </div>
 
-<!-- 16. 高度类 -->
+<!-- 17. 高度类 -->
 <div class="section" id="height">
-  <h2><span class="badge">16</span> 高度类</h2>
+  <h2><span class="badge">17</span> 高度类</h2>
+  <h3>固定高度 <code>h-{数字}</code>，步进为10（10、20、30……个位数都是0）</h3>
+  <p>与宽度对称：共 81 个类，覆盖 <code>0</code> 与 <code>10~800</code> 的全部 10 的倍数，<code>h-110</code> 现已补齐（旧版文档称其不存在），最大 <code>h-800</code>。</p>
   <table>
-    <tr><th>类名</th><th>效果</th></tr>
-    <tr><td><code>h-{10~750}</code></td><td>固定高度（步进 10rpx）</td></tr>
-    <tr><td><code>h-full</code></td><td>高度 100%</td></tr>
-    <tr><td><code>h-half</code></td><td>高度 50%</td></tr>
-    <tr><td><code>h-screen</code></td><td>高度 100vh（全屏）</td></tr>
+    <tr><th>区间</th><th>完整类名</th><th>CSS 等价声明</th></tr>
+    <tr><td>零值</td><td><code>h-0</code></td><td><code>height: 0px</code></td></tr>
+    <tr><td>10 ~ 110</td><td><div class="code-list"><code>h-10</code><code>h-20</code><code>h-30</code><code>h-40</code><code>h-50</code><code>h-60</code><code>h-70</code><code>h-80</code><code>h-90</code><code>h-100</code><code>h-110</code></div></td><td><code>height: Npx</code></td></tr>
+    <tr><td>120 ~ 400</td><td><div class="code-list"><code>h-120</code><code>h-130</code><code>h-140</code><code>h-150</code><code>h-160</code><code>h-170</code><code>h-180</code><code>h-190</code><code>h-200</code><code>h-210</code><code>h-220</code><code>h-230</code><code>h-240</code><code>h-250</code><code>h-260</code><code>h-270</code><code>h-280</code><code>h-290</code><code>h-300</code><code>h-310</code><code>h-320</code><code>h-330</code><code>h-340</code><code>h-350</code><code>h-360</code><code>h-370</code><code>h-380</code><code>h-390</code><code>h-400</code></div></td><td><code>height: Npx</code></td></tr>
+    <tr><td>410 ~ 600</td><td><div class="code-list"><code>h-410</code><code>h-420</code><code>h-430</code><code>h-440</code><code>h-450</code><code>h-460</code><code>h-470</code><code>h-480</code><code>h-490</code><code>h-500</code><code>h-510</code><code>h-520</code><code>h-530</code><code>h-540</code><code>h-550</code><code>h-560</code><code>h-570</code><code>h-580</code><code>h-590</code><code>h-600</code></div></td><td><code>height: Npx</code></td></tr>
+    <tr><td>610 ~ 800</td><td><div class="code-list"><code>h-610</code><code>h-620</code><code>h-630</code><code>h-640</code><code>h-650</code><code>h-660</code><code>h-670</code><code>h-680</code><code>h-690</code><code>h-700</code><code>h-710</code><code>h-720</code><code>h-730</code><code>h-740</code><code>h-750</code><code>h-760</code><code>h-770</code><code>h-780</code><code>h-790</code><code>h-800</code></div></td><td><code>height: Npx</code></td></tr>
+  </table>
+  <h3>百分比与视口高度</h3>
+  <table>
+    <tr><th>类名</th><th>CSS 等价声明</th><th>说明</th></tr>
+    <tr><td><code>h-full</code></td><td><code>height: 100%</code></td><td>与 <code>fulled-height</code> 完全等价，两个类都真实存在</td></tr>
+    <tr><td><code>fulled-height</code></td><td><code>height: 100%</code></td><td>语义化别名，原本归在杂类，现按用途移入本节；父级需有确定高度</td></tr>
+    <tr><td><code>h-half</code></td><td><code>height: 50%</code></td><td>父级高度的一半</td></tr>
+    <tr><td><code>h-screen</code></td><td><code>height: 100vh</code></td><td>视口高度。在小程序的某些场景中 <code>vh</code> 的表现与 H5 不同，需要实测</td></tr>
   </table>
 </div>
 
 <!-- 常用组合示例 -->
 <div class="section" id="examples">
   <h2><span class="badge">实战</span> 常用组合示例</h2>
+  <p>以下示例全部使用 px 版本，内联样式也使用 px 单位，可直接复制使用。</p>
   <h3>居中卡片</h3>
-  <pre><code>&lt;view class="flex flex-center fulled" style="height:400rpx"&gt;
+  <pre><code>&lt;view class="flex flex-center-center fulled" style="height:400px"&gt;
   &lt;view class="bg-white round-10 shadow-5 pa-30 ma-20"&gt;
     &lt;text class="text-size-lg text-weight-b text-align-center"&gt;标题&lt;/text&gt;
     &lt;text class="text-size-n text-gray mt-10"&gt;描述内容&lt;/text&gt;
   &lt;/view&gt;
 &lt;/view&gt;</code></pre>
   <h3>顶部导航栏</h3>
-  <pre><code>&lt;view class="flex flex-between bg-white pa-20 border-b"&gt;
+  <pre><code>&lt;view class="flex-row flex-between-center bg-white pa-20 border-b"&gt;
   &lt;text class="text-size-lg text-weight-b"&gt;返回&lt;/text&gt;
   &lt;text class="text-size-lg text-weight-b"&gt;标题&lt;/text&gt;
   &lt;text class="text-size-lg"&gt;更多&lt;/text&gt;
 &lt;/view&gt;</code></pre>
+  <h3>粘性吸顶标题</h3>
+  <pre><code>&lt;view class="sticky bg-white pa-20 border-b zIndex-10"&gt;分组标题&lt;/view&gt;
+&lt;!-- sticky 自带 top:0，无需再写 t-0 --&gt;</code></pre>
   <h3>三列网格布局</h3>
   <pre><code>&lt;view class="grid grid-col-3 gap-5 pa-20"&gt;
-  &lt;view class="bg-white round-10 shadow-3 pa-20 flex flex-center" v-for="i in 9"&gt;
+  &lt;view class="bg-white round-10 shadow-3 pa-20 flex flex-center-center" v-for="i in 9"&gt;
     &lt;text&gt;项目 {{i}}&lt;/text&gt;
   &lt;/view&gt;
-&lt;/view&gt;</code></pre>
+&lt;/view&gt;
+&lt;!-- grid-col-3 让每个子项宽 33.3333%，gap-5 让项间空 5px --&gt;</code></pre>
   <h3>底部安全区按钮</h3>
   <pre><code>&lt;view class="fixed b-0 fulled bg-white pa-20"&gt;
-  &lt;view class="bg-blue round-10 flex flex-center" style="height:88rpx"&gt;
+  &lt;view class="bg-primary round-10 flex flex-center-center" style="height:88px"&gt;
     &lt;text class="text-white text-size-lg text-weight-b"&gt;确认&lt;/text&gt;
   &lt;/view&gt;
   &lt;view class="safe-height"&gt;&lt;/view&gt;
@@ -511,49 +831,68 @@ pre code{background:none;padding:0;color:var(--text);font-size:13px;}
     &lt;text class="text-size-s"&gt;{{tag}}&lt;/text&gt;
   &lt;/view&gt;
 &lt;/view&gt;</code></pre>
+  <h3>左图右文列表项</h3>
+  <pre><code>&lt;view class="flex flex-row flex-start-center pa-20 border-b"&gt;
+  &lt;view class="bg-greyLight-1 round-10 flex-none" style="width:60px;height:60px"&gt;&lt;/view&gt;
+  &lt;view class="flex-1 ml-20"&gt;
+    &lt;view class="text-size-n text-weight-b"&gt;标题&lt;/view&gt;
+    &lt;view class="text-size-xs text-grey mt-10 text-overflow"&gt;单行超长描述会被省略号截断&lt;/view&gt;
+  &lt;/view&gt;
+&lt;/view&gt;</code></pre>
 </div>
 
 <!-- 命名规则总结 -->
 <div class="section" id="rules">
   <h2><span class="badge">参考</span> 命名规则总结</h2>
+  <p>下表汇总所有前缀与模式。凡涉及 <code>n</code>、<code>--</code> 的规则，都以第 15~17 节的说明为准。</p>
   <table>
-    <tr><th>前缀/模式</th><th>含义</th></tr>
-    <tr><td><code>text-</code></td><td>文本相关</td></tr>
-    <tr><td><code>bg-</code></td><td>背景相关</td></tr>
-    <tr><td><code>round-</code></td><td>圆角</td></tr>
-    <tr><td><code>shadow-</code></td><td>投影</td></tr>
-    <tr><td><code>border-</code></td><td>边线</td></tr>
-    <tr><td><code>flex-</code></td><td>Flex 布局</td></tr>
-    <tr><td><code>grid-</code></td><td>网格布局</td></tr>
-    <tr><td><code>gap-</code></td><td>元素间隙</td></tr>
-    <tr><td><code>m</code> + 方向</td><td>外边距</td></tr>
-    <tr><td><code>p</code> + 方向</td><td>内边距</td></tr>
-    <tr><td><code>t / l / r / b</code></td><td>位置控制</td></tr>
-    <tr><td><code>w- / h-</code></td><td>宽度 / 高度</td></tr>
-    <tr><td><code>zIndex-</code></td><td>层级</td></tr>
-    <tr><td><code>-n{数字}</code></td><td>值为 数字×4</td></tr>
-    <tr><td><code>--{数字}</code></td><td>负值</td></tr>
-    <tr><td><code>--n{数字}</code></td><td>负的 数字×4</td></tr>
+    <tr><th>前缀 / 模式</th><th>含义</th><th>取值范围与例外</th></tr>
+    <tr><td><code>text-</code> / <code>bg-</code></td><td>文字颜色 / 背景颜色</td><td>基础色 15 个 + 品牌色 10 个；背景另有 <code>bg-transparent</code></td></tr>
+    <tr><td><code>text-size-</code></td><td>字号</td><td><code>xxs / xs / s / n / g / lg / xl / xxl / xxxl</code>，共 9 个</td></tr>
+    <tr><td><code>text-weight-</code></td><td>字重</td><td><code>thin / s / n / b</code>，共 4 个</td></tr>
+    <tr><td><code>leading-</code></td><td>行高</td><td><code>none / tight / normal / loose</code>，共 4 个</td></tr>
+    <tr><td><code>tracking-</code></td><td>字间距</td><td><code>tight / normal / wide / wider</code>，共 4 个</td></tr>
+    <tr><td><code>round-</code></td><td>圆角</td><td>四边 0~25；单角 <code>tl/tr/bl/br</code> 的 0~25；组合 <code>t/b/l/r</code> 仅 0/5/10/15/20/25</td></tr>
+    <tr><td><code>rounded</code> / <code>round-pill</code></td><td>圆形 / 胶囊</td><td>独立类，不是 <code>round-N</code> 的变体</td></tr>
+    <tr><td><code>opacity-</code></td><td>透明度</td><td>0~10，对应 0.0~1.0</td></tr>
+    <tr><td><code>shadow-</code></td><td>投影</td><td>0~25</td></tr>
+    <tr><td><code>border-</code></td><td>边线</td><td>四边 0~10；单边 <code>t/b/l/r/a</code> 的 0~5 及无数字别名（=1px）</td></tr>
+    <tr><td><code>zIndex-</code></td><td>层级</td><td>0~25 与 <code>n1~n5</code>；注意大写 I</td></tr>
+    <tr><td><code>flex-</code></td><td>Flex 布局</td><td>基础类（<code>row/row-reverse/col/col-reverse</code>、<code>wrap/wrap-reverse/nowrap</code>、<code>shrink-0</code>、<code>min-w-0</code>）+ 占比 <code>0~12</code></td></tr>
+    <tr><td><code>flex-{justify}-{align}</code></td><td>轴向对齐</td><td>5 × 5 共 25 个，只设 <code>justify-content</code> / <code>align-items</code>，需配合 <code>flex-row</code> / <code>flex-col</code> 使用</td></tr>
+    <tr><td><code>grid</code> / <code>grid-col-</code></td><td>Flex 实现的网格</td><td>列数 1~12，子元素宽度为精确百分比</td></tr>
+    <tr><td><code>gap-</code> / <code>gap-row-</code> / <code>gap-col-</code></td><td>元素间隙</td><td>1~25，单位 px（<code>Npx</code>）</td></tr>
+    <tr><td><code>m</code> + 方向 + <code>-数字</code></td><td>外边距正值</td><td>方向 <code>a/l/r/t/b/x/y</code>；数字 <strong>2~100，步进 2</strong>；另有 <code>auto</code>；无负值、无 n 系列、不含 <code>box-sizing</code></td></tr>
+    <tr><td><code>p</code> + 方向 + <code>-数字</code></td><td>内边距正值</td><td>方向 <code>a/l/r/t/b/x/y</code>；数字 <strong>2~100，步进 2</strong>；无负值、无 n 系列；每条规则自带 <code>box-sizing: border-box</code></td></tr>
+    <tr><td><code>t / l / r / b</code> + <code>-数字</code></td><td>定位偏移</td><td>数字 0~50，需配合定位类</td></tr>
+    <tr><td><code>w-</code> / <code>h-</code></td><td>宽度 / 高度</td><td>0 与 10~800 的全部 10 的倍数，共 81 个；另有 <code>full/half/third/quarter</code> 与 <code>h-screen</code></td></tr>
+    <tr><td><code>-n{数字}</code></td><td><strong>正的</strong> 4 倍数档位</td><td>数字 1~25 → 4~100px；<strong>仅第 13 节定位类有</strong>，margin / padding 已取消</td></tr>
+    <tr><td><code>--{数字}</code></td><td>负值</td><td>数字 1~50 → -1~-50px；<strong>仅定位类有</strong>，margin 与 padding 均已取消</td></tr>
+    <tr><td><code>--n{数字}</code></td><td>负的 4 倍数</td><td>数字 1~25 → -4~-100px；<strong>仅定位类有</strong></td></tr>
   </table>
 </div>
 
 <!-- 注意事项 -->
 <div class="section" id="notes">
   <h2><span class="badge">注意</span> 注意事项</h2>
-  <div class="warn"><strong>优先级：</strong>本类库为纯 CSS，优先级低于内联样式和 <code>!important</code></div>
+  <div class="warn"><strong>优先级：</strong>本类库全部是单类选择器（如 <code>.pa-20</code>），优先级为 <code>0,0,1,0</code>。内联样式、<code>!important</code>、ID 选择器或多类组合选择器都会覆盖它。当两个工具类作用于同一属性（例如 <code>fulled</code> 与 <code>w-200</code>）时，由它们在 CSS 文件中的<strong>先后顺序</strong>决定结果，而不是你在 <code>class</code> 属性里的书写顺序。</div>
   <table>
     <tr><th>项目</th><th>说明</th></tr>
-    <tr><td>类名冲突</td><td>如与已有样式冲突，可通过调整引入顺序解决</td></tr>
-    <tr><td>性能</td><td>类库较大（~150KB），建议在生产环境使用构建工具进行 tree-shaking 或按需引入</td></tr>
-    <tr><td>平台兼容</td><td>所有类均兼容 H5、小程序、APP 等多端</td></tr>
-    <tr><td>rpx 单位</td><td>所有尺寸基于 750rpx 设计稿宽度，自动适配不同屏幕</td></tr>
+    <tr><td>文件路径</td><td>px 版文件为 <code>styles/tool-px.css</code>，体积约 77KB（未压缩）；rpx 版是 <code>styles/tool-rpx.css</code>，约 87KB。不要把本文档的 px 数值用到 rpx 版上。</td></tr>
+    <tr><td>两个版本共存</td><td>rpx 版类名统一带 <code>rpx-</code> 前缀，px 版无前缀，二者可同时引入；但同一元素上不要同时写语义相同的两个版本类，避免属性互相覆盖。</td></tr>
+    <tr><td>px 与 rpx 的差别</td><td>px 是固定像素，不随屏宽缩放；rpx 以 750 为基准按屏宽自适应。跨端适配优先选 rpx 版，需要严格固定尺寸（如 1px 细线）选 px 版。</td></tr>
+    <tr><td>类名冲突</td><td>若与项目已有类名重名，可调整引入顺序，或改用 rpx 版前缀来规避。</td></tr>
+    <tr><td>性能</td><td>约 77KB 未压缩，其中内外边距合计仅 707 条规则（margin 357 + padding 350），约占 26KB，是所有分区里最轻的。全部引入会增加包体，生产环境仍建议用构建工具按需提取用到的类，或按业务拆分自定义子集。</td></tr>
+    <tr><td>安全区</td><td><code>safe-height</code> 依赖 <code>env(safe-area-inset-bottom)</code>，需要在页面 meta 中设置 <code>viewport-fit=cover</code> 才会出现数值；非全面屏设备上结果为 0。</td></tr>
+    <tr><td>兼容提示</td><td><code>position: sticky</code>、Flex 容器的 <code>gap</code>、<code>filter: grayscale()</code>、<code>-webkit-line-clamp</code> 在较旧的 WebView / 小程序基础库中可能不生效。若目标端较旧，建议对这几类做降级处理（如用 margin 替代 gap，用固定高度 + overflow 替代 line-clamp）。</td></tr>
+    <tr><td>vh 单位</td><td><code>h-screen</code> 使用 <code>100vh</code>，部分小程序场景中键盘弹起或导航栏会影响其实际高度，需实测。</td></tr>
+    <tr><td>省略号生效条件</td><td><code>text-overflow</code> 与 <code>text-overflow-{1~5}</code> 都要求元素宽度受限；在 Flex 子项上可能还需要 <code>flex-none</code> 或 <code>flex-min-w-0</code>（即 <code>min-width: 0</code>）才能正常省略。</td></tr>
   </table>
 </div>
 
 </main>
 
 <script>
-// 搜索过滤
 function filterNav(keyword){
   const items=document.querySelectorAll('.nav-item');
   const kw=keyword.toLowerCase().trim();
@@ -562,7 +901,6 @@ function filterNav(keyword){
     item.style.display=(!kw||text.includes(kw))?'':'none';
   });
 }
-// 滚动高亮
 const sections=document.querySelectorAll('.section[id]');
 const navItems=document.querySelectorAll('.nav-item');
 const observer=new IntersectionObserver(entries=>{
@@ -575,9 +913,8 @@ const observer=new IntersectionObserver(entries=>{
   });
 },{rootMargin:'-10% 0px -80% 0px'});
 sections.forEach(s=>observer.observe(s));
-// 点击平滑滚动+关闭移动端菜单
 navItems.forEach(item=>{
-  item.addEventListener('click',function(e){
+  item.addEventListener('click',function(){
     if(window.innerWidth<=768){
       document.querySelector('.sidebar').classList.remove('open');
     }

@@ -325,7 +325,6 @@ export default {
 .z-popup {
   width: 100%;
   height: 100%;
-  box-shadow: var(--zzz-shadow-more-big);
 
   &__close-icon {
     position: absolute;
